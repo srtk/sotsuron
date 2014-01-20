@@ -1,0 +1,10 @@
+cd sotsuron_figure
+ls | iconv -f UTF-8-MAC -t UTF-8 | sed -ne 's/スライド\(.*\)/mv スライド\1 sl\1/ p' | sh
+ls | echo sed -e 's/スライド\(.*\)/mv スライド\1 sl\1/' | sh
+for FILE in $(ls)
+do 
+NAME=${FILE%.*}
+EXT=${FILE##*.}
+convert -trim $FILE s${NAME}.${EXT}
+rm $FILE
+done

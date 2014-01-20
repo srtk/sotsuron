@@ -1,0 +1,12 @@
+cd sotsuron_figure
+mv ssl02.jpg library_merit.jpg
+mv ssl03.jpg library_hedge.jpg
+mv ssl04.jpg concept.jpg
+mv ssl05.jpg prof2prop.jpg
+mv ssl06.jpg conv.jpg
+mv ssl07.jpg expr.jpg
+mv ssl08.jpg pic_sample.jpg
+mv ssl09.jpg pic_judge.jpg
+mv ssl10.jpg filter.jpg
+#mv sl11.jpg 
+mv ssl12.jpg prof_visibility.jpg

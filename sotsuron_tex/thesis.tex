@@ -1,0 +1,57 @@
+\documentclass[a4paper,11pt,oneside,openany]{jsbook}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{comment}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{subfigure}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage{ascmac}
+\usepackage{makeidx}
+\usepackage{url}
+\makeindex
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{40\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.55in}
+\renewcommand{\bibname}{参考文献}
+%
+\title{Web工学で応用するための\\Deep Learning利用法と知見の体系化}
+\author{2013年度卒業論文\\
+東京大学工学部システム創成学科知能社会システムコース\\
+03120929 黒滝 紘生\\\\
+指導教官: 松尾 豊 准教授}
+\date{2013年2月 日}
+%
+\begin{document}
+%
+\maketitle
+%
+\pagestyle{plain}
+\setlength{\baselineskip}{22truept}
+%
+\frontmatter
+\include{introduction}
+
+%
+\tableofcontents
+\listoffigures
+\listoftables
+%
+\mainmatter
+\include{chap1}
+\include{chap2}
+\include{chap3}
+\include{chap4}
+\include{chap5}
+\include{chap6}
+\include{chap7}
+\include{chap8}
+%
+\include{acknowledgment}
+%
+%\include{bibliography}
+\bibliographystyle{jplain}
+\bibliography{research}
+%
+\end{document}

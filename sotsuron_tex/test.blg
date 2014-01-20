@@ -1,0 +1,51 @@
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: test.aux
+The style file: jplain.bst
+Database file #1: res.bib
+Warning--empty journal in dahl2008cs81:
+Warning--empty school in krizhevsky2009learning
+Warning--can't use both volume and number fields in wan2013regularization
+You've used 35 entries,
+            2620 wiz_defined-function locations,
+            807 strings with 11153 characters,
+and the built_in function-call counts, 17200 in all, are:
+= -- 1559
+> -- 601
+< -- 56
++ -- 249
+- -- 212
+* -- 1027
+:= -- 2273
+add.period$ -- 109
+call.type$ -- 35
+change.case$ -- 210
+chr.to.int$ -- 0
+cite$ -- 38
+duplicate$ -- 910
+empty$ -- 1385
+format.name$ -- 319
+if$ -- 4010
+int.to.chr$ -- 0
+int.to.str$ -- 35
+missing$ -- 33
+newline$ -- 177
+num.names$ -- 70
+pop$ -- 311
+preamble$ -- 1
+purify$ -- 176
+quote$ -- 0
+skip$ -- 887
+stack$ -- 0
+substring$ -- 1011
+swap$ -- 315
+text.length$ -- 56
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 139
+warning$ -- 3
+while$ -- 140
+width$ -- 37
+write$ -- 388
+is.kanji.str$ -- 428
+(There were 3 warnings)
