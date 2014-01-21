@@ -1,10 +1,9 @@
 % !TEX root = thesis.tex
 \chapter{深層学習のアルゴリズム}
-Deep Learningは、多層ニューラルネットワークのアイデアをさらに一歩推し進めたもので、学習方法の工夫により、多くのレイヤーを学習して、より複雑な関数を学習できるようになった。数々の分類タスクにて、従来手法を大きくしのぐ成果を収め、注目を浴びている。この章では、Deep Learningのこれまで挙げた成果を紹介すると共に、Deep Learningで使われているアルゴリズムの詳細について述べる。
+Deep Learningは、多層ニューラルネットワークのアイデアをさらに一歩推し進めたもので、学習方法の工夫により、従来よりも多くのレイヤーを扱えて、より複雑な関数を学習できるようになった。数々の分類タスクにて、従来手法を大きくしのぐ成果を収め、注目を浴びている。この章では、Deep Learningがこれまで挙げた成果を紹介すると共に、Deep Learningで使われているアルゴリズムの詳細について述べる。
 
 \section{深層学習の歴史}
-ニューラルネットワークは隠れ層を追加することによって、任意の非線形関数を近似できるとわかり、人気が高まった。しかし、2章で見たように、バックプロパゲーション
-
+多層ニューラルネットワークを学習させるための有用な方法は、まず2006年、Hintonらの研究
 Deep Learningの登場 Hinton, Bengio, LeCun
 画像認識タスクでの成績、音声認識タスクでの成果、猫認識
 MNIST, CIFAR, SVHNなどにおけるconv.net、Maxout, DropConnectの優位
@@ -12,12 +11,12 @@ MNIST, CIFAR, SVHNなどにおけるconv.net、Maxout, DropConnectの優位
 \section{深層学習モデルのバリエーションと詳細}
 この節では、Deep Learningのアルゴリズムが、どのような要素の組み合わせで出来ているのか、それぞれの要素はどのようにして学習を助けているのか、紹介する。
 \subsection{全体の構造}
-大澤さんのpylearn2の図を一般化したものを書く
-\subsection{pretraningとfinetuning}
+(大澤さんのpylearn2の図を一般化したものを書く)
+%\subsection{pretraningとfinetuning}
 \subsection{ネットワーク構造}
 ・普通のMLP, SDA, DBM, CNN
 \subsection{コスト}
-Dropout(Robustness?), DropConnect \\
+Dropout, DropConnect \\
 図\ref{c3_dropconnect}は、DropConnectの著者による紹介Webページ\footnote{\url{http://cs.nyu.edu/~wanli/dropc/}}に掲載されている画像の引用である。ニューラルネットワークにおけるニューロン同士の接続が、ランダムに切断されている様子を表している。
 \begin{figure}[tbp]
  \begin{center}

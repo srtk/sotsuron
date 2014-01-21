@@ -47,6 +47,11 @@ Robert Gens and Pedro Domingos.
 \newblock In {\em Advances in Neural Information Processing Systems}, pp.
   3248--3256, 2012.
 
+\bibitem{goldberg1992using}
+David Goldberg, David Nichols, Brian~M. Oki, and Douglas Terry.
+\newblock Using collaborative filtering to weave an information tapestry.
+\newblock {\em Commun. ACM}, Vol.~35, No.~12, pp. 61--70, December 1992.
+
 \bibitem{goodfellow2013maxout}
 Ian~J Goodfellow, David Warde-Farley, Mehdi Mirza, Aaron Courville, and Yoshua
   Bengio.
@@ -64,6 +69,11 @@ Geoffrey~E Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and
 \newblock Improving neural networks by preventing co-adaptation of feature
   detectors.
 \newblock {\em arXiv preprint arXiv:1207.0580}, 2012.
+
+\bibitem{le2012building}
+ICML.
+\newblock {\em Building High-level Features Building High-level Features Using
+  Large Scale Unsupervised Learning}, 2012.
 
 \bibitem{jarrett2009what}
 K.~Jarrett, K.~Kavukcuoglu, M.~Ranzato, and Y.~LeCun.
@@ -84,6 +94,16 @@ Daniel Keysers, Thomas Deselaers, Christian Gollan, and Hermann Ney.
 \newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, Vol.~29, No.~8, pp.
   1422--1435, August 2007.
 
+\bibitem{koren2009matrix}
+Yehuda Koren, Robert Bell, and Chris Volinsky.
+\newblock Matrix factorization techniques for recommender systems.
+\newblock {\em Computer}, Vol.~42, No.~8, pp. 30--37, August 2009.
+
+\bibitem{krizhevsky2009learning}
+Alex Krizhevsky and G~Hinton.
+\newblock Learning multiple layers of features from tiny images.
+\newblock Master's thesis, 4 2009.
+
 \bibitem{krizhevsky2012imagenet}
 Alex Krizhevsky, Ilya Sutskever, and Geoff Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
@@ -102,6 +122,11 @@ Fabien Lauer, Ching~Y. Suen, and G{\'e}rard Bloch.
 \newblock A trainable feature extractor for handwritten digit recognition.
 \newblock {\em Pattern Recogn.}, Vol.~40, No.~6, pp. 1816--1824, June 2007.
 
+\bibitem{lecun1998gradient-based}
+Y.~LeCun, L.~Bottou, Y.~Bengio, and P.~Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE}, Vol.~86, No.~11, pp. 2278--2324, 1998.
+
 \bibitem{lee2009convolutional}
 Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew~Y. Ng.
 \newblock Convolutional deep belief networks for scalable unsupervised learning
@@ -114,6 +139,22 @@ Martin~Renqiang Min, David~A. Stanley, Zineng Yuan, Anthony~J. Bonner, and
   Zhaolei Zhang.
 \newblock Large-margin knn classification using a deep encoder network.
 \newblock {\em CoRR}, Vol. abs/0906.1814, , 2009.
+
+\bibitem{minsky1988perceptrons:}
+Marvin~Lee Minsky and Seymour Papert.
+\newblock {\em Perceptrons: An Introduction to Computational Geometry}.
+\newblock MIT Press, Cambridge Mass., expanded ed. edition, 1988.
+
+\bibitem{mislove2011understanding}
+Alan Mislove, Sune Lehmann, Yong-Yeol Ahn, Jukka-Pekka Onnela, and J~Niels
+  Rosenquist.
+\newblock Understanding the demographics of twitter users.
+\newblock In {\em ICWSM}, 2011.
+
+\bibitem{pennacchiotti2011a-machine}
+Marco Pennacchiotti and Ana-Maria Popescu.
+\newblock A machine learning approach to twitter user classification.
+\newblock In {\em ICWSM}, 2011.
 
 \bibitem{poultney2006efficient}
 Christopher Poultney, Christopher Poultney, Sumit Chopra, and Yann" Lecun.
@@ -129,11 +170,29 @@ M.~Ranzato, Fu~Jie Huang, Y.-L. Boureau, and Y.~LeCun.
 \newblock In {\em Computer Vision and Pattern Recognition, 2007. CVPR '07. IEEE
   Conference on}, pp. 1--8, 2007.
 
+\bibitem{resnick1997recommender}
+Paul Resnick and Hal~R. Varian.
+\newblock Recommender systems.
+\newblock {\em Commun. ACM}, Vol.~40, No.~3, pp. 56--58, March 1997.
+
+\bibitem{rumelhart1986learning}
+David~E Rumelhart, Geoffrey~E Hintont, and Ronald~J Williams.
+\newblock Learning representations by back-propagating errors.
+\newblock {\em Nature}, Vol. 323, No. 6088, pp. 533--536, 1986.
+
 \bibitem{salakhutdinov2009deep}
 Ruslan Salakhutdinov and Geoffrey~E Hinton.
 \newblock Deep boltzmann machines.
 \newblock In {\em International Conference on Artificial Intelligence and
   Statistics}, pp. 448--455, 2009.
+
+\bibitem{schwartz2013personality}
+H.~Andrew Schwartz, Johannes~C. Eichstaedt, Margaret~L. Kern, Lukasz
+  Dziurzynski, Stephanie~M. Ramones, Megha Agrawal, Achal Shah, Michal
+  Kosinski, David Stillwell, Martin E.~P. Seligman, and Lyle~H. Ungar.
+\newblock Personality, gender, and age in the language of social media: The
+  open-vocabulary approach.
+\newblock {\em PLoS ONE}, Vol.~8, No.~9, p. e73791, 09 2013.
 
 \bibitem{simard2003best}
 Patrice~Y. Simard, Dave Steinkraus, and John~C. Platt.
