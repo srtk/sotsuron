@@ -1,27 +1,27 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces ディープラーニングで画像を認識する流れ}}{3}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces 猫を認識するニューロン (教師無しYoutubeビデオより学習された。)}}{3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces 猫を認識するニューロン (教師無しYoutubeビデオより学習された。)}}{4}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces 上 : 入力画像の中で、ニューロンが最も強く反応した48枚　下 : 計算上、最もニューロンが強く反応する画像}}{4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces DropConnectの模式図}}{11}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Maxout Networkの構造図}}{12}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Maxout Unitが凸関数を近似する様子(1次元の場合)}}{12}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces DropConnectの模式図}}{12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Maxout Networkの構造図}}{13}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Maxout Unitが凸関数を近似する様子(1次元の場合)}}{13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 既存コードの利用における、完全オリジナルコードの作成に対する利点}}{14}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 既存ソースコード利用のリスクと、対処方法}}{14}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Pylearn2の実験計画例}}{16}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 既存コードの利用における、完全オリジナルコードの作成に対する利点}}{15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 既存ソースコード利用のリスクと、対処方法}}{15}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Pylearn2の実験計画例}}{17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces MNISTデータの例}}{19}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces CIFAR10データの例}}{21}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces ユーザ属性推定の必要性}}{20}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Facebookにおけるプロフィール画像の例}}{21}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 提案手法}}{22}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 今回の実験の模式図}}{24}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces 実験で使った、画像から入力ベクトルへの変換方法}}{24}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces プロフィール画像からの顔画像抽出方法}}{24}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces 実験で学習されたフィルター}}{25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces ユーザ属性推定の必要性}}{25}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Facebookにおけるプロフィール画像の例}}{26}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces 提案手法}}{27}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces 今回の実験の模式図}}{29}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces 実験で使った、画像から入力ベクトルへの変換方法}}{29}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces プロフィール画像からの顔画像抽出方法}}{29}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces 実験で学習されたフィルター}}{30}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces MNISTデータの例}}{27}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces CIFAR10データの例}}{29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Maxout NetworkによるMNIST分類実験で、誤差が論文より大きくなった原因}}{32}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Maxout NetworkによるMNIST分類実験で、誤差が論文より大きくなった原因}}{34}
 \addvspace {10\p@ }

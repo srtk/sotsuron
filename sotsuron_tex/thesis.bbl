@@ -58,6 +58,11 @@ Ian~J Goodfellow, David Warde-Farley, Mehdi Mirza, Aaron Courville, and Yoshua
 \newblock Maxout networks.
 \newblock {\em arXiv preprint arXiv:1302.4389}, 2013.
 
+\bibitem{hinton2006a-fast}
+Geoffrey~E Hinton, Simon Osindero, and Yee-Whye Teh.
+\newblock A fast learning algorithm for deep belief nets.
+\newblock {\em Neural computation}, Vol.~18, No.~7, pp. 1527--1554, 2006.
+
 \bibitem{hinton2006reducing}
 Geoffrey~E Hinton and Ruslan~R Salakhutdinov.
 \newblock Reducing the dimensionality of data with neural networks.
