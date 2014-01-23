@@ -1,0 +1,14 @@
+% http://tex.stackexchange.com/questions/55465/remove-dots-page-numbers-from-toc
+\let\Contentsline\contentsline 
+\renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
+\makeatletter
+\renewcommand{\@dotsep}{10000} 
+\makeatother
+
+\setcounter{tocdepth}{3} % print subsubsection
+
+% http://ameblo.jp/ppsh41/entry-10873160319.html
+\makeatletter
+\def\subsection{\leftskip=1em\@startsection {subsection}{1}{\z@}{-3.5ex plus -1ex minus
+-.2ex}{2.3ex plus .2ex}{\normalsize}}
+\makeatother

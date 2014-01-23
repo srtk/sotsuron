@@ -17,46 +17,46 @@ Warning--I didn't find a database entry for "liao2007learning"
 Warning--empty journal in dahl2008cs81:
 Warning--empty school in krizhevsky2009learning
 Warning--can't use both volume and number fields in wan2013regularization
-You've used 40 entries,
+You've used 42 entries,
             2620 wiz_defined-function locations,
-            846 strings with 12323 characters,
-and the built_in function-call counts, 19591 in all, are:
-= -- 1742
-> -- 746
-< -- 61
-+ -- 310
-- -- 266
-* -- 1179
-:= -- 2617
-add.period$ -- 123
-call.type$ -- 40
-change.case$ -- 252
+            858 strings with 12557 characters,
+and the built_in function-call counts, 20218 in all, are:
+= -- 1791
+> -- 760
+< -- 64
++ -- 317
+- -- 270
+* -- 1204
+:= -- 2702
+add.period$ -- 129
+call.type$ -- 42
+change.case$ -- 259
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 1023
-empty$ -- 1545
-format.name$ -- 400
-if$ -- 4536
+cite$ -- 45
+duplicate$ -- 1068
+empty$ -- 1606
+format.name$ -- 406
+if$ -- 4683
 int.to.chr$ -- 0
-int.to.str$ -- 40
-missing$ -- 39
-newline$ -- 202
-num.names$ -- 80
-pop$ -- 376
+int.to.str$ -- 42
+missing$ -- 42
+newline$ -- 212
+num.names$ -- 84
+pop$ -- 395
 preamble$ -- 1
-purify$ -- 213
+purify$ -- 219
 quote$ -- 0
-skip$ -- 990
+skip$ -- 1028
 stack$ -- 0
-substring$ -- 1068
-swap$ -- 345
-text.length$ -- 61
+substring$ -- 1085
+swap$ -- 355
+text.length$ -- 64
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 157
+type$ -- 163
 warning$ -- 3
-while$ -- 151
-width$ -- 42
-write$ -- 438
-is.kanji.str$ -- 502
+while$ -- 156
+width$ -- 44
+write$ -- 459
+is.kanji.str$ -- 520
 (There were 4 warnings)

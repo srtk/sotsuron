@@ -180,6 +180,12 @@ Paul Resnick and Hal~R. Varian.
 \newblock Recommender systems.
 \newblock {\em Commun. ACM}, Vol.~40, No.~3, pp. 56--58, March 1997.
 
+\bibitem{rosenblatt1958perceptron}
+Frank Rosenblatt.
+\newblock The perceptron: a probabilistic model for information storage and
+  organization in the brain.
+\newblock {\em Psychological review}, Vol.~65, No.~6, p. 386, 1958.
+
 \bibitem{rumelhart1986learning}
 David~E Rumelhart, Geoffrey~E Hintont, and Ronald~J Williams.
 \newblock Learning representations by back-propagating errors.
@@ -236,5 +242,10 @@ Matthew~D Zeiler and Rob Fergus.
 \newblock Stochastic pooling for regularization of deep convolutional neural
   networks.
 \newblock {\em arXiv preprint arXiv:1301.3557}, 2013.
+
+\bibitem{kawato1998}
+川人光男.
+\newblock 脳の計算理論.
+\newblock 産業図書, 1998.
 
 \end{thebibliography}
