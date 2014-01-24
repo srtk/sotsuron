@@ -16,47 +16,49 @@ Database file #1: research.bib
 Warning--I didn't find a database entry for "liao2007learning"
 Warning--empty journal in dahl2008cs81:
 Warning--empty school in krizhevsky2009learning
+Warning--empty booktitle in le2012building
+Warning--empty journal in smolensky1986information
 Warning--can't use both volume and number fields in wan2013regularization
-You've used 42 entries,
+You've used 44 entries,
             2620 wiz_defined-function locations,
-            858 strings with 12557 characters,
-and the built_in function-call counts, 20218 in all, are:
-= -- 1791
-> -- 760
-< -- 64
-+ -- 317
-- -- 270
-* -- 1204
-:= -- 2702
-add.period$ -- 129
-call.type$ -- 42
-change.case$ -- 259
+            869 strings with 12974 characters,
+and the built_in function-call counts, 21433 in all, are:
+= -- 1890
+> -- 840
+< -- 65
++ -- 349
+- -- 300
+* -- 1282
+:= -- 2888
+add.period$ -- 137
+call.type$ -- 44
+change.case$ -- 280
 chr.to.int$ -- 0
-cite$ -- 45
-duplicate$ -- 1068
-empty$ -- 1606
-format.name$ -- 406
-if$ -- 4683
+cite$ -- 49
+duplicate$ -- 1114
+empty$ -- 1683
+format.name$ -- 451
+if$ -- 4947
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 42
-newline$ -- 212
-num.names$ -- 84
-pop$ -- 395
+int.to.str$ -- 44
+missing$ -- 45
+newline$ -- 223
+num.names$ -- 90
+pop$ -- 430
 preamble$ -- 1
-purify$ -- 219
+purify$ -- 237
 quote$ -- 0
-skip$ -- 1028
+skip$ -- 1072
 stack$ -- 0
-substring$ -- 1085
-swap$ -- 355
-text.length$ -- 64
+substring$ -- 1122
+swap$ -- 366
+text.length$ -- 65
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 163
-warning$ -- 3
-while$ -- 156
-width$ -- 44
-write$ -- 459
-is.kanji.str$ -- 520
-(There were 4 warnings)
+type$ -- 172
+warning$ -- 5
+while$ -- 164
+width$ -- 46
+write$ -- 482
+is.kanji.str$ -- 550
+(There were 6 warnings)

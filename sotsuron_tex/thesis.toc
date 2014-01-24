@@ -14,59 +14,60 @@
 \contentsline {subsection}{\numberline {2.2.2}ニューラルネットワーク}{9}
 \contentsline {subsubsection}{ニューラルネットワークの伝達方式}{9}
 \contentsline {subsubsection}{パーセプトロン}{9}
-\contentsline {subsection}{\numberline {2.2.3}Restricted Boltzman Machine}{10}
 \contentsline {chapter}{\numberline {第3章}深層学習のアルゴリズム}{11}
-\contentsline {section}{\numberline {3.1}深層学習の歴史}{11}
-\contentsline {section}{\numberline {3.2}深層学習モデルのバリエーションと詳細}{11}
-\contentsline {subsection}{\numberline {3.2.1}ネットワーク構造}{12}
-\contentsline {subsubsection}{Multi Layer Perceptron (MLP)}{12}
-\contentsline {subsubsection}{}{12}
-\contentsline {subsection}{\numberline {3.2.2}Dropoutとrobustnessの確保}{12}
-\contentsline {subsection}{\numberline {3.2.3}活性化関数}{12}
-\contentsline {subsubsection}{sigmoidとhyperbolic tangent}{13}
-\contentsline {subsubsection}{rectifier}{13}
-\contentsline {subsubsection}{Maxout Unit}{13}
-\contentsline {chapter}{\numberline {第4章}深層学習の実装における技術}{15}
-\contentsline {section}{\numberline {4.1}評価基準}{15}
-\contentsline {section}{\numberline {4.2}既存ソースコード使用の利点}{15}
-\contentsline {section}{\numberline {4.3}Graphics Processing Unitの利用による高速化}{17}
-\contentsline {section}{\numberline {4.4}数値計算ライブラリTheanoの利点}{17}
-\contentsline {section}{\numberline {4.5}機械学習ライブラリPylearn2の利点}{17}
-\contentsline {subsection}{\numberline {4.5.1}高精度アルゴリズムMaxout Networkの実装}{18}
-\contentsline {subsection}{\numberline {4.5.2}Theanoの利用}{18}
-\contentsline {subsection}{\numberline {4.5.3}高度な拡張性と可読性}{18}
-\contentsline {section}{\numberline {4.6}ハードウェアの構成}{19}
-\contentsline {chapter}{\numberline {第5章}Facebookの顔画像認識と深層学習技術}{20}
-\contentsline {section}{\numberline {5.1}背景}{20}
-\contentsline {section}{\numberline {5.2}ソーシャルメディアにおける、プロフィール画像}{22}
-\contentsline {section}{\numberline {5.3}提案手法}{23}
-\contentsline {section}{\numberline {5.4}問題設定と、実験方法の詳細}{24}
-\contentsline {subsection}{\numberline {5.4.1}画像の取得と加工}{24}
-\contentsline {subsection}{\numberline {5.4.2}ベクトルデータへの変換}{24}
-\contentsline {subsection}{\numberline {5.4.3}ユーザの分類}{24}
-\contentsline {section}{\numberline {5.5}結果}{26}
-\contentsline {chapter}{\numberline {第6章}Web工学への深層学習技術の応用}{27}
-\contentsline {section}{\numberline {6.1}利用したデータセット}{27}
-\contentsline {subsection}{\numberline {6.1.1}MNIST}{27}
-\contentsline {subsection}{\numberline {6.1.2}CIFAR10}{28}
-\contentsline {section}{\numberline {6.2}使用したライブラリ}{30}
-\contentsline {section}{\numberline {6.3}使用したハードウェア}{30}
-\contentsline {section}{\numberline {6.4}ベンチマーク実験の詳細}{31}
-\contentsline {subsection}{\numberline {6.4.1}Maxout Networkによる、MNISTの分類タスク(2次元データとして扱う)}{31}
-\contentsline {subsection}{\numberline {6.4.2}Maxout Networkによる、MNISTの分類タスク(1次元データとして扱う)}{31}
-\contentsline {subsection}{\numberline {6.4.3}Maxout Networkによる、CIFAR10の分類タスク}{32}
-\contentsline {chapter}{\numberline {第7章}考察と提言}{33}
-\contentsline {section}{\numberline {7.1}5章の実験に関する考察}{33}
-\contentsline {subsection}{\numberline {7.1.1}全体の結果のまとめ}{33}
-\contentsline {subsection}{\numberline {7.1.2}SDAにて良い精度が出なかった理由の考察}{33}
-\contentsline {subsection}{\numberline {7.1.3}今後の発展について}{34}
-\contentsline {section}{\numberline {7.2}6章の実験に関する考察}{34}
-\contentsline {subsection}{\numberline {7.2.1}全体のまとめ}{34}
-\contentsline {subsection}{\numberline {7.2.2}分類誤差が大きくなってしまう原因の考察}{34}
-\contentsline {subsection}{\numberline {7.2.3}CIFAR10の実行時間が非常に長くなってしまう問題について}{35}
-\contentsline {section}{\numberline {7.3}深層学習の利用法に関する提言}{36}
-\contentsline {chapter}{\numberline {第8章}おわりに}{38}
-\contentsline {section}{\numberline {8.1}研究の成果}{38}
-\contentsline {section}{\numberline {8.2}今後の課題}{38}
-\contentsline {chapter}{謝辞}{40}
-\contentsline {chapter}{参考文献}{41}
+\contentsline {section}{\numberline {3.1}Deep Belief Network}{11}
+\contentsline {subsection}{\numberline {3.1.1}unsupervised pretrainingとfinetuning}{11}
+\contentsline {subsection}{\numberline {3.1.2}Restricted Boltzman Machine}{12}
+\contentsline {subsection}{\numberline {3.1.3}DBNの成果}{13}
+\contentsline {section}{\numberline {3.2}深層学習モデルのバリエーションと詳細}{13}
+\contentsline {subsubsection}{Multi Layer Perceptron (MLP)}{13}
+\contentsline {subsubsection}{}{14}
+\contentsline {subsection}{\numberline {3.2.1}Dropoutとrobustnessの確保}{14}
+\contentsline {subsection}{\numberline {3.2.2}活性化関数}{14}
+\contentsline {subsubsection}{sigmoidとhyperbolic tangent}{14}
+\contentsline {subsubsection}{rectifier}{15}
+\contentsline {subsubsection}{Maxout Unit}{15}
+\contentsline {chapter}{\numberline {第4章}深層学習の実装における技術}{16}
+\contentsline {section}{\numberline {4.1}評価基準}{16}
+\contentsline {section}{\numberline {4.2}既存ソースコード使用の利点}{16}
+\contentsline {section}{\numberline {4.3}Graphics Processing Unitの利用による高速化}{18}
+\contentsline {section}{\numberline {4.4}数値計算ライブラリTheanoの利点}{18}
+\contentsline {section}{\numberline {4.5}機械学習ライブラリPylearn2の利点}{18}
+\contentsline {subsection}{\numberline {4.5.1}高精度アルゴリズムMaxout Networkの実装}{19}
+\contentsline {subsection}{\numberline {4.5.2}Theanoの利用}{19}
+\contentsline {subsection}{\numberline {4.5.3}高度な拡張性と可読性}{19}
+\contentsline {section}{\numberline {4.6}ハードウェアの構成}{20}
+\contentsline {chapter}{\numberline {第5章}Facebookの顔画像認識と深層学習技術}{21}
+\contentsline {section}{\numberline {5.1}背景}{21}
+\contentsline {section}{\numberline {5.2}ソーシャルメディアにおける、プロフィール画像}{23}
+\contentsline {section}{\numberline {5.3}提案手法}{24}
+\contentsline {section}{\numberline {5.4}問題設定と、実験方法の詳細}{25}
+\contentsline {subsection}{\numberline {5.4.1}画像の取得と加工}{25}
+\contentsline {subsection}{\numberline {5.4.2}ベクトルデータへの変換}{25}
+\contentsline {subsection}{\numberline {5.4.3}ユーザの分類}{25}
+\contentsline {section}{\numberline {5.5}結果}{27}
+\contentsline {chapter}{\numberline {第6章}Web工学への深層学習技術の応用}{28}
+\contentsline {section}{\numberline {6.1}利用したデータセット}{28}
+\contentsline {subsection}{\numberline {6.1.1}MNIST}{28}
+\contentsline {subsection}{\numberline {6.1.2}CIFAR10}{29}
+\contentsline {section}{\numberline {6.2}使用したライブラリ}{31}
+\contentsline {section}{\numberline {6.3}使用したハードウェア}{31}
+\contentsline {section}{\numberline {6.4}ベンチマーク実験の詳細}{32}
+\contentsline {subsection}{\numberline {6.4.1}Maxout Networkによる、MNISTの分類タスク(2次元データとして扱う)}{32}
+\contentsline {subsection}{\numberline {6.4.2}Maxout Networkによる、MNISTの分類タスク(1次元データとして扱う)}{32}
+\contentsline {subsection}{\numberline {6.4.3}Maxout Networkによる、CIFAR10の分類タスク}{33}
+\contentsline {chapter}{\numberline {第7章}考察と提言}{34}
+\contentsline {section}{\numberline {7.1}5章の実験に関する考察}{34}
+\contentsline {subsection}{\numberline {7.1.1}全体の結果のまとめ}{34}
+\contentsline {subsection}{\numberline {7.1.2}SDAにて良い精度が出なかった理由の考察}{34}
+\contentsline {subsection}{\numberline {7.1.3}今後の発展について}{35}
+\contentsline {section}{\numberline {7.2}6章の実験に関する考察}{35}
+\contentsline {subsection}{\numberline {7.2.1}全体のまとめ}{35}
+\contentsline {subsection}{\numberline {7.2.2}分類誤差が大きくなってしまう原因の考察}{35}
+\contentsline {subsection}{\numberline {7.2.3}CIFAR10の実行時間が非常に長くなってしまう問題について}{36}
+\contentsline {section}{\numberline {7.3}深層学習の利用法に関する提言}{37}
+\contentsline {chapter}{\numberline {第8章}おわりに}{39}
+\contentsline {section}{\numberline {8.1}研究の成果}{39}
+\contentsline {section}{\numberline {8.2}今後の課題}{39}
+\contentsline {chapter}{謝辞}{41}
+\contentsline {chapter}{参考文献}{42}
