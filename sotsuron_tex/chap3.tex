@@ -1,6 +1,22 @@
 % !TEX root = thesis.tex
 \chapter{深層学習のアルゴリズム}
-Deep Learningは、多層ニューラルネットワーク(MLP)のうち、普通隠れ層が2つ以上のものをいう。2006年にHintonらによって、このようなDeepな構造を学習させる方法が発見され、発展への道が開けた\cite{hinton2006a-fast, hinton2006reducing}。従来よりも多くのレイヤーを扱うことで、より複雑な関数を学習できるようになった。Deep Learningは、数々の分類タスクにて、従来手法を大きくしのぐ成果を収め、注目を浴びている。例えば第1章で触れたように、2012年には、GoogleがYoutubeビデオの静止画を使って多層ニューラルネットワークの教師なし学習を行わせ、結果として、猫を認識するユニットや人を認識するユニットを学習させることに成功したと共に、ImageNet Large Scale Visual Recognition Competition(ILSVRC)というデータセット\cite{deng2009imagenet:}の分類にて、state of the artの結果を残した。この章では、Deep Learningで使われているアルゴリズムの詳細について述べる。
+Deep Learningは、多層ニューラルネットワーク(MLP)のうち、普通隠れ層が2つ以上のものをいう。2006年にHintonらによって、このようなDeepな構造を学習させる方法が発見され、発展への道が開けた\cite{hinton2006a-fast, hinton2006reducing}。従来よりも多くのレイヤーを扱うことで、より複雑な関数を学習できるようになった。Deep Learningは、数々の分類タスクにて、従来手法を大きくしのぐ成果を収め、注目を浴びている。\par
+第1章でも触れたが、2012年には、GoogleがYoutubeビデオの静止画を使って多層ニューラルネットワークの教師なし学習を行わせ、結果として、猫を認識するユニットや人を認識するユニットを学習させることに成功した。また、ImageNet Large Scale Visual Recognition Competition(ILSVRC)というデータセット\cite{deng2009imagenet:}の分類にて、state of the artの結果を残した。ImageNet\footnote{\url{http://www.image-net.org/}}とは、WordNet\footnote{\url{http://wordnet.princeton.edu/}}を真似して作られたデータセットである。2009年より、100を超える様々な論文にて、画像認識のベンチマークに利用されてきている\footnote{\url{http://www.image-net.org/about-publication}}。図\ref{c3_imagenet}は、ImageNetの画像の例である。画像はツリー状に分類されており、例えば上を見ると、mammal(哺乳類)→palcental(胎盤)→carnivore(肉食)→canine(イヌ科)→dog(イヌ)→working dog(盲導犬やそり犬など使役される犬)→husky(ハスキー)というように、徐々に分類が細かくなっていくことがわかる。また、一つのカテゴリーには、9枚の画像がひもづけられている。\par
+\begin{figure}[tbp]
+ \begin{center}
+  \includegraphics[width=120mm]{img/c3/imagenet}
+ \end{center}
+ \caption{Imagenetの画像とラベル構造の例}
+ \label{c3_imagenet}
+\end{figure}
+Googleのsupervisionによる、画像分析の結果の例を図\ref{c3_supervision}に載せる(\cite{krizhevsky2012imagenet}より引用)。画像の分類に失敗している場合でも、妥当なラベルをつけていることがわかる。この章では、Deep Learningで使われているアルゴリズムの詳細について述べる。
+\begin{figure}[tbp]
+ \begin{center}
+  \includegraphics[width=80mm]{img/c3/supervision}
+ \end{center}
+ \caption{Supervisionによる画像分類の結果の例}
+ \label{c3_supervision}
+\end{figure}
 \section{Deep Belief Network}
 最初にMLPの学習のブレイクスルーとなったのは、2006年のHintonらによるDeep Belief Nets(DBN)\cite{hinton2006a-fast, hinton2006reducing}である。このモデルについて解説する。
 \subsection{unsupervised pretrainingとfinetuning}
@@ -18,9 +34,35 @@ RBMの学習は、自由エネルギーと呼ばれる従属変数を最小に�
 \begin{equation}
 F(v) = -b' v-\sum_{i}log(1+e^{(c_i+W_{i}v)})
 \end{equation}
-となる。この自由エネルギーを、SGDなどのアルゴリズムを用いて最小化することで、目標となる生成モデルを得ることができる。なお、自由エネルギーの導入と最小化というアプローチは、Energy-Based Modelと呼ばれるアルゴリズム群に共通して用いられる概念であり、自由エネルギーにはさらに一般的な定義が存在するが、割愛する。
+となる。この自由エネルギーを、SGDなどのアルゴリズムを用いて最小化することで、目標となる生成モデルを得ることができる。なお、自由エネルギーの導入と最小化というアプローチは、Energy-Based Modelと呼ばれるアルゴリズム群に共通して用いられる概念であり、自由エネルギーにもさらに様々なモデルで使える一般的な定義が存在するが、割愛する。
 \subsection{DBNの成果}
 この研究では、評価実験としてMNISTの手書き数字認識データセットを用いている。彼らは各レイヤーのユニット数が"784-500-500-2000-10"という構造のDBNによって、学習を行った。そして、Permutation invariantと呼ばれるタスクにて、当時のstate fo the artを塗り替えたことにより、注目された。ここで、Permutation invariantとは、データを単なる1次元の値の集まりと見なし、2次元の画像という事前情報の利用を禁止した状態で、分類実験を行うことである。具体的には、画像的変形による水増しや、2次元的畳み込み(Convolutional Layerの節にて詳述)などが当てはまる。Permutation invariantの制約下で良い成果を出したDBNは、画像の性質を利用したConvolutional Netに比べたとき、画像以外の1次元のデータに対しても適用しやすいアルゴリズムだと考えられる。
+
+\section{Stacked Denoising Autoencoder}
+Deep Belief Networkと共に、1次元のデータに対して広く用いることができるモデルが、Stacked Denoising Autoencoderである。これは2007年に提唱されたStacked Autoencoder\cite{bengio2007greedy}というモデルを基に、2008年に発表された\cite{VincentPLarochelleH2008}。基本的なアイデアは、Deep Belief NetsにおけるRBMを、Denoising Autoencoderというモデルに変更することである。
+\subsection{Autoencoder}
+Denoising Autoencoderは、Autoencoderの特殊なバージョンなので、まずはAutoencoderについて説明する。Autoencoderは、ニューラルネットワークの一種であり、入力されたデータを再現するようなモデルを学習する。\cite{bourlard1988auto, hinton1994autoencoders, schwenk1995transformation}\par
+Autoencoderの構造を、\ref{c3_autoencoder}に示す。Autoencoderは、この図でいうInput, Representation, Outputの3つのレイヤーから構成されている。OutputとInputの値が一致するように、重み$W$と$W'$を学習させていく。この一致に成功すれば、RepresentationはInputを復元(decode)するための情報を含んでいる、つまりRepresentationはInputの別表現である、という論理が成り立つ。Inputに与えられたデータを、別の素性を用いたRepresentationに符号化(encode)していることから、自分自身の符号化方法を覚えるという意味で、Autoencoderという名前がつけられている。\par
+Autoencoderを用いることで、Inputを別の素性に変換することができる。しかし一方で、必ずしも得られた素性が抽象度の高いものになっているとは限らない。例えば、最も自明なAutoencoderは、EncoderとDecoderの双方に恒等写像を用いることである。このとき、InputとRepresentationとOutputの値は一致し、確かにReconstruction Errorは0になっている。しかし、InputとRepresentationの抽象度は同じであり、素性学習としての有用性は全くない。実用上は、SGDを用い、入力レイヤーよりも表現レイヤーのユニット数を多くとり、非線形な関数をEncoderやDecoderに使うことで、抽象度が高くスパースな素性が獲得されることがわかっている\cite{bengio2007greedy}\cite{lee2007sparse}。しかし、理論的な理由は解明されていない。この素性学習の不確実性の問題を緩和するのが、次に述べるDenoising Autoencoderである。
+\begin{figure}[tbp]
+ \begin{center}
+  \includegraphics[width=80mm]{img/c3/autoencoder}
+ \end{center}
+ \caption{Autoencoderの構造図}
+ \label{c3_autoencoder}
+\end{figure}
+
+\subsection{Denoising Autoencoder}
+Denoising Autoencoderは、Autoencoderを拡張したものである。Input層に渡す入力データの一部をランダムに隠し(corrupted input)、元の隠されていない入力データを復元するように学習させる。データを隠す割合をcorruption rateといい、例えばcorruption rate30\%の場合、100次元の画像データだとしたら、そのうち30次元分をランダムに選んで、数値を0にしてしまうことになる。図\ref{c3_da_pic}は、Denoising Autoencoderが働く様子を、画像の場合について表している。また、図\ref{c3_da}は、元の入力データ群から外れた入力データを作り、これを復元している様子を模式的に表している(\footnote{\url{http://www.iro.umontreal.ca/~bengioy/talks/icml2012-YB-tutorial.pdf}}より引用)。Denoising Autoencoderの学習過程には、Restricted Boltzman MachineのようなEnergy-Based Modelとの類似性があることがわかっている\cite{vincent2011a-connection}。
+\begin{figure}[tbp]
+ \begin{center}
+  \includegraphics[width=80mm]{img/c3/da}
+ \end{center}
+ \caption{Denoising Autoencoder}
+ \label{c3_da}
+\end{figure}
+
+\subsection{Stacked Denoising Autoencoder}
 
 %Deep Learningの登場 Hinton, Bengio, LeCun
 %画像認識タスクでの成績、音声認識タスクでの成果、猫認識

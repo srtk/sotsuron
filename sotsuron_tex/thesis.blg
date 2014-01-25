@@ -13,52 +13,53 @@ A level-1 auxiliary file: chap8.aux
 A level-1 auxiliary file: acknowledgment.aux
 The style file: jplain.bst
 Database file #1: research.bib
-Warning--I didn't find a database entry for "liao2007learning"
+Warning--empty booktitle in bengio2007greedy
 Warning--empty journal in dahl2008cs81:
 Warning--empty school in krizhevsky2009learning
 Warning--empty booktitle in le2012building
 Warning--empty journal in smolensky1986information
+Warning--empty booktitle in VincentPLarochelleH2008
 Warning--can't use both volume and number fields in wan2013regularization
-You've used 44 entries,
+You've used 53 entries,
             2620 wiz_defined-function locations,
-            869 strings with 12974 characters,
-and the built_in function-call counts, 21433 in all, are:
-= -- 1890
-> -- 840
-< -- 65
-+ -- 349
-- -- 300
-* -- 1282
-:= -- 2888
-add.period$ -- 137
-call.type$ -- 44
-change.case$ -- 280
+            915 strings with 14395 characters,
+and the built_in function-call counts, 25969 in all, are:
+= -- 2313
+> -- 983
+< -- 79
++ -- 409
+- -- 350
+* -- 1532
+:= -- 3474
+add.period$ -- 165
+call.type$ -- 53
+change.case$ -- 331
 chr.to.int$ -- 0
-cite$ -- 49
-duplicate$ -- 1114
-empty$ -- 1683
-format.name$ -- 451
-if$ -- 4947
+cite$ -- 60
+duplicate$ -- 1359
+empty$ -- 2061
+format.name$ -- 526
+if$ -- 6013
 int.to.chr$ -- 0
-int.to.str$ -- 44
-missing$ -- 45
-newline$ -- 223
-num.names$ -- 90
-pop$ -- 430
+int.to.str$ -- 53
+missing$ -- 55
+newline$ -- 268
+num.names$ -- 108
+pop$ -- 522
 preamble$ -- 1
-purify$ -- 237
+purify$ -- 280
 quote$ -- 0
-skip$ -- 1072
+skip$ -- 1311
 stack$ -- 0
-substring$ -- 1122
-swap$ -- 366
-text.length$ -- 65
+substring$ -- 1424
+swap$ -- 454
+text.length$ -- 79
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 172
-warning$ -- 5
-while$ -- 164
-width$ -- 46
-write$ -- 482
-is.kanji.str$ -- 550
-(There were 6 warnings)
+type$ -- 206
+warning$ -- 7
+while$ -- 206
+width$ -- 55
+write$ -- 580
+is.kanji.str$ -- 652
+(There were 7 warnings)

@@ -13,6 +13,22 @@ S.~Belongie, J.~Malik, and J.~Puzicha.
 \newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, Vol.~24, No.~4, pp.
   509--522, April 2002.
 
+\bibitem{bengio2007greedy}
+Yoshua Bengio, Pascal Lamblin, Dan Popovici, and Hugo Larochelle.
+\newblock Greedy layer-wise training of deep networks.
+\newblock pp. 153--160, 2007.
+
+\bibitem{bishop2006pattern}
+Christopher~M Bishop and Nasser~M Nasrabadi.
+\newblock {\em Pattern recognition and machine learning}, Vol.~1.
+\newblock springer New York, 2006.
+
+\bibitem{bourlard1988auto}
+Herv{\'e} Bourlard and Yves Kamp.
+\newblock Auto-association by multilayer perceptrons and singular value
+  decomposition.
+\newblock {\em Biological cybernetics}, Vol.~59, No. 4-5, pp. 291--294, 1988.
+
 \bibitem{ciresan2010deep}
 Dan~Claudiu Ciresan, Ueli Meier, Luca~Maria Gambardella, and J{\"u}rgen
   Schmidhuber.
@@ -81,6 +97,12 @@ Geoffrey~E Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and
   detectors.
 \newblock {\em arXiv preprint arXiv:1207.0580}, 2012.
 
+\bibitem{hinton1994autoencoders}
+Geoffrey~E Hinton and Richard~S Zemel.
+\newblock Autoencoders, minimum description length, and helmholtz free energy.
+\newblock {\em Advances in neural information processing systems}, pp. 3--3,
+  1994.
+
 \bibitem{jarrett2009what}
 K.~Jarrett, K.~Kavukcuoglu, M.~Ranzato, and Y.~LeCun.
 \newblock What is the best multi-stage architecture for object recognition?
@@ -140,12 +162,24 @@ Y.~LeCun, L.~Bottou, Y.~Bengio, and P.~Haffner.
 \newblock Gradient-based learning applied to document recognition.
 \newblock {\em Proceedings of the IEEE}, Vol.~86, No.~11, pp. 2278--2324, 1998.
 
+\bibitem{lee2007sparse}
+Honglak Lee, Chaitanya Ekanadham, and Andrew Ng.
+\newblock Sparse deep belief net model for visual area v2.
+\newblock In {\em Advances in neural information processing systems}, pp.
+  873--880, 2007.
+
 \bibitem{lee2009convolutional}
 Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew~Y. Ng.
 \newblock Convolutional deep belief networks for scalable unsupervised learning
   of hierarchical representations.
 \newblock In {\em Proceedings of the 26th Annual International Conference on
   Machine Learning}, ICML '09, pp. 609--616, New York, NY, USA, 2009. ACM.
+
+\bibitem{liao2007learning}
+Shengcai Liao, Xiangxin Zhu, Zhen Lei, Lun Zhang, and Stan~Z Li.
+\newblock Learning multi-scale block local binary patterns for face
+  recognition.
+\newblock In {\em Advances in Biometrics}, pp. 828--837. Springer, 2007.
 
 \bibitem{min2009large-margin}
 Martin~Renqiang Min, David~A. Stanley, Zineng Yuan, Anthony~J. Bonner, and
@@ -213,6 +247,13 @@ H.~Andrew Schwartz, Johannes~C. Eichstaedt, Margaret~L. Kern, Lukasz
   open-vocabulary approach.
 \newblock {\em PLoS ONE}, Vol.~8, No.~9, p. e73791, 09 2013.
 
+\bibitem{schwenk1995transformation}
+Holger Schwenk and Maurice Milgram.
+\newblock Transformation invariant autoassociation with application to
+  handwritten character recognition.
+\newblock {\em Advances in neural information processing systems}, Vol.~7, pp.
+  991--998, 1995.
+
 \bibitem{simard2003best}
 Patrice~Y. Simard, Dave Steinkraus, and John~C. Platt.
 \newblock Best practices for convolutional neural networks applied to visual
@@ -237,6 +278,16 @@ Markus Thom and G\"{u}nther Palm.
 \newblock Sparse activity and sparse connectivity in supervised learning.
 \newblock {\em J. Mach. Learn. Res.}, Vol.~14, No.~1, pp. 1091--1143, April
   2013.
+
+\bibitem{vincent2011a-connection}
+Pascal Vincent.
+\newblock A connection between score matching and denoising autoencoders.
+\newblock {\em Neural computation}, Vol.~23, No.~7, pp. 1661--1674, 2011.
+
+\bibitem{VincentPLarochelleH2008}
+Pascal Vincent, Hugo Larochelle, Yoshua Bengio, and Pierre-Antoine Manzagol.
+\newblock Extracting and composing robust features with denoising autoencoders.
+\newblock pp. 1096--1103, 2008.
 
 \bibitem{wan2013regularization}
 Li~Wan, Matthew Zeiler, Sixin Zhang, Yann~L. Cun, and Rob Fergus.

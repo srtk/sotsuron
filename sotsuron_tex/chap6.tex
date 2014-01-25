@@ -105,7 +105,7 @@ Single-Layer Networks \cite{coates2011an-analysis}& AISTATS 2011 & 20.4 \% \\ \h
 
 \subsection{Maxout Networkによる、MNISTの分類タスク(2次元データとして扱う)}
 Maxout Networkを分類器として用い、MNISTの分類タスクを行わせた。モデル構造としては、Convolutional Layerを2層重ねた上に、全てのニューロンが単純に接続されたMaxout Layerを1層付け加え、最後の層にてロジスティック回帰を行って分類結果を出した。
-実験を行った結果、分類誤差は0.51\%となった。これは、元の論文が主張している分類誤差より、僅かに悪い結果となった。
+実験を行った結果、分類誤差は0.51\%となった。これは、元の論文が主張している分類誤差より、僅かに悪い結果となった。結果を、表\ref{c5_maxout_mnist2_result}に示す。
 \begin{table}[tdp]
 \caption{Maxout NetworkによるMNIST(2次元)分類の結果}
 \begin{center}
@@ -114,7 +114,7 @@ Maxout Networkを分類器として用い、MNISTの分類タスクを行わせ�
 Maxout Network & MNIST(2次元) & 0.45\% & 0.51\% & +0.06\% \\ \hline
 \end{tabular}
 \end{center}
-\label{c5_maxout_mnist1_result}
+\label{c5_maxout_mnist2_result}
 \end{table}%
 
 \subsection{Maxout Networkによる、MNISTの分類タスク(1次元データとして扱う)}

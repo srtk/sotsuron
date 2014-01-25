@@ -3,13 +3,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Facebook顔画像の分類結果}}{27}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Facebook顔画像の分類結果}}{30}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces MNISTの分類誤差ランキング}}{30}
-\contentsline {table}{\numberline {6.2}{\ignorespaces CIFAR10分類誤差のランキング}}{31}
-\contentsline {table}{\numberline {6.3}{\ignorespaces ハードウェア性能の比較}}{32}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Maxout NetworkによるMNIST(2次元)分類の結果}}{32}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Maxout NetworkによるMNIST(1次元)分類の結果}}{33}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Maxout NetworkによるMNIST(1次元)分類の実験詳細}}{33}
+\contentsline {table}{\numberline {6.1}{\ignorespaces MNISTの分類誤差ランキング}}{33}
+\contentsline {table}{\numberline {6.2}{\ignorespaces CIFAR10分類誤差のランキング}}{34}
+\contentsline {table}{\numberline {6.3}{\ignorespaces ハードウェア性能の比較}}{35}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Maxout NetworkによるMNIST(2次元)分類の結果}}{35}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Maxout NetworkによるMNIST(1次元)分類の結果}}{36}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Maxout NetworkによるMNIST(1次元)分類の実験詳細}}{36}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
