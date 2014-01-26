@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{adamic2003friends}
+Lada~A Adamic and Eytan Adar.
+\newblock Friends and neighbors on the web.
+\newblock {\em Social networks}, Vol.~25, No.~3, pp. 211--230, 2003.
+
 \bibitem{azzopardi2013trainable}
 G.~Azzopardi and N.~Petkov.
 \newblock Trainable cosfire filters for keypoint detection and pattern
@@ -38,6 +43,19 @@ Herv{\'e} Bourlard and Yves Kamp.
 \newblock Auto-association by multilayer perceptrons and singular value
   decomposition.
 \newblock {\em Biological cybernetics}, Vol.~59, No. 4-5, pp. 291--294, 1988.
+
+\bibitem{brin1998anatomy}
+Sergey Brin and Lawrence Page.
+\newblock The anatomy of a large-scale hypertextual web search engine.
+\newblock {\em Computer networks and ISDN systems}, Vol.~30, No.~1, pp.
+  107--117, 1998.
+
+\bibitem{burges2005learning}
+Chris Burges, Tal Shaked, Erin Renshaw, Ari Lazier, Matt Deeds, Nicole
+  Hamilton, and Greg Hullender.
+\newblock Learning to rank using gradient descent.
+\newblock In {\em Proceedings of the 22nd international conference on Machine
+  learning}, pp. 89--96. ACM, 2005.
 
 \bibitem{burges1998tutorial}
 Christopher~JC Burges.
@@ -127,6 +145,11 @@ Robert Gens and Pedro Domingos.
 \newblock In {\em Advances in Neural Information Processing Systems}, pp.
   3248--3256, 2012.
 
+\bibitem{godbole2007large}
+Namrata Godbole, Manja Srinivasaiah, and Steven Skiena.
+\newblock Large-scale sentiment analysis for news and blogs.
+\newblock {\em ICWSM}, Vol.~7, , 2007.
+
 \bibitem{goldberg1992using}
 David Goldberg, David Nichols, Brian~M. Oki, and Douglas Terry.
 \newblock Using collaborative filtering to weave an information tapestry.
@@ -160,6 +183,11 @@ Geoffrey~E Hinton and Richard~S Zemel.
 \newblock Autoencoders, minimum description length, and helmholtz free energy.
 \newblock {\em Advances in neural information processing systems}, pp. 3--3,
   1994.
+
+\bibitem{jaccard1902lois}
+Paul Jaccard.
+\newblock {\em Lois de distribution florale dans la zone alpine}.
+\newblock Corbaz, 1902.
 
 \bibitem{jarrett2009what}
 K.~Jarrett, K.~Kavukcuoglu, M.~Ranzato, and Y.~LeCun.
@@ -267,6 +295,25 @@ Hideki Nakayama.
 \newblock Efficient discriminative convolution using fisher weight map.
 \newblock BMVC, 2013.
 
+\bibitem{page1999pagerank}
+Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd.
+\newblock The pagerank citation ranking: bringing order to the web.
+\newblock 1999.
+
+\bibitem{pang2004sentimental}
+Bo~Pang and Lillian Lee.
+\newblock A sentimental education: Sentiment analysis using subjectivity
+  summarization based on minimum cuts.
+\newblock In {\em Proceedings of the 42nd annual meeting on Association for
+  Computational Linguistics}, p. 271. Association for Computational
+  Linguistics, 2004.
+
+\bibitem{pang2008opinion}
+Bo~Pang and Lillian Lee.
+\newblock Opinion mining and sentiment analysis.
+\newblock {\em Foundations and trends in information retrieval}, Vol.~2, No.
+  1-2, pp. 1--135, 2008.
+
 \bibitem{pennacchiotti2011a-machine}
 Marco Pennacchiotti and Ana-Maria Popescu.
 \newblock A machine learning approach to twitter user classification.
@@ -349,6 +396,14 @@ Jasper Snoek, Hugo Larochelle, and Ryan~P Adams.
 \newblock Practical bayesian optimization of machine learning algorithms.
 \newblock {\em arXiv preprint arXiv:1206.2944}, 2012.
 
+\bibitem{socher2013recursive}
+Richard Socher, Alex Perelygin, Jean~Y Wu, Jason Chuang, Christopher~D Manning,
+  Andrew~Y Ng, and Christopher Potts.
+\newblock Recursive deep models for semantic compositionality over a sentiment
+  treebank.
+\newblock In {\em Proceedings of the Conference on Empirical Methods in Natural
+  Language Processing (EMNLP)}, 2013.
+
 \bibitem{thom2013sparse}
 Markus Thom and G\"{u}nther Palm.
 \newblock Sparse activity and sparse connectivity in supervised learning.
@@ -378,11 +433,23 @@ Jason Weston, Fr{\'e}d{\'e}ric Ratle, Hossein Mobahi, and Ronan Collobert.
 \newblock In {\em Neural Networks: Tricks of the Trade}, pp. 639--655.
   Springer, 2012.
 
+\bibitem{wilson2005recognizing}
+Theresa Wilson, Janyce Wiebe, and Paul Hoffmann.
+\newblock Recognizing contextual polarity in phrase-level sentiment analysis.
+\newblock In {\em Proceedings of the conference on Human Language Technology
+  and Empirical Methods in Natural Language Processing}, pp. 347--354.
+  Association for Computational Linguistics, 2005.
+
 \bibitem{zeiler2013stochastic}
 Matthew~D Zeiler and Rob Fergus.
 \newblock Stochastic pooling for regularization of deep convolutional neural
   networks.
 \newblock {\em arXiv preprint arXiv:1301.3557}, 2013.
+
+\bibitem{tsujii1999joho}
+徳永健伸.
+\newblock 情報検索と言語処理 (言語と計算).
+\newblock 東京大学出版会, 11 1999.
 
 \bibitem{kawato1998}
 川人光男.

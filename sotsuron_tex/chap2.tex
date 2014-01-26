@@ -1,30 +1,55 @@
 % !TEX root = thesis.tex
 \chapter{関連研究}
 \section{Web工学と機械学習}
-この節では、Web工学における課題をいくつか例示し、それらの課題を解決するために、機械学習がどのように用いられてきたかを概観する。
+この節では、Web工学における課題をいくつか例示し、それらの課題を解決するために、機械学習がどのように用いられてきたかを概観する。具体的には、Recommendation System, Link Prediction, Sentiment Analysis, Learning to Rankの4つを取り上げる。
+
 \subsection{Recommendation System}
 主にWebショッピングを含むサイトや、Web広告の配信において求められる技術である。Webサイトを閲覧しているユーザに対し、そのユーザが購入したいと商品を予測して、Web上の広告などの形で推薦する。適切な広告を表示することにより、ユーザの購買行動を促進することが出来る。
 Recommendation Systemの研究は、1992年のTapestryシステムに始まる\cite{goldberg1992using}。また、少なくとも90年代の終わりには、Amazon.com, CDNOW, eBay, Levis, GroupLensなど、様々なサイトにてRecommendation Systemは利用されていた\cite{resnick1997recommender}。
 Recommendation Systemを実現するための、機械学習のテクニックとしては、大きく2種類が挙げられる\cite{koren2009matrix}。1つは、Content Filteringと呼ばれ、ユーザや商品の属性や購買傾向を学習することことで、推薦を行う。もう1つはCollaboraitive Filteringと呼ばれており、ユーザや商品の属性を扱う代わりに、購入や評価といった、ユーザの過去の行動を基にして、推薦を行う。
+%recsysなど会議
+
 \subsection{Link Prediction}
-Link Predictionとは、グラフが与えられたとき、現在のグラフ構造(ノード間接続の様子)から、未来の構造を予測する問題である。最初に提唱された論文\cite{liben2007link}では、ソーシャルネットワークの状態が与えられたとき、ユーザ間で交わされる将来の行動を予測する問題として述べられている。この論文では、ノード(ユーザ)間の近さを定義する方法や、全てのエッジ(接続)を通しで見て判断する方法、クラスタリングによる方法などが用いられている。論文で用いられているノード間の近さの定義を挙げる(\cite{liben2007link}より引用)。ノード$x$に対し、$x$とつながっているノードの集合を$Γ(x)$とする。\par
-\begin{eqnarray}
-graph distance & 
-\end{eqnarray}
-LInk Predictionには様々な応用が考えられる。ショッピングサイトのデータ分析に役立ったり\cite{clauset2004finding}、。Web工学の問題以外にも応用が可能であり、タンパク質の反応予測(Protein to Protein Interaction, PPI)に用いられたり\cite{bader2003gaining}、テロリストのネットワークや草原の食物連鎖の分析にも役に立っている\cite{clauset2008hierarchical}。
-[加筆]
+Link Predictionとは、図\ref{c2_link_prediction}のように、現在の時間$t$のグラフ構造(ノード間接続の様子)が与えられたとき、未来の時間$t+1$における、同じグラフの構造変化を予測する問題である。\par
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=80mm]{img/c2/link_prediction}
+ \caption{Link Predictionの問題設定}
+ \label{c2_link_prediction}
+\end{figure}
+最初に提唱された論文\cite{liben2007link}では、ソーシャルネットワークの状態が与えられたとき、ユーザ間で交わされる将来の行動を予測する問題として述べられている。この論文では、ノード(ユーザ)間の近さを定義する方法や、全てのエッジ(接続)を通しで見て判断する方法、クラスタリングによる方法などが用いられている。論文で用いられているノード間の近さの定義を図\ref{c2_lp_method}に挙げる(\cite{liben2007link}より引用)。ノード$x$に対し、$x$とつながっているノードの集合を$\Gamma(x)$とする。\par
+\begin{table}[tbp]
+ \begin{center}
+  \begin{tabular}{|l|l|}\hline
+  graph distance & (negated) length of shortest path between x and y \\ \hline
+  common neighbors & $|\Gamma(x)∩\Gamma(y)|$ \\ \hline
+  Jaccard's coefficient \cite{jaccard1902lois}& $\left| \frac{\Gamma(x)∩\Gamma(y)}{\Gamma(x)∪\Gamma(y)} \right|$ \\ \hline
+  Adamic / Adar \cite{adamic2003friends}& $\sum_{z\epsilon \Gamma(x)∩\Gamma(y)} \frac{1}{log|\Gamma(x)|}$ \\ \hline
+  preferential attachment & $|\Gamma(x)|・|\Gamma(y)|$ \\ \hline
+  \end{tabular}
+ \end{center}
+ \caption{Link Predictionにて、ノード同士の近さを定義する方法}
+ \label{c2_lp_method}
+\end{table}
+
+LInk Predictionには様々な応用があり、例えばショッピングサイトのデータ分析に役立てることが出来る\cite{clauset2004finding}。Web工学の問題以外にも応用が可能であり、タンパク質の反応予測(Protein to Protein Interaction, PPI)に用いられたり\cite{bader2003gaining}、テロリストのネットワークや草原の食物連鎖の分析にも役に立っている\cite{clauset2008hierarchical}。
+%2011のやつ、flickr, 全解析
+%link predictionの絵
+
 \subsection{Sentiment Analysis}
-ユーザの感想データを手に入れられるようになってきた\\
-事実だけでなく、他の人がどのような感情を抱いているのかを分析したい\\
-opinion miningという語も広義には似た内容を指している\\
-2001-2003に研究が出始めた\\
-common neighbors\\
-Jaccard係数 SVDによる次元削減\\
-Stanfordによるデモに言及
+この場合のSentimentとは、ユーザが持っている感情のことである。Web上の情報収集の自由度が高まるにつれて、ユーザが書いた文章を取得できる機会が増えてきている。その中には、新製品やサービスへの感想やレビューも含まれている。ユーザの属性や行動といった明確な事実だけでなく、他の人がどのような感情を抱いているのかを分析したいという要望が高まり、2000年代に入ってから、人間が書いた文章から人間の感情を読み取るための研究が盛んになった\cite{pang2008opinion}。なお、opinion miningという語も、多少の差異はあれど、広義には似た内容を指していることが多い。\par
+\cite{pang2004sentimental}では、最小カット法を用いることで良い成果が出たとされている。また、\cite{wilson2005recognizing}では、文脈を考慮した単語の感情(positive, negative)を分析して、性能を挙げることに成功している。Google社も、検索エンジンの性能向上のため、Sentiment Analysisの研究を行っている\cite{godbole2007large}。\par
+Deep Learningとの関連で重要な研究として、Stanford大のチームによる文章解析データセットの制作及び、Webアプリの開発がある\cite{socher2013recursive}。この研究にて彼らは、感情分析のための大規模なデータセットがそもそも不足しているという問題を解決するため、The Stanford Sentiment TreebankというSentiment Analysisのためのデータセットを制作した。さらに、Recursive Neural Tensor Network (RNTN)というDeep Learningのモデルを構築した。このモデルにより、与えられた文章を構文木に分解した後、各単語が5段階の感情のうちどれにあたるかを分析している。感情は、"very negative"、"negative"、"neutral"、"positive"、"very positive"の5種類に分類される。このモデルは、ソースコードが公開されている他、Webページ上にて実際に分析を試してみることができる\footnote{\url{http://nlp.stanford.edu/sentiment/index.html}}。図\ref{c2_rntn_ex}は、論文より引用したもので、文章を実際にこのwebアプリで分析した様子を表している。赤が強いとnegativeな言葉、青が強いとpositiveな言葉、というように色分けされている。
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=80mm]{img/c2/rntn_ex}
+ \caption{Stanford大が製作した、Deep LearningによるSentiment Analysisの例}
+ \label{c2_rntn_ex}
+\end{figure}
 
 \subsection{Learning to Rank}
-多様なランキング素因を組み合わせて、ランキング関数を作成\\
-→どの組み合わせが有効か、機械学習する
+これは、情報検索システムを作る際に用いられる技術である。ユーザは、自分が求めた情報だけを、出来るだけ取りこぼし少なく取得したい(precisionとrecall、\cite{tsujii1999joho})。従来はtf-idfやPageRank\cite{brin1998anatomy}\cite{page1999pagerank}などの単一の指標によって、検索結果を表示させていたが、その後多様なランキング素因を組み合わせるという方法が出現した。どの素因をどのような割合で組み合わせるべきかが問題であり、これに対し機械学習によってランキング関数を作成するアプローチが、Learning to Rankである。\par
+RankNet\cite{burges2005learning}では、Deepな構造こそ使っていないが、ニューラルネットワークによってランキング関数の性能をアップさせており、Deep Learningの応用による性能向上が期待できる。
 
 \section{機械学習で利用される、代表的な分類器}
 機械学習のプロセスは、「入力データを、数学的モデルで使える素性に変換する」「素性を数学的モデルに入力して、出力値を得る」「出力を見ながら、モデルを修正する」という行程に大きく分けられる。データの分類問題を機械学習で解く場合、モデルによる出力値が分類結果に対応するよう、モデルを学習させることになる。この場合、モデルのことを分類器とも呼ぶ。\par
@@ -33,6 +58,7 @@ Deep Learning、あるいはDeep Neural Network(多層ニューラルネット�
 %\subsection{線形識別モデル}
 
 %\subsection{ロジスティック回帰}
+%random forest, ada boost
 
 \subsection{Support Vector Machine}
 Support Vector Macine(SVM)は、図\ref{c2_svm}のように、データを2つのクラスに分類する能力を持ったモデルである\cite{cortes1995support-vector}。\par
