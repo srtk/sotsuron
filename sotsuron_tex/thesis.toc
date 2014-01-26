@@ -14,23 +14,23 @@
 \contentsline {subsection}{\numberline {2.2.2}ニューラルネットワーク}{9}
 \contentsline {subsubsection}{ニューラルネットワークの伝達方式}{9}
 \contentsline {subsubsection}{パーセプトロン}{9}
-\contentsline {chapter}{\numberline {第3章}深層学習のアルゴリズム}{11}
-\contentsline {section}{\numberline {3.1}Deep Belief Network}{12}
-\contentsline {subsection}{\numberline {3.1.1}unsupervised pretrainingとfinetuning}{12}
-\contentsline {subsection}{\numberline {3.1.2}Restricted Boltzman Machine}{13}
-\contentsline {subsection}{\numberline {3.1.3}DBNの成果}{14}
-\contentsline {section}{\numberline {3.2}Stacked Denoising Autoencoder}{14}
-\contentsline {subsection}{\numberline {3.2.1}Autoencoder}{15}
-\contentsline {subsection}{\numberline {3.2.2}Denoising Autoencoder}{16}
-\contentsline {subsection}{\numberline {3.2.3}Stacked Denoising Autoencoder}{16}
-\contentsline {section}{\numberline {3.3}深層学習モデルのバリエーションと詳細}{16}
-\contentsline {subsubsection}{Multi Layer Perceptron (MLP)}{16}
-\contentsline {subsubsection}{}{16}
-\contentsline {subsection}{\numberline {3.3.1}Dropoutとrobustnessの確保}{17}
-\contentsline {subsection}{\numberline {3.3.2}活性化関数}{17}
+\contentsline {chapter}{\numberline {第3章}深層学習の成果とアルゴリズム}{11}
+\contentsline {section}{\numberline {3.1}Deep Learningの成果}{11}
+\contentsline {section}{\numberline {3.2}Deep Learningのアルゴリズム}{12}
+\contentsline {subsection}{\numberline {3.2.1}Deep Belief Network}{12}
+\contentsline {subsubsection}{unsupervised pretrainingとfinetuning}{12}
+\contentsline {subsubsection}{Restricted Boltzman Machine}{13}
+\contentsline {subsubsection}{DBNの性能}{14}
+\contentsline {subsection}{\numberline {3.2.2}Stacked Denoising Autoencoder}{14}
+\contentsline {subsubsection}{Autoencoder}{15}
+\contentsline {subsubsection}{Denoising Autoencoder}{15}
+\contentsline {subsubsection}{Stacked Denoising Autoencoder}{16}
+\contentsline {subsection}{\numberline {3.2.3}Convolutional Network}{16}
+\contentsline {subsection}{\numberline {3.2.4}Dropoutとrobustnessの確保}{16}
+\contentsline {subsection}{\numberline {3.2.5}活性化関数}{17}
 \contentsline {subsubsection}{sigmoidとhyperbolic tangent}{17}
-\contentsline {subsubsection}{rectifier}{18}
-\contentsline {subsubsection}{Maxout Unit}{18}
+\contentsline {subsubsection}{rectifier}{17}
+\contentsline {subsubsection}{Maxout Unit}{17}
 \contentsline {chapter}{\numberline {第4章}深層学習の実装における技術}{19}
 \contentsline {section}{\numberline {4.1}評価基準}{19}
 \contentsline {section}{\numberline {4.2}既存ソースコード使用の利点}{19}
