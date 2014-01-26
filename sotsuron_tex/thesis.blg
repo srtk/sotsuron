@@ -15,51 +15,53 @@ The style file: jplain.bst
 Database file #1: research.bib
 Warning--empty booktitle in bengio2007greedy
 Warning--empty journal in dahl2008cs81:
+Warning--there's a number but no volume in fukushima1983neocognitron
 Warning--empty school in krizhevsky2009learning
 Warning--empty booktitle in le2012building
+Warning--empty booktitle in nakayama2013efficient
 Warning--empty journal in smolensky1986information
 Warning--empty booktitle in VincentPLarochelleH2008
 Warning--can't use both volume and number fields in wan2013regularization
-You've used 53 entries,
+You've used 57 entries,
             2620 wiz_defined-function locations,
-            915 strings with 14395 characters,
-and the built_in function-call counts, 25969 in all, are:
-= -- 2313
-> -- 983
-< -- 79
-+ -- 409
-- -- 350
-* -- 1532
-:= -- 3474
-add.period$ -- 165
-call.type$ -- 53
-change.case$ -- 331
+            937 strings with 15077 characters,
+and the built_in function-call counts, 27841 in all, are:
+= -- 2482
+> -- 1041
+< -- 87
++ -- 433
+- -- 370
+* -- 1644
+:= -- 3718
+add.period$ -- 177
+call.type$ -- 57
+change.case$ -- 353
 chr.to.int$ -- 0
-cite$ -- 60
-duplicate$ -- 1359
-empty$ -- 2061
-format.name$ -- 526
-if$ -- 6013
+cite$ -- 66
+duplicate$ -- 1461
+empty$ -- 2217
+format.name$ -- 556
+if$ -- 6447
 int.to.chr$ -- 0
-int.to.str$ -- 53
-missing$ -- 55
-newline$ -- 268
-num.names$ -- 108
-pop$ -- 522
+int.to.str$ -- 57
+missing$ -- 59
+newline$ -- 288
+num.names$ -- 116
+pop$ -- 556
 preamble$ -- 1
-purify$ -- 280
+purify$ -- 298
 quote$ -- 0
-skip$ -- 1311
+skip$ -- 1408
 stack$ -- 0
-substring$ -- 1424
-swap$ -- 454
-text.length$ -- 79
+substring$ -- 1540
+swap$ -- 490
+text.length$ -- 87
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 206
-warning$ -- 7
-while$ -- 206
-width$ -- 55
-write$ -- 580
-is.kanji.str$ -- 652
-(There were 7 warnings)
+type$ -- 222
+warning$ -- 9
+while$ -- 223
+width$ -- 59
+write$ -- 623
+is.kanji.str$ -- 696
+(There were 9 warnings)

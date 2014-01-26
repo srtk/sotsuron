@@ -63,6 +63,19 @@ Jia Deng, Wei Dong, R.~Socher, Li-Jia Li, Kai Li, and Li~Fei-Fei.
 \newblock In {\em Computer Vision and Pattern Recognition, 2009. CVPR 2009.
   IEEE Conference on}, pp. 248--255. CVPR, 2009.
 
+\bibitem{fukushima1980neocognitron}
+Kunihiko Fukushima.
+\newblock Neocognitron: A self-organizing neural network model for a mechanism
+  of pattern recognition unaffected by shift in position.
+\newblock {\em Biological cybernetics}, Vol.~36, No.~4, pp. 193--202, 1980.
+
+\bibitem{fukushima1983neocognitron}
+Kunihiko Fukushima, Sei Miyake, and Takayuki Ito.
+\newblock Neocognitron: A neural network model for a mechanism of visual
+  pattern recognition.
+\newblock {\em Systems, Man and Cybernetics, IEEE Transactions on}, No.~5, pp.
+  826--834, 1983.
+
 \bibitem{gens2012discriminative}
 Robert Gens and Pedro Domingos.
 \newblock Discriminative learning of sum-product networks.
@@ -198,6 +211,11 @@ Alan Mislove, Sune Lehmann, Yong-Yeol Ahn, Jukka-Pekka Onnela, and J~Niels
 \newblock Understanding the demographics of twitter users.
 \newblock In {\em ICWSM}, 2011.
 
+\bibitem{nakayama2013efficient}
+Hideki Nakayama.
+\newblock Efficient discriminative convolution using fisher weight map.
+\newblock BMVC, 2013.
+
 \bibitem{pennacchiotti2011a-machine}
 Marco Pennacchiotti and Ana-Maria Popescu.
 \newblock A machine learning approach to twitter user classification.
@@ -253,6 +271,13 @@ Holger Schwenk and Maurice Milgram.
   handwritten character recognition.
 \newblock {\em Advances in neural information processing systems}, Vol.~7, pp.
   991--998, 1995.
+
+\bibitem{serre2007robust}
+Thomas Serre, Lior Wolf, Stanley Bileschi, Maximilian Riesenhuber, and Tomaso
+  Poggio.
+\newblock Robust object recognition with cortex-like mechanisms.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, Vol.~29, No.~3, pp. 411--426, 2007.
 
 \bibitem{simard2003best}
 Patrice~Y. Simard, Dave Steinkraus, and John~C. Platt.

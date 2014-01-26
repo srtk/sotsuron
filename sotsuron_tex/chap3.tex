@@ -22,7 +22,13 @@ Googleのsupervisionによる、画像分析の結果の例を図\ref{c3_supervi
 \subsection{Deep Belief Network}
 最初にMLPの学習のブレイクスルーとなったのは、2006年のHintonらによるDeep Belief Nets(DBN)\cite{hinton2006a-fast, hinton2006reducing}である。このモデルについて解説する。
 \subsubsection{unsupervised pretrainingとfinetuning}
-この研究では、MLPの重みをランダムに初期化した後、すぐバックプロパゲーション学習にかけるのではなく、各レイヤーの重みをあらかじめ教師無し(unsupervised)学習で調整して、隠れ層が効率の良い素性を学習できるよう仕込んでおくというアイデアが使われた。この事前学習のことを、pretrainingと呼び、バックプロパゲーションにて学習する段階の方は、finetuningと呼ぶ。pretrainingの段階では、入力側から1レイヤーずつ学習を行い、学習済のレイヤーは固定して動かさない(Greedy Layer-wise pretraining)。finetuningの段階では、全てのレイヤーをバックプロパゲーションにて同時に変化させていく。\par
+この研究では、MLPの重みをランダムに初期化した後、すぐバックプロパゲーション学習にかけるのではなく、各レイヤーの重みをあらかじめ教師無し(unsupervised)学習で調整して、隠れ層が効率の良い素性を学習できるよう仕込んでおくというアイデアが使われた。この事前学習のことを、pretrainingと呼び、バックプロパゲーションにて学習する段階の方は、finetuningと呼ぶ。pretrainingの段階では、入力側から1レイヤーずつ学習を行い、学習済のレイヤーは固定して動かさない(Greedy Layer-wise pretraining)。finetuningの段階では、全てのレイヤーをバックプロパゲーションにて同時に変化させていく。DBNの構造を、図\ref{c3_dbn}に示す。\par
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=120mm]{img/c3/dbn}
+ \caption{Deep Belief Networkの構造と、学習過程}
+ \label{c3_dbn}
+\end{figure}
 unsupervised pretrainingをどのような基準で行うかが問題だが、この研究では、Restricted Boltzman Machine(以下RBM)というモデルを用いている。RBMとは、ニューラルネットワークの一種で、可視変数層と隠れ変数層の2つのレイヤーから成り立っている。DBNにおいては、可視変数=入力データと考えておけばよい。RBMモデルの学習を進めることで、入力データ→隠れ変数への推論モデルを得ることができる。これがDeep Learningの最大の特徴の1つである、「抽象度の高い素性への変換方法自体を学習する」ことに対応している。DBNでは、RBMを1レイヤーずつ学習させながら、RBM同士を「前のレイヤーの隠れ層 = 次のレイヤーの入力層」となるようにつなげていく。これにより「入力層→抽象度の低いレイヤー→...→抽象度の高いレイヤー→出力」という、複数の隠れ層をもつDeepな構造を作り、上手くpretrainingさせることに成功している。RBMを積み重ねた最も上のレイヤーに、普通の線形レイヤーを1つ置いて、「最も抽象度の高い素性→出力値」の推測を行わせることが多い。なお、finetuningにおけるバックプロパゲーションでは、RBMにあった「隠れ層→入力層」の方のつながりは、最終レイヤーにおける誤差に影響しない。よって、以前からあるfeed-forwardなMLPと同様に学習させることができる。
 \subsubsection{Restricted Boltzman Machine}
 DBNのpretrainingに用いられるRestricted Boltzman Machine\cite{smolensky1986information}とは、ニューラルネットワークを用いた生成モデルの一種である。まず生成モデルについて説明する。\par
@@ -31,7 +37,13 @@ DBNのpretrainingに用いられるRestricted Boltzman Machine\cite{smolensky198
 p(C_k|x) = \frac{p(x | C_k)p(C_k)}{p(x)} = \frac{p(x | C_k)p(C_k)}{\sum_{k}p(x | C_k)p(C_k)}
 \end{equation}
 によって求められる。これは、入力とクラスの同時確率$p(C_k, x)$を求めることと等価である。生成モデルの利点は、クラス分類のモデルだけでなく、入力データの性質に関する情報をも同時に得られる点にある。しかし、一般に識別モデルよりも複雑で困難な問題を解く必要が生じるため、常に生成モデルが用いられるわけではない。\par
-さて、前述したように、RBMは可視層と隠れ層の2レイヤーで構成されるニューラルネットワークである。入力層の各ユニットの値を$v_j$, 隠れ層の各ユニットの値を$h_i$とおく。これらをまとめたベクトルをそれぞれ$\bm{v}=\{v_1, v_2, ...\}, \bm{h}=\{h_1, h_2, ...\}$とおく。これは、例えば$\bm{v}$が画像や音声などの入力データをベクトル化したもので、$\bm{h}$がこれらの変数の関係を説明する変数だと考えれば良い。ただし、$\bm{h}$が即$\bm{v}$のクラス分類に対応するとは限らないことに注意する。RBMの学習を進めると、$p(\bm{v}|\bm{h})$と$p(\bm{h}|\bm{v})$との、2方向の条件付き確率のモデルが同時に得られる。\par
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=100mm]{img/c3/rbm}
+ \caption{Restriceted Boltzman Machineのネットワーク構造}
+ \label{c3_rbm}
+\end{figure}
+さて、前述したように、RBMは可視層と隠れ層の2レイヤーで構成されるニューラルネットワークである。RBMの構造を、図\ref{c3_rbm}に示す。入力層の各ユニットの値を$v_j$, 隠れ層の各ユニットの値を$h_i$とおく。これらをまとめたベクトルをそれぞれ$\bm{v}=\{v_1, v_2, ...\}, \bm{h}=\{h_1, h_2, ...\}$とおく。これは、例えば$\bm{v}$が画像や音声などの入力データをベクトル化したもので、$\bm{h}$がこれらの変数の関係を説明する変数だと考えれば良い。ただし、$\bm{h}$が即$\bm{v}$のクラス分類に対応するとは限らないことに注意する。RBMの学習を進めると、$p(\bm{v}|\bm{h})$と$p(\bm{h}|\bm{v})$との、2方向の条件付き確率のモデルが同時に得られる。\par
 RBMの学習は、自由エネルギーと呼ばれる従属変数を最小にするように行われる\footnote{自由エネルギーという呼び名は、物理学から採られている。}。ここでは、最も簡単かつ重要な、$v_j, h_i\epsilon\{0,1\}$のケースについて述べる。Wをvとhの間の重み、bとcを、それぞれvとhに対応するバイアス項とする。このとき、RBMにおける自由エネルギー$F(v)$は、
 \begin{equation}
 F(v) = -b' v-\sum_{i}log(1+e^{(c_i+W_{i}v)})
@@ -55,25 +67,73 @@ Autoencoderを用いることで、Inputを別の素性に変換することが�
 \end{figure}
 
 \subsubsection{Denoising Autoencoder}
-Denoising Autoencoderは、Autoencoderを拡張したものである。Input層に渡す入力データの一部をランダムに隠し(corrupted input)、元の隠されていない入力データを復元するように学習させる。データを隠す割合をcorruption rateといい、例えばcorruption rate30\%の場合、100次元の画像データだとしたら、そのうち30次元分をランダムに選んで、数値を0にしてしまうことになる。図\ref{c3_da_pic}は、Denoising Autoencoderが働く様子を、画像の場合について表している。また、図\ref{c3_da}は、元の入力データ群から外れた入力データを作り、これを復元している様子を模式的に表している(\footnote{\url{http://www.iro.umontreal.ca/~bengioy/talks/icml2012-YB-tutorial.pdf}}より引用)。データの一部を隠すことによって、よりrobustな素性の作り方のモデルを得ることが出来ると考えられている。\par
+Denoising Autoencoderは、Autoencoderを拡張したものである。Input層に渡す入力データの一部をランダムに隠し(corrupted input)、元の隠されていない入力データを復元するように学習させる。データを隠す割合をcorruption rateといい、例えばcorruption rate30\%の場合、100次元の画像データだとしたら、そのうち30次元分をランダムに選んで、数値を0にしてしまうことになる。図\ref{c3_da_pic}は、Denoising Autoencoderが働く様子を、画像の入力レイヤーの場合について表している。\par
+また、図\ref{c3_da}は、元の入力データ群から外れた入力データを作り、これを復元している様子を模式的に表している(\footnote{\url{http://www.iro.umontreal.ca/~bengioy/talks/icml2012-YB-tutorial.pdf}}より引用)。データの一部を隠すことによって、よりrobustな素性の作り方のモデルを得ることが出来ると考えられている。\par
 なお、Denoising Autoencoderの学習過程には、Restricted Boltzman MachineのようなEnergy-Based Modelとの類似性があることがわかっている\cite{vincent2011a-connection}。
+\begin{figure}[tbp]
+ \begin{center}
+  \includegraphics[width=80mm]{img/c3/da_pic}
+ \end{center}
+ \caption{画像に対するDenoising Autoencoder}
+ \label{c3_da_pic}
+\end{figure}
+
 \begin{figure}[tbp]
  \begin{center}
   \includegraphics[width=80mm]{img/c3/da}
  \end{center}
- \caption{Denoising Autoencoder}
+ \caption{Denoising Autoencoderの模式図}
  \label{c3_da}
 \end{figure}
 
 \subsubsection{Stacked Denoising Autoencoder}
-Stacked Denoising Autoencoder(SDA)は、Deep Belief Netsのpretrainingで、RBMの代わりにDenoising Autoencoder(以下DA)を用いたものである。DBN同様、前の層のRepresentationレイヤー = 次の層のInputレイヤーとなるように、DAで学習したレイヤーを積み重ねていく。最終レイヤーには、DAではなくSoftmaxレイヤーなどを置き、最終的な確率を出して、分類を行わせる。
+Stacked Denoising Autoencoder(SDA)は、Deep Belief Netsのpretrainingで、RBMの代わりにDenoising Autoencoder(以下DA)を用いたものである。DBN同様、前の層のRepresentationレイヤー = 次の層のInputレイヤーとなるように、DAで学習したレイヤーを積み重ねていく。最終レイヤーには、DAではなくSoftmaxレイヤーなどを置き、最終的な確率を出して、分類を行わせる。図\ref{c3_sda}は、SDAにて、どのようにpretrainingが繰り返され、DAが積み上げられていくのかを表している。いったんpretrainingが済んだら、そのレイヤーの入力は隠さず、学習された重みをそのまま使って高い抽象度の素性を作る。そして、その新しい素性を入力と捉えて、新たにDenoising Autoencoderの学習を行わせる。これを繰り返してレイヤーを積み上げ、最終的に良い素性を学習しやすいMLPを作ることで、finetuning段階でも学習がスムーズに進み、精度のよい推論ができるようになる。
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=100mm]{img/c3/sda}
+ \caption{Stacked Denoising Autoencoderにおける学習の進行}
+ \label{c3_sda}
+\end{figure}
 
 %Deep Learningの登場 Hinton, Bengio, LeCun
 %画像認識タスクでの成績、音声認識タスクでの成果、猫認識
 %MNIST, CIFAR, SVHNなどにおけるconv.net、Maxout, DropConnectの優位
 
 \subsection{Convolutional Network}
-Convolutional Networkは、DBNやSDAよりも早く、2003年には既に発見されていた。
+Convolutional Network(畳み込みネットワーク)は、画像認識にて使われるニューラルネットワークの一種である。DBNやSDAのようにユニットが1対1で接続されるのではなく、画像上で距離が近いユニットを一まとめに考えるが特徴である。具体的には、フィルターと呼ばれる小さな四角形を、画像の上で動かしていき、フィルターが覆っている部分の性質を抽出して次のレイヤーに渡していく。フィルターは行列で表現されており、フィルター行列の各要素と、画像の各画素を掛け算し、その和を取ることで、次のレイヤーに渡す値が得られる。基本的な構造は、図\ref{c3_convolution}のようになっている。この図では、2回のconvolutionを行ったあと、十分に画像の素性が得られたところで、従来のMLPで見られる隠れレイヤーを1つ介して、出力を得ている。\par
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=80mm]{img/c3/convolution}
+ \caption{Convolutional Netの仕組み}
+ \label{c3_convolution}
+\end{figure}
+Convolutional Netの発祥はDBNやSDAよりも古い。画像上の各部分ごとに性質を抜き出しニューラルネットワークを構成するというアイデアは、人間の視覚野の仕組みを参考にしたもので、1980年のNeocognitronを始めとして\cite{fukushima1980neocognitron}\cite{fukushima1983neocognitron}様々な形で提唱されている\cite{lecun1998gradient-based}\cite{serre2007robust}。2003年に提唱されたConvolutional Netのモデルが、画像認識ベンチマークのMNISTにて、今でも5位の精度を保っており\cite{simard2003best}、2012年のものは2位となっている\cite{ciresan2012multi-column}。Fisherベクトルなど既存の画像認識手法との組み合わせでも、良い性能を発揮できることがわかっている\cite{nakayama2013efficient}。
+\subsubsection{Feature Map}
+実際のConvolutional Networkでは、Feature Mapと呼ばれる方法が使われている。これは、filterが1つだけでなく、複数種類のfilterを、複数枚の画像の上で動かしていく方法である、図\ref{c3_convolution}の構造に、Feature Mapの考え方を適用すると、\ref{c3_feature_map}のようになる。(図\ref{c3_convolution}では、簡単のため、Feature Mapは表現されていない。)1枚のmapが、1書類のfilterに対応しているので、filterの数と同じだけ次のレイヤーのFeature Mapが用意されている。それぞれのfilterを、全てのFeature Mapの上で動かして、畳み込み計算を行っていく。最終的に、普通のMLPに帰着させるところは変わらない。
+
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=80mm]{img/c3/feature_map}
+ \caption{Convolutional Netとfeature map}
+ \label{c3_feature_map}
+\end{figure}
+
+\subsubsection{Max-pooling}
+Max pooling
+
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=80mm]{img/c3/maxpooling}
+ \caption{Maxpoolingと、Maxpooling Layerの作用}
+ \label{l}
+\end{figure}
+
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=120mm]{img/c3/convnet}
+ \caption{max pooling layerを取り入れたConvolutional Network}
+ \label{c3_convnet}
+\end{figure}
 
 \subsection{Dropoutとrobustnessの確保}
 \label{c3_dropout}
