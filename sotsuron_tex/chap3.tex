@@ -139,9 +139,9 @@ Max-poolingを用いることにより、各レイヤーの次元数を効率良
  \label{c3_convnet}
 \end{figure}
 
-\subsection{Dropoutとrobustnessの確保}
+\subsection{DropoutとDropConnect}
 \label{c3_dropout}
-Dropoutとは、2012年にHinton氏らによって提案された、過学習を防ぐための技術である\cite{hinton2012improving}。過学習とは、機械学習全般において使われる用語で、学習モデルが訓練中に見たデータへの適応を重視し過ぎたために、未知のデータをうまく識別できなくなる現象のことを指す。Dropoutでは、過学習を防ぐため、各レイヤーからの出力をランダムに消去してしまう。これによって各ユニットには、他のユニットに頼らず自力で学習をする必要が生じ、より様々な入力に対応しやすい堅固(robust)なモデルが獲得される、と考えられている。\par
+Dropoutとは、2012年にHinton氏らによって提案された、過学習を防ぐための技術である\cite{hinton2012improving}。過学習とは、機械学習全般において使われる用語で、学習モデルが訓練中に見たデータへの適応を重視し過ぎたために、未知のデータをうまく識別できなくなる現象のことを指す。Dropoutでは、過学習を防ぐため、各レイヤーからの出力をランダムに消去してしまう。これによって各ユニットには、他のユニットに頼らず自力で学習をする必要が生じ、より様々な入力に対応しやすい堅固(robust)なモデルが獲得される、と考えられている。図\ref{c3_dropout_timit}は、\cite{hinton2012improving}より引用した図で、音声認識のTIMITデータベース\cite{fisher1986darpa}\footnote{\url{http://catalog.ldc.upenn.edu/LDC93S1}}に対する識別精度である。Dropoutを使うことで、使わなかった場合に比べ、特にEpoch数(学習の繰り返し回数)が大きい場合に分類精度が向上していることがわかる。\par
 DropConnectは、Dropoutをさらに一般化した手法である。DropConnectでは、各ユニットからの出力ではなく、ユニット同士のつながりをランダムにカットしている。図\ref{c3_dropconnect}は、DropConnectの著者による紹介Webページ\footnote{\url{http://cs.nyu.edu/~wanli/dropc/}}に掲載されている画像の引用である。ニューラルネットワークにおけるニューロン同士の接続が、ランダムに切断されている様子を表している。
 \begin{figure}[tbp]
  \begin{center}
@@ -184,9 +184,27 @@ S(x) = \frac{1}{1+e^{-x}}
  \caption{Sigmoid関数}
  \label{c3_sigmoid}
 \end{figure}
+なお、hyperbolic tangent関数、通称tanh関数を用いることもある。sigmoid関数とtanh関数は線形の差しかないため、ニューラルネットワークの性能という面では、どちらを使用しても等価である。
+\begin{equation}
+tanh(x) = \frac{e^x-e^{-x}}{e^x+e^{-x}} \\\\
+\end{equation}
+\begin{equation}
+S(x) = \frac{tanh(x/2)+1}{2}
+\end{equation}
 
 \subsubsection{Rectifier Unit}
+Rectifier関数は、最近のニューラルネットワークにおいてよく用いられている活性化関数である。
+\begin{equation}
+f(x) = max(0, x) = \left\{\begin{array}{cc} 0\quad (x < 0)\\ x \quad (x > 0)\end{array}\right.
+\end{equation}
+Rectifier関数が性能向上に役立つ理由は、まだ解明されていない。
 
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=80mm]{img/c3/rectifier}
+ \caption{Rectifier関数}
+ \label{c3_rectifier}
+\end{figure}
 
 \subsubsection{Maxout Unit}
 Maxout Networkとは、バックプロパゲーションを伴う単純な多層MLP構造に、\ref{c3_dropout}で述べたDropout法を組み合わせ、さらにMaxout Unitという特殊な活性化関数を併用したニューラルネットワークである\cite{goodfellow2013maxout}。Maxout Networkの1レイヤー分の構造を、図\ref{c3_maxout_arch}に示す。\par

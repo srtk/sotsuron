@@ -7,8 +7,11 @@
 Recommendation Systemの研究は、1992年のTapestryシステムに始まる\cite{goldberg1992using}。また、少なくとも90年代の終わりには、Amazon.com, CDNOW, eBay, Levis, GroupLensなど、様々なサイトにてRecommendation Systemは利用されていた\cite{resnick1997recommender}。
 Recommendation Systemを実現するための、機械学習のテクニックとしては、大きく2種類が挙げられる\cite{koren2009matrix}。1つは、Content Filteringと呼ばれ、ユーザや商品の属性や購買傾向を学習することことで、推薦を行う。もう1つはCollaboraitive Filteringと呼ばれており、ユーザや商品の属性を扱う代わりに、購入や評価といった、ユーザの過去の行動を基にして、推薦を行う。
 \subsection{Link Prediction}
-グラフにおいて、現在のノード間接続から未来の接続を予測する
-ソーシャルグラフの予測、タンパク質の反応予測(PPI)に有効である
+Link Predictionとは、グラフが与えられたとき、現在のグラフ構造(ノード間接続の様子)から、未来の構造を予測する問題である。最初に提唱された論文\cite{liben2007link}では、ソーシャルネットワークの状態が与えられたとき、ユーザ間で交わされる将来の行動を予測する問題として述べられている。この論文では、ノード(ユーザ)間の近さを定義する方法や、全てのエッジ(接続)を通しで見て判断する方法、クラスタリングによる方法などが用いられている。論文で用いられているノード間の近さの定義を挙げる(\cite{liben2007link}より引用)。ノード$x$に対し、$x$とつながっているノードの集合を$Γ(x)$とする。\par
+\begin{eqnarray}
+graph distance & 
+\end{eqnarray}
+LInk Predictionには様々な応用が考えられる。ショッピングサイトのデータ分析に役立ったり\cite{clauset2004finding}、。Web工学の問題以外にも応用が可能であり、タンパク質の反応予測(Protein to Protein Interaction, PPI)に用いられたり\cite{bader2003gaining}、テロリストのネットワークや草原の食物連鎖の分析にも役に立っている\cite{clauset2008hierarchical}。
 [加筆]
 \subsection{Sentiment Analysis}
 ユーザの感想データを手に入れられるようになってきた\\
@@ -32,8 +35,21 @@ Deep Learning、あるいはDeep Neural Network(多層ニューラルネット�
 %\subsection{ロジスティック回帰}
 
 \subsection{Support Vector Machine}
-Support Vector Macine(SVM)は、データを2つのクラスに分類する能力を持っている。\par
-カーネルマジックとマージン最大化により、優れた精度を出している。SVMは、画像認識などに既に実用化されている。\par
+Support Vector Macine(SVM)は、図\ref{c2_svm}のように、データを2つのクラスに分類する能力を持ったモデルである\cite{cortes1995support-vector}。\par
+SVMのメインとなる原理は、マージン最大化である。図\ref{c2_svm}は最も単純なSVMの問題を表しており、グラフ上に散らばった黒と白の点を、直線を1本引くことで分けることが目標である。言い換えれば、どの点が黒で、どの点が白なのかを識別する、2クラス分類問題を解こうとしている。緑の線は、分類に失敗している。青の線は分類に成功しているが、後から点線で表された新しい白点が加わると、やはり分類に失敗してしまう。赤の線は、現在見えている点を分類できるだけでなく、新しい点が加わっても正しく識別できる可能性が高い。SVMのマージン最大化とは、各点からの距離(マージン)の和が、最大になるように直線の引き方を決めることである。こうすることにより、汎化性能(訓練時に見えていなかった、新しいデータを正しく分類する性能)が最大になることが知られている。\par
+この図のSVMは、データが直線で完全に分類できることを前提にしている。しかし、現実のデータは、\ref{c2_svm_mixed}のように、必ずしも1本の直線にて分類が可能ではない。(3次元以上の場合で言えば、1つの超平面にて分類が可能とは限らない。)このような場合に対応するため、まず非線形関数にてデータを高次元の空間に移し、超平面による分類が出来るように変換する方法が知られている\cite{burges1998tutorial}。ただし、一般に複雑な分類ほど、変換先の次元数が高くなる傾向があり、次元数が増えると、「次元の呪い」と言って、内積計算にかかる時間が指数関数的に増大することがわかっている\cite{bellman1961adaptive}。この計算時間を減少させるため、数式処理によって内積を計算する必要がなくなるように設計された、カーネル関数と呼ばれる変換関数を用いる方法が使われている(カーネルマジック)。
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=80mm]{img/c2/svm}
+ \caption{Support Vector Machineのマージン最大化}
+ \label{c2_svm}
+\end{figure}
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=80mm]{img/c2/svm_mixed}
+ \caption{直線にて分類できない場合}
+ \label{c2_svm_mixed}
+\end{figure}
 SVMは、広くその信頼性が認められたモデルの1つであり、ライブラリの利用方法も確立している。例えば、libsvm\footnote{\url{http://www.csie.ntu.edu.tw/~cjlin/libsvm/}}やliblinear\footnote{\url{http://www.csie.ntu.edu.tw/~cjlin/liblinear/}}は使用が容易なライブラリとしてよく知られている。これらのライブラリを使うと、簡単な所定の方式に沿って入力データファイルを用意し、CUI上で2,3回の操作をするだけで、SVMによる分類を行わせることができる。このとき、利用者が自分でプログラムを書く必要は全くない。プログラムを書かないで済むと、手軽に利用することができ、またバグを起こす危険性が非常に少なく安全に使うことができる。\par
 Deep Learningについては、このようなライブラリはまだ存在していないため、Deep Learningの代表的なアルゴリズムについて、プログラム無しで利用できるようなライブラリの整備が望まれる。
 \subsection{ニューラルネットワーク}

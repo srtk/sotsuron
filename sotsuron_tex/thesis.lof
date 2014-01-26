@@ -3,39 +3,42 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces 猫を認識するニューロン (教師無しYoutubeビデオより学習された。)}}{4}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces 上 : 入力画像の中で、ニューロンが最も強く反応した48枚　下 : 計算上、最もニューロンが強く反応する画像}}{4}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Support Vector Machineのマージン最大化}}{10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 直線にて分類できない場合}}{10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Imagenetの画像とラベル構造の例}}{12}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Supervisionによる画像分類の結果の例}}{12}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Deep Belief Networkの構造と、学習過程}}{13}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Restriceted Boltzman Machineのネットワーク構造}}{14}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Autoencoderの構造図}}{16}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces 画像に対するDenoising Autoencoder}}{17}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Denoising Autoencoderの模式図}}{17}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Stacked Denoising Autoencoderにおける学習の進行}}{18}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Convolutional Netの仕組み}}{18}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Convolutional Netとfeature map}}{19}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Maxpoolingと、Maxpooling Layerの作用}}{20}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces max pooling layerを取り入れたConvolutional Network}}{20}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces DropConnectの模式図}}{21}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Heavisideの階段関数}}{22}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Sigmoid関数}}{22}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Maxout Networkの構造図}}{23}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Maxout Unitが凸関数を近似する様子(1次元の場合)}}{23}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Imagenetの画像とラベル構造の例}}{14}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Supervisionによる画像分類の結果の例}}{14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Deep Belief Networkの構造と、学習過程}}{15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Restriceted Boltzman Machineのネットワーク構造}}{16}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Autoencoderの構造図}}{18}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 画像に対するDenoising Autoencoder}}{19}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Denoising Autoencoderの模式図}}{19}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Stacked Denoising Autoencoderにおける学習の進行}}{20}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Convolutional Netの仕組み}}{20}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Convolutional Netとfeature map}}{21}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Maxpoolingと、Maxpooling Layerの作用}}{22}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces max pooling layerを取り入れたConvolutional Network}}{22}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces DropConnectの模式図}}{23}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Heavisideの階段関数}}{24}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Sigmoid関数}}{24}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Rectifier関数}}{25}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Maxout Networkの構造図}}{26}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Maxout Unitが凸関数を近似する様子(1次元の場合)}}{26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 既存コードの利用における、完全オリジナルコードの作成に対する利点}}{25}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 既存ソースコード利用のリスクと、対処方法}}{25}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Pylearn2の実験計画例}}{27}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 既存コードの利用における、完全オリジナルコードの作成に対する利点}}{28}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 既存ソースコード利用のリスクと、対処方法}}{28}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Pylearn2の実験計画例}}{30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces ユーザ属性推定の必要性}}{30}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Facebookにおけるプロフィール画像の例}}{31}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 提案手法}}{32}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces 今回の実験の模式図}}{34}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces 実験で使った、画像から入力ベクトルへの変換方法}}{34}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces プロフィール画像からの顔画像抽出方法}}{34}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces 実験で学習されたフィルター}}{35}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces ユーザ属性推定の必要性}}{33}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Facebookにおけるプロフィール画像の例}}{34}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 提案手法}}{35}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 今回の実験の模式図}}{37}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces 実験で使った、画像から入力ベクトルへの変換方法}}{37}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces プロフィール画像からの顔画像抽出方法}}{37}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces 実験で学習されたフィルター}}{38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces MNISTデータの例}}{37}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces CIFAR10データの例}}{39}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces MNISTデータの例}}{40}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces CIFAR10データの例}}{42}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Maxout NetworkによるMNIST分類実験で、誤差が論文より大きくなった原因}}{44}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Maxout NetworkによるMNIST分類実験で、誤差が論文より大きくなった原因}}{47}
 \addvspace {10\p@ }
