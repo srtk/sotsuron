@@ -14,26 +14,28 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Stacked Denoising Autoencoderにおける学習の進行}}{18}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Convolutional Netの仕組み}}{18}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Convolutional Netとfeature map}}{19}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Maxpoolingと、Maxpooling Layerの作用}}{19}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces max pooling layerを取り入れたConvolutional Network}}{19}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces DropConnectの模式図}}{20}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Maxout Networkの構造図}}{21}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Maxout Unitが凸関数を近似する様子(1次元の場合)}}{21}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Maxpoolingと、Maxpooling Layerの作用}}{20}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces max pooling layerを取り入れたConvolutional Network}}{20}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces DropConnectの模式図}}{21}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Heavisideの階段関数}}{22}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Sigmoid関数}}{22}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Maxout Networkの構造図}}{23}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Maxout Unitが凸関数を近似する様子(1次元の場合)}}{23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 既存コードの利用における、完全オリジナルコードの作成に対する利点}}{23}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 既存ソースコード利用のリスクと、対処方法}}{23}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Pylearn2の実験計画例}}{25}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 既存コードの利用における、完全オリジナルコードの作成に対する利点}}{25}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 既存ソースコード利用のリスクと、対処方法}}{25}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Pylearn2の実験計画例}}{27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces ユーザ属性推定の必要性}}{28}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Facebookにおけるプロフィール画像の例}}{29}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 提案手法}}{30}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces 今回の実験の模式図}}{32}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces 実験で使った、画像から入力ベクトルへの変換方法}}{32}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces プロフィール画像からの顔画像抽出方法}}{32}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces 実験で学習されたフィルター}}{33}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces ユーザ属性推定の必要性}}{30}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Facebookにおけるプロフィール画像の例}}{31}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 提案手法}}{32}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 今回の実験の模式図}}{34}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces 実験で使った、画像から入力ベクトルへの変換方法}}{34}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces プロフィール画像からの顔画像抽出方法}}{34}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces 実験で学習されたフィルター}}{35}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces MNISTデータの例}}{35}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces CIFAR10データの例}}{37}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces MNISTデータの例}}{37}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces CIFAR10データの例}}{39}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Maxout NetworkによるMNIST分類実験で、誤差が論文より大きくなった原因}}{42}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Maxout NetworkによるMNIST分類実験で、誤差が論文より大きくなった原因}}{44}
 \addvspace {10\p@ }

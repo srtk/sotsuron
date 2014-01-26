@@ -107,9 +107,11 @@ Convolutional Network(畳み込みネットワーク)は、画像認識にて使
  \caption{Convolutional Netの仕組み}
  \label{c3_convolution}
 \end{figure}
-Convolutional Netの発祥はDBNやSDAよりも古い。画像上の各部分ごとに性質を抜き出しニューラルネットワークを構成するというアイデアは、人間の視覚野の仕組みを参考にしたもので、1980年のNeocognitronを始めとして\cite{fukushima1980neocognitron}\cite{fukushima1983neocognitron}様々な形で提唱されている\cite{lecun1998gradient-based}\cite{serre2007robust}。2003年に提唱されたConvolutional Netのモデルが、画像認識ベンチマークのMNISTにて、今でも5位の精度を保っており\cite{simard2003best}、2012年のものは2位となっている\cite{ciresan2012multi-column}。Fisherベクトルなど既存の画像認識手法との組み合わせでも、良い性能を発揮できることがわかっている\cite{nakayama2013efficient}。
+Convolutional Netの発祥はDBNやSDAよりも古い。画像上の各部分ごとに性質を抜き出しニューラルネットワークを構成するというアイデアは、人間の視覚野の仕組みを参考にしたもので、1980年のNeocognitronを始めとして\cite{fukushima1980neocognitron}\cite{fukushima1983neocognitron}様々な形で提唱されている\cite{lecun1998gradient-based}\cite{serre2007robust}。2003年に提唱されたConvolutional Netのモデルが、画像認識ベンチマークのMNISTにて、今でも5位の精度を保っており\cite{simard2003best}、2012年のものは2位となっている\cite{ciresan2012multi-column}。Fisherベクトルなど既存の画像認識手法との組み合わせでも、良い性能を発揮できることがわかっている\cite{nakayama2013efficient}。ここで紹介するのは、1998年にLeCunらが紹介した方法\cite{lecun1998gradient-based}であり、ほとんどのConvolutional Networkに使われているアルゴリズムの基本的な部分である。
 \subsubsection{Feature Map}
-実際のConvolutional Networkでは、Feature Mapと呼ばれる方法が使われている。これは、filterが1つだけでなく、複数種類のfilterを、複数枚の画像の上で動かしていく方法である、図\ref{c3_convolution}の構造に、Feature Mapの考え方を適用すると、\ref{c3_feature_map}のようになる。(図\ref{c3_convolution}では、簡単のため、Feature Mapは表現されていない。)1枚のmapが、1書類のfilterに対応しているので、filterの数と同じだけ次のレイヤーのFeature Mapが用意されている。それぞれのfilterを、全てのFeature Mapの上で動かして、畳み込み計算を行っていく。最終的に、普通のMLPに帰着させるところは変わらない。
+実際のConvolutional Networkでは、Feature Mapと呼ばれる方法が使われている。これは、filterが1つだけでなく、複数種類のfilterを、複数枚の画像の上で動かしていく方法である。図\ref{c3_convolution}の構造に、Feature Mapの考え方を適用すると、\ref{c3_feature_map}のようになる。この図では、フィルターが移動する様子は省略している。四角形はFeature Map1つを、円はMLPのユニット1つを表している。Feature Map同士では、filterによる畳み込みによって情報が伝達される。Feature MapからMLPの隠れレイヤーにつながる部分では、まず全てのFeature Mapをつなげ、1次元のベクトルに並び替えて入力したと考えている。残りは、通常のMLPと同じように処理される。(なお、図\ref{c3_convolution}では、簡単のため、Feature Mapは表現されていない。)\par
+1枚のmapが、1書類のfilterに対応しているので、filterの数と同じだけ次のレイヤーのFeature Mapが用意されている。それぞれのfilterを、全てのFeature Mapの上で動かして、畳み込み計算を行っていく。最終的に、普通のMLPに帰着させるところは変わらない。\par
+Feature Mapは、カラー画像を扱うときにも利用できる。カラー画像データは、ほとんどの場合Red、Green、Blueの光の3原色に対応する3つの値にて表現される。これを省略してRGBと呼ぶ。Convolutional Netの入力レイヤーにて、画像サイズと同じ大きさの、RGBの3色に対応する3つのFeature Mapを設定することで、色情報を簡単に扱うことができる。
 
 \begin{figure}[tbp]
  \centering
@@ -119,13 +121,15 @@ Convolutional Netの発祥はDBNやSDAよりも古い。画像上の各部分ご
 \end{figure}
 
 \subsubsection{Max-pooling}
-Max pooling
+Convolutinal Netにて、広く使われている方法のもう1つが、Max poolingである。Max pooling layerは普通Convolutional Layer同士の間に置かれる。Max poolingでは、convolutional layerで得られた画素を、部分ごとにたたみ込んでいく。ただし、convolutional layerの計算に使うfilterとは違い、重み行列は用いず、単純に対象領域の画素値のmaxを取って、次のレイヤーに渡していく。また、convolutional layerではfilterを1ピクセルずつ動かしていくが、max pooling layerでは、一度にfilterのサイズと同じだけ動かし、畳み込み対象領域が重ならないようにする。また、filterのサイズは2x2ピクセルに設定されることが多い。図\ref{c3_maxpooling}の左側は、max poolingによる畳み込みの様子を、右側ではMax-pooling Layerによる畳み込みの全体の様子を表している。\par
+Max-poolingを用いることにより、各レイヤーの次元数を効率良く下げることが出来る。また同時に、ピクセルの位置が少し変化しても同じ結果が得られるので、位置的なrobustnessを上げることも出来る。\par
+最後に、Max pooling Layerを用いた一般的なConvolutional Networkの全体図を、図\ref{c3_convnet}に挙げる。この図では、各Feature Mapごとのつながりは省略している。
 
 \begin{figure}[tbp]
  \centering
   \includegraphics[width=80mm]{img/c3/maxpooling}
  \caption{Maxpoolingと、Maxpooling Layerの作用}
- \label{l}
+ \label{c3_maxpooling}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -146,14 +150,44 @@ DropConnectは、Dropoutをさらに一般化した手法である。DropConnect
  \caption{DropConnectの模式図}
  \label{c3_dropconnect}
 \end{figure}
+
 \subsection{活性化関数}
 各ユニットに入力された値は、ある一定の関数によって増幅･変換される。これは人間の神経細胞を真似た仕組みで、神経細胞の化学物質による活性化にちなんで、活性化関数(activation function)と呼ばれる。この項では、ニューラルネットにおける様々な活性化関数を紹介する。
-\subsubsection{sigmoidとhyperbolic tangent}
-シグモイド関数は、以下の式で表される。
-%\begin{equation}
+\subsubsection{heaviside関数}
+始めにニューラルネットワークの活性化関数として用いられたがHeavisideの階段関数である。この関数は負値に0、正値に1を返す。数式では、
+\begin{equation}
+H(x)= \left\{\begin{array}{cc} 0\quad (x < 0)\\ 1 \quad (x > 0)\end{array}\right.
+\end{equation}
+となる。ただし、これだけでは$x=0$の点で不連続になるので、$H(x)=0$や$H(x)=0.5$などの定義が用いられる。ヘビサイド関数のグラフを\ref{c3_heaviside}に示す。\par
+heaviside関数は、ニューロンが受けた刺激の総和を測り、閾値を超えていれば次のニューロンにも情報を伝達し、超えていなければ何もしないという性質をそのまま反映している。しかし、この関数は微分不可能なため、バックプロパゲーションを行う上では不都合であり、特にDeep Learningのネットワークモデルにおいて使われることは少ない。
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=80mm]{img/c3/heaviside}
+ \caption{Heavisideの階段関数}
+ \label{c3_heaviside}
+\end{figure}
 
-%\end{equation}
-\subsubsection{rectifier}
+\subsubsection{sigmoid関数とhyperbolic tangent}
+シグモイド関数は、ヘビサイド関数に似ているが、全域にて非線形かつ微分可能である。この2つの特性により、バックプロパゲーションに適している。以下の式で表される。
+\begin{equation}
+S(x) = \frac{1}{1+e^{-x}}
+\end{equation}
+また、微分した形が同じシグモイド関数で表されるという特徴があり、実装が容易である。
+\begin{eqnarray}
+\frac{d}{dx}S(x) &=& \left( \frac{1}{1+e^{-x}} \right) \left( \frac{-e^{-x}}{1+e^{-x}} \right)\\
+&=& S(x)(1-S(x))
+\end{eqnarray}
+シグモイド関数のグラフが図\ref{c3_sigmoid}である。Heaviside関数を$x=0$の付近のみ滑らかにしたような形をしている。この関数は、xの絶対値が大きくなるにつれ、yの変化が非常にに小さくなっている。そのため、ユニット間伝達において、入力と重みの積が大きくなってしまうと、その部分は誤差のバックプロパゲーションに対する反応が小さくなってしまい、学習が進みにくくなってしまうという弱点がある。
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=80mm]{img/c3/sigmoid}
+ \caption{Sigmoid関数}
+ \label{c3_sigmoid}
+\end{figure}
+
+\subsubsection{Rectifier Unit}
+
+
 \subsubsection{Maxout Unit}
 Maxout Networkとは、バックプロパゲーションを伴う単純な多層MLP構造に、\ref{c3_dropout}で述べたDropout法を組み合わせ、さらにMaxout Unitという特殊な活性化関数を併用したニューラルネットワークである\cite{goodfellow2013maxout}。Maxout Networkの1レイヤー分の構造を、図\ref{c3_maxout_arch}に示す。\par
 Maxout Unitでは、複数の線形ユニットの出力について、maxを取っている。これにより、任意の凸関数を近似することが出来る。図\ref{c3_maxout_app}は、Maxout Unitが凸関数を近似する様子を、1次元の入力について示している。そして、複数のmaxout unitの線形和を取ることは、複数の近似された凸関数の線形和を取ることである。これによって、最終的に任意の連続関数を近似できることが証明されている。
