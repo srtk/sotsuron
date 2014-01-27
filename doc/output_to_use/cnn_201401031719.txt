@@ -1,0 +1,1803 @@
+Using gpu device 0: GeForce GTX 760
+/home/kurotaki/lib/python/pylearn2-0.1dev-py2.7.egg/pylearn2/models/mlp.py:41: UserWarning: MLP changing the recursion limit.
+  warnings.warn("MLP changing the recursion limit.")
+Input shape:  (28, 28)
+Detector space:  (24, 24)
+Output space:  (11, 11)
+Input shape:  (11, 11)
+Detector space:  (7, 7)
+Output space:  (3, 3)
+/home/kurotaki/lib/python/pylearn2-0.1dev-py2.7.egg/pylearn2/training_algorithms/sgd.py:642: UserWarning: sgd.MomentumAdjustor interface is deprecated and will become officially unsuported as of May 9, 2014. Please use `learning_rule.MomentumAdjustor` instead.
+  warnings.warn("sgd.MomentumAdjustor interface is deprecated and will "
+/home/kurotaki/lib/python/pylearn2-0.1dev-py2.7.egg/pylearn2/training_algorithms/sgd.py:108: UserWarning: init_momentum interface is deprecated and will become officially unsuported as of May 9, 2014. Please use the `learning_rule` parameter instead, providing an object of type `pylearn2.training_algorithms.learning_rule.Momentum` instead
+  warnings.warn("init_momentum interface is deprecated and will "
+Parameter and initial learning rate summary:
+	W: 0.00999999977648
+	b: 0.00999999977648
+	W: 0.00999999977648
+	b: 0.00999999977648
+	softmax_b: 0.00999999977648
+	softmax_W: 0.00999999977648
+Compiling sgd_update...
+Compiling sgd_update done. Time elapsed: 0:02:03.774888
+compiling begin_record_entry...
+compiling begin_record_entry done. Time elapsed: 0.000000 seconds
+Monitored channels: 
+	learning_rate
+	momentum
+	monitor_seconds_per_epoch
+	test_h2_kernel_norms_max
+	test_h2_kernel_norms_mean
+	test_h2_kernel_norms_min
+	test_h3_kernel_norms_max
+	test_h3_kernel_norms_mean
+	test_h3_kernel_norms_min
+	test_objective
+	test_term_0
+	test_term_1_weight_decay
+	test_y_col_norms_max
+	test_y_col_norms_mean
+	test_y_col_norms_min
+	test_y_max_max_class
+	test_y_mean_max_class
+	test_y_min_max_class
+	test_y_misclass
+	test_y_nll
+	test_y_row_norms_max
+	test_y_row_norms_mean
+	test_y_row_norms_min
+	valid_h2_kernel_norms_max
+	valid_h2_kernel_norms_mean
+	valid_h2_kernel_norms_min
+	valid_h3_kernel_norms_max
+	valid_h3_kernel_norms_mean
+	valid_h3_kernel_norms_min
+	valid_objective
+	valid_term_0
+	valid_term_1_weight_decay
+	valid_y_col_norms_max
+	valid_y_col_norms_mean
+	valid_y_col_norms_min
+	valid_y_max_max_class
+	valid_y_mean_max_class
+	valid_y_min_max_class
+	valid_y_misclass
+	valid_y_nll
+	valid_y_row_norms_max
+	valid_y_row_norms_mean
+	valid_y_row_norms_min
+Compiling accum...
+graph size: 175
+graph size: 172
+Compiling accum done. Time elapsed: 16.000000 seconds
+/home/kurotaki/lib/python/pylearn2-0.1dev-py2.7.egg/pylearn2/datasets/dense_design_matrix.py:1044: UserWarning: It looks like DefaultViewConverter.axes has been changed directly, please use the set_axes() method instead.
+  "instead." % self.__class__.__name__)
+Monitoring step:
+	Epochs seen: 0
+	Batches seen: 0
+	Examples seen: 0
+	learning_rate: 0.00999999046326
+	momentum: 0.499999672174
+	monitor_seconds_per_epoch: 0.0
+	test_h2_kernel_norms_max: 0.166490137577
+	test_h2_kernel_norms_mean: 0.141212999821
+	test_h2_kernel_norms_min: 0.121112905443
+	test_h3_kernel_norms_max: 1.18473732471
+	test_h3_kernel_norms_mean: 1.15763354301
+	test_h3_kernel_norms_min: 1.12533462048
+	test_objective: 2.32052111626
+	test_term_0: 2.31546401978
+	test_term_1_weight_decay: 0.00505703128874
+	test_y_col_norms_max: 1.21192967892
+	test_y_col_norms_mean: 1.18646144867
+	test_y_col_norms_min: 1.14516699314
+	test_y_max_max_class: 0.138236686587
+	test_y_mean_max_class: 0.128954455256
+	test_y_min_max_class: 0.117230169475
+	test_y_misclass: 0.902700126171
+	test_y_nll: 2.31546401978
+	test_y_row_norms_max: 0.263923496008
+	test_y_row_norms_mean: 0.152641579509
+	test_y_row_norms_min: 0.0449281223118
+	valid_h2_kernel_norms_max: 0.166490137577
+	valid_h2_kernel_norms_mean: 0.141212999821
+	valid_h2_kernel_norms_min: 0.121112905443
+	valid_h3_kernel_norms_max: 1.18473732471
+	valid_h3_kernel_norms_mean: 1.15763354301
+	valid_h3_kernel_norms_min: 1.12533462048
+	valid_objective: 2.3198826313
+	valid_term_0: 2.31482505798
+	valid_term_1_weight_decay: 0.00505703128874
+	valid_y_col_norms_max: 1.21192967892
+	valid_y_col_norms_mean: 1.18646144867
+	valid_y_col_norms_min: 1.14516699314
+	valid_y_max_max_class: 0.138572052121
+	valid_y_mean_max_class: 0.128778457642
+	valid_y_min_max_class: 0.11714861542
+	valid_y_misclass: 0.913700342178
+	valid_y_nll: 2.31482505798
+	valid_y_row_norms_max: 0.263923496008
+	valid_y_row_norms_mean: 0.152641579509
+	valid_y_row_norms_min: 0.0449281223118
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 1
+	Batches seen: 500
+	Examples seen: 50000
+	learning_rate: 0.00999999046326
+	momentum: 0.499999672174
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 0.581306159496
+	test_h2_kernel_norms_mean: 0.297096073627
+	test_h2_kernel_norms_min: 0.126363515854
+	test_h3_kernel_norms_max: 1.25406515598
+	test_h3_kernel_norms_mean: 1.19243395329
+	test_h3_kernel_norms_min: 1.13259589672
+	test_objective: 0.196862205863
+	test_term_0: 0.191002234817
+	test_term_1_weight_decay: 0.0058599319309
+	test_y_col_norms_max: 1.46149802208
+	test_y_col_norms_mean: 1.40521132946
+	test_y_col_norms_min: 1.36712372303
+	test_y_max_max_class: 0.999937415123
+	test_y_mean_max_class: 0.913676083088
+	test_y_min_max_class: 0.401934057474
+	test_y_misclass: 0.0550000183284
+	test_y_nll: 0.191002234817
+	test_y_row_norms_max: 0.324206471443
+	test_y_row_norms_mean: 0.180202841759
+	test_y_row_norms_min: 0.0709113180637
+	valid_h2_kernel_norms_max: 0.581306159496
+	valid_h2_kernel_norms_mean: 0.297096073627
+	valid_h2_kernel_norms_min: 0.126363515854
+	valid_h3_kernel_norms_max: 1.25406515598
+	valid_h3_kernel_norms_mean: 1.19243395329
+	valid_h3_kernel_norms_min: 1.13259589672
+	valid_objective: 0.192156344652
+	valid_term_0: 0.186296328902
+	valid_term_1_weight_decay: 0.0058599319309
+	valid_y_col_norms_max: 1.46149802208
+	valid_y_col_norms_mean: 1.40521132946
+	valid_y_col_norms_min: 1.36712372303
+	valid_y_max_max_class: 0.999950647354
+	valid_y_mean_max_class: 0.915453970432
+	valid_y_min_max_class: 0.400984883308
+	valid_y_misclass: 0.0531000159681
+	valid_y_nll: 0.186296328902
+	valid_y_row_norms_max: 0.324206471443
+	valid_y_row_norms_mean: 0.180202841759
+	valid_y_row_norms_min: 0.0709113180637
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 2
+	Batches seen: 1000
+	Examples seen: 100000
+	learning_rate: 0.00999999046326
+	momentum: 0.554444551468
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 0.661853730679
+	test_h2_kernel_norms_mean: 0.327936738729
+	test_h2_kernel_norms_min: 0.127359494567
+	test_h3_kernel_norms_max: 1.27304828167
+	test_h3_kernel_norms_mean: 1.20296859741
+	test_h3_kernel_norms_min: 1.13129627705
+	test_objective: 0.107272207737
+	test_term_0: 0.101159445941
+	test_term_1_weight_decay: 0.00611274736002
+	test_y_col_norms_max: 1.53912222385
+	test_y_col_norms_mean: 1.47295796871
+	test_y_col_norms_min: 1.41813862324
+	test_y_max_max_class: 0.99997895956
+	test_y_mean_max_class: 0.956225216389
+	test_y_min_max_class: 0.488607525826
+	test_y_misclass: 0.0300000011921
+	test_y_nll: 0.101159445941
+	test_y_row_norms_max: 0.369143247604
+	test_y_row_norms_mean: 0.188525423408
+	test_y_row_norms_min: 0.0740534886718
+	valid_h2_kernel_norms_max: 0.661853730679
+	valid_h2_kernel_norms_mean: 0.327936738729
+	valid_h2_kernel_norms_min: 0.127359494567
+	valid_h3_kernel_norms_max: 1.27304828167
+	valid_h3_kernel_norms_mean: 1.20296859741
+	valid_h3_kernel_norms_min: 1.13129627705
+	valid_objective: 0.112452194095
+	valid_term_0: 0.106339462101
+	valid_term_1_weight_decay: 0.00611274736002
+	valid_y_col_norms_max: 1.53912222385
+	valid_y_col_norms_mean: 1.47295796871
+	valid_y_col_norms_min: 1.41813862324
+	valid_y_max_max_class: 0.999984323978
+	valid_y_mean_max_class: 0.956206381321
+	valid_y_min_max_class: 0.461280673742
+	valid_y_misclass: 0.0306999832392
+	valid_y_nll: 0.106339462101
+	valid_y_row_norms_max: 0.369143247604
+	valid_y_row_norms_mean: 0.188525423408
+	valid_y_row_norms_min: 0.0740534886718
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 3
+	Batches seen: 1500
+	Examples seen: 150000
+	learning_rate: 0.00999999046326
+	momentum: 0.608888924122
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 0.725418269634
+	test_h2_kernel_norms_mean: 0.347110837698
+	test_h2_kernel_norms_min: 0.128395810723
+	test_h3_kernel_norms_max: 1.29060709476
+	test_h3_kernel_norms_mean: 1.21009469032
+	test_h3_kernel_norms_min: 1.12981021404
+	test_objective: 0.0835968032479
+	test_term_0: 0.0773085653782
+	test_term_1_weight_decay: 0.00628823973238
+	test_y_col_norms_max: 1.58758461475
+	test_y_col_norms_mean: 1.51972389221
+	test_y_col_norms_min: 1.44631457329
+	test_y_max_max_class: 0.999984264374
+	test_y_mean_max_class: 0.966581344604
+	test_y_min_max_class: 0.529616951942
+	test_y_misclass: 0.0245999917388
+	test_y_nll: 0.0773085653782
+	test_y_row_norms_max: 0.40035751462
+	test_y_row_norms_mean: 0.194186002016
+	test_y_row_norms_min: 0.0720322206616
+	valid_h2_kernel_norms_max: 0.725418269634
+	valid_h2_kernel_norms_mean: 0.347110837698
+	valid_h2_kernel_norms_min: 0.128395810723
+	valid_h3_kernel_norms_max: 1.29060709476
+	valid_h3_kernel_norms_mean: 1.21009469032
+	valid_h3_kernel_norms_min: 1.12981021404
+	valid_objective: 0.0869519785047
+	valid_term_0: 0.0806637629867
+	valid_term_1_weight_decay: 0.00628823973238
+	valid_y_col_norms_max: 1.58758461475
+	valid_y_col_norms_mean: 1.51972389221
+	valid_y_col_norms_min: 1.44631457329
+	valid_y_max_max_class: 0.999989449978
+	valid_y_mean_max_class: 0.966785132885
+	valid_y_min_max_class: 0.483101159334
+	valid_y_misclass: 0.0226999912411
+	valid_y_nll: 0.0806637629867
+	valid_y_row_norms_max: 0.40035751462
+	valid_y_row_norms_mean: 0.194186002016
+	valid_y_row_norms_min: 0.0720322206616
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 4
+	Batches seen: 2000
+	Examples seen: 200000
+	learning_rate: 0.00999999046326
+	momentum: 0.663333714008
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 0.781859397888
+	test_h2_kernel_norms_mean: 0.361994683743
+	test_h2_kernel_norms_min: 0.129564642906
+	test_h3_kernel_norms_max: 1.31148552895
+	test_h3_kernel_norms_mean: 1.2162245512
+	test_h3_kernel_norms_min: 1.12809610367
+	test_objective: 0.0713881105185
+	test_term_0: 0.0649493187666
+	test_term_1_weight_decay: 0.00643879268318
+	test_y_col_norms_max: 1.62427508831
+	test_y_col_norms_mean: 1.55978488922
+	test_y_col_norms_min: 1.46710860729
+	test_y_max_max_class: 0.999996781349
+	test_y_mean_max_class: 0.973104596138
+	test_y_min_max_class: 0.542321264744
+	test_y_misclass: 0.019699992612
+	test_y_nll: 0.0649493187666
+	test_y_row_norms_max: 0.422030478716
+	test_y_row_norms_mean: 0.199011057615
+	test_y_row_norms_min: 0.0679552331567
+	valid_h2_kernel_norms_max: 0.781859397888
+	valid_h2_kernel_norms_mean: 0.361994683743
+	valid_h2_kernel_norms_min: 0.129564642906
+	valid_h3_kernel_norms_max: 1.31148552895
+	valid_h3_kernel_norms_mean: 1.2162245512
+	valid_h3_kernel_norms_min: 1.12809610367
+	valid_objective: 0.0735285654664
+	valid_term_0: 0.0670897737145
+	valid_term_1_weight_decay: 0.00643879268318
+	valid_y_col_norms_max: 1.62427508831
+	valid_y_col_norms_mean: 1.55978488922
+	valid_y_col_norms_min: 1.46710860729
+	valid_y_max_max_class: 0.999997675419
+	valid_y_mean_max_class: 0.973387658596
+	valid_y_min_max_class: 0.503270566463
+	valid_y_misclass: 0.018399996683
+	valid_y_nll: 0.0670897737145
+	valid_y_row_norms_max: 0.422030478716
+	valid_y_row_norms_mean: 0.199011057615
+	valid_y_row_norms_min: 0.0679552331567
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 5
+	Batches seen: 2500
+	Examples seen: 250000
+	learning_rate: 0.00999999046326
+	momentum: 0.717777431011
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 0.832773625851
+	test_h2_kernel_norms_mean: 0.375479727983
+	test_h2_kernel_norms_min: 0.130946144462
+	test_h3_kernel_norms_max: 1.33192455769
+	test_h3_kernel_norms_mean: 1.22226464748
+	test_h3_kernel_norms_min: 1.12613403797
+	test_objective: 0.0632106438279
+	test_term_0: 0.0566251575947
+	test_term_1_weight_decay: 0.00658547598869
+	test_y_col_norms_max: 1.66011714935
+	test_y_col_norms_mean: 1.59827458858
+	test_y_col_norms_min: 1.48868477345
+	test_y_max_max_class: 0.999997138977
+	test_y_mean_max_class: 0.976692438126
+	test_y_min_max_class: 0.577260375023
+	test_y_misclass: 0.0176999960095
+	test_y_nll: 0.0566251575947
+	test_y_row_norms_max: 0.439695209265
+	test_y_row_norms_mean: 0.203644096851
+	test_y_row_norms_min: 0.0637692287564
+	valid_h2_kernel_norms_max: 0.832773625851
+	valid_h2_kernel_norms_mean: 0.375479727983
+	valid_h2_kernel_norms_min: 0.130946144462
+	valid_h3_kernel_norms_max: 1.33192455769
+	valid_h3_kernel_norms_mean: 1.22226464748
+	valid_h3_kernel_norms_min: 1.12613403797
+	valid_objective: 0.0688050463796
+	valid_term_0: 0.062219556421
+	valid_term_1_weight_decay: 0.00658547598869
+	valid_y_col_norms_max: 1.66011714935
+	valid_y_col_norms_mean: 1.59827458858
+	valid_y_col_norms_min: 1.48868477345
+	valid_y_max_max_class: 0.999997437
+	valid_y_mean_max_class: 0.976944029331
+	valid_y_min_max_class: 0.52714407444
+	valid_y_misclass: 0.0174999963492
+	valid_y_nll: 0.062219556421
+	valid_y_row_norms_max: 0.439695209265
+	valid_y_row_norms_mean: 0.203644096851
+	valid_y_row_norms_min: 0.0637692287564
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 6
+	Batches seen: 3000
+	Examples seen: 300000
+	learning_rate: 0.00999999046326
+	momentum: 0.772221684456
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 0.88766849041
+	test_h2_kernel_norms_mean: 0.38820785284
+	test_h2_kernel_norms_min: 0.132575467229
+	test_h3_kernel_norms_max: 1.35547780991
+	test_h3_kernel_norms_mean: 1.22891294956
+	test_h3_kernel_norms_min: 1.12390017509
+	test_objective: 0.0508170388639
+	test_term_0: 0.0440755337477
+	test_term_1_weight_decay: 0.00674151722342
+	test_y_col_norms_max: 1.70457088947
+	test_y_col_norms_mean: 1.63869786263
+	test_y_col_norms_min: 1.51417279243
+	test_y_max_max_class: 0.999998807907
+	test_y_mean_max_class: 0.982150614262
+	test_y_min_max_class: 0.625940322876
+	test_y_misclass: 0.0127999959514
+	test_y_nll: 0.0440755337477
+	test_y_row_norms_max: 0.450602352619
+	test_y_row_norms_mean: 0.208474799991
+	test_y_row_norms_min: 0.0636670812964
+	valid_h2_kernel_norms_max: 0.88766849041
+	valid_h2_kernel_norms_mean: 0.38820785284
+	valid_h2_kernel_norms_min: 0.132575467229
+	valid_h3_kernel_norms_max: 1.35547780991
+	valid_h3_kernel_norms_mean: 1.22891294956
+	valid_h3_kernel_norms_min: 1.12390017509
+	valid_objective: 0.0573169440031
+	valid_term_0: 0.0505754128098
+	valid_term_1_weight_decay: 0.00674151722342
+	valid_y_col_norms_max: 1.70457088947
+	valid_y_col_norms_mean: 1.63869786263
+	valid_y_col_norms_min: 1.51417279243
+	valid_y_max_max_class: 0.999998748302
+	valid_y_mean_max_class: 0.983028948307
+	valid_y_min_max_class: 0.604730963707
+	valid_y_misclass: 0.0140999974683
+	valid_y_nll: 0.0505754128098
+	valid_y_row_norms_max: 0.450602352619
+	valid_y_row_norms_mean: 0.208474799991
+	valid_y_row_norms_min: 0.0636670812964
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 7
+	Batches seen: 3500
+	Examples seen: 350000
+	learning_rate: 0.00999999046326
+	momentum: 0.826667308807
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 0.929123222828
+	test_h2_kernel_norms_mean: 0.399323552847
+	test_h2_kernel_norms_min: 0.134827151895
+	test_h3_kernel_norms_max: 1.38547825813
+	test_h3_kernel_norms_mean: 1.23686885834
+	test_h3_kernel_norms_min: 1.12105619907
+	test_objective: 0.056061360985
+	test_term_0: 0.0491489693522
+	test_term_1_weight_decay: 0.00691237207502
+	test_y_col_norms_max: 1.75048100948
+	test_y_col_norms_mean: 1.68254709244
+	test_y_col_norms_min: 1.53889346123
+	test_y_max_max_class: 0.999998807907
+	test_y_mean_max_class: 0.981656014919
+	test_y_min_max_class: 0.602277040482
+	test_y_misclass: 0.0163999944925
+	test_y_nll: 0.0491489693522
+	test_y_row_norms_max: 0.461918920279
+	test_y_row_norms_mean: 0.213699370623
+	test_y_row_norms_min: 0.0587794966996
+	valid_h2_kernel_norms_max: 0.929123222828
+	valid_h2_kernel_norms_mean: 0.399323552847
+	valid_h2_kernel_norms_min: 0.134827151895
+	valid_h3_kernel_norms_max: 1.38547825813
+	valid_h3_kernel_norms_mean: 1.23686885834
+	valid_h3_kernel_norms_min: 1.12105619907
+	valid_objective: 0.064027749002
+	valid_term_0: 0.0571153722703
+	valid_term_1_weight_decay: 0.00691237207502
+	valid_y_col_norms_max: 1.75048100948
+	valid_y_col_norms_mean: 1.68254709244
+	valid_y_col_norms_min: 1.53889346123
+	valid_y_max_max_class: 0.999998986721
+	valid_y_mean_max_class: 0.982254683971
+	valid_y_min_max_class: 0.603839755058
+	valid_y_misclass: 0.0169999953359
+	valid_y_nll: 0.0571153722703
+	valid_y_row_norms_max: 0.461918920279
+	valid_y_row_norms_mean: 0.213699370623
+	valid_y_row_norms_min: 0.0587794966996
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 8
+	Batches seen: 4000
+	Examples seen: 400000
+	learning_rate: 0.00999999046326
+	momentum: 0.881111502647
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 0.989806592464
+	test_h2_kernel_norms_mean: 0.410601556301
+	test_h2_kernel_norms_min: 0.137333706021
+	test_h3_kernel_norms_max: 1.42606520653
+	test_h3_kernel_norms_mean: 1.24712812901
+	test_h3_kernel_norms_min: 1.11718678474
+	test_objective: 0.0502738766372
+	test_term_0: 0.043147739023
+	test_term_1_weight_decay: 0.00712614273652
+	test_y_col_norms_max: 1.82054030895
+	test_y_col_norms_mean: 1.73716878891
+	test_y_col_norms_min: 1.57843542099
+	test_y_max_max_class: 0.999999165535
+	test_y_mean_max_class: 0.982117474079
+	test_y_min_max_class: 0.62409812212
+	test_y_misclass: 0.0145999984816
+	test_y_nll: 0.043147739023
+	test_y_row_norms_max: 0.474265426397
+	test_y_row_norms_mean: 0.220210835338
+	test_y_row_norms_min: 0.0624779649079
+	valid_h2_kernel_norms_max: 0.989806592464
+	valid_h2_kernel_norms_mean: 0.410601556301
+	valid_h2_kernel_norms_min: 0.137333706021
+	valid_h3_kernel_norms_max: 1.42606520653
+	valid_h3_kernel_norms_mean: 1.24712812901
+	valid_h3_kernel_norms_min: 1.11718678474
+	valid_objective: 0.0570201724768
+	valid_term_0: 0.0498940385878
+	valid_term_1_weight_decay: 0.00712614273652
+	valid_y_col_norms_max: 1.82054030895
+	valid_y_col_norms_mean: 1.73716878891
+	valid_y_col_norms_min: 1.57843542099
+	valid_y_max_max_class: 0.99999922514
+	valid_y_mean_max_class: 0.982436537743
+	valid_y_min_max_class: 0.589764595032
+	valid_y_misclass: 0.0149999968708
+	valid_y_nll: 0.0498940385878
+	valid_y_row_norms_max: 0.474265426397
+	valid_y_row_norms_mean: 0.220210835338
+	valid_y_row_norms_min: 0.0624779649079
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 9
+	Batches seen: 4500
+	Examples seen: 450000
+	learning_rate: 0.00999999046326
+	momentum: 0.935554862022
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.07385063171
+	test_h2_kernel_norms_mean: 0.424426734447
+	test_h2_kernel_norms_min: 0.13899704814
+	test_h3_kernel_norms_max: 1.53400921822
+	test_h3_kernel_norms_mean: 1.27375245094
+	test_h3_kernel_norms_min: 1.11178195477
+	test_objective: 0.042645521462
+	test_term_0: 0.0350370593369
+	test_term_1_weight_decay: 0.00760845141485
+	test_y_col_norms_max: 1.9364978075
+	test_y_col_norms_mean: 1.8522503376
+	test_y_col_norms_min: 1.66434967518
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.987486541271
+	test_y_min_max_class: 0.660976171494
+	test_y_misclass: 0.0110999951139
+	test_y_nll: 0.0350370593369
+	test_y_row_norms_max: 0.507471621037
+	test_y_row_norms_mean: 0.233693793416
+	test_y_row_norms_min: 0.060208145529
+	valid_h2_kernel_norms_max: 1.07385063171
+	valid_h2_kernel_norms_mean: 0.424426734447
+	valid_h2_kernel_norms_min: 0.13899704814
+	valid_h3_kernel_norms_max: 1.53400921822
+	valid_h3_kernel_norms_mean: 1.27375245094
+	valid_h3_kernel_norms_min: 1.11178195477
+	valid_objective: 0.0555849485099
+	valid_term_0: 0.0479764938354
+	valid_term_1_weight_decay: 0.00760845141485
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.8522503376
+	valid_y_col_norms_min: 1.66434967518
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.987507760525
+	valid_y_min_max_class: 0.64010322094
+	valid_y_misclass: 0.0137999951839
+	valid_y_nll: 0.0479764938354
+	valid_y_row_norms_max: 0.507471621037
+	valid_y_row_norms_mean: 0.233693793416
+	valid_y_row_norms_min: 0.060208145529
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 10
+	Batches seen: 5000
+	Examples seen: 500000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.36454200745
+	test_h2_kernel_norms_mean: 0.594996869564
+	test_h2_kernel_norms_min: 0.188119694591
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.61646950245
+	test_h3_kernel_norms_min: 1.09280478954
+	test_objective: 0.0631499513984
+	test_term_0: 0.051388181746
+	test_term_1_weight_decay: 0.011761742644
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93649816513
+	test_y_col_norms_min: 1.9364978075
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.984071493149
+	test_y_min_max_class: 0.615571260452
+	test_y_misclass: 0.0163999963552
+	test_y_nll: 0.051388181746
+	test_y_row_norms_max: 0.6544906497
+	test_y_row_norms_mean: 0.228901535273
+	test_y_row_norms_min: 0.0415909774601
+	valid_h2_kernel_norms_max: 1.36454200745
+	valid_h2_kernel_norms_mean: 0.594996869564
+	valid_h2_kernel_norms_min: 0.188119694591
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.61646950245
+	valid_h3_kernel_norms_min: 1.09280478954
+	valid_objective: 0.0694027915597
+	valid_term_0: 0.0576410628855
+	valid_term_1_weight_decay: 0.011761742644
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93649816513
+	valid_y_col_norms_min: 1.9364978075
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.984029531479
+	valid_y_min_max_class: 0.59427690506
+	valid_y_misclass: 0.0182999949902
+	valid_y_nll: 0.0576410628855
+	valid_y_row_norms_max: 0.6544906497
+	valid_y_row_norms_mean: 0.228901535273
+	valid_y_row_norms_min: 0.0415909774601
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 11
+	Batches seen: 5500
+	Examples seen: 550000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.39056098461
+	test_h2_kernel_norms_mean: 0.706941008568
+	test_h2_kernel_norms_min: 0.234355121851
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.68765711784
+	test_h3_kernel_norms_min: 1.04099500179
+	test_objective: 0.0482793785632
+	test_term_0: 0.0351886712015
+	test_term_1_weight_decay: 0.0130906961858
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93641197681
+	test_y_col_norms_min: 1.93562746048
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.988412082195
+	test_y_min_max_class: 0.640873014927
+	test_y_misclass: 0.0119999945164
+	test_y_nll: 0.0351886712015
+	test_y_row_norms_max: 0.654929816723
+	test_y_row_norms_mean: 0.21740038693
+	test_y_row_norms_min: 0.0218525696546
+	valid_h2_kernel_norms_max: 1.39056098461
+	valid_h2_kernel_norms_mean: 0.706941008568
+	valid_h2_kernel_norms_min: 0.234355121851
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.68765711784
+	valid_h3_kernel_norms_min: 1.04099500179
+	valid_objective: 0.058560539037
+	valid_term_0: 0.0454698391259
+	valid_term_1_weight_decay: 0.0130906961858
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93641197681
+	valid_y_col_norms_min: 1.93562746048
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.989314675331
+	valid_y_min_max_class: 0.635535776615
+	valid_y_misclass: 0.0131999952719
+	valid_y_nll: 0.0454698391259
+	valid_y_row_norms_max: 0.654929816723
+	valid_y_row_norms_mean: 0.21740038693
+	valid_y_row_norms_min: 0.0218525696546
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 12
+	Batches seen: 6000
+	Examples seen: 600000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.50585258007
+	test_h2_kernel_norms_mean: 0.774378061295
+	test_h2_kernel_norms_min: 0.233526900411
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.69440424442
+	test_h3_kernel_norms_min: 0.989599168301
+	test_objective: 0.0645113363862
+	test_term_0: 0.0509137585759
+	test_term_1_weight_decay: 0.0135975833982
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93406319618
+	test_y_col_norms_min: 1.91211950779
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.98580300808
+	test_y_min_max_class: 0.631423413754
+	test_y_misclass: 0.01649999246
+	test_y_nll: 0.0509137585759
+	test_y_row_norms_max: 0.700326502323
+	test_y_row_norms_mean: 0.212286829948
+	test_y_row_norms_min: 0.0131878741086
+	valid_h2_kernel_norms_max: 1.50585258007
+	valid_h2_kernel_norms_mean: 0.774378061295
+	valid_h2_kernel_norms_min: 0.233526900411
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.69440424442
+	valid_h3_kernel_norms_min: 0.989599168301
+	valid_objective: 0.0733848139644
+	valid_term_0: 0.0597872585058
+	valid_term_1_weight_decay: 0.0135975833982
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93406319618
+	valid_y_col_norms_min: 1.91211950779
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.986354351044
+	valid_y_min_max_class: 0.607634842396
+	valid_y_misclass: 0.0165999978781
+	valid_y_nll: 0.0597872585058
+	valid_y_row_norms_max: 0.700326502323
+	valid_y_row_norms_mean: 0.212286829948
+	valid_y_row_norms_min: 0.0131878741086
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 13
+	Batches seen: 6500
+	Examples seen: 650000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.53394854069
+	test_h2_kernel_norms_mean: 0.805532991886
+	test_h2_kernel_norms_min: 0.244464352727
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.68991374969
+	test_h3_kernel_norms_min: 0.940793633461
+	test_objective: 0.0511825196445
+	test_term_0: 0.0373907200992
+	test_term_1_weight_decay: 0.0137917911634
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93513691425
+	test_y_col_norms_min: 1.92288172245
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.987354934216
+	test_y_min_max_class: 0.654107630253
+	test_y_misclass: 0.0122999968007
+	test_y_nll: 0.0373907200992
+	test_y_row_norms_max: 0.716042459011
+	test_y_row_norms_mean: 0.20915569365
+	test_y_row_norms_min: 0.00851909630001
+	valid_h2_kernel_norms_max: 1.53394854069
+	valid_h2_kernel_norms_mean: 0.805532991886
+	valid_h2_kernel_norms_min: 0.244464352727
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.68991374969
+	valid_h3_kernel_norms_min: 0.940793633461
+	valid_objective: 0.0587141513824
+	valid_term_0: 0.0449223667383
+	valid_term_1_weight_decay: 0.0137917911634
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93513691425
+	valid_y_col_norms_min: 1.92288172245
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.987662255764
+	valid_y_min_max_class: 0.62133961916
+	valid_y_misclass: 0.014599993825
+	valid_y_nll: 0.0449223667383
+	valid_y_row_norms_max: 0.716042459011
+	valid_y_row_norms_mean: 0.20915569365
+	valid_y_row_norms_min: 0.00851909630001
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 14
+	Batches seen: 7000
+	Examples seen: 700000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.61472260952
+	test_h2_kernel_norms_mean: 0.841480374336
+	test_h2_kernel_norms_min: 0.248451441526
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.68273794651
+	test_h3_kernel_norms_min: 0.894427657127
+	test_objective: 0.0421922914684
+	test_term_0: 0.0282006710768
+	test_term_1_weight_decay: 0.0139916250482
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93523454666
+	test_y_col_norms_min: 1.9238704443
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.990878582001
+	test_y_min_max_class: 0.697841525078
+	test_y_misclass: 0.00909999758005
+	test_y_nll: 0.0282006710768
+	test_y_row_norms_max: 0.706338822842
+	test_y_row_norms_mean: 0.208251163363
+	test_y_row_norms_min: 0.00511088222265
+	valid_h2_kernel_norms_max: 1.61472260952
+	valid_h2_kernel_norms_mean: 0.841480374336
+	valid_h2_kernel_norms_min: 0.248451441526
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.68273794651
+	valid_h3_kernel_norms_min: 0.894427657127
+	valid_objective: 0.0473993085325
+	valid_term_0: 0.0334076955914
+	valid_term_1_weight_decay: 0.0139916250482
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93523454666
+	valid_y_col_norms_min: 1.9238704443
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.99194008112
+	valid_y_min_max_class: 0.690940380096
+	valid_y_misclass: 0.00989999808371
+	valid_y_nll: 0.0334076955914
+	valid_y_row_norms_max: 0.706338822842
+	valid_y_row_norms_mean: 0.208251163363
+	valid_y_row_norms_min: 0.00511088222265
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 15
+	Batches seen: 7500
+	Examples seen: 750000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.64804530144
+	test_h2_kernel_norms_mean: 0.843919992447
+	test_h2_kernel_norms_min: 0.236922517419
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.66448712349
+	test_h3_kernel_norms_min: 0.850341975689
+	test_objective: 0.0726393014193
+	test_term_0: 0.0587929338217
+	test_term_1_weight_decay: 0.0138463508338
+	test_y_col_norms_max: 1.9364978075
+	test_y_col_norms_mean: 1.92979514599
+	test_y_col_norms_min: 1.89925503731
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.985738158226
+	test_y_min_max_class: 0.626274108887
+	test_y_misclass: 0.0174999982119
+	test_y_nll: 0.0587929338217
+	test_y_row_norms_max: 0.688614487648
+	test_y_row_norms_mean: 0.207361996174
+	test_y_row_norms_min: 0.00397483678535
+	valid_h2_kernel_norms_max: 1.64804530144
+	valid_h2_kernel_norms_mean: 0.843919992447
+	valid_h2_kernel_norms_min: 0.236922517419
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.66448712349
+	valid_h3_kernel_norms_min: 0.850341975689
+	valid_objective: 0.0679507032037
+	valid_term_0: 0.0541043430567
+	valid_term_1_weight_decay: 0.0138463508338
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.92979514599
+	valid_y_col_norms_min: 1.89925503731
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.986961960793
+	valid_y_min_max_class: 0.616462945938
+	valid_y_misclass: 0.0153999943286
+	valid_y_nll: 0.0541043430567
+	valid_y_row_norms_max: 0.688614487648
+	valid_y_row_norms_mean: 0.207361996174
+	valid_y_row_norms_min: 0.00397483678535
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 16
+	Batches seen: 8000
+	Examples seen: 800000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.64686727524
+	test_h2_kernel_norms_mean: 0.859606385231
+	test_h2_kernel_norms_min: 0.226451143622
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.6567440033
+	test_h3_kernel_norms_min: 0.80843013525
+	test_objective: 0.0536539815366
+	test_term_0: 0.0397340878844
+	test_term_1_weight_decay: 0.01391991321
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93411040306
+	test_y_col_norms_min: 1.91262662411
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.989290714264
+	test_y_min_max_class: 0.67043530941
+	test_y_misclass: 0.0123999947682
+	test_y_nll: 0.0397340878844
+	test_y_row_norms_max: 0.810259222984
+	test_y_row_norms_mean: 0.206370636821
+	test_y_row_norms_min: 0.00287774624303
+	valid_h2_kernel_norms_max: 1.64686727524
+	valid_h2_kernel_norms_mean: 0.859606385231
+	valid_h2_kernel_norms_min: 0.226451143622
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.6567440033
+	valid_h3_kernel_norms_min: 0.80843013525
+	valid_objective: 0.0558189190924
+	valid_term_0: 0.0418990328908
+	valid_term_1_weight_decay: 0.01391991321
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93411040306
+	valid_y_col_norms_min: 1.91262662411
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.98990637064
+	valid_y_min_max_class: 0.635619819164
+	valid_y_misclass: 0.0121999979019
+	valid_y_nll: 0.0418990328908
+	valid_y_row_norms_max: 0.810259222984
+	valid_y_row_norms_mean: 0.206370636821
+	valid_y_row_norms_min: 0.00287774624303
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 17
+	Batches seen: 8500
+	Examples seen: 850000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.6833152771
+	test_h2_kernel_norms_mean: 0.869428694248
+	test_h2_kernel_norms_min: 0.216688320041
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.6434429884
+	test_h3_kernel_norms_min: 0.768542766571
+	test_objective: 0.050197776407
+	test_term_0: 0.0362909547985
+	test_term_1_weight_decay: 0.01390680857
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93550288677
+	test_y_col_norms_min: 1.92681241035
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.990207016468
+	test_y_min_max_class: 0.672472238541
+	test_y_misclass: 0.0104999961331
+	test_y_nll: 0.0362909547985
+	test_y_row_norms_max: 0.74431347847
+	test_y_row_norms_mean: 0.207573086023
+	test_y_row_norms_min: 0.00181939394679
+	valid_h2_kernel_norms_max: 1.6833152771
+	valid_h2_kernel_norms_mean: 0.869428694248
+	valid_h2_kernel_norms_min: 0.216688320041
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.6434429884
+	valid_h3_kernel_norms_min: 0.768542766571
+	valid_objective: 0.0522766783834
+	valid_term_0: 0.0383698642254
+	valid_term_1_weight_decay: 0.01390680857
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93550288677
+	valid_y_col_norms_min: 1.92681241035
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.990079283714
+	valid_y_min_max_class: 0.639623939991
+	valid_y_misclass: 0.0117999957874
+	valid_y_nll: 0.0383698642254
+	valid_y_row_norms_max: 0.74431347847
+	valid_y_row_norms_mean: 0.207573086023
+	valid_y_row_norms_min: 0.00181939394679
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 18
+	Batches seen: 9000
+	Examples seen: 900000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.69176769257
+	test_h2_kernel_norms_mean: 0.871950507164
+	test_h2_kernel_norms_min: 0.207790702581
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.62504935265
+	test_h3_kernel_norms_min: 0.730635285378
+	test_objective: 0.0632521063089
+	test_term_0: 0.0494847223163
+	test_term_1_weight_decay: 0.0137673746794
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93226325512
+	test_y_col_norms_min: 1.89522528648
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.991277217865
+	test_y_min_max_class: 0.699724972248
+	test_y_misclass: 0.0138999959454
+	test_y_nll: 0.0494847223163
+	test_y_row_norms_max: 0.746858000755
+	test_y_row_norms_mean: 0.207474812865
+	test_y_row_norms_min: 0.00145336287096
+	valid_h2_kernel_norms_max: 1.69176769257
+	valid_h2_kernel_norms_mean: 0.871950507164
+	valid_h2_kernel_norms_min: 0.207790702581
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.62504935265
+	valid_h3_kernel_norms_min: 0.730635285378
+	valid_objective: 0.0604873597622
+	valid_term_0: 0.0467199645936
+	valid_term_1_weight_decay: 0.0137673746794
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93226325512
+	valid_y_col_norms_min: 1.89522528648
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.992373108864
+	valid_y_min_max_class: 0.692509114742
+	valid_y_misclass: 0.0112999957055
+	valid_y_nll: 0.0467199645936
+	valid_y_row_norms_max: 0.746858000755
+	valid_y_row_norms_mean: 0.207474812865
+	valid_y_row_norms_min: 0.00145336287096
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 19
+	Batches seen: 9500
+	Examples seen: 950000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.70350921154
+	test_h2_kernel_norms_mean: 0.868803143501
+	test_h2_kernel_norms_min: 0.198672682047
+	test_h3_kernel_norms_max: 1.9364978075
+	test_h3_kernel_norms_mean: 1.60863113403
+	test_h3_kernel_norms_min: 0.694590866566
+	test_objective: 0.0554669238627
+	test_term_0: 0.0418479889631
+	test_term_1_weight_decay: 0.0136189218611
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93179786205
+	test_y_col_norms_min: 1.8999004364
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.989010691643
+	test_y_min_max_class: 0.665831983089
+	test_y_misclass: 0.0128999976441
+	test_y_nll: 0.0418479889631
+	test_y_row_norms_max: 0.758111357689
+	test_y_row_norms_mean: 0.20689624548
+	test_y_row_norms_min: 0.00127917598002
+	valid_h2_kernel_norms_max: 1.70350921154
+	valid_h2_kernel_norms_mean: 0.868803143501
+	valid_h2_kernel_norms_min: 0.198672682047
+	valid_h3_kernel_norms_max: 1.9364978075
+	valid_h3_kernel_norms_mean: 1.60863113403
+	valid_h3_kernel_norms_min: 0.694590866566
+	valid_objective: 0.0577871836722
+	valid_term_0: 0.0441682524979
+	valid_term_1_weight_decay: 0.0136189218611
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93179786205
+	valid_y_col_norms_min: 1.8999004364
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.990188956261
+	valid_y_min_max_class: 0.667697668076
+	valid_y_misclass: 0.0131999934092
+	valid_y_nll: 0.0441682524979
+	valid_y_row_norms_max: 0.758111357689
+	valid_y_row_norms_mean: 0.20689624548
+	valid_y_row_norms_min: 0.00127917598002
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 20
+	Batches seen: 10000
+	Examples seen: 1000000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.67778658867
+	test_h2_kernel_norms_mean: 0.875897884369
+	test_h2_kernel_norms_min: 0.190444305539
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.60025644302
+	test_h3_kernel_norms_min: 0.660322248936
+	test_objective: 0.0523675829172
+	test_term_0: 0.0387336090207
+	test_term_1_weight_decay: 0.0136339832097
+	test_y_col_norms_max: 1.9364978075
+	test_y_col_norms_mean: 1.93490970135
+	test_y_col_norms_min: 1.9253256321
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.989630460739
+	test_y_min_max_class: 0.66692173481
+	test_y_misclass: 0.012799997814
+	test_y_nll: 0.0387336090207
+	test_y_row_norms_max: 0.722443640232
+	test_y_row_norms_mean: 0.207777306437
+	test_y_row_norms_min: 0.000983290025033
+	valid_h2_kernel_norms_max: 1.67778658867
+	valid_h2_kernel_norms_mean: 0.875897884369
+	valid_h2_kernel_norms_min: 0.190444305539
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.60025644302
+	valid_h3_kernel_norms_min: 0.660322248936
+	valid_objective: 0.0586272664368
+	valid_term_0: 0.0449933074415
+	valid_term_1_weight_decay: 0.0136339832097
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93490970135
+	valid_y_col_norms_min: 1.9253256321
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.991472780704
+	valid_y_min_max_class: 0.668991863728
+	valid_y_misclass: 0.0114999935031
+	valid_y_nll: 0.0449933074415
+	valid_y_row_norms_max: 0.722443640232
+	valid_y_row_norms_mean: 0.207777306437
+	valid_y_row_norms_min: 0.000983290025033
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 21
+	Batches seen: 10500
+	Examples seen: 1050000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.68835270405
+	test_h2_kernel_norms_mean: 0.884814620018
+	test_h2_kernel_norms_min: 0.181439623237
+	test_h3_kernel_norms_max: 1.9364978075
+	test_h3_kernel_norms_mean: 1.59218680859
+	test_h3_kernel_norms_min: 0.62776196003
+	test_objective: 0.03988757357
+	test_term_0: 0.0262223407626
+	test_term_1_weight_decay: 0.0136652281508
+	test_y_col_norms_max: 1.9364978075
+	test_y_col_norms_mean: 1.93643593788
+	test_y_col_norms_min: 1.93587529659
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.992762684822
+	test_y_min_max_class: 0.715005218983
+	test_y_misclass: 0.0088999979198
+	test_y_nll: 0.0262223407626
+	test_y_row_norms_max: 0.712972819805
+	test_y_row_norms_mean: 0.207791805267
+	test_y_row_norms_min: 0.000716669776011
+	valid_h2_kernel_norms_max: 1.68835270405
+	valid_h2_kernel_norms_mean: 0.884814620018
+	valid_h2_kernel_norms_min: 0.181439623237
+	valid_h3_kernel_norms_max: 1.9364978075
+	valid_h3_kernel_norms_mean: 1.59218680859
+	valid_h3_kernel_norms_min: 0.62776196003
+	valid_objective: 0.047671277076
+	valid_term_0: 0.0340060293674
+	valid_term_1_weight_decay: 0.0136652281508
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93643593788
+	valid_y_col_norms_min: 1.93587529659
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.993757724762
+	valid_y_min_max_class: 0.72335934639
+	valid_y_misclass: 0.00929999537766
+	valid_y_nll: 0.0340060293674
+	valid_y_row_norms_max: 0.712972819805
+	valid_y_row_norms_mean: 0.207791805267
+	valid_y_row_norms_min: 0.000716669776011
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 22
+	Batches seen: 11000
+	Examples seen: 1100000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.72621023655
+	test_h2_kernel_norms_mean: 0.891603708267
+	test_h2_kernel_norms_min: 0.173431098461
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.58001172543
+	test_h3_kernel_norms_min: 0.596793949604
+	test_objective: 0.0424352698028
+	test_term_0: 0.028796441853
+	test_term_1_weight_decay: 0.0136388447136
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93519902229
+	test_y_col_norms_min: 1.92366552353
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.993107318878
+	test_y_min_max_class: 0.724319517612
+	test_y_misclass: 0.00819999817759
+	test_y_nll: 0.028796441853
+	test_y_row_norms_max: 0.700765967369
+	test_y_row_norms_mean: 0.206688389182
+	test_y_row_norms_min: 0.000587478920352
+	valid_h2_kernel_norms_max: 1.72621023655
+	valid_h2_kernel_norms_mean: 0.891603708267
+	valid_h2_kernel_norms_min: 0.173431098461
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.58001172543
+	valid_h3_kernel_norms_min: 0.596793949604
+	valid_objective: 0.0514981485903
+	valid_term_0: 0.0378593243659
+	valid_term_1_weight_decay: 0.0136388447136
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93519902229
+	valid_y_col_norms_min: 1.92366552353
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.993462741375
+	valid_y_min_max_class: 0.724108099937
+	valid_y_misclass: 0.00899999588728
+	valid_y_nll: 0.0378593243659
+	valid_y_row_norms_max: 0.700765967369
+	valid_y_row_norms_mean: 0.206688389182
+	valid_y_row_norms_min: 0.000587478920352
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 23
+	Batches seen: 11500
+	Examples seen: 1150000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.68583106995
+	test_h2_kernel_norms_mean: 0.897240757942
+	test_h2_kernel_norms_min: 0.167056888342
+	test_h3_kernel_norms_max: 1.93649816513
+	test_h3_kernel_norms_mean: 1.57001388073
+	test_h3_kernel_norms_min: 0.567350149155
+	test_objective: 0.0363993793726
+	test_term_0: 0.0227796118706
+	test_term_1_weight_decay: 0.0136197600514
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93630170822
+	test_y_col_norms_min: 1.93506193161
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.993925571442
+	test_y_min_max_class: 0.733813285828
+	test_y_misclass: 0.00589999789372
+	test_y_nll: 0.0227796118706
+	test_y_row_norms_max: 0.696706712246
+	test_y_row_norms_mean: 0.207620769739
+	test_y_row_norms_min: 0.000437293841969
+	valid_h2_kernel_norms_max: 1.68583106995
+	valid_h2_kernel_norms_mean: 0.897240757942
+	valid_h2_kernel_norms_min: 0.167056888342
+	valid_h3_kernel_norms_max: 1.93649816513
+	valid_h3_kernel_norms_mean: 1.57001388073
+	valid_h3_kernel_norms_min: 0.567350149155
+	valid_objective: 0.0436839200556
+	valid_term_0: 0.0300641581416
+	valid_term_1_weight_decay: 0.0136197600514
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93630170822
+	valid_y_col_norms_min: 1.93506193161
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.994033038616
+	valid_y_min_max_class: 0.722307622433
+	valid_y_misclass: 0.00759999733418
+	valid_y_nll: 0.0300641581416
+	valid_y_row_norms_max: 0.696706712246
+	valid_y_row_norms_mean: 0.207620769739
+	valid_y_row_norms_min: 0.000437293841969
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 24
+	Batches seen: 12000
+	Examples seen: 1200000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.68564248085
+	test_h2_kernel_norms_mean: 0.889169812202
+	test_h2_kernel_norms_min: 0.160865500569
+	test_h3_kernel_norms_max: 1.9364978075
+	test_h3_kernel_norms_mean: 1.54897785187
+	test_h3_kernel_norms_min: 0.539356291294
+	test_objective: 0.0389547720551
+	test_term_0: 0.0255668349564
+	test_term_1_weight_decay: 0.0133879426867
+	test_y_col_norms_max: 1.9364978075
+	test_y_col_norms_mean: 1.93423271179
+	test_y_col_norms_min: 1.92195153236
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.995527327061
+	test_y_min_max_class: 0.773853540421
+	test_y_misclass: 0.00749999796972
+	test_y_nll: 0.0255668349564
+	test_y_row_norms_max: 0.694369792938
+	test_y_row_norms_mean: 0.208099275827
+	test_y_row_norms_min: 0.000383263395634
+	valid_h2_kernel_norms_max: 1.68564248085
+	valid_h2_kernel_norms_mean: 0.889169812202
+	valid_h2_kernel_norms_min: 0.160865500569
+	valid_h3_kernel_norms_max: 1.9364978075
+	valid_h3_kernel_norms_mean: 1.54897785187
+	valid_h3_kernel_norms_min: 0.539356291294
+	valid_objective: 0.0491341352463
+	valid_term_0: 0.0357461981475
+	valid_term_1_weight_decay: 0.0133879426867
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93423271179
+	valid_y_col_norms_min: 1.92195153236
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.995152533054
+	valid_y_min_max_class: 0.751248776913
+	valid_y_misclass: 0.00829999893904
+	valid_y_nll: 0.0357461981475
+	valid_y_row_norms_max: 0.694369792938
+	valid_y_row_norms_mean: 0.208099275827
+	valid_y_row_norms_min: 0.000383263395634
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 25
+	Batches seen: 12500
+	Examples seen: 1250000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.69196462631
+	test_h2_kernel_norms_mean: 0.879831790924
+	test_h2_kernel_norms_min: 0.153864011168
+	test_h3_kernel_norms_max: 1.93408703804
+	test_h3_kernel_norms_mean: 1.52654671669
+	test_h3_kernel_norms_min: 0.512733280659
+	test_objective: 0.0370578356087
+	test_term_0: 0.0239195544273
+	test_term_1_weight_decay: 0.0131382811815
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93425166607
+	test_y_col_norms_min: 1.92024695873
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.994359254837
+	test_y_min_max_class: 0.749475896358
+	test_y_misclass: 0.00829999614507
+	test_y_nll: 0.0239195544273
+	test_y_row_norms_max: 0.681436598301
+	test_y_row_norms_mean: 0.208086118102
+	test_y_row_norms_min: 0.000330334267346
+	valid_h2_kernel_norms_max: 1.69196462631
+	valid_h2_kernel_norms_mean: 0.879831790924
+	valid_h2_kernel_norms_min: 0.153864011168
+	valid_h3_kernel_norms_max: 1.93408703804
+	valid_h3_kernel_norms_mean: 1.52654671669
+	valid_h3_kernel_norms_min: 0.512733280659
+	valid_objective: 0.0411327928305
+	valid_term_0: 0.0279944967479
+	valid_term_1_weight_decay: 0.0131382811815
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93425166607
+	valid_y_col_norms_min: 1.92024695873
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.995723307133
+	valid_y_min_max_class: 0.776681661606
+	valid_y_misclass: 0.00689999759197
+	valid_y_nll: 0.0279944967479
+	valid_y_row_norms_max: 0.681436598301
+	valid_y_row_norms_mean: 0.208086118102
+	valid_y_row_norms_min: 0.000330334267346
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 26
+	Batches seen: 13000
+	Examples seen: 1300000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.66537487507
+	test_h2_kernel_norms_mean: 0.874121308327
+	test_h2_kernel_norms_min: 0.146776556969
+	test_h3_kernel_norms_max: 1.9364978075
+	test_h3_kernel_norms_mean: 1.50085985661
+	test_h3_kernel_norms_min: 0.487425893545
+	test_objective: 0.0368337668478
+	test_term_0: 0.0239664204419
+	test_term_1_weight_decay: 0.012867340818
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93443059921
+	test_y_col_norms_min: 1.92772090435
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.99531930685
+	test_y_min_max_class: 0.763916194439
+	test_y_misclass: 0.00679999776185
+	test_y_nll: 0.0239664204419
+	test_y_row_norms_max: 0.714621961117
+	test_y_row_norms_mean: 0.208242222667
+	test_y_row_norms_min: 0.000281198386801
+	valid_h2_kernel_norms_max: 1.66537487507
+	valid_h2_kernel_norms_mean: 0.874121308327
+	valid_h2_kernel_norms_min: 0.146776556969
+	valid_h3_kernel_norms_max: 1.9364978075
+	valid_h3_kernel_norms_mean: 1.50085985661
+	valid_h3_kernel_norms_min: 0.487425893545
+	valid_objective: 0.0432483702898
+	valid_term_0: 0.0303810164332
+	valid_term_1_weight_decay: 0.012867340818
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93443059921
+	valid_y_col_norms_min: 1.92772090435
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.99551397562
+	valid_y_min_max_class: 0.777581751347
+	valid_y_misclass: 0.00719999661669
+	valid_y_nll: 0.0303810164332
+	valid_y_row_norms_max: 0.714621961117
+	valid_y_row_norms_mean: 0.208242222667
+	valid_y_row_norms_min: 0.000281198386801
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 27
+	Batches seen: 13500
+	Examples seen: 1350000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.64331126213
+	test_h2_kernel_norms_mean: 0.859558463097
+	test_h2_kernel_norms_min: 0.142427310348
+	test_h3_kernel_norms_max: 1.90365302563
+	test_h3_kernel_norms_mean: 1.46347272396
+	test_h3_kernel_norms_min: 0.463380783796
+	test_objective: 0.0346898175776
+	test_term_0: 0.0222900789231
+	test_term_1_weight_decay: 0.0123997237533
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93206357956
+	test_y_col_norms_min: 1.91979658604
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.995556890965
+	test_y_min_max_class: 0.774405956268
+	test_y_misclass: 0.00639999797568
+	test_y_nll: 0.0222900789231
+	test_y_row_norms_max: 0.714301943779
+	test_y_row_norms_mean: 0.207722306252
+	test_y_row_norms_min: 0.000251587975072
+	valid_h2_kernel_norms_max: 1.64331126213
+	valid_h2_kernel_norms_mean: 0.859558463097
+	valid_h2_kernel_norms_min: 0.142427310348
+	valid_h3_kernel_norms_max: 1.90365302563
+	valid_h3_kernel_norms_mean: 1.46347272396
+	valid_h3_kernel_norms_min: 0.463380783796
+	valid_objective: 0.0444162450731
+	valid_term_0: 0.0320165045559
+	valid_term_1_weight_decay: 0.0123997237533
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93206357956
+	valid_y_col_norms_min: 1.91979658604
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.995870888233
+	valid_y_min_max_class: 0.784895181656
+	valid_y_misclass: 0.00769999856129
+	valid_y_nll: 0.0320165045559
+	valid_y_row_norms_max: 0.714301943779
+	valid_y_row_norms_mean: 0.207722306252
+	valid_y_row_norms_min: 0.000251587975072
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 28
+	Batches seen: 14000
+	Examples seen: 1400000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.60091817379
+	test_h2_kernel_norms_mean: 0.847774326801
+	test_h2_kernel_norms_min: 0.135476872325
+	test_h3_kernel_norms_max: 1.90083956718
+	test_h3_kernel_norms_mean: 1.4264909029
+	test_h3_kernel_norms_min: 0.440516233444
+	test_objective: 0.0355651155114
+	test_term_0: 0.0235966388136
+	test_term_1_weight_decay: 0.0119684897363
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93215537071
+	test_y_col_norms_min: 1.91463315487
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.994921386242
+	test_y_min_max_class: 0.753433525562
+	test_y_misclass: 0.00759999779984
+	test_y_nll: 0.0235966388136
+	test_y_row_norms_max: 0.713906705379
+	test_y_row_norms_mean: 0.207586675882
+	test_y_row_norms_min: 0.000232789869187
+	valid_h2_kernel_norms_max: 1.60091817379
+	valid_h2_kernel_norms_mean: 0.847774326801
+	valid_h2_kernel_norms_min: 0.135476872325
+	valid_h3_kernel_norms_max: 1.90083956718
+	valid_h3_kernel_norms_mean: 1.4264909029
+	valid_h3_kernel_norms_min: 0.440516233444
+	valid_objective: 0.040809225291
+	valid_term_0: 0.0288407560438
+	valid_term_1_weight_decay: 0.0119684897363
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93215537071
+	valid_y_col_norms_min: 1.91463315487
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.995193839073
+	valid_y_min_max_class: 0.770011305809
+	valid_y_misclass: 0.00699999695644
+	valid_y_nll: 0.0288407560438
+	valid_y_row_norms_max: 0.713906705379
+	valid_y_row_norms_mean: 0.207586675882
+	valid_y_row_norms_min: 0.000232789869187
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 29
+	Batches seen: 14500
+	Examples seen: 1450000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.58257114887
+	test_h2_kernel_norms_mean: 0.839243888855
+	test_h2_kernel_norms_min: 0.130251988769
+	test_h3_kernel_norms_max: 1.8848054409
+	test_h3_kernel_norms_mean: 1.39818203449
+	test_h3_kernel_norms_min: 0.418775558472
+	test_objective: 0.0348900184035
+	test_term_0: 0.0232177637517
+	test_term_1_weight_decay: 0.0116722593084
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.9357329607
+	test_y_col_norms_min: 1.93191480637
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.995525717735
+	test_y_min_max_class: 0.771845698357
+	test_y_misclass: 0.00679999729618
+	test_y_nll: 0.0232177637517
+	test_y_row_norms_max: 0.721959710121
+	test_y_row_norms_mean: 0.207785829902
+	test_y_row_norms_min: 0.000211058068089
+	valid_h2_kernel_norms_max: 1.58257114887
+	valid_h2_kernel_norms_mean: 0.839243888855
+	valid_h2_kernel_norms_min: 0.130251988769
+	valid_h3_kernel_norms_max: 1.8848054409
+	valid_h3_kernel_norms_mean: 1.39818203449
+	valid_h3_kernel_norms_min: 0.418775558472
+	valid_objective: 0.0439223013818
+	valid_term_0: 0.0322500579059
+	valid_term_1_weight_decay: 0.0116722593084
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.9357329607
+	valid_y_col_norms_min: 1.93191480637
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.995786309242
+	valid_y_min_max_class: 0.766686916351
+	valid_y_misclass: 0.00749999750406
+	valid_y_nll: 0.0322500579059
+	valid_y_row_norms_max: 0.721959710121
+	valid_y_row_norms_mean: 0.207785829902
+	valid_y_row_norms_min: 0.000211058068089
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 30
+	Batches seen: 15000
+	Examples seen: 1500000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.57517504692
+	test_h2_kernel_norms_mean: 0.831081151962
+	test_h2_kernel_norms_min: 0.125741973519
+	test_h3_kernel_norms_max: 1.85392832756
+	test_h3_kernel_norms_mean: 1.36885237694
+	test_h3_kernel_norms_min: 0.398104667664
+	test_objective: 0.0366027764976
+	test_term_0: 0.0252521429211
+	test_term_1_weight_decay: 0.0113506168127
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93363416195
+	test_y_col_norms_min: 1.91801786423
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.99491339922
+	test_y_min_max_class: 0.764514684677
+	test_y_misclass: 0.00739999860525
+	test_y_nll: 0.0252521429211
+	test_y_row_norms_max: 0.719762325287
+	test_y_row_norms_mean: 0.207735702395
+	test_y_row_norms_min: 0.000189444122952
+	valid_h2_kernel_norms_max: 1.57517504692
+	valid_h2_kernel_norms_mean: 0.831081151962
+	valid_h2_kernel_norms_min: 0.125741973519
+	valid_h3_kernel_norms_max: 1.85392832756
+	valid_h3_kernel_norms_mean: 1.36885237694
+	valid_h3_kernel_norms_min: 0.398104667664
+	valid_objective: 0.0463137216866
+	valid_term_0: 0.034963093698
+	valid_term_1_weight_decay: 0.0113506168127
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93363416195
+	valid_y_col_norms_min: 1.91801786423
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.994868218899
+	valid_y_min_max_class: 0.737891018391
+	valid_y_misclass: 0.00849999766797
+	valid_y_nll: 0.034963093698
+	valid_y_row_norms_max: 0.719762325287
+	valid_y_row_norms_mean: 0.207735702395
+	valid_y_row_norms_min: 0.000189444122952
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 31
+	Batches seen: 15500
+	Examples seen: 1550000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.5779736042
+	test_h2_kernel_norms_mean: 0.827632904053
+	test_h2_kernel_norms_min: 0.120320126414
+	test_h3_kernel_norms_max: 1.82392573357
+	test_h3_kernel_norms_mean: 1.34619140625
+	test_h3_kernel_norms_min: 0.378453671932
+	test_objective: 0.0340870730579
+	test_term_0: 0.0229520369321
+	test_term_1_weight_decay: 0.011135048233
+	test_y_col_norms_max: 1.9364978075
+	test_y_col_norms_mean: 1.93261814117
+	test_y_col_norms_min: 1.92221474648
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.99570864439
+	test_y_min_max_class: 0.787575006485
+	test_y_misclass: 0.00659999856725
+	test_y_nll: 0.0229520369321
+	test_y_row_norms_max: 0.704383790493
+	test_y_row_norms_mean: 0.207179769874
+	test_y_row_norms_min: 0.000173812455614
+	valid_h2_kernel_norms_max: 1.5779736042
+	valid_h2_kernel_norms_mean: 0.827632904053
+	valid_h2_kernel_norms_min: 0.120320126414
+	valid_h3_kernel_norms_max: 1.82392573357
+	valid_h3_kernel_norms_mean: 1.34619140625
+	valid_h3_kernel_norms_min: 0.378453671932
+	valid_objective: 0.0406742691994
+	valid_term_0: 0.0295392181724
+	valid_term_1_weight_decay: 0.011135048233
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93261814117
+	valid_y_col_norms_min: 1.92221474648
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.995444834232
+	valid_y_min_max_class: 0.771299421787
+	valid_y_misclass: 0.00819999817759
+	valid_y_nll: 0.0295392181724
+	valid_y_row_norms_max: 0.704383790493
+	valid_y_row_norms_mean: 0.207179769874
+	valid_y_row_norms_min: 0.000173812455614
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 32
+	Batches seen: 16000
+	Examples seen: 1600000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.59001338482
+	test_h2_kernel_norms_mean: 0.817721605301
+	test_h2_kernel_norms_min: 0.114863947034
+	test_h3_kernel_norms_max: 1.81585228443
+	test_h3_kernel_norms_mean: 1.31814038754
+	test_h3_kernel_norms_min: 0.359775602818
+	test_objective: 0.030712351203
+	test_term_0: 0.0198767911643
+	test_term_1_weight_decay: 0.0108355646953
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93532991409
+	test_y_col_norms_min: 1.93021285534
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.996017575264
+	test_y_min_max_class: 0.800283312798
+	test_y_misclass: 0.00559999933466
+	test_y_nll: 0.0198767911643
+	test_y_row_norms_max: 0.695500731468
+	test_y_row_norms_mean: 0.207943171263
+	test_y_row_norms_min: 0.000158947208547
+	valid_h2_kernel_norms_max: 1.59001338482
+	valid_h2_kernel_norms_mean: 0.817721605301
+	valid_h2_kernel_norms_min: 0.114863947034
+	valid_h3_kernel_norms_max: 1.81585228443
+	valid_h3_kernel_norms_mean: 1.31814038754
+	valid_h3_kernel_norms_min: 0.359775602818
+	valid_objective: 0.0364593975246
+	valid_term_0: 0.0256238374859
+	valid_term_1_weight_decay: 0.0108355646953
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93532991409
+	valid_y_col_norms_min: 1.93021285534
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.995783805847
+	valid_y_min_max_class: 0.76019436121
+	valid_y_misclass: 0.00709999771789
+	valid_y_nll: 0.0256238374859
+	valid_y_row_norms_max: 0.695500731468
+	valid_y_row_norms_mean: 0.207943171263
+	valid_y_row_norms_min: 0.000158947208547
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 33
+	Batches seen: 16500
+	Examples seen: 1650000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.57511591911
+	test_h2_kernel_norms_mean: 0.80326384306
+	test_h2_kernel_norms_min: 0.109706811607
+	test_h3_kernel_norms_max: 1.76447713375
+	test_h3_kernel_norms_mean: 1.27905166149
+	test_h3_kernel_norms_min: 0.342014402151
+	test_objective: 0.0336497314274
+	test_term_0: 0.0232624839991
+	test_term_1_weight_decay: 0.0103872353211
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93237066269
+	test_y_col_norms_min: 1.92732727528
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.995543837547
+	test_y_min_max_class: 0.783837497234
+	test_y_misclass: 0.00709999818355
+	test_y_nll: 0.0232624839991
+	test_y_row_norms_max: 0.692723035812
+	test_y_row_norms_mean: 0.207481861115
+	test_y_row_norms_min: 0.00015024516324
+	valid_h2_kernel_norms_max: 1.57511591911
+	valid_h2_kernel_norms_mean: 0.80326384306
+	valid_h2_kernel_norms_min: 0.109706811607
+	valid_h3_kernel_norms_max: 1.76447713375
+	valid_h3_kernel_norms_mean: 1.27905166149
+	valid_h3_kernel_norms_min: 0.342014402151
+	valid_objective: 0.037237688899
+	valid_term_0: 0.0268504470587
+	valid_term_1_weight_decay: 0.0103872353211
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93237066269
+	valid_y_col_norms_min: 1.92732727528
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.995502591133
+	valid_y_min_max_class: 0.765996038914
+	valid_y_misclass: 0.00729999877512
+	valid_y_nll: 0.0268504470587
+	valid_y_row_norms_max: 0.692723035812
+	valid_y_row_norms_mean: 0.207481861115
+	valid_y_row_norms_min: 0.00015024516324
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 34
+	Batches seen: 17000
+	Examples seen: 1700000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.56109428406
+	test_h2_kernel_norms_mean: 0.808016657829
+	test_h2_kernel_norms_min: 0.106077812612
+	test_h3_kernel_norms_max: 1.80211400986
+	test_h3_kernel_norms_mean: 1.27658939362
+	test_h3_kernel_norms_min: 0.325125664473
+	test_objective: 0.0345510318875
+	test_term_0: 0.0241065099835
+	test_term_1_weight_decay: 0.0104445042089
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93504393101
+	test_y_col_norms_min: 1.92401349545
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.995047926903
+	test_y_min_max_class: 0.770895302296
+	test_y_misclass: 0.00759999733418
+	test_y_nll: 0.0241065099835
+	test_y_row_norms_max: 0.717484533787
+	test_y_row_norms_mean: 0.207626789808
+	test_y_row_norms_min: 0.000136090122396
+	valid_h2_kernel_norms_max: 1.56109428406
+	valid_h2_kernel_norms_mean: 0.808016657829
+	valid_h2_kernel_norms_min: 0.106077812612
+	valid_h3_kernel_norms_max: 1.80211400986
+	valid_h3_kernel_norms_mean: 1.27658939362
+	valid_h3_kernel_norms_min: 0.325125664473
+	valid_objective: 0.0384156778455
+	valid_term_0: 0.0279711540788
+	valid_term_1_weight_decay: 0.0104445042089
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93504393101
+	valid_y_col_norms_min: 1.92401349545
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.995293200016
+	valid_y_min_max_class: 0.759243786335
+	valid_y_misclass: 0.00739999767393
+	valid_y_nll: 0.0279711540788
+	valid_y_row_norms_max: 0.717484533787
+	valid_y_row_norms_mean: 0.207626789808
+	valid_y_row_norms_min: 0.000136090122396
+Time this epoch: 45.000000 seconds
+Monitoring step:
+	Epochs seen: 35
+	Batches seen: 17500
+	Examples seen: 1750000
+	learning_rate: 0.00999999046326
+	momentum: 0.989998817444
+	monitor_seconds_per_epoch: 45.0000419617
+	test_h2_kernel_norms_max: 1.56958472729
+	test_h2_kernel_norms_mean: 0.807142674923
+	test_h2_kernel_norms_min: 0.102567844093
+	test_h3_kernel_norms_max: 1.8155939579
+	test_h3_kernel_norms_mean: 1.26298308372
+	test_h3_kernel_norms_min: 0.309067994356
+	test_objective: 0.0321890898049
+	test_term_0: 0.0218411553651
+	test_term_1_weight_decay: 0.0103479316458
+	test_y_col_norms_max: 1.93649816513
+	test_y_col_norms_mean: 1.93570828438
+	test_y_col_norms_min: 1.93173956871
+	test_y_max_max_class: 0.999999344349
+	test_y_mean_max_class: 0.995139658451
+	test_y_min_max_class: 0.76361477375
+	test_y_misclass: 0.00679999869317
+	test_y_nll: 0.0218411553651
+	test_y_row_norms_max: 0.702237665653
+	test_y_row_norms_mean: 0.207991480827
+	test_y_row_norms_min: 0.000126592232846
+	valid_h2_kernel_norms_max: 1.56958472729
+	valid_h2_kernel_norms_mean: 0.807142674923
+	valid_h2_kernel_norms_min: 0.102567844093
+	valid_h3_kernel_norms_max: 1.8155939579
+	valid_h3_kernel_norms_mean: 1.26298308372
+	valid_h3_kernel_norms_min: 0.309067994356
+	valid_objective: 0.0433275438845
+	valid_term_0: 0.0329795964062
+	valid_term_1_weight_decay: 0.0103479316458
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93570828438
+	valid_y_col_norms_min: 1.93173956871
+	valid_y_max_max_class: 0.999999344349
+	valid_y_mean_max_class: 0.995215177536
+	valid_y_min_max_class: 0.747305870056
+	valid_y_misclass: 0.00779999792576
+	valid_y_nll: 0.0329795964062
+	valid_y_row_norms_max: 0.702237665653
+	valid_y_row_norms_mean: 0.207991480827
+	valid_y_row_norms_min: 0.000126592232846
+start : 3.34  stop : 1813.47  diff : 1810.13
+max memory usage : 814616  (the unit depends on the system)

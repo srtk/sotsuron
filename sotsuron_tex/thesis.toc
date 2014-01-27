@@ -47,7 +47,8 @@
 \contentsline {subsubsection}{高精度アルゴリズムMaxout Networkの実装}{36}
 \contentsline {subsubsection}{Theanoの利用}{36}
 \contentsline {subsubsection}{高度な拡張性と可読性}{36}
-\contentsline {section}{\numberline {4.5}ハードウェアの構成}{36}
+\contentsline {subsubsection}{pylearn2の主なパッケージ}{36}
+\contentsline {section}{\numberline {4.5}ハードウェアの構成}{37}
 \contentsline {chapter}{\numberline {第5章}Web工学への深層学習技術の応用}{39}
 \contentsline {section}{\numberline {5.1}利用したデータセット}{39}
 \contentsline {subsection}{\numberline {5.1.1}MNIST}{39}

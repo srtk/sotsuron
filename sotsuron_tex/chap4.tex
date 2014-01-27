@@ -82,6 +82,24 @@ pylearn2のソースコードは、拡張性や可読性を非常に強く意識
  \caption{Pylearn2の実験計画例}
  \label{c4_pylearn2_yaml}
 \end{figure}
+
+\subsubsection{pylearn2の主なパッケージ}
+現在のpylearn2のソースコードは、使われているものと非推奨のものが混在している。これは、pylearn2に定められたAPI変更のルールのためである。pylearn2では、「変数やクラスを消去する半年前に、ライブラリ上で告知しなければならない」という管理方針を定めている。これは、pylearn2の安定性に寄与しているが、一方で、ソースコードリーディングの際には使われていないパッケージがノイズになることも少なくない。ここでは、pylearn2で現在使われている主なパッケージについて紹介する。
+\begin{itemize}
+\item \textbf{costs} 最終レイヤーで誤差を計算するときに使われる、損失関数(loss function)を集めたパッケージである。主にSGDによって利用される。Dropout、Lpペナルティ、クロスエントロピー関数、Negative Log Likelihood関数などがここに含まれている。また、DBNやAutoencoderのように、独自の損失関数が必要な場合も、ここで定義されている。
+\item \textbf{datasets} MNISTやCIFAR10, SVHNなどのデータセットがクラス化されている。新しいデータセットに対してDeep Learningを使いたい場合は、ここに定義されているDatasetクラスやDenseDesignMatrixクラスのサブクラスを作成することになる。
+\item \textbf{distributions} ガウス分布などの分布関数が集められている。
+\item \textbf{gui} 主に重みフィルタを可視化するためのクラスが用意されている。
+\item \textbf{linear} Theanoの線形変換クラスを作り直したもので、Convolutional Layerもここに含まれる。
+\item \textbf{models} Autoencoder、RBMなどの学習モデルが定義されている。
+\item \textbf{sandbox} cuda-convnetのラッパクラスが定義されている。
+\item \textbf{scripts} 実際に学習を行わせたり、学習結果を集計するときに便利なスクリプトが集められている。
+%\item \textbf{train_extensions} 学習がスタートする時や、1回の処理が終了したときに動かす処理を定義するための、Observerクラスである。
+%\item \textbf{training_algorithms} SGDとBatch Gradient Descentを始めとする、学習アルゴリズムが定義されている。SGDと併用するための、学習率変化(線形減少、指数関数的減少、焼き鈍し)、慣性率、Polyak averagingなども、ここで一緒に定義されている。
+
+
+\end{itemize}
+
 \section{ハードウェアの構成}
 Deep Learningに限った話ではないが、機械学習のタスクは長時間の計算を必要とする場合が多く、プログラムの実行時間が1日以上かかることも稀ではない。普段使用しているPCが使えなくなると困る場合は、機械学習を動かしておくための専用サーバを用意することが望ましい。\par
 GPUは必ずしも搭載していなくとも良いのだが、実践上TheanoやCUDAの性能を最大限に生かすためには、GPUを搭載しなければならない。また、CUDAを用いてGPUマシン専用に書かれたアルゴリズムを動作させるためには、GPUが必須となる。GPUは、NVIDIA製で、CUDAに対応していなければならない。ただし、グラフィック出力の機能はなくても構わない。2013年1月現在、NVIDIAのWebページに掲載されているGPUに関しては、全てCUDAに対応しているため、店舗で新品のGPUを購入する場合は基本的に問題は生じないと思われる。\par
