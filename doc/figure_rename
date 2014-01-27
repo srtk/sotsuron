@@ -8,5 +8,6 @@ mv ssl07.jpg expr.jpg
 mv ssl08.jpg pic_sample.jpg
 mv ssl09.jpg pic_judge.jpg
 mv ssl10.jpg filter.jpg
-mv sl11.jpg autoencoder.jpg
+mv ssl11.jpg autoencoder.jpg
 mv ssl12.jpg prof_visibility.jpg
+mv ssl13.jpg theano_compile.jpg
