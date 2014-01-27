@@ -18,51 +18,52 @@ Warning--empty journal in dahl2008cs81:
 Warning--there's a number but no volume in fukushima1983neocognitron
 Warning--empty school in krizhevsky2009learning
 Warning--empty booktitle in le2012building
+Warning--empty booktitle in mnih2013playing
 Warning--empty booktitle in nakayama2013efficient
 Warning--empty journal in page1999pagerank
 Warning--empty journal in smolensky1986information
 Warning--empty booktitle in VincentPLarochelleH2008
 Warning--can't use both volume and number fields in wan2013regularization
-You've used 83 entries,
+You've used 102 entries,
             2620 wiz_defined-function locations,
-            1078 strings with 19783 characters,
-and the built_in function-call counts, 39867 in all, are:
-= -- 3536
-> -- 1493
-< -- 130
-+ -- 625
-- -- 530
-* -- 2347
-:= -- 5340
-add.period$ -- 261
-call.type$ -- 83
-change.case$ -- 508
+            1166 strings with 23710 characters,
+and the built_in function-call counts, 51278 in all, are:
+= -- 4565
+> -- 2047
+< -- 151
++ -- 850
+- -- 735
+* -- 3059
+:= -- 6903
+add.period$ -- 329
+call.type$ -- 102
+change.case$ -- 663
 chr.to.int$ -- 0
-cite$ -- 93
-duplicate$ -- 2105
-empty$ -- 3182
-format.name$ -- 796
-if$ -- 9223
+cite$ -- 113
+duplicate$ -- 2634
+empty$ -- 4012
+format.name$ -- 1106
+if$ -- 11839
 int.to.chr$ -- 0
-int.to.str$ -- 83
-missing$ -- 88
-newline$ -- 419
-num.names$ -- 168
-pop$ -- 808
+int.to.str$ -- 102
+missing$ -- 107
+newline$ -- 514
+num.names$ -- 208
+pop$ -- 1053
 preamble$ -- 1
-purify$ -- 430
+purify$ -- 566
 quote$ -- 0
-skip$ -- 2005
+skip$ -- 2499
 stack$ -- 0
-substring$ -- 2135
-swap$ -- 693
-text.length$ -- 130
+substring$ -- 2759
+swap$ -- 876
+text.length$ -- 151
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 320
-warning$ -- 10
-while$ -- 320
-width$ -- 85
-write$ -- 910
-is.kanji.str$ -- 1010
-(There were 10 warnings)
+type$ -- 396
+warning$ -- 11
+while$ -- 404
+width$ -- 105
+write$ -- 1129
+is.kanji.str$ -- 1289
+(There were 11 warnings)

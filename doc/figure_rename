@@ -11,3 +11,4 @@ mv ssl10.jpg filter.jpg
 mv ssl11.jpg autoencoder.jpg
 mv ssl12.jpg prof_visibility.jpg
 mv ssl13.jpg theano_compile.jpg
+mv ssl14.jpg devise.jpg

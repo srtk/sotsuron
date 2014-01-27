@@ -16,64 +16,68 @@
 \contentsline {subsubsection}{パーセプトロン}{13}
 \contentsline {chapter}{\numberline {第3章}深層学習の成果とアルゴリズム}{15}
 \contentsline {section}{\numberline {3.1}Deep Learningの成果}{15}
-\contentsline {section}{\numberline {3.2}Deep Learningのアルゴリズム}{16}
-\contentsline {subsection}{\numberline {3.2.1}Deep Belief Network}{16}
-\contentsline {subsubsection}{unsupervised pretrainingとfinetuning}{16}
-\contentsline {subsubsection}{Restricted Boltzman Machine}{17}
-\contentsline {subsubsection}{DBNの性能}{19}
-\contentsline {subsection}{\numberline {3.2.2}Stacked Denoising Autoencoder}{19}
-\contentsline {subsubsection}{Autoencoder}{19}
-\contentsline {subsubsection}{Denoising Autoencoder}{20}
-\contentsline {subsubsection}{Stacked Denoising Autoencoder}{20}
-\contentsline {subsection}{\numberline {3.2.3}Convolutional Network}{21}
-\contentsline {subsubsection}{Feature Map}{22}
-\contentsline {subsubsection}{Max-pooling}{23}
-\contentsline {subsection}{\numberline {3.2.4}DropoutとDropConnect}{24}
-\contentsline {subsection}{\numberline {3.2.5}活性化関数}{25}
-\contentsline {subsubsection}{heaviside関数}{25}
-\contentsline {subsubsection}{sigmoid関数とhyperbolic tangent}{26}
-\contentsline {subsubsection}{Rectifier Unit}{27}
-\contentsline {subsubsection}{Maxout Unit}{27}
-\contentsline {chapter}{\numberline {第4章}深層学習の実装における技術}{29}
-\contentsline {section}{\numberline {4.1}評価基準}{29}
-\contentsline {section}{\numberline {4.2}既存ソースコード使用の利点}{29}
-\contentsline {section}{\numberline {4.3}Graphics Processing Unitの利用による高速化}{31}
-\contentsline {section}{\numberline {4.4}数値計算ライブラリTheanoの利点}{31}
-\contentsline {section}{\numberline {4.5}機械学習ライブラリPylearn2の利点}{32}
-\contentsline {subsection}{\numberline {4.5.1}高精度アルゴリズムMaxout Networkの実装}{32}
-\contentsline {subsection}{\numberline {4.5.2}Theanoの利用}{32}
-\contentsline {subsection}{\numberline {4.5.3}高度な拡張性と可読性}{32}
-\contentsline {section}{\numberline {4.6}ハードウェアの構成}{33}
-\contentsline {chapter}{\numberline {第5章}Web工学への深層学習技術の応用}{35}
-\contentsline {section}{\numberline {5.1}利用したデータセット}{35}
-\contentsline {subsection}{\numberline {5.1.1}MNIST}{35}
-\contentsline {subsection}{\numberline {5.1.2}CIFAR10}{36}
-\contentsline {section}{\numberline {5.2}使用したライブラリ}{38}
-\contentsline {section}{\numberline {5.3}使用したハードウェア}{38}
-\contentsline {section}{\numberline {5.4}ベンチマーク実験の詳細}{39}
-\contentsline {subsection}{\numberline {5.4.1}Maxout Networkによる、MNISTの分類タスク(2次元データとして扱う)}{39}
-\contentsline {subsection}{\numberline {5.4.2}Maxout Networkによる、MNISTの分類タスク(1次元データとして扱う)}{39}
-\contentsline {subsection}{\numberline {5.4.3}Maxout Networkによる、CIFAR10の分類タスク}{40}
-\contentsline {chapter}{\numberline {第6章}考察と提言}{41}
-\contentsline {section}{\numberline {6.1}全体のまとめ}{41}
-\contentsline {section}{\numberline {6.2}分類誤差が大きくなってしまう原因の考察}{41}
-\contentsline {section}{\numberline {6.3}CIFAR10の実行時間が非常に長くなってしまう問題について}{42}
-\contentsline {section}{\numberline {6.4}深層学習の利用法に関する提言}{42}
-\contentsline {chapter}{\numberline {第7章}Facebookの顔画像認識と深層学習技術}{44}
-\contentsline {section}{\numberline {7.1}背景}{44}
-\contentsline {section}{\numberline {7.2}ソーシャルメディアにおける、プロフィール画像}{46}
-\contentsline {section}{\numberline {7.3}提案手法}{47}
-\contentsline {section}{\numberline {7.4}問題設定と、実験方法の詳細}{47}
-\contentsline {subsection}{\numberline {7.4.1}画像の取得と加工}{48}
-\contentsline {subsection}{\numberline {7.4.2}ベクトルデータへの変換}{48}
-\contentsline {subsection}{\numberline {7.4.3}ユーザの分類}{48}
-\contentsline {section}{\numberline {7.5}結果}{49}
-\contentsline {section}{\numberline {7.6}考察}{50}
-\contentsline {subsection}{\numberline {7.6.1}全体の結果のまとめ}{50}
-\contentsline {subsection}{\numberline {7.6.2}SDAにて良い精度が出なかった理由の考察}{50}
-\contentsline {subsection}{\numberline {7.6.3}今後の発展について}{51}
-\contentsline {chapter}{\numberline {第8章}おわりに}{52}
-\contentsline {section}{\numberline {8.1}研究の成果}{52}
-\contentsline {section}{\numberline {8.2}今後の課題}{52}
-\contentsline {chapter}{謝辞}{54}
-\contentsline {chapter}{参考文献}{55}
+\contentsline {section}{\numberline {3.2}Deep Learningのアルゴリズム}{18}
+\contentsline {subsection}{\numberline {3.2.1}Deep Belief Network}{18}
+\contentsline {subsubsection}{unsupervised pretrainingとfinetuning}{18}
+\contentsline {subsubsection}{Restricted Boltzman Machine}{19}
+\contentsline {subsubsection}{DBNの性能}{20}
+\contentsline {subsection}{\numberline {3.2.2}Stacked Denoising Autoencoder}{20}
+\contentsline {subsubsection}{Autoencoder}{21}
+\contentsline {subsubsection}{Denoising Autoencoder}{21}
+\contentsline {subsubsection}{Stacked Denoising Autoencoder}{22}
+\contentsline {subsection}{\numberline {3.2.3}Convolutional Network}{23}
+\contentsline {subsubsection}{Feature Map}{24}
+\contentsline {subsubsection}{Max-pooling}{24}
+\contentsline {subsection}{\numberline {3.2.4}DropoutとDropConnect}{26}
+\contentsline {subsection}{\numberline {3.2.5}活性化関数}{27}
+\contentsline {subsubsection}{heaviside関数}{27}
+\contentsline {subsubsection}{sigmoid関数とhyperbolic tangent}{27}
+\contentsline {subsubsection}{Rectifier Unit}{29}
+\contentsline {subsubsection}{Maxout Unit}{29}
+\contentsline {chapter}{\numberline {第4章}深層学習の実装における技術}{31}
+\contentsline {section}{\numberline {4.1}評価基準}{31}
+\contentsline {section}{\numberline {4.2}既存ソースコード使用の利点}{31}
+\contentsline {section}{\numberline {4.3}Graphics Processing Unitの利用による高速化}{33}
+\contentsline {section}{\numberline {4.4}Deep Learningのライブラリ}{34}
+\contentsline {subsection}{\numberline {4.4.1}cuda-convnet}{34}
+\contentsline {subsection}{\numberline {4.4.2}word2vec}{34}
+\contentsline {subsection}{\numberline {4.4.3}数値計算ライブラリTheano}{34}
+\contentsline {subsection}{\numberline {4.4.4}Deep Learning Tutorial}{35}
+\contentsline {subsection}{\numberline {4.4.5}機械学習ライブラリPylearn2}{36}
+\contentsline {subsubsection}{高精度アルゴリズムMaxout Networkの実装}{36}
+\contentsline {subsubsection}{Theanoの利用}{36}
+\contentsline {subsubsection}{高度な拡張性と可読性}{36}
+\contentsline {section}{\numberline {4.5}ハードウェアの構成}{36}
+\contentsline {chapter}{\numberline {第5章}Web工学への深層学習技術の応用}{39}
+\contentsline {section}{\numberline {5.1}利用したデータセット}{39}
+\contentsline {subsection}{\numberline {5.1.1}MNIST}{39}
+\contentsline {subsection}{\numberline {5.1.2}CIFAR10}{40}
+\contentsline {section}{\numberline {5.2}使用したライブラリ}{42}
+\contentsline {section}{\numberline {5.3}使用したハードウェア}{42}
+\contentsline {section}{\numberline {5.4}ベンチマーク実験の詳細}{43}
+\contentsline {subsection}{\numberline {5.4.1}Maxout Networkによる、MNISTの分類タスク(2次元データとして扱う)}{43}
+\contentsline {subsection}{\numberline {5.4.2}Maxout Networkによる、MNISTの分類タスク(1次元データとして扱う)}{43}
+\contentsline {subsection}{\numberline {5.4.3}Maxout Networkによる、CIFAR10の分類タスク}{44}
+\contentsline {chapter}{\numberline {第6章}考察と提言}{45}
+\contentsline {section}{\numberline {6.1}全体のまとめ}{45}
+\contentsline {section}{\numberline {6.2}分類誤差が大きくなってしまう原因の考察}{45}
+\contentsline {section}{\numberline {6.3}CIFAR10の実行時間が非常に長くなってしまう問題について}{46}
+\contentsline {section}{\numberline {6.4}深層学習の利用法に関する提言}{47}
+\contentsline {chapter}{\numberline {第7章}Facebookの顔画像認識と深層学習技術}{49}
+\contentsline {section}{\numberline {7.1}背景}{49}
+\contentsline {section}{\numberline {7.2}ソーシャルメディアにおける、プロフィール画像}{51}
+\contentsline {section}{\numberline {7.3}提案手法}{52}
+\contentsline {section}{\numberline {7.4}問題設定と、実験方法の詳細}{52}
+\contentsline {subsection}{\numberline {7.4.1}画像の取得と加工}{53}
+\contentsline {subsection}{\numberline {7.4.2}ベクトルデータへの変換}{53}
+\contentsline {subsection}{\numberline {7.4.3}ユーザの分類}{53}
+\contentsline {section}{\numberline {7.5}結果}{54}
+\contentsline {section}{\numberline {7.6}考察}{55}
+\contentsline {subsection}{\numberline {7.6.1}全体の結果のまとめ}{55}
+\contentsline {subsection}{\numberline {7.6.2}SDAにて良い精度が出なかった理由の考察}{55}
+\contentsline {subsection}{\numberline {7.6.3}今後の発展について}{56}
+\contentsline {chapter}{\numberline {第8章}おわりに}{57}
+\contentsline {section}{\numberline {8.1}研究の成果}{57}
+\contentsline {section}{\numberline {8.2}今後の課題}{57}
+\contentsline {chapter}{謝辞}{59}
+\contentsline {chapter}{参考文献}{60}

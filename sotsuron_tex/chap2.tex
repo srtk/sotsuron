@@ -32,9 +32,10 @@ Link Predictionとは、図\ref{c2_link_prediction}のように、現在の時�
  \label{c2_lp_method}
 \end{table}
 
-LInk Predictionには様々な応用があり、例えばショッピングサイトのデータ分析に役立てることが出来る\cite{clauset2004finding}。Web工学の問題以外にも応用が可能であり、タンパク質の反応予測(Protein to Protein Interaction, PPI)に用いられたり\cite{bader2003gaining}、テロリストのネットワークや草原の食物連鎖の分析にも役に立っている\cite{clauset2008hierarchical}。
+LInk Predictionには様々な応用があり、例えばショッピングサイトのデータ分析に役立てることが出来る\cite{clauset2004finding}。Web工学の問題以外にも応用が可能であり、タンパク質の反応予測(Protein to Protein Interaction, PPI)に用いられたり\cite{bader2003gaining}、テロリストのネットワークや草原の食物連鎖の分析にも役に立っている\cite{clauset2008hierarchical}。全ての部分グラフをカウントする方法はNP困難であり、計算時間的に解くことが難しいことが知られている\cite{gartner2003graph}が、この問題はGraphHopper Kernelを用いることで、現実的な時間で解くことができる\cite{feragen2013scalable}。また、Noisy ORを用いて局所的な情報を統合することにより、効率良く様々な情報を扱わせることができる\cite{changpinyo2013similarity}。
 %2011のやつ、flickr, 全解析
 %link predictionの絵
+%bag of words?
 
 \subsection{Sentiment Analysis}
 この場合のSentimentとは、ユーザが持っている感情のことである。Web上の情報収集の自由度が高まるにつれて、ユーザが書いた文章を取得できる機会が増えてきている。その中には、新製品やサービスへの感想やレビューも含まれている。ユーザの属性や行動といった明確な事実だけでなく、他の人がどのような感情を抱いているのかを分析したいという要望が高まり、2000年代に入ってから、人間が書いた文章から人間の感情を読み取るための研究が盛んになった\cite{pang2008opinion}。なお、opinion miningという語も、多少の差異はあれど、広義には似た内容を指していることが多い。\par

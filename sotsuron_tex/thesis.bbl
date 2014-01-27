@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{adamic2003friends}
 Lada~A Adamic and Eytan Adar.
@@ -84,6 +84,19 @@ Christopher~JC Burges.
 \newblock {\em Data mining and knowledge discovery}, Vol.~2, No.~2, pp.
   121--167, 1998.
 
+\bibitem{cesa-bianchi2013a-gang}
+Nicol\`{o} Cesa-Bianchi, Claudio Gentile, and Giovanni Zappella.
+\newblock A gang of bandits.
+\newblock In C.J.C. Burges, L.~Bottou, M.~Welling, Z.~Ghahramani, and K.Q.
+  Weinberger, editors, {\em Advances in Neural Information Processing Systems
+  26}, pp. 737--745. NIPS, NIPS, 2013.
+
+\bibitem{changpinyo2013similarity}
+Soravit Changpinyo, Kuan Liu, and Fei Sha.
+\newblock Similarity component analysis.
+\newblock In {\em Advances in Neural Information Processing Systems}, pp.
+  1511--1519. NIPS, 2013.
+
 \bibitem{ciresan2010deep}
 Dan~Claudiu Ciresan, Ueli Meier, Luca~Maria Gambardella, and J{\"u}rgen
   Schmidhuber.
@@ -134,12 +147,26 @@ Jia Deng, Wei Dong, R.~Socher, Li-Jia Li, Kai Li, and Li~Fei-Fei.
 \newblock In {\em Computer Vision and Pattern Recognition, 2009. CVPR 2009.
   IEEE Conference on}, pp. 248--255. CVPR, 2009.
 
+\bibitem{feragen2013scalable}
+Aasa Feragen, Niklas Kasenburg, Jens Petersen, Marleen de~Bruijne, and Karsten
+  Borgwardt.
+\newblock Scalable kernels for graphs with continuous attributes.
+\newblock In {\em Advances in Neural Information Processing Systems}, pp.
+  216--224. NIPS, 2013.
+
 \bibitem{fisher1986darpa}
 William~M Fisher, George~R Doddington, and Kathleen~M Goudie-Marshall.
 \newblock The darpa speech recognition research database: specifications and
   status.
 \newblock In {\em Proc. DARPA Workshop on speech recognition}, pp. 93--99,
   1986.
+
+\bibitem{frome2013devise}
+Andrea Frome, Greg~S Corrado, Jon Shlens, Samy Bengio, Jeff Dean, Tomas
+  Mikolov, et~al.
+\newblock Devise: A deep visual-semantic embedding model.
+\newblock In {\em Advances in Neural Information Processing Systems}, pp.
+  2121--2129. NIPS, 2013.
 
 \bibitem{fukushima1980neocognitron}
 Kunihiko Fukushima.
@@ -159,6 +186,18 @@ Ken-Ichi Funahashi.
 \newblock On the approximate realization of continuous mappings by neural
   networks.
 \newblock {\em Neural Networks}, Vol.~2, No.~3, pp. 183 -- 192, 1989.
+
+\bibitem{garland2008parallel}
+Michael Garland, Scott Le~Grand, John Nickolls, Joshua Anderson, Jim Hardwick,
+  Scott Morton, Everett Phillips, Yao Zhang, and Vasily Volkov.
+\newblock Parallel computing experiences with cuda.
+\newblock {\em Micro, IEEE}, Vol.~28, No.~4, pp. 13--27, 2008.
+
+\bibitem{gartner2003graph}
+Thomas G{\"a}rtner, Peter Flach, and Stefan Wrobel.
+\newblock On graph kernels: Hardness results and efficient alternatives.
+\newblock In {\em Learning Theory and Kernel Machines}, pp. 129--143. Springer,
+  2003.
 
 \bibitem{gens2012discriminative}
 Robert Gens and Pedro Domingos.
@@ -212,6 +251,14 @@ Geoffrey~E Hinton and Richard~S Zemel.
 \newblock {\em Advances in neural information processing systems}, pp. 3--3,
   1994.
 
+\bibitem{ho2013more}
+Qirong Ho, James Cipar, Henggang Cui, Seunghak Lee, Jin~Kyu Kim, Phillip~B
+  Gibbons, Garth~A Gibson, Greg Ganger, and Eric Xing.
+\newblock More effective distributed ml via a stale synchronous parallel
+  parameter server.
+\newblock In {\em Advances in Neural Information Processing Systems}, pp.
+  1223--1231. NIPS, 2013.
+
 \bibitem{jaccard1902lois}
 Paul Jaccard.
 \newblock {\em Lois de distribution florale dans la zone alpine}.
@@ -236,6 +283,19 @@ Daniel Keysers, Thomas Deselaers, Christian Gollan, and Hermann Ney.
 \newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, Vol.~29, No.~8, pp.
   1422--1435, August 2007.
 
+\bibitem{klockner2012pycuda}
+Andreas {Kl{\"o}ckner}, Nicolas {Pinto}, Yunsup {Lee}, B.~{Catanzaro}, Paul
+  {Ivanov}, and Ahmed {Fasih}.
+\newblock {PyCUDA and PyOpenCL: A Scripting-Based Approach to GPU Run-Time Code
+  Generation}.
+\newblock {\em Parallel Computing}, Vol.~38, No.~3, pp. 157--174, 2012.
+
+\bibitem{klockner2009pycuda:}
+Andreas Kl{\"o}ckner, Nicolas Pinto, Yunsup Lee, Bryan Catanzaro, Paul Ivanov,
+  Ahmed Fasih, AD~Sarma, D~Nanongkai, G~Pandurangan, P~Tetali, et~al.
+\newblock Pycuda: Gpu run-time code generation for high-performance computing.
+\newblock {\em Arxiv preprint arXiv}, Vol. 911, , 2009.
+
 \bibitem{koren2009matrix}
 Yehuda Koren, Robert Bell, and Chris Volinsky.
 \newblock Matrix factorization techniques for recommender systems.
@@ -258,6 +318,12 @@ K.~Labusch, E.~Barth, and T.~Martinetz.
   coding.
 \newblock {\em Trans. Neur. Netw.}, Vol.~19, No.~11, pp. 1985--1989, November
   2008.
+
+\bibitem{lake2013one}
+Brenden~M Lake, Ruslan Salakhutdinov, and Josh Tenenbaum.
+\newblock One-shot learning by inverting a compositional causal process.
+\newblock In {\em Advances in Neural Information Processing Systems}, pp.
+  2526--2534. NIPS, 2013.
 
 \bibitem{lauer2007a-trainable}
 Fabien Lauer, Ching~Y. Suen, and G{\'e}rard Bloch.
@@ -307,6 +373,29 @@ David~G Lowe.
 \newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
   international conference on}, Vol.~2, pp. 1150--1157. Ieee, 1999.
 
+\bibitem{mensink2012metric}
+Thomas Mensink, Jakob Verbeek, Florent Perronnin, and Gabriela Csurka.
+\newblock Metric learning for large scale image classification: Generalizing to
+  new classes at near-zero cost.
+\newblock In {\em Computer Vision--ECCV 2012}, pp. 488--501. Springer, 2012.
+
+\bibitem{mikolov2013efficient}
+Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
+\newblock Efficient estimation of word representations in vector space.
+\newblock {\em CoRR}, Vol. abs/1301.3781, , 2013.
+
+\bibitem{mikolov2013distributed}
+Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg~S Corrado, and Jeff Dean.
+\newblock Distributed representations of words and phrases and their
+  compositionality.
+\newblock In {\em Advances in Neural Information Processing Systems}, pp.
+  3111--3119. NIPS, 2013.
+
+\bibitem{mikolov2013linguistic}
+Tomas Mikolov, Wen-tau Yih, and Geoffrey Zweig.
+\newblock Linguistic regularities in continuous space word representations.
+\newblock In {\em Proceedings of NAACL-HLT}, pp. 746--751, 2013.
+
 \bibitem{min2009large-margin}
 Martin~Renqiang Min, David~A. Stanley, Zineng Yuan, Anthony~J. Bonner, and
   Zhaolei Zhang.
@@ -324,6 +413,12 @@ Alan Mislove, Sune Lehmann, Yong-Yeol Ahn, Jukka-Pekka Onnela, and J~Niels
 \newblock Understanding the demographics of twitter users.
 \newblock In {\em ICWSM}, 2011.
 
+\bibitem{mnih2013playing}
+Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis
+  Antonoglou, Daan Wierstra, and Martin Riedmiller.
+\newblock Playing atari with deep reinforcement learning.
+\newblock NIPS, 2013.
+
 \bibitem{nakayama2013efficient}
 Hideki Nakayama.
 \newblock Efficient discriminative convolution using fisher weight map.
@@ -333,6 +428,12 @@ Hideki Nakayama.
 Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd.
 \newblock The pagerank citation ranking: bringing order to the web.
 \newblock 1999.
+
+\bibitem{palatucci2009zero-shot}
+Mark Palatucci, Dean Pomerleau, Geoffrey~E Hinton, and Tom~M Mitchell.
+\newblock Zero-shot learning with semantic output codes.
+\newblock In {\em Advances in neural information processing systems}, pp.
+  1410--1418. NIPS, 2009.
 
 \bibitem{pang2004sentimental}
 Bo~Pang and Lillian Lee.
@@ -377,6 +478,26 @@ M.~Ranzato, Fu~Jie Huang, Y.-L. Boureau, and Y.~LeCun.
 Paul Resnick and Hal~R. Varian.
 \newblock Recommender systems.
 \newblock {\em Commun. ACM}, Vol.~40, No.~3, pp. 56--58, March 1997.
+
+\bibitem{rifai2011learning}
+Salah Rifai, Xavier Muller, Xavier Glorot, Gr{\'e}goire Mesnil, Yoshua Bengio,
+  and Pascal Vincent.
+\newblock Learning invariant features through local space contraction.
+\newblock {\em arXiv preprint arXiv:1104.4153}, 2011.
+
+\bibitem{rifai2011contractive}
+Salah Rifai, Pascal Vincent, Xavier Muller, Xavier Glorot, and Yoshua Bengio.
+\newblock Contractive auto-encoders: Explicit invariance during feature
+  extraction.
+\newblock In {\em Proceedings of the 28th International Conference on Machine
+  Learning (ICML-11)}, pp. 833--840, 2011.
+
+\bibitem{rohrbach2011evaluating}
+Marcus Rohrbach, Michael Stark, and Bernt Schiele.
+\newblock Evaluating knowledge transfer and zero-shot learning in a large-scale
+  setting.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2011 IEEE
+  Conference on}, pp. 1641--1648. IEEE, 2011.
 
 \bibitem{rosenblatt1958perceptron}
 Frank Rosenblatt.

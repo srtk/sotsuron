@@ -2,7 +2,7 @@
 \chapter{深層学習の成果とアルゴリズム}
 Deep Learningは、多層ニューラルネットワーク(MLP)のうち、普通隠れ層が2つ以上のものをいう。2006年にHintonらによって、このようなDeepな構造を学習させる方法が発見され、発展への道が開けた\cite{hinton2006a-fast, hinton2006reducing}。従来よりも多くのレイヤーを扱うことで、より複雑な関数を学習できるようになった。Deep Learningは、数々の分類タスクにて、従来手法を大きくしのぐ成果を収め、注目を浴びている。この章では、Deep Learningで使われているアルゴリズムの詳細について述べる。
 \section{Deep Learningの成果}
-第1章でも触れたが、2012年には、GoogleがYoutubeビデオの静止画を使って多層ニューラルネットワークの教師なし学習を行わせ、結果として、猫を認識するユニットや人を認識するユニットを学習させることに成功した。また、ImageNet Large Scale Visual Recognition Competition(ILSVRC)というデータセット\cite{deng2009imagenet:}の分類にて、state of the artの結果を残した。ImageNet\footnote{\url{http://www.image-net.org/}}とは、WordNet\footnote{\url{http://wordnet.princeton.edu/}}を真似して作られたデータセットである。2009年より、100を超える様々な論文にて、画像認識のベンチマークに利用されてきている\footnote{\url{http://www.image-net.org/about-publication}}。図\ref{c3_imagenet}は、ImageNetの画像の例である。画像はツリー状に分類されており、例えば上を見ると、mammal(哺乳類)→palcental(胎盤)→carnivore(肉食)→canine(イヌ科)→dog(イヌ)→working dog(盲導犬やそり犬など使役される犬)→husky(ハスキー)というように、徐々に分類が細かくなっていくことがわかる。また、一つのカテゴリーには、9枚の画像がひもづけられている。\par
+第1章でも触れたが、2012年には、GoogleがSupervisionと題してYoutubeビデオの静止画を使って多層ニューラルネットワークの教師なし学習を行わせ、結果として、猫を認識するユニットや人を認識するユニットを学習させることに成功した。また、ImageNet Large Scale Visual Recognition Competition(ILSVRC)というデータセット\cite{deng2009imagenet:}の分類にて、state of the artの結果を残した。ImageNet\footnote{\url{http://www.image-net.org/}}とは、WordNet\footnote{\url{http://wordnet.princeton.edu/}}を真似して作られたデータセットである。2009年より、100を超える様々な論文にて、画像認識のベンチマークに利用されてきている\footnote{\url{http://www.image-net.org/about-publication}}。図\ref{c3_imagenet}は、ImageNetの画像の例である。画像はツリー状に分類されており、例えば上を見ると、mammal(哺乳類)→palcental(胎盤)→carnivore(肉食)→canine(イヌ科)→dog(イヌ)→working dog(盲導犬やそり犬など使役される犬)→husky(ハスキー)というように、徐々に分類が細かくなっていくことがわかる。また、一つのカテゴリーには、9枚の画像がひもづけられている。\par
 \begin{figure}[tbp]
  \begin{center}
   \includegraphics[width=120mm]{img/c3/imagenet}
@@ -17,6 +17,22 @@ Googleのsupervisionによる、画像分析の結果の例を図\ref{c3_supervi
  \caption{Supervisionによる画像分類の結果の例}
  \label{c3_supervision}
 \end{figure}
+
+Deep Learningは画像分析だけでなく、自然言語処理(NLP)の分野でも有効なことがわかっている。Googleが公開している"word2vec"というライブラリを使うと、入力されたテキスト文書から、単語のベクトル化やクラスタリングを行うことができる\cite{mikolov2013efficient}\cite{mikolov2013linguistic}。このベクトル化により、
+\begin{equation}
+vector('Paris') - vector('France') + vector('Italy') = vector('Rome')
+vector('king') - vector('man') + vector('woman') = vector('queen')
+\end{equation}
+のような計算が行えるようになった。また、この計算を行う過程で、全ての単語同士の内積の和を計算していたところを止め、数個だけサンプルを取って計算することで、計算時間が短縮できるだけでなく、分類精度まで向上することが判明した\cite{mikolov2013distributed}。\par
+word2vecを応用した研究も出現している。Deep Visual-Semantic Embedding model(DeViSE)\cite{frome2013devise}と名付けられたシステムでは、zero-shot learningと呼ばれる問題を解かせるため、Supervisionとword2vecを組み合わせている。zero-shot learningとは、訓練時に一度も見たことがないクラスの画像に対し、正しく分類を行えるかという問題である。この研究では、1000カテゴリの画像による訓練を行っただけで、まだ見たことが無い20000カテゴリに属する画像を適切にラベリングしている。画像以外に全く情報がなければ分類は不可能なので、wikipediaのテキスト内容を補助データとして使っているが、これはWordNetや意味データベースの情報を直接用いていた従来の研究\cite{mensink2012metric}\cite{rohrbach2011evaluating}\cite{palatucci2009zero-shot}に比べて、より生データに近い情報で処理に成功していると言える。\par
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=120mm]{img/c3/devise}
+ \caption{DeViSEの学習方法}
+ \label{c3_devise}
+\end{figure}
+図\ref{c3_devise}は、DeViSEの学習方法を示している(ImageNetとWikiediaのロゴは、公式Webページより引用した\footnote{\url{http://www.image-net.org/splash/logo.jpg}},\footnote{\url{http://upload.wikimedia.org/wikipedia/commons/a/ad/Wikipedia-logo-v2-ja.png}})。DeViseでは、画像データを意味付けするためにSupervisionを使い、wikipediaの情報処理にword2vecを用いている。まずSupervisionにImageNetのデータを、word2vecにwikipediaのデータを与えて学習させたあと、実際の画像及び未見カテゴリのラベルを与え、画像とラベルの意味ベクトルが、出来るだけ近くなるように分類している。\par
+Deep Learningを強化学習(reinforced learning)と組み合わせることで、ゲームを上手くプレイできるAIを作る研究も成功している\cite{mnih2013playing}。強化学習では、環境に対してAIが行動を起こし、環境から得られる報酬を最大化できるように、アルゴリズムを修正していく。多くの場合、「行動と報酬の間に時間差があり、どの行動が報酬に結びついたのか分かりにくい」「行動によって環境が変化しててしまうため、分析が難しい」といった状況設定がなされる。また、Bandit問題というカテゴリでは、スロットゲームを題材にして、「知識を活用すると報酬は上がるが、もっと良い行動があるかもしれない」「行動の探索を優先すると、既存知識は活かせず、一時的な報酬は下がりやすい」というジレンマの解決が研究されている\cite{cesa-bianchi2013a-gang}。\cite{mnih2013playing}の研究では、ゲーム内のキャラクターをAIで行動させ、報酬としてのスコアを最大化させるような行動を学習させる。Deep Learningは、ゲーム内の状況をモデル化して、そこから最適な行動を導き出すために用いられている。
 
 \section{Deep Learningのアルゴリズム}
 \subsection{Deep Belief Network}
