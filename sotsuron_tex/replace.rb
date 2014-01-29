@@ -77,9 +77,16 @@ rpl = {
   "pylearn2" => "Pylearn2",
   /libsvm/i => "LIBSVM",
   /liblinear/i => "LIBLINEAR",
+  "Dropconnect" => "DropConnect",
   
   #remove spaces derived from english
   "教師無し 事前学習" => "教師無し事前学習",
+  "最大値蓄積 レイヤー" => "最大値蓄積レイヤー",
+  "ソフトマックス レイヤー" => "ソフトマックスレイヤー",
+  "" => "",
+  "" => "",
+  "" => "",
+  "" => "",
   
   #exceptions
   "Greedy Layer-wise 事前学習" => "レイヤー毎の貪欲事前学習",
