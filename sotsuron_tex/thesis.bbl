@@ -259,6 +259,13 @@ Qirong Ho, James Cipar, Henggang Cui, Seunghak Lee, Jin~Kyu Kim, Phillip~B
 \newblock In {\em Advances in Neural Information Processing Systems}, pp.
   1223--1231. NIPS, 2013.
 
+\bibitem{hochreiter1998the-vanishing}
+Sepp Hochreiter.
+\newblock The vanishing gradient problem during learning recurrent neural nets
+  and problem solutions.
+\newblock {\em International Journal of Uncertainty, Fuzziness and
+  Knowledge-Based Systems}, Vol.~6, No.~02, pp. 107--116, 1998.
+
 \bibitem{jaccard1902lois}
 Paul Jaccard.
 \newblock {\em Lois de distribution florale dans la zone alpine}.
@@ -362,10 +369,10 @@ David Liben-Nowell and Jon Kleinberg.
   technology}, Vol.~58, No.~7, pp. 1019--1031, 2007.
 
 \bibitem{lowe1999object}
-David~G Lowe.
-\newblock Object recognition from local scale-invariant features.
-\newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
-  international conference on}, Vol.~2, pp. 1150--1157. Ieee, 1999.
+D.~G. Lowe.
+\newblock Object recognition from local scale--invariant features.
+\newblock In {\em Proceedings of the 7th IEEE International Conference on
+  Conputer Vision}, Vol.~2, pp. 1150--1157, 1999.
 
 \bibitem{mensink2012metric}
 Thomas Mensink, Jakob Verbeek, Florent Perronnin, and Gabriela Csurka.
