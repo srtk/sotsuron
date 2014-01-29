@@ -9,4 +9,5 @@
 *.lot
 *.idx
 *.synctex.gz
+*.pdf
 db-*
