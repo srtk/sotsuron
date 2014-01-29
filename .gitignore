@@ -2,4 +2,11 @@
 *.aux
 *.log
 *.xbb
+*.toc
+*.bbl
+*.blg
+*.lof
+*.lot
+*.idx
+*.synctex.gz
 db-*
