@@ -12,7 +12,8 @@ rpl = {
   "Sentiment Analysis" => "感情分析",
   "Learning to Rank" => "順位付け学習",
   "Deep Neural Network" => "深層ニューラルネットワーク",
-  /Deep Belief Net(|s|work)/ => "深層信念ネットワーク",
+  /deep convolutional belief net(|s)/i => "深層畳み込み信念ネットワーク",
+  /Deep Belief Net(s|work|)/ => "深層信念ネットワーク",
   /Stacked denoising autoencoder/i => "積層雑音除去自己符号器",
   /denoising autoencoder/i => "雑音除去自己符号器",
   /negative log likelihood/i => "負の対数尤度",
@@ -56,15 +57,25 @@ rpl = {
   "ホームページ" => "ウェブページ",
   /logistic/i => "ロジスティック",
   "" => "",
-  "" => "",
   
-  #white list
+  #english capitalization
+  "numpy" => "Numpy",
+  "scipy" => "Scipy",
+  "theano" => "Theano",
+  "pylearn2" => "Pylearn2",
+  /libsvm/i => "LIBSVM",
+  /liblinear/i => "LIBLINEAR",
+  
+  #remove spaces derived from english
+  
+  
+  #exceptions
   "Greedy Layer-wise 事前学習" => "レイヤー毎の貪欲事前学習",
   "serre2007頑堅" => "serre2007robust",
-  "" => "",
-  "" => "",
-  "" => "",
-  "" => "",
+  "img/c3/自己符号器" => "img/c3/autoencoder",
+  "img/c3/整流" => "img/c3/rectifier",
+  "ranzato2007教師無し" => "ranzato2007unsupervised",
+  "hinton1994自己符号器s" => "hinton1994autoencoders",
   "" => "",
   "" => "",
   "" => "",
@@ -76,16 +87,6 @@ rpl = {
   "" => "",
   "" => "",
   #  "" => "",
-
-  #english capitalization
-  "numpy" => "Numpy",
-  "scipy" => "Scipy",
-  "theano" => "Theano",
-  "pylearn2" => "Pylearn2",
-  /libsvm/i => "LIBSVM",
-  /liblinear/i => "LIBLINEAR",
-
-  #remove spaces derived from english
   
 }
 Dir::glob("*.tex").each {|fname|

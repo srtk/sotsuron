@@ -71,12 +71,12 @@ F(v) = -b' v-\sum_{i}log(1+e^{(c_i+W_{i}v)})
 \subsection{積層雑音除去自己符号器}
 深層信念ネットワークworkと共に、1次元のデータに対して広く用いることができるモデルが、積層雑音除去自己符号器である。これは2007年に提唱されたStacked 自己符号器\cite{bengio2007greedy}というモデルを基に、2008年に発表された\cite{VincentPLarochelleH2008}。基本的なアイデアは、深層信念ネットワークsにおけるRBMを、雑音除去自己符号器というモデルに変更することである。
 \subsubsection{自己符号器}
-雑音除去自己符号器は、自己符号器の特殊なバージョンなので、まずは自己符号器について説明する。自己符号器は、ニューラルネットワークの一種であり、入力されたデータを再現するようなモデルを学習する。\cite{bourlard1988auto, hinton1994自己符号器s, schwenk1995transformation}\par
+雑音除去自己符号器は、自己符号器の特殊なバージョンなので、まずは自己符号器について説明する。自己符号器は、ニューラルネットワークの一種であり、入力されたデータを再現するようなモデルを学習する。\cite{bourlard1988auto, hinton1994autoencoders, schwenk1995transformation}\par
 自己符号器の構造を、\ref{c3_自己符号器}に示す。自己符号器は、この図でいうInput, Representation, Outputの3つのレイヤーから構成されている。OutputとInputの値が一致するように、重み$W$と$W'$を学習させていく。この一致に成功すれば、RepresentationはInputを復元(decode)するための情報を含んでいる、つまりRepresentationはInputの別表現である、という論理が成り立つ。Inputに与えられたデータを、別の素性を用いたRepresentationに符号化(encode)していることから、自分自身の符号化方法を覚えるという意味で、自己符号器という名前がつけられている。\par
 自己符号器を用いることで、Inputを別の素性に変換することができる。しかし一方で、必ずしも得られた素性が抽象度の高いものになっているとは限らない。例えば、最も自明な自己符号器は、EncoderとDecoderの双方に恒等写像を用いることである。このとき、InputとRepresentationとOutputの値は一致し、確かにReconstruction Errorは0になっている。しかし、InputとRepresentationの抽象度は同じであり、素性学習としての有用性は全くない。実用上は、SGDを用い、入力レイヤーよりも表現レイヤーのユニット数を多くとり、非線形な関数をEncoderやDecoderに使うことで、抽象度が高くスパースな素性が獲得されることがわかっている\cite{bengio2007greedy}\cite{lee2007sparse}。しかし、理論的な理由は解明されていない。この素性学習の不確実性の問題を緩和するのが、次に述べる雑音除去自己符号器である。
 \begin{figure}[tbp]
  \begin{center}
-  \includegraphics[width=80mm]{img/c3/自己符号器}
+  \includegraphics[width=80mm]{img/c3/autoencoder}
  \end{center}
  \caption{自己符号器の構造図}
  \label{c3_自己符号器}
@@ -224,7 +224,7 @@ f(x) = max(0, x) = \left\{\begin{array}{cc} 0\quad (x < 0)\\ x \quad (x > 0)\end
 
 \begin{figure}[tbp]
  \centering
-  \includegraphics[width=80mm]{img/c3/整流}
+  \includegraphics[width=80mm]{img/c3/rectifier}
  \caption{整流関数}
  \label{c3_整流}
 \end{figure}
