@@ -3,6 +3,7 @@
 rpl = {
   #black list
   "Deep Learning" => "深層学習",
+  /Deep Architecture/i => "深い構造",
   "Representation Learning" => "表現学習",
   "Recommendation System" => "推薦システム",
   "Collaboraitive Filtering" => "協調フィルタリング",
@@ -11,6 +12,12 @@ rpl = {
   "Sentiment Analysis" => "感情分析",
   "Learning to Rank" => "順位付け学習",
   "Deep Neural Network" => "深層ニューラルネットワーク",
+  /Deep Belief Net(|s|work)/ => "深層信念ネットワーク",
+  /Stacked denoising autoencoder/i => "積層雑音除去自己符号器",
+  /denoising autoencoder/i => "雑音除去自己符号器",
+  /negative log likelihood/i => "負の対数尤度",
+  /autoencoder/i => "自己符号器",
+  /feed[ -]forward/ => "前送り",
   "Energy-Based Model" => "エネルギーに基づくモデル",
   "Web" => "ウェブ",
   "precision" => "適合率",
@@ -26,6 +33,7 @@ rpl = {
   "Restricted Boltzman Machine" => "制限付きボルツマンマシン",
   "State of the Art" => "最先端",
   "state of the art" => "最先端",
+  /convolutional Neural net(|s|work)/i => "畳み込みニューラルネットワーク",
   "Convolutional Network" => "畳み込みネットワーク",
   "Convolutional Net" => "畳み込みネットワーク",
   "Permutation invariant" => "順序不変",
@@ -43,10 +51,10 @@ rpl = {
   /hyperbolic tangent/i => "双曲線正接",
   /Rectifier/i => "整流",
   /layer/i => "レイヤー",
-  "" => "",
-  "" => "",
-  "" => "",
-  "" => "",
+  "Unit" => "ユニット",
+  /softmax/i => "ソフトマックス",
+  "ホームページ" => "ウェブページ",
+  /logistic/i => "ロジスティック",
   "" => "",
   "" => "",
   
@@ -73,8 +81,12 @@ rpl = {
   "numpy" => "Numpy",
   "scipy" => "Scipy",
   "theano" => "Theano",
+  "pylearn2" => "Pylearn2",
   /libsvm/i => "LIBSVM",
   /liblinear/i => "LIBLINEAR",
+
+  #remove spaces derived from english
+  
 }
 Dir::glob("*.tex").each {|fname|
   f=File.open(fname,"r")
