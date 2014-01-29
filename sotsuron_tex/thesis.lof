@@ -41,11 +41,3 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Maxout NetworkによるMNIST分類実験で、誤差が論文より大きくなった原因}}{46}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces ユーザ属性推定の必要性}}{50}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Facebookにおけるプロフィール画像の例}}{51}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces 提案手法}}{52}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces 今回の実験の模式図}}{54}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces 実験で使った、画像から入力ベクトルへの変換方法}}{54}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces プロフィール画像からの顔画像抽出方法}}{54}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces 実験で学習されたフィルター}}{55}
-\addvspace {10\p@ }

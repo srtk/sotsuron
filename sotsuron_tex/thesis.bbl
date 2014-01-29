@@ -1,4 +1,4 @@
-\begin{thebibliography}{100}
+\begin{thebibliography}{10}
 
 \bibitem{adamic2003friends}
 Lada~A Adamic and Eytan Adar.
@@ -355,12 +355,6 @@ Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew~Y. Ng.
 \newblock In {\em Proceedings of the 26th Annual International Conference on
   Machine Learning}, ICML '09, pp. 609--616, New York, NY, USA, 2009. ACM.
 
-\bibitem{liao2007learning}
-Shengcai Liao, Xiangxin Zhu, Zhen Lei, Lun Zhang, and Stan~Z Li.
-\newblock Learning multi-scale block local binary patterns for face
-  recognition.
-\newblock In {\em Advances in Biometrics}, pp. 828--837. Springer, 2007.
-
 \bibitem{liben2007link}
 David Liben-Nowell and Jon Kleinberg.
 \newblock The link-prediction problem for social networks.
@@ -407,12 +401,6 @@ Marvin~Lee Minsky and Seymour Papert.
 \newblock {\em Perceptrons: An Introduction to Computational Geometry}.
 \newblock MIT Press, Cambridge Mass., expanded ed. edition, 1988.
 
-\bibitem{mislove2011understanding}
-Alan Mislove, Sune Lehmann, Yong-Yeol Ahn, Jukka-Pekka Onnela, and J~Niels
-  Rosenquist.
-\newblock Understanding the demographics of twitter users.
-\newblock In {\em ICWSM}, 2011.
-
 \bibitem{mnih2013playing}
 Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis
   Antonoglou, Daan Wierstra, and Martin Riedmiller.
@@ -448,11 +436,6 @@ Bo~Pang and Lillian Lee.
 \newblock Opinion mining and sentiment analysis.
 \newblock {\em Foundations and trends in information retrieval}, Vol.~2, No.
   1-2, pp. 1--135, 2008.
-
-\bibitem{pennacchiotti2011a-machine}
-Marco Pennacchiotti and Ana-Maria Popescu.
-\newblock A machine learning approach to twitter user classification.
-\newblock In {\em ICWSM}, 2011.
 
 \bibitem{perronnin2007fisher}
 Florent Perronnin and Christopher Dance.
@@ -515,14 +498,6 @@ Ruslan Salakhutdinov and Geoffrey~E Hinton.
 \newblock Deep boltzmann machines.
 \newblock In {\em International Conference on Artificial Intelligence and
   Statistics}, pp. 448--455, 2009.
-
-\bibitem{schwartz2013personality}
-H.~Andrew Schwartz, Johannes~C. Eichstaedt, Margaret~L. Kern, Lukasz
-  Dziurzynski, Stephanie~M. Ramones, Megha Agrawal, Achal Shah, Michal
-  Kosinski, David Stillwell, Martin E.~P. Seligman, and Lyle~H. Ungar.
-\newblock Personality, gender, and age in the language of social media: The
-  open-vocabulary approach.
-\newblock {\em PLoS ONE}, Vol.~8, No.~9, p. e73791, 09 2013.
 
 \bibitem{schwenk1995transformation}
 Holger Schwenk and Maurice Milgram.

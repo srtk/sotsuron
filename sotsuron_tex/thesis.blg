@@ -8,7 +8,6 @@ A level-1 auxiliary file: chap3.aux
 A level-1 auxiliary file: chap4.aux
 A level-1 auxiliary file: chap5.aux
 A level-1 auxiliary file: chap6.aux
-A level-1 auxiliary file: chap7.aux
 A level-1 auxiliary file: chap8.aux
 A level-1 auxiliary file: acknowledgment.aux
 The style file: jplain.bst
@@ -24,46 +23,46 @@ Warning--empty journal in page1999pagerank
 Warning--empty journal in smolensky1986information
 Warning--empty booktitle in VincentPLarochelleH2008
 Warning--can't use both volume and number fields in wan2013regularization
-You've used 102 entries,
+You've used 98 entries,
             2620 wiz_defined-function locations,
-            1166 strings with 23710 characters,
-and the built_in function-call counts, 51278 in all, are:
-= -- 4565
-> -- 2047
-< -- 151
-+ -- 850
-- -- 735
-* -- 3059
-:= -- 6903
-add.period$ -- 329
-call.type$ -- 102
-change.case$ -- 663
+            1146 strings with 22793 characters,
+and the built_in function-call counts, 49122 in all, are:
+= -- 4391
+> -- 1924
+< -- 147
++ -- 799
+- -- 689
+* -- 2923
+:= -- 6598
+add.period$ -- 316
+call.type$ -- 98
+change.case$ -- 628
 chr.to.int$ -- 0
-cite$ -- 113
-duplicate$ -- 2634
-empty$ -- 4012
-format.name$ -- 1106
-if$ -- 11839
+cite$ -- 109
+duplicate$ -- 2529
+empty$ -- 3859
+format.name$ -- 1037
+if$ -- 11355
 int.to.chr$ -- 0
-int.to.str$ -- 102
-missing$ -- 107
-newline$ -- 514
-num.names$ -- 208
-pop$ -- 1053
+int.to.str$ -- 98
+missing$ -- 103
+newline$ -- 494
+num.names$ -- 200
+pop$ -- 996
 preamble$ -- 1
-purify$ -- 566
+purify$ -- 535
 quote$ -- 0
-skip$ -- 2499
+skip$ -- 2408
 stack$ -- 0
-substring$ -- 2759
-swap$ -- 876
-text.length$ -- 151
+substring$ -- 2694
+swap$ -- 846
+text.length$ -- 147
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 396
+type$ -- 380
 warning$ -- 11
-while$ -- 404
-width$ -- 105
-write$ -- 1129
-is.kanji.str$ -- 1289
+while$ -- 392
+width$ -- 100
+write$ -- 1086
+is.kanji.str$ -- 1229
 (There were 11 warnings)

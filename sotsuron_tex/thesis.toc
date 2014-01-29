@@ -64,21 +64,8 @@
 \contentsline {section}{\numberline {6.2}分類誤差が大きくなってしまう原因の考察}{45}
 \contentsline {section}{\numberline {6.3}CIFAR10の実行時間が非常に長くなってしまう問題について}{46}
 \contentsline {section}{\numberline {6.4}深層学習の利用法に関する提言}{47}
-\contentsline {chapter}{\numberline {第7章}Facebookの顔画像認識と深層学習技術}{49}
-\contentsline {section}{\numberline {7.1}背景}{49}
-\contentsline {section}{\numberline {7.2}ソーシャルメディアにおける、プロフィール画像}{51}
-\contentsline {section}{\numberline {7.3}提案手法}{52}
-\contentsline {section}{\numberline {7.4}問題設定と、実験方法の詳細}{52}
-\contentsline {subsection}{\numberline {7.4.1}画像の取得と加工}{53}
-\contentsline {subsection}{\numberline {7.4.2}ベクトルデータへの変換}{53}
-\contentsline {subsection}{\numberline {7.4.3}ユーザの分類}{53}
-\contentsline {section}{\numberline {7.5}結果}{54}
-\contentsline {section}{\numberline {7.6}考察}{55}
-\contentsline {subsection}{\numberline {7.6.1}全体の結果のまとめ}{55}
-\contentsline {subsection}{\numberline {7.6.2}SDAにて良い精度が出なかった理由の考察}{55}
-\contentsline {subsection}{\numberline {7.6.3}今後の発展について}{56}
-\contentsline {chapter}{\numberline {第8章}おわりに}{57}
-\contentsline {section}{\numberline {8.1}研究の成果}{57}
-\contentsline {section}{\numberline {8.2}今後の課題}{57}
-\contentsline {chapter}{謝辞}{59}
-\contentsline {chapter}{参考文献}{60}
+\contentsline {chapter}{\numberline {第7章}おわりに}{49}
+\contentsline {section}{\numberline {7.1}研究の成果}{49}
+\contentsline {section}{\numberline {7.2}今後の課題}{49}
+\contentsline {chapter}{謝辞}{51}
+\contentsline {chapter}{参考文献}{52}

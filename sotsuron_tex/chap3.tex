@@ -137,9 +137,9 @@ Feature Mapは、カラー画像を扱うときにも利用できる。カラー
 \end{figure}
 
 \subsubsection{Max-pooling}
-Convolutinal Netにて、広く使われている方法のもう1つが、Max poolingである。Max pooling layerは普通Convolutional Layer同士の間に置かれる。Max poolingでは、convolutional layerで得られた画素を、部分ごとにたたみ込んでいく。ただし、convolutional layerの計算に使うfilterとは違い、重み行列は用いず、単純に対象領域の画素値のmaxを取って、次のレイヤーに渡していく。また、convolutional layerではfilterを1ピクセルずつ動かしていくが、max pooling layerでは、一度にfilterのサイズと同じだけ動かし、畳み込み対象領域が重ならないようにする。また、filterのサイズは2x2ピクセルに設定されることが多い。図\ref{c3_maxpooling}の左側は、max poolingによる畳み込みの様子を、右側ではMax-pooling Layerによる畳み込みの全体の様子を表している。\par
+Convolutinal Netにて、もう1つ広く使われている方法が、Max poolingである。Max pooling layerは普通Convolutional Layer同士の間に置かれる。Max poolingでは、convolutional layerで得られた画素を、部分ごとにたたみ込んでいく。ただし、convolutional layerの計算に使うfilterとは違い、重み行列は用いず、単純に対象領域の画素値のmaxを取って、次のレイヤーに渡していく。また、convolutional layerではfilterを1ピクセルずつ動かしていくが、max pooling layerでは、一度にfilterのサイズと同じだけ動かし、畳み込み対象領域が重ならないようにする。また、filterのサイズは2x2ピクセルに設定されることが多い。図\ref{c3_maxpooling}の左側は、max poolingによる畳み込みの様子を、右側ではMax-pooling Layerによる畳み込みの全体の様子を表している。\par
 Max-poolingを用いることにより、各レイヤーの次元数を効率良く下げることが出来る。また同時に、ピクセルの位置が少し変化しても同じ結果が得られるので、位置的なrobustnessを上げることも出来る。\par
-最後に、Max pooling Layerを用いた一般的なConvolutional Networkの全体図を、図\ref{c3_convnet}に挙げる。この図では、各Feature Mapごとのつながりは省略している。
+Max pooling Layerを併用した場合の、一般的なConvolutional Networkの全体図を、図\ref{c3_convnet}に挙げる。なお、この図では、各Feature Mapごとのつながりは省略している。
 
 \begin{figure}[tbp]
  \centering
@@ -157,7 +157,7 @@ Max-poolingを用いることにより、各レイヤーの次元数を効率良
 
 \subsection{DropoutとDropConnect}
 \label{c3_dropout}
-Dropoutとは、2012年にHinton氏らによって提案された、過学習を防ぐための技術である\cite{hinton2012improving}。過学習とは、機械学習全般において使われる用語で、学習モデルが訓練中に見たデータへの適応を重視し過ぎたために、未知のデータをうまく識別できなくなる現象のことを指す。Dropoutでは、過学習を防ぐため、各レイヤーからの出力をランダムに消去してしまう。これによって各ユニットには、他のユニットに頼らず自力で学習をする必要が生じ、より様々な入力に対応しやすい堅固(robust)なモデルが獲得される、と考えられている。図\ref{c3_dropout_timit}は、\cite{hinton2012improving}より引用した図で、音声認識のTIMITデータベース\cite{fisher1986darpa}\footnote{\url{http://catalog.ldc.upenn.edu/LDC93S1}}に対する識別精度である。Dropoutを使うことで、使わなかった場合に比べ、特にEpoch数(学習の繰り返し回数)が大きい場合に分類精度が向上していることがわかる。
+Dropoutとは、2012年にHinton氏らによって提案された、過学習を防ぐための技術である\cite{hinton2012improving}。過学習とは、機械学習全般において使われる用語で、学習モデルが訓練中に見たデータへの適応を重視し過ぎたために、未知のデータをうまく識別できなくなる現象のことを指す。Dropoutでは、過学習を防ぐため、各レイヤーからの出力をランダムに消去してしまう。これによって各ユニットには、他のユニットに頼らず自力で学習をする必要が生じ、より様々な入力に対応しやすい堅固(robust)なモデルが獲得される、と考えられている。図\ref{c3_dropout_timit}は、\cite{hinton2012improving}より引用した図で、音声認識のTIMITデータベース\cite{fisher1986darpa}\footnote{\url{http://catalog.ldc.upenn.edu/LDC93S1}}に対する識別精度である。Dropoutを使うことで、使わなかった場合に比べ、特にEpoch数(学習の繰り返し回数)が大きい場合に、分類誤差を減少出来ていることがわかる。
 \begin{figure}[tbp]
  \centering
   \includegraphics[width=100mm]{img/c3/dropout_timit}
@@ -182,7 +182,7 @@ DropConnectは、Dropoutをさらに一般化した手法である。DropConnect
 H(x)= \left\{\begin{array}{cc} 0\quad (x < 0)\\ 1 \quad (x > 0)\end{array}\right.
 \end{equation}
 となる。ただし、これだけでは$x=0$の点で不連続になるので、$H(x)=0$や$H(x)=0.5$などの定義が用いられる。ヘビサイド関数のグラフを\ref{c3_heaviside}に示す。\par
-heaviside関数は、ニューロンが受けた刺激の総和を測り、閾値を超えていれば次のニューロンにも情報を伝達し、超えていなければ何もしないという性質をそのまま反映している。しかし、この関数は微分不可能なため、バックプロパゲーションを行う上では不都合であり、特にDeep Learningのネットワークモデルにおいて使われることは少ない。
+heaviside関数は、ニューロンが受けた刺激の総和を測り、閾値を超えていれば次のニューロンにも情報を伝達し、超えていなければ何もしないという性質を、そのまま表現している。しかし、この関数は微分不可能なため、バックプロパゲーションを行う上では不都合であり、特にDeep Learningのネットワークモデルにおいて使われることは少ない。
 \begin{figure}[tbp]
  \centering
   \includegraphics[width=80mm]{img/c3/heaviside}
