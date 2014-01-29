@@ -1,6 +1,7 @@
 #!/usr/local/bin/ruby
 # -*- coding: utf-8 -*-
 rpl = {
+  #全角 [^ -~｡-ﾟ]
   #black list
   "Deep Learning" => "深層学習",
   /Deep Architecture/i => "深い構造",
@@ -8,7 +9,8 @@ rpl = {
   "Recommendation System" => "推薦システム",
   "Collaboraitive Filtering" => "協調フィルタリング",
   "Content Filtering" => "コンテンツベースのフィルタリング",
-  "Link Prediction" => "リンク予測",
+  /Link Prediction/i => "リンク予測",
+  "GraphHopper Kernel" => "GraphHopperカーネル",
   "Sentiment Analysis" => "感情分析",
   "Learning to Rank" => "順位付け学習",
   "Deep Neural Network" => "深層ニューラルネットワーク",
@@ -20,7 +22,7 @@ rpl = {
   /autoencoder/i => "自己符号器",
   /feed[ -]forward/ => "前送り",
   "Energy-Based Model" => "エネルギーに基づくモデル",
-  "Web" => "ウェブ",
+  /Web/i => "ウェブ",
   "precision" => "適合率",
   "recall" => "再現率",
   "Support Vector Machine" => "サポートベクターマシン",
@@ -65,6 +67,7 @@ rpl = {
   "pylearn2" => "Pylearn2",
   /libsvm/i => "LIBSVM",
   /liblinear/i => "LIBLINEAR",
+#  /([^ -~｡-ﾟ].)wikipedia([^ -~｡-ﾟ].)/i => "\1Wikipedia\2"
   
   #remove spaces derived from english
   
@@ -76,8 +79,8 @@ rpl = {
   "img/c3/整流" => "img/c3/rectifier",
   "ranzato2007教師無し" => "ranzato2007unsupervised",
   "hinton1994自己符号器s" => "hinton1994autoencoders",
-  "" => "",
-  "" => "",
+  "(マシンラーニング)" => "(Machine Learning)",
+  "Multi レイヤー Perceptron" => "Multi Layer Perceptron",
   "" => "",
   "" => "",
   "" => "",

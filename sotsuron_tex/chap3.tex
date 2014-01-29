@@ -10,7 +10,7 @@
  \caption{Imagenetの画像とラベル構造の例}
  \label{c3_imagenet}
 \end{figure}
-Googleのsupervisionによる、画像分析の結果の例を図\ref{c3_supervision}に載せる(\cite{krizhevsky2012imagenet}より引用)。画像の分類に失敗している場合でも、妥当なラベルをつけていることがわかる。\begin{figure}[tbp]
+GoogleのSupervisionによる、画像分析の結果の例を図\ref{c3_supervision}に載せる(\cite{krizhevsky2012imagenet}より引用)。画像の分類に失敗している場合でも、妥当なラベルをつけていることがわかる。\begin{figure}[tbp]
  \begin{center}
   \includegraphics[width=80mm]{img/c3/supervision}
  \end{center}
@@ -24,14 +24,14 @@ vector('Paris') - vector('France') + vector('Italy') = vector('Rome')
 vector('king') - vector('man') + vector('woman') = vector('queen')
 \end{equation}
 のような計算が行えるようになった。また、この計算を行う過程で、全ての単語同士の内積の和を計算していたところを止め、数個だけサンプルを取って計算することで、計算時間が短縮できるだけでなく、分類精度まで向上することが判明した\cite{mikolov2013distributed}。\par
-word2vecを応用した研究も出現している。Deep Visual-Semantic Embedding model(DeViSE)\cite{frome2013devise}と名付けられたシステムでは、zero-shot learningと呼ばれる問題を解かせるため、Supervisionとword2vecを組み合わせている。zero-shot learningとは、訓練時に一度も見たことがないクラスの画像に対し、正しく分類を行えるかという問題である。この研究では、1000カテゴリの画像による訓練を行っただけで、まだ見たことが無い20000カテゴリに属する画像を適切にラベリングしている。画像以外に全く情報がなければ分類は不可能なので、wikipediaのテキスト内容を補助データとして使っているが、これはWordNetや意味データベースの情報を直接用いていた従来の研究\cite{mensink2012metric}\cite{rohrbach2011evaluating}\cite{palatucci2009zero-shot}に比べて、より生データに近い情報で処理に成功していると言える。\par
+word2vecを応用した研究も出現している。Deep Visual-Semantic Embedding model(DeViSE)\cite{frome2013devise}と名付けられたシステムでは、zero-shot learningと呼ばれる問題を解かせるため、Supervisionとword2vecを組み合わせている。zero-shot learningとは、訓練時に一度も見たことがないクラスの画像に対し、正しく分類を行えるかという問題である。この研究では、1000カテゴリの画像による訓練を行っただけで、まだ見たことが無い20000カテゴリに属する画像を適切にラベリングしている。画像以外に全く情報がなければ分類は不可能なので、Wikipediaのテキスト内容を補助データとして使っているが、これはWordNetや意味データベースの情報を直接用いていた従来の研究\cite{mensink2012metric}\cite{rohrbach2011evaluating}\cite{palatucci2009zero-shot}に比べて、より生データに近い情報で処理に成功していると言える。\par
 \begin{figure}[tbp]
  \centering
   \includegraphics[width=120mm]{img/c3/devise}
  \caption{DeViSEの学習方法}
  \label{c3_devise}
 \end{figure}
-図\ref{c3_devise}は、DeViSEの学習方法を示している(ImageNetとWikiediaのロゴは、公式ウェブページより引用した\footnote{\url{http://www.image-net.org/splash/logo.jpg}},\footnote{\url{http://upload.wikimedia.org/wikipedia/commons/a/ad/Wikipedia-logo-v2-ja.png}})。DeViseでは、画像データを意味付けするためにSupervisionを使い、wikipediaの情報処理にword2vecを用いている。まずSupervisionにImageNetのデータを、word2vecにwikipediaのデータを与えて学習させたあと、実際の画像及び未見カテゴリのラベルを与え、画像とラベルの意味ベクトルが、出来るだけ近くなるように分類している。\par
+図\ref{c3_devise}は、DeViSEの学習方法を示している(ImageNetとWikipediaのロゴは、公式ウェブページより引用した\footnote{\url{http://www.image-net.org/splash/logo.jpg}},\footnote{\url{http://upload.wikimedia.org/wikipedia/commons/a/ad/Wikipedia-logo-v2-ja.png}})。DeViseでは、画像データを意味付けするためにSupervisionを使い、Wikipediaの情報処理にword2vecを用いている。まずSupervisionにImageNetのデータを、word2vecにwikipediaのデータを与えて学習させたあと、実際の画像及び未見カテゴリのラベルを与え、画像とラベルの意味ベクトルが、出来るだけ近くなるように分類している。\par
 深層学習を強化学習(reinforced learning)と組み合わせることで、ゲームを上手くプレイできるAIを作る研究も成功している\cite{mnih2013playing}。強化学習では、環境に対してAIが行動を起こし、環境から得られる報酬を最大化できるように、アルゴリズムを修正していく。多くの場合、「行動と報酬の間に時間差があり、どの行動が報酬に結びついたのか分かりにくい」「行動によって環境が変化しててしまうため、分析が難しい」といった状況設定がなされる。また、Bandit問題というカテゴリでは、スロットゲームを題材にして、「知識を活用すると報酬は上がるが、もっと良い行動があるかもしれない」「行動の探索を優先すると、既存知識は活かせず、一時的な報酬は下がりやすい」というジレンマの解決が研究されている\cite{cesa-bianchi2013a-gang}。\cite{mnih2013playing}の研究では、ゲーム内のキャラクターをAIで行動させ、報酬としてのスコアを最大化させるような行動を学習させる。深層学習は、ゲーム内の状況をモデル化して、そこから最適な行動を導き出すために用いられている。
 
 \section{深層学習のアルゴリズム}
