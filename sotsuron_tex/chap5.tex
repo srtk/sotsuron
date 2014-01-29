@@ -21,35 +21,7 @@ MNISTは、様々な画像認識アルゴリズムの作者によって使用さ
 \begin{center}
   %\centering
   \caption{MNISTの分類誤差ランキング}
-    \begin{tabular}{|l|l|r|}\hline
-%    \toprule
-    手法 & 発表学会/雑誌/年 & 分類誤差 \\ \hline
-%    \midrule
-    DropConnect \cite{wan2013regularization}& ICML 2013 & 0.21\% \\ \hline
-    Multi-column 深層ニューラルネットワークs \cite{ciresan2012multi-column}& CVPR 2012 & 0.23\% \\ \hline
-    Deep Big Simple Neural Nets \cite{ciresan2010deep}& Neural Computation 2010 & 0.35\% \\ \hline
-    エネルギーに基づくモデル \cite{poultney2006efficient}& NIPS 2006 & 0.39\% \\ \hline
-    畳み込みニューラルネットワークworks \cite{simard2003best}& Document Analysis and Recognition 2003 & 0.40\% \\ \hline
-    \textbf{Maxout Networks} \cite{goodfellow2013maxout}& ICML 2013 & 0.45\% \\ \hline
-    COSFIRE フィルタs \cite{azzopardi2013trainable}& PAMI 2013 & 0.52\% \\ \hline
-    Multi-Stage Architecture \cite{jarrett2009what}& ICCV 2009 & 0.53\% \\ \hline
-    Deformation Models \cite{keysers2007deformation}& PAMI 2007 & 0.54\% \\ \hline
-    A trainable feature extractor \cite{lauer2007a-trainable}& Journal Pattern Recognition 2007   & 0.54\% \\ \hline
-    Invariant サポートベクターマシンs \cite{decoste2002training}& Machine Learning 2002 & 0.56\% \\ \hline
-    Sparse Coding \cite{labusch2008simple}& TNN 2008 & 0.59\% \\ \hline
-    教師無し learning of invariant feature hierarchies \cite{ranzato2007unsupervised}& CVPR 2007 & 0.62\% \\ \hline
-    shape contexts \cite{belongie2002shape}& PAMI 2002 & 0.63\% \\ \hline
-    Receptive Field Learning \cite{jia2012beyond}& CVPR 2012 & 0.64\% \\ \hline
-    Sparse Activity, Sparse Connectivity \cite{thom2013sparse}& JMLR 2013 & 0.75\% \\ \hline
-    Convolutional 深層信念ネットワークworks \cite{lee2009convolutional}& ICML 2009 & 0.82\% \\ \hline
-    Deep Encoder Network \cite{min2009large-margin}& 2009 & 0.94\% \\ \hline
-    Deep Boltzmann Machines \cite{salakhutdinov2009deep}& AISTATS 2009 & 0.95\% \\ \hline
-    深層信念ネットワークworks \cite{dahl2008cs81:}& 2008 & 1.12\% \\ \hline
-    畳み込みニューラルネットワークworks  \cite{simard2003best}& 2003 & 1.19\% \\ \hline
-    neural networks \cite{hinton2006reducing}& 2006 & 1.20\% \\ \hline
-    Deep learning via semi-教師有り embedding \cite{weston2012deep}& 2008 & 1.50\% \\ \hline
-%    \bottomrule
-    \end{tabular}%
+\input{chap5_mnist_rank}
   \label{c5_mnist_rank}%
   \end{center}
 \end{table}%
@@ -67,18 +39,7 @@ CIFAR10についても、データの例を\ref{c5_cifar_ex}に、分類誤差�
 \end{figure}
 \begin{table}[tbp]
  \begin{center}
-  \begin{tabular}{|l|l|r|}\hline
-  手法 & 発表学会/雑誌 & 分類誤差 \\ \hline
-DropConnect \cite{wan2013regularization}& ICML 2013 & 9.32 \% \\ \hline
-Maxout Networks \cite{goodfellow2013maxout}& ICML 2013 & 9.35 \% \\ \hline
-Bayesian Optimization \cite{snoek2012practical}& NIPS 2012 & 9.50 \% \\ \hline
-Deep 畳み込みニューラルネットワークworks \cite{krizhevsky2012imagenet}& NIPS 2012 & 11.00 \% \\ \hline
-Multi-Column 深層ニューラルネットワークs \cite{ciresan2012multi-column}& CVPR 2012 & 11.21 \% \\ \hline
-Deep 畳み込みニューラルネットワークworks \cite{zeiler2013stochastic}& arXiv 2013 & 15.13 \% \\ \hline
-Dropout \cite{hinton2012improving}& arXiv 2012 & 15.60 \% \\ \hline
-Sum-Product Networks \cite{gens2012discriminative}& NIPS 2012 & 16.04 \% \\ \hline
-Single-レイヤー Networks \cite{coates2011an-analysis}& AISTATS 2011 & 20.4 \% \\ \hline
-  \end{tabular}
+ \input{chap5_cifar_rank}
  \end{center}
  \caption{CIFAR10分類誤差のランキング}
  \label{c5_cifar_rank}

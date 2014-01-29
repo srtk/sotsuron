@@ -1,5 +1,12 @@
 #!/usr/local/bin/ruby
 # -*- coding: utf-8 -*-
+file_exception =
+  [
+   "chap5_mnist_rank.tex",
+   "chap5_cifar_rank.tex",
+  ]
+
+
 rpl = {
   #全角 [^ -~｡-ﾟ]
   #black list
@@ -48,7 +55,7 @@ rpl = {
   "robustness" => "頑健性",
   "robust" => "頑堅",
   /Max Pooling Layer/i => "最大値蓄積レイヤー",
-  /Max[\ -]Pooling/i => "最大値蓄積",
+  /Max[ -]?Pooling/i => "最大値蓄積",
   /Feature Map/i => "素性写像",
   "filter" => "フィルタ",
   /hyperbolic tangent/i => "双曲線正接",
@@ -58,7 +65,10 @@ rpl = {
   /softmax/i => "ソフトマックス",
   "ホームページ" => "ウェブページ",
   /logistic/i => "ロジスティック",
-  "" => "",
+  "Fisher" => "フィッシャー",
+  /LISA ?Lab.?/ => "LISA.研究室",
+  /Epoch数/ => "繰り返し回数",
+  /Epoch/i => "繰り返し回数",
   
   #english capitalization
   "numpy" => "Numpy",
@@ -67,13 +77,13 @@ rpl = {
   "pylearn2" => "Pylearn2",
   /libsvm/i => "LIBSVM",
   /liblinear/i => "LIBLINEAR",
-#  /([^ -~｡-ﾟ].)wikipedia([^ -~｡-ﾟ].)/i => "\1Wikipedia\2"
   
   #remove spaces derived from english
-  
+  "教師無し 事前学習" => "教師無し事前学習",
   
   #exceptions
   "Greedy Layer-wise 事前学習" => "レイヤー毎の貪欲事前学習",
+  "Greedy レイヤー-wise 事前学習" => "レイヤー毎の貪欲事前学習",
   "serre2007頑堅" => "serre2007robust",
   "img/c3/自己符号器" => "img/c3/autoencoder",
   "img/c3/整流" => "img/c3/rectifier",
@@ -81,18 +91,33 @@ rpl = {
   "hinton1994自己符号器s" => "hinton1994autoencoders",
   "(マシンラーニング)" => "(Machine Learning)",
   "Multi レイヤー Perceptron" => "Multi Layer Perceptron",
-  "" => "",
-  "" => "",
-  "" => "",
+  "深層信念ネットワークworks" => "深層信念ネットワーク",
+  "Stacked 自己符号器" => "積層自己符号器",
+  "深層信念ネットワークs" => "深層信念ネットワーク",
+  "ref{c3_自己符号器}" => "ref{c3_autoencoder}",
+  "label{c3_自己符号器}" => "label{c3_autoencoder}",
+  "深層信念ネットワークs" => "深層信念ネットワーク",
+  "{img/c3/最大値蓄積}" => "{img/c3/maxpooling}",
+  "label{c3_最大値蓄積}" => "label{c3_maxpooling}",
+  "ef{c3_最大値蓄積}" => "ef{c3_maxpooling}",
+  "label{c3_整流}" => "label{c3_rectifier}",
+  "ef{c3_整流" => "ef{c3_rectifier",
+  "img/c4/Theano_compile" => "img/c4/theano_compile",
+  "深層学習 Tutorial" => "Deep Learning Tutorial",
+  "Contractive 自己符号器" => "契約自己符号器",
   "" => "",
   "" => "",
   "" => "",
   "" => "",
   "" => "",
   #  "" => "",
-  
 }
-Dir::glob("*.tex").each {|fname|
+
+dirs = Dir::glob("*.tex")
+file_exception.each{|ex|
+  dirs.delete(ex)
+}
+dirs.each {|fname|
   f=File.open(fname,"r")
   buffer = f.read();
   rpl.each{|k,v|
