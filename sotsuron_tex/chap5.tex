@@ -37,11 +37,14 @@ CIFAR10についても、データの例を\ref{c5_cifar_ex}に、分類誤差�
  \caption{CIFAR10データの例}
  \label{c5_cifar_ex}
 \end{figure}
+
+
 \begin{table}[tbp]
  \begin{center}
+  \caption{CIFAR10分類誤差のランキング}
  \input{chap5_cifar_rank}
  \end{center}
- \caption{CIFAR10分類誤差のランキング}
+
  \label{c5_cifar_rank}
 \end{table}
 
@@ -51,13 +54,14 @@ CIFAR10についても、データの例を\ref{c5_cifar_ex}に、分類誤差�
 この章の実験では、GPUを搭載したサーバマシンを用いた。表\ref{c5_hardware_spec}に、今回の実験で使用したマシンの主な使用パーツ及び性能を列挙した。また、Maxout Networkの実装ソースコードには、実験マシンのパーツ性能を書いたファイルが付属している\footnote{Pylearn2/scripts/papers/maxout/notes}。このファイルの記述内容も、比較のために列挙した。今回の実験に使ったマシンの方が、ハードウェア性能的には優れていることがわかる。
 \begin{table}[tbp]
  \begin{center}
+  \caption{ハードウェア性能の比較}
   \begin{tabular}{|c|c|c|c|c|c|}\hline
    & GPU & CUDA core & CPU & クロック数 & メモリ容量\\ \hline
 今回 & GTX760 & 1152 & Intel CPU Core i7 4770S & 3.1 GHz & 32GB\\ \hline
 論文 & GTX580 & 512 & Intel Xeon CPU E5620 &  2.40GHz & (記載無し)\\ \hline
   \end{tabular}
  \end{center}
- \caption{ハードウェア性能の比較}
+
  \label{c5_hardware_spec}
 \end{table}
 

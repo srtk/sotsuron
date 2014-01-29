@@ -23,6 +23,7 @@
 最初に提唱された論文\cite{liben2007link}では、ソーシャルネットワークの状態が与えられたとき、ユーザ間で交わされる将来の行動を予測する問題として述べられている。この論文では、ノード(ユーザ)間の近さを定義する方法や、全てのエッジ(接続)を通しで見て判断する方法、クラスタリングによる方法などが用いられている。論文で用いられているノード間の近さの定義を図\ref{c2_lp_method}に挙げる(\cite{liben2007link}より引用)。ノード$x$に対し、$x$とつながっているノードの集合を$\Gamma(x)$とする。\par
 \begin{table}[tbp]
  \begin{center}
+  \caption{リンク予測にて、ノード同士の近さを定義する方法}
   \begin{tabular}{|l|l|}\hline
   グラフ距離 & (負値にされた) xとyの最短距離 \\ \hline
   共通隣接 & $|\Gamma(x)∩\Gamma(y)|$ \\ \hline
@@ -31,7 +32,6 @@
   優先的選択 & $|\Gamma(x)|・|\Gamma(y)|$ \\ \hline
   \end{tabular}
  \end{center}
- \caption{リンク予測にて、ノード同士の近さを定義する方法}
  \label{c2_lp_method}
 \end{table}
 
