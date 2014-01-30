@@ -1,0 +1,88 @@
+2013/11/12 00:54:37.620720
+... loading data from data/cifar10_for_dlt.pkl.gz
+loading completed
+... building the model
+... getting the pretraining functions
+... pre-training the model
+Pre-training layer 0, epoch 0, cost  1879.99088559
+Pre-training layer 0, epoch 1, cost  1821.39551579
+Pre-training layer 0, epoch 2, cost  1788.59322625
+Pre-training layer 0, epoch 3, cost  1767.54144116
+Pre-training layer 0, epoch 4, cost  1756.22895318
+Pre-training layer 0, epoch 5, cost  1750.11691562
+Pre-training layer 0, epoch 6, cost  1746.54547158
+Pre-training layer 0, epoch 7, cost  1744.24263904
+Pre-training layer 0, epoch 8, cost  1742.64912865
+Pre-training layer 0, epoch 9, cost  1741.42132594
+Pre-training layer 0, epoch 10, cost  1740.46123134
+Pre-training layer 0, epoch 11, cost  1739.70645171
+Pre-training layer 0, epoch 12, cost  1739.05100374
+Pre-training layer 0, epoch 13, cost  1738.51282231
+Pre-training layer 0, epoch 14, cost  1738.01183568
+Pre-training layer 1, epoch 0, cost  451.198520041
+Pre-training layer 1, epoch 1, cost  428.234171667
+Pre-training layer 1, epoch 2, cost  423.201793278
+Pre-training layer 1, epoch 3, cost  420.742999961
+Pre-training layer 1, epoch 4, cost  419.094548054
+Pre-training layer 1, epoch 5, cost  418.021836611
+Pre-training layer 1, epoch 6, cost  417.127260792
+Pre-training layer 1, epoch 7, cost  416.454102017
+Pre-training layer 1, epoch 8, cost  415.940336453
+Pre-training layer 1, epoch 9, cost  415.498623026
+Pre-training layer 1, epoch 10, cost  415.148485122
+Pre-training layer 1, epoch 11, cost  414.840127688
+Pre-training layer 1, epoch 12, cost  414.568685796
+Pre-training layer 1, epoch 13, cost  414.328701957
+Pre-training layer 1, epoch 14, cost  414.102197726
+Pre-training layer 2, epoch 0, cost  420.54418349
+Pre-training layer 2, epoch 1, cost  401.935860753
+Pre-training layer 2, epoch 2, cost  398.300764236
+Pre-training layer 2, epoch 3, cost  396.455253452
+Pre-training layer 2, epoch 4, cost  395.397332712
+Pre-training layer 2, epoch 5, cost  394.612137052
+Pre-training layer 2, epoch 6, cost  394.037354196
+Pre-training layer 2, epoch 7, cost  393.569314755
+Pre-training layer 2, epoch 8, cost  393.193938493
+Pre-training layer 2, epoch 9, cost  392.867467237
+Pre-training layer 2, epoch 10, cost  392.601042927
+Pre-training layer 2, epoch 11, cost  392.354139827
+Pre-training layer 2, epoch 12, cost  392.098741135
+Pre-training layer 2, epoch 13, cost  391.903687315
+Pre-training layer 2, epoch 14, cost  391.728654141
+The pretraining code for file SdA_cifar10.py ran for 2034.31m
+... getting the finetuning functions
+... finetunning the model
+epoch 1, minibatch 41666/41666, validation error 68.034557 %
+     epoch 1, minibatch 41666/41666, test error of best model 66.120000 %
+epoch 2, minibatch 41666/41666, validation error 63.318934 %
+     epoch 2, minibatch 41666/41666, test error of best model 62.760000 %
+epoch 3, minibatch 41666/41666, validation error 59.971202 %
+     epoch 3, minibatch 41666/41666, test error of best model 60.030000 %
+epoch 4, minibatch 41666/41666, validation error 59.467243 %
+     epoch 4, minibatch 41666/41666, test error of best model 58.940000 %
+epoch 5, minibatch 41666/41666, validation error 57.979362 %
+     epoch 5, minibatch 41666/41666, test error of best model 57.140000 %
+epoch 6, minibatch 41666/41666, validation error 57.943365 %
+     epoch 6, minibatch 41666/41666, test error of best model 57.200000 %
+epoch 7, minibatch 41666/41666, validation error 58.831293 %
+epoch 8, minibatch 41666/41666, validation error 60.211183 %
+epoch 9, minibatch 41666/41666, validation error 57.175426 %
+     epoch 9, minibatch 41666/41666, test error of best model 57.420000 %
+epoch 10, minibatch 41666/41666, validation error 58.675306 %
+epoch 11, minibatch 41666/41666, validation error 60.091193 %
+epoch 12, minibatch 41666/41666, validation error 56.419486 %
+     epoch 12, minibatch 41666/41666, test error of best model 56.940000 %
+epoch 13, minibatch 41666/41666, validation error 58.735301 %
+epoch 14, minibatch 41666/41666, validation error 58.267339 %
+epoch 15, minibatch 41666/41666, validation error 58.315335 %
+epoch 16, minibatch 41666/41666, validation error 58.771298 %
+epoch 17, minibatch 41666/41666, validation error 58.207343 %
+epoch 18, minibatch 41666/41666, validation error 59.875210 %
+epoch 19, minibatch 41666/41666, validation error 58.903288 %
+epoch 20, minibatch 41666/41666, validation error 59.251260 %
+epoch 21, minibatch 41666/41666, validation error 60.067195 %
+epoch 22, minibatch 41666/41666, validation error 59.143269 %
+epoch 23, minibatch 41666/41666, validation error 60.835133 %
+Optimization complete with best validation score of 56.419486 %,with test performance 56.940000 %
+The training code for file SdA_cifar10.py ran for 1334.77m
+2013/11/13 05:27:05.996041

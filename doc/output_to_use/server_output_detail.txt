@@ -1,0 +1,32 @@
+* file
+module_benchmark/cnn
+ipythonのtutorialのcnnそのまま構築
+
+module_benchmark/sda_tutorial
+ipythonのtutorialのsdaそのまま構築
+
+同train_mod_なんちゃら
+わからん
+
+tmp
+softmaxの実験
+
+log_cifar_no_aug
+3日かけて失敗したときのログ
+
+
+* あるもの
+
+
+artemis+DLT+CIFAR+{CNN, DBN, SDA}
+artemis+DLT+MNIST+drednet(original)
+
+physalis+PL2+MNIST+{CNN, DBN, SDA, Maxout1, Maxout2}
+
+これから
+
+physalis+DLT+MNIST+{CNN, DBN, SDA}
+physalis+DLT+CIFAR10+{CNN, DBN, SDA}
+
+失敗したもの
+physalis+PL2+CIFAR+Maxout

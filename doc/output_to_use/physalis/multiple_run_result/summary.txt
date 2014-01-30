@@ -1,0 +1,83 @@
+
+test_y_misclass
+0.0116000017151
+0.0116000017151
+0.0116000017151
+...
+(10回とも同じ)
+
+
+実行時間(↑がpretraining, ↓がfinetuning)
+log_01.txt:run 2527.78 sec
+log_01.txt:run 757.32 sec
+
+log_02.txt:run 2529.65 sec
+log_02.txt:run 754.27 sec
+
+log_03.txt:run 2535.82 sec
+log_03.txt:run 758.22 sec
+
+log_04.txt:run 2534.88 sec
+log_04.txt:run 757.78 sec
+
+log_05.txt:run 2545.69 sec
+log_05.txt:run 756.38 sec
+
+log_06.txt:run 2538.06 sec
+log_06.txt:run 760.31 sec
+
+log_07.txt:run 2529.61 sec
+log_07.txt:run 758.24 sec
+
+log_08.txt:run 2530.62 sec
+log_08.txt:run 754.35 sec
+
+log_09.txt:run 2526.54 sec
+log_09.txt:run 754.46 sec
+
+log_10.txt:run 2527.59 sec
+log_10.txt:run 758.49 sec
+
+平均
+pretraining 2532.8
+finetuning 756.7
+平均の合計 3289.5 sec = 55 min
+
+
+[最大メモリ使用量]
+log_01.txt:max memory usage(ru_maxrss) : 798056  (check 'man getrusage' for the unit)
+log_01.txt:max memory usage(ru_maxrss) : 811540  (check 'man getrusage' for the unit)
+
+log_02.txt:max memory usage(ru_maxrss) : 798036  (check 'man getrusage' for the unit)
+log_02.txt:max memory usage(ru_maxrss) : 811544  (check 'man getrusage' for the unit)
+
+log_03.txt:max memory usage(ru_maxrss) : 798056  (check 'man getrusage' for the unit)
+log_03.txt:max memory usage(ru_maxrss) : 811556  (check 'man getrusage' for the unit)
+
+log_04.txt:max memory usage(ru_maxrss) : 798032  (check 'man getrusage' for the unit)
+log_04.txt:max memory usage(ru_maxrss) : 811548  (check 'man getrusage' for the unit)
+
+log_05.txt:max memory usage(ru_maxrss) : 798052  (check 'man getrusage' for the unit)
+log_05.txt:max memory usage(ru_maxrss) : 811536  (check 'man getrusage' for the unit)
+
+log_06.txt:max memory usage(ru_maxrss) : 798040  (check 'man getrusage' for the unit)
+log_06.txt:max memory usage(ru_maxrss) : 811548  (check 'man getrusage' for the unit)
+
+log_07.txt:max memory usage(ru_maxrss) : 798036  (check 'man getrusage' for the unit)
+log_07.txt:max memory usage(ru_maxrss) : 811552  (check 'man getrusage' for the unit)
+
+log_08.txt:max memory usage(ru_maxrss) : 798056  (check 'man getrusage' for the unit)
+log_08.txt:max memory usage(ru_maxrss) : 811556  (check 'man getrusage' for the unit)
+
+log_09.txt:max memory usage(ru_maxrss) : 798048  (check 'man getrusage' for the unit)
+log_09.txt:max memory usage(ru_maxrss) : 811544  (check 'man getrusage' for the unit)
+
+log_10.txt:max memory usage(ru_maxrss) : 798064  (check 'man getrusage' for the unit)
+log_10.txt:max memory usage(ru_maxrss) : 811560  (check 'man getrusage' for the unit)
+
+798056 + 798036 + 798056 + 798032 + 798052 + 798040 + 798036 + 798056 + 798048 + 798064
+
+811560 + 811540 + 811544 + 811556 + 811548 + 811536 + 811548 + 811552 + 811556 + 811544
+
+pretraining 779.343359375 MB
+finetuning 792.5277rs34375 MB

@@ -1,0 +1,1440 @@
+Using gpu device 0: GeForce GTX 760
+!obj:pylearn2.train.Train {
+    dataset: &train !obj:pylearn2.datasets.mnist.MNIST {
+        which_set: 'train',
+        start: 0,
+        stop: 50000
+    },
+    model: !obj:pylearn2.models.autoencoder.DenoisingAutoencoder {
+        nvis : 784,
+        nhid : 500,
+        irange : 0.05,
+        corruptor: !obj:pylearn2.corruption.BinomialCorruptor {
+            corruption_level: .2,
+        },
+        act_enc: "tanh",
+        act_dec: null,    # Linear activation on the decoder side.
+    },
+    algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {
+        learning_rate : 1e-3,
+        batch_size : 100,
+        monitoring_batches : 5,
+        monitoring_dataset : *train,
+        cost : !obj:pylearn2.costs.autoencoder.MeanSquaredReconstructionError {},
+        termination_criterion : !obj:pylearn2.termination_criteria.EpochCounter {
+            max_epochs: 10,
+        },
+    },
+    save_path: "./dae_l1.pkl",
+    save_freq: 1
+}
+
+/usr/local/lib/python2.7/dist-packages/theano/sandbox/rng_mrg.py:768: UserWarning: MRG_RandomStreams Can't determine #streams from size (Shape.0), guessing 60*256
+  nstreams = self.n_streams(size)
+Parameter and initial learning rate summary:
+	vb: 0.0010000000475
+	hb: 0.0010000000475
+	W: 0.0010000000475
+	Wprime: 0.0010000000475
+Compiling sgd_update...
+Compiling sgd_update done. Time elapsed: 0.000000 seconds
+compiling begin_record_entry...
+compiling begin_record_entry done. Time elapsed: 0.000000 seconds
+Monitored channels: 
+	learning_rate
+	monitor_seconds_per_epoch
+	objective
+Compiling accum...
+graph size: 20
+Compiling accum done. Time elapsed: 0.000000 seconds
+Monitoring step:
+	Epochs seen: 0
+	Batches seen: 0
+	Examples seen: 0
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 0.0
+	objective: 85.4375915527
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 1
+	Batches seen: 500
+	Examples seen: 50000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 29.1613636017
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 2
+	Batches seen: 1000
+	Examples seen: 100000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 21.9736881256
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 3
+	Batches seen: 1500
+	Examples seen: 150000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 18.4479560852
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 4
+	Batches seen: 2000
+	Examples seen: 200000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 16.2897167206
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 5
+	Batches seen: 2500
+	Examples seen: 250000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 14.8111886978
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 6
+	Batches seen: 3000
+	Examples seen: 300000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 13.650428772
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 7
+	Batches seen: 3500
+	Examples seen: 350000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 12.9274587631
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 8
+	Batches seen: 4000
+	Examples seen: 400000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 12.276591301
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 9
+	Batches seen: 4500
+	Examples seen: 450000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 11.7446937561
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 10
+	Batches seen: 5000
+	Examples seen: 500000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 11.4141283035
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+Saving to ./dae_l1.pkl...
+Saving to ./dae_l1.pkl done. Time elapsed: 0.000000 seconds
+!obj:pylearn2.train.Train {
+    dataset: &train !obj:pylearn2.datasets.transformer_dataset.TransformerDataset {
+        raw: !obj:pylearn2.datasets.mnist.MNIST {
+            which_set: 'train',
+            start: 0,
+            stop: 50000
+        },
+        transformer: !pkl: "./dae_l1.pkl"
+    },
+    model: !obj:pylearn2.models.autoencoder.DenoisingAutoencoder {
+        nvis : 500,
+        nhid : 500,
+        irange : 0.05,
+        corruptor: !obj:pylearn2.corruption.BinomialCorruptor {
+            corruption_level: .3,
+        },
+        act_enc: "tanh",
+        act_dec: null,    # Linear activation on the decoder side.
+    },
+    algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {
+        learning_rate : 1e-3,
+        batch_size : 100,
+        monitoring_batches : 5,
+        monitoring_dataset : *train,
+        cost : !obj:pylearn2.costs.autoencoder.MeanSquaredReconstructionError {},
+        termination_criterion : !obj:pylearn2.termination_criteria.EpochCounter {
+            max_epochs: 10,
+        },
+    },
+    save_path: "./dae_l2.pkl",
+    save_freq: 1
+}
+
+Parameter and initial learning rate summary:
+	vb: 0.0010000000475
+	hb: 0.0010000000475
+	W: 0.0010000000475
+	Wprime: 0.0010000000475
+Compiling sgd_update...
+Compiling sgd_update done. Time elapsed: 0.000000 seconds
+compiling begin_record_entry...
+compiling begin_record_entry done. Time elapsed: 0.000000 seconds
+Monitored channels: 
+	learning_rate
+	monitor_seconds_per_epoch
+	objective
+Compiling accum...
+graph size: 20
+Compiling accum done. Time elapsed: 0.000000 seconds
+Monitoring step:
+	Epochs seen: 0
+	Batches seen: 0
+	Examples seen: 0
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 0.0
+	objective: 51.0506210327
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 1
+	Batches seen: 500
+	Examples seen: 50000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 20.0142116547
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 2
+	Batches seen: 1000
+	Examples seen: 100000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 12.8833475113
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 3
+	Batches seen: 1500
+	Examples seen: 150000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 9.65194129944
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 4
+	Batches seen: 2000
+	Examples seen: 200000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 7.71482992172
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 5
+	Batches seen: 2500
+	Examples seen: 250000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 6.52382802963
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 6
+	Batches seen: 3000
+	Examples seen: 300000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 5.69179153442
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 7
+	Batches seen: 3500
+	Examples seen: 350000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 5.15888214111
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 8
+	Batches seen: 4000
+	Examples seen: 400000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 4.75159072876
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 9
+	Batches seen: 4500
+	Examples seen: 450000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 4.38682508469
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 10
+	Batches seen: 5000
+	Examples seen: 500000
+	learning_rate: 0.00100000016391
+	monitor_seconds_per_epoch: 1.0
+	objective: 4.21171617508
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+Saving to ./dae_l2.pkl...
+Saving to ./dae_l2.pkl done. Time elapsed: 0.000000 seconds
+!obj:pylearn2.train.Train {
+    dataset: &train !obj:pylearn2.datasets.mnist.MNIST {
+        which_set: 'train',
+        one_hot: 1,
+        start: 0,
+        stop: 50000
+    },
+    model: !obj:pylearn2.models.mlp.MLP {
+        batch_size: 100,
+        layers: [
+                 !obj:pylearn2.models.mlp.PretrainedLayer {
+                     layer_name: 'h1',
+                     layer_content: !pkl: "./dae_l1.pkl"
+                 },
+                 !obj:pylearn2.models.mlp.PretrainedLayer {
+                     layer_name: 'h2',
+                     layer_content: !pkl: "./dae_l2.pkl"
+                 },
+                 !obj:pylearn2.models.mlp.Softmax {
+                     max_col_norm: 1.9365,
+                     layer_name: 'y',
+                     n_classes: 10,
+                     irange: .005
+                 }
+                ],
+        nvis: 784
+    },
+    algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {
+        learning_rate: .05,
+        learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum {
+            init_momentum: .5,
+        },
+        monitoring_dataset:
+            {
+                'valid' : !obj:pylearn2.datasets.mnist.MNIST {
+                              which_set: 'train',
+                              one_hot: 1,
+                              start: 50000,
+                              stop: 60000
+                          },
+            },
+        cost: !obj:pylearn2.costs.mlp.Default {},
+        termination_criterion: !obj:pylearn2.termination_criteria.And {
+            criteria: [
+                !obj:pylearn2.termination_criteria.MonitorBased {
+                    channel_name: "valid_y_misclass",
+                    prop_decrease: 0.,
+                    N: 100
+                },
+                !obj:pylearn2.termination_criteria.EpochCounter {
+                    max_epochs: 50
+                }
+            ]
+        },
+        update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay {
+            decay_factor: 1.00004,
+            min_lr: .000001
+        }
+    },
+    extensions: [
+        !obj:pylearn2.training_algorithms.learning_rule.MomentumAdjustor {
+            start: 1,
+            saturate: 250,
+            final_momentum: .7
+        }
+    ]
+}
+
+/home/kurotaki/lib/python/pylearn2-0.1dev-py2.7.egg/pylearn2/models/mlp.py:41: UserWarning: MLP changing the recursion limit.
+  warnings.warn("MLP changing the recursion limit.")
+Parameter and initial learning rate summary:
+	vb: 0.0500000007451
+	hb: 0.0500000007451
+	W: 0.0500000007451
+	Wprime: 0.0500000007451
+	vb: 0.0500000007451
+	hb: 0.0500000007451
+	W: 0.0500000007451
+	Wprime: 0.0500000007451
+	softmax_b: 0.0500000007451
+	softmax_W: 0.0500000007451
+Compiling sgd_update...
+Compiling sgd_update done. Time elapsed: 0.000000 seconds
+compiling begin_record_entry...
+compiling begin_record_entry done. Time elapsed: 0.000000 seconds
+Monitored channels: 
+	learning_rate
+	momentum
+	monitor_seconds_per_epoch
+	valid_objective
+	valid_y_col_norms_max
+	valid_y_col_norms_mean
+	valid_y_col_norms_min
+	valid_y_max_max_class
+	valid_y_mean_max_class
+	valid_y_min_max_class
+	valid_y_misclass
+	valid_y_nll
+	valid_y_row_norms_max
+	valid_y_row_norms_mean
+	valid_y_row_norms_min
+Compiling accum...
+graph size: 75
+Compiling accum done. Time elapsed: 0.000000 seconds
+Monitoring step:
+	Epochs seen: 0
+	Batches seen: 0
+	Examples seen: 0
+	learning_rate: 0.0500000119209
+	momentum: 0.499999672174
+	monitor_seconds_per_epoch: 0.0
+	valid_objective: 2.30245757103
+	valid_y_col_norms_max: 0.0650026649237
+	valid_y_col_norms_mean: 0.0641745403409
+	valid_y_col_norms_min: 0.0624679774046
+	valid_y_max_max_class: 0.10553213954
+	valid_y_mean_max_class: 0.102753870189
+	valid_y_min_max_class: 0.101059176028
+	valid_y_misclass: 0.903100371361
+	valid_y_nll: 2.30245757103
+	valid_y_row_norms_max: 0.0125483665615
+	valid_y_row_norms_mean: 0.00897720176727
+	valid_y_row_norms_min: 0.00411556242034
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 1
+	Batches seen: 500
+	Examples seen: 50000
+	learning_rate: 0.0490099266171
+	momentum: 0.499999672174
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.285481214523
+	valid_y_col_norms_max: 1.37920033932
+	valid_y_col_norms_mean: 1.25995886326
+	valid_y_col_norms_min: 1.10580408573
+	valid_y_max_max_class: 0.999643802643
+	valid_y_mean_max_class: 0.891385912895
+	valid_y_min_max_class: 0.366638153791
+	valid_y_misclass: 0.0814000219107
+	valid_y_nll: 0.285481214523
+	valid_y_row_norms_max: 0.306006073952
+	valid_y_row_norms_mean: 0.173898175359
+	valid_y_row_norms_min: 0.0752066597342
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 2
+	Batches seen: 1000
+	Examples seen: 100000
+	learning_rate: 0.0480394884944
+	momentum: 0.500803589821
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.247136458755
+	valid_y_col_norms_max: 1.53969144821
+	valid_y_col_norms_mean: 1.40233445168
+	valid_y_col_norms_min: 1.25563120842
+	valid_y_max_max_class: 0.999809861183
+	valid_y_mean_max_class: 0.914137363434
+	valid_y_min_max_class: 0.396682679653
+	valid_y_misclass: 0.069399997592
+	valid_y_nll: 0.247136458755
+	valid_y_row_norms_max: 0.348902791739
+	valid_y_row_norms_mean: 0.193130522966
+	valid_y_row_norms_min: 0.0754316821694
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 3
+	Batches seen: 1500
+	Examples seen: 150000
+	learning_rate: 0.0470883138478
+	momentum: 0.501606047153
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.209606871009
+	valid_y_col_norms_max: 1.67392396927
+	valid_y_col_norms_mean: 1.51739025116
+	valid_y_col_norms_min: 1.41721081734
+	valid_y_max_max_class: 0.999855041504
+	valid_y_mean_max_class: 0.925868034363
+	valid_y_min_max_class: 0.405808866024
+	valid_y_misclass: 0.06040000543
+	valid_y_nll: 0.209606871009
+	valid_y_row_norms_max: 0.398027926683
+	valid_y_row_norms_mean: 0.20821505785
+	valid_y_row_norms_min: 0.0778625309467
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 4
+	Batches seen: 2000
+	Examples seen: 200000
+	learning_rate: 0.0461559444666
+	momentum: 0.502409934998
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.181997328997
+	valid_y_col_norms_max: 1.88737154007
+	valid_y_col_norms_mean: 1.62824416161
+	valid_y_col_norms_min: 1.44828641415
+	valid_y_max_max_class: 0.999894917011
+	valid_y_mean_max_class: 0.934701681137
+	valid_y_min_max_class: 0.424763560295
+	valid_y_misclass: 0.0520000010729
+	valid_y_nll: 0.181997328997
+	valid_y_row_norms_max: 0.444758713245
+	valid_y_row_norms_mean: 0.222617387772
+	valid_y_row_norms_min: 0.0790278539062
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 5
+	Batches seen: 2500
+	Examples seen: 250000
+	learning_rate: 0.0452419146895
+	momentum: 0.50321239233
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.159930184484
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.72115278244
+	valid_y_col_norms_min: 1.47439146042
+	valid_y_max_max_class: 0.99988681078
+	valid_y_mean_max_class: 0.940866410732
+	valid_y_min_max_class: 0.426196783781
+	valid_y_misclass: 0.0440000146627
+	valid_y_nll: 0.159930184484
+	valid_y_row_norms_max: 0.464266359806
+	valid_y_row_norms_mean: 0.234414324164
+	valid_y_row_norms_min: 0.0797939524055
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 6
+	Batches seen: 3000
+	Examples seen: 300000
+	learning_rate: 0.0443461276591
+	momentum: 0.504016280174
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.143035233021
+	valid_y_col_norms_max: 1.93126213551
+	valid_y_col_norms_mean: 1.79720795155
+	valid_y_col_norms_min: 1.52031481266
+	valid_y_max_max_class: 0.999934792519
+	valid_y_mean_max_class: 0.948293268681
+	valid_y_min_max_class: 0.448669165373
+	valid_y_misclass: 0.0376999974251
+	valid_y_nll: 0.143035233021
+	valid_y_row_norms_max: 0.501182079315
+	valid_y_row_norms_mean: 0.244007915258
+	valid_y_row_norms_min: 0.0815980732441
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 7
+	Batches seen: 3500
+	Examples seen: 350000
+	learning_rate: 0.0434680506587
+	momentum: 0.504818737507
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.128972768784
+	valid_y_col_norms_max: 1.93631577492
+	valid_y_col_norms_mean: 1.84140181541
+	valid_y_col_norms_min: 1.56303739548
+	valid_y_max_max_class: 0.99993532896
+	valid_y_mean_max_class: 0.952728152275
+	valid_y_min_max_class: 0.45773011446
+	valid_y_misclass: 0.0372999943793
+	valid_y_nll: 0.128972768784
+	valid_y_row_norms_max: 0.522079348564
+	valid_y_row_norms_mean: 0.249332204461
+	valid_y_row_norms_min: 0.0810364633799
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 8
+	Batches seen: 4000
+	Examples seen: 400000
+	learning_rate: 0.0426072925329
+	momentum: 0.505622982979
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.123533084989
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.87326931953
+	valid_y_col_norms_min: 1.61571848392
+	valid_y_max_max_class: 0.999963104725
+	valid_y_mean_max_class: 0.954613864422
+	valid_y_min_max_class: 0.463554382324
+	valid_y_misclass: 0.0348999910057
+	valid_y_nll: 0.123533084989
+	valid_y_row_norms_max: 0.525154948235
+	valid_y_row_norms_mean: 0.253258258104
+	valid_y_row_norms_min: 0.0812314674258
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 9
+	Batches seen: 4500
+	Examples seen: 450000
+	learning_rate: 0.0417636223137
+	momentum: 0.506425499916
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.119187660515
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.89299559593
+	valid_y_col_norms_min: 1.65916585922
+	valid_y_max_max_class: 0.999965846539
+	valid_y_mean_max_class: 0.956201434135
+	valid_y_min_max_class: 0.464787393808
+	valid_y_misclass: 0.0323999859393
+	valid_y_nll: 0.119187660515
+	valid_y_row_norms_max: 0.534337162971
+	valid_y_row_norms_mean: 0.255589127541
+	valid_y_row_norms_min: 0.0810972750187
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 10
+	Batches seen: 5000
+	Examples seen: 500000
+	learning_rate: 0.0409367084503
+	momentum: 0.50722938776
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.107577234507
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.90345025063
+	valid_y_col_norms_min: 1.70279407501
+	valid_y_max_max_class: 0.999951183796
+	valid_y_mean_max_class: 0.960036695004
+	valid_y_min_max_class: 0.468458384275
+	valid_y_misclass: 0.0300999823958
+	valid_y_nll: 0.107577234507
+	valid_y_row_norms_max: 0.542799532413
+	valid_y_row_norms_mean: 0.256767898798
+	valid_y_row_norms_min: 0.0823006108403
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 11
+	Batches seen: 5500
+	Examples seen: 550000
+	learning_rate: 0.0401261113584
+	momentum: 0.508031845093
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.10791914165
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.9149273634
+	valid_y_col_norms_min: 1.76190459728
+	valid_y_max_max_class: 0.999973893166
+	valid_y_mean_max_class: 0.959668278694
+	valid_y_min_max_class: 0.47409799695
+	valid_y_misclass: 0.0300999861211
+	valid_y_nll: 0.10791914165
+	valid_y_row_norms_max: 0.550511002541
+	valid_y_row_norms_mean: 0.258117824793
+	valid_y_row_norms_min: 0.0835976824164
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 12
+	Batches seen: 6000
+	Examples seen: 600000
+	learning_rate: 0.0393316075206
+	momentum: 0.508835673332
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0998769327998
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.92226481438
+	valid_y_col_norms_min: 1.80892860889
+	valid_y_max_max_class: 0.999977052212
+	valid_y_mean_max_class: 0.964593172073
+	valid_y_min_max_class: 0.50040268898
+	valid_y_misclass: 0.0274999812245
+	valid_y_nll: 0.0998769327998
+	valid_y_row_norms_max: 0.559845924377
+	valid_y_row_norms_mean: 0.259052544832
+	valid_y_row_norms_min: 0.0850237235427
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 13
+	Batches seen: 6500
+	Examples seen: 650000
+	learning_rate: 0.0385527797043
+	momentum: 0.509638190269
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0978430211544
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.92790329456
+	valid_y_col_norms_min: 1.8607878685
+	valid_y_max_max_class: 0.999977111816
+	valid_y_mean_max_class: 0.964517354965
+	valid_y_min_max_class: 0.493009716272
+	valid_y_misclass: 0.0281999818981
+	valid_y_nll: 0.0978430211544
+	valid_y_row_norms_max: 0.565926194191
+	valid_y_row_norms_mean: 0.259754091501
+	valid_y_row_norms_min: 0.0865103900433
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 14
+	Batches seen: 7000
+	Examples seen: 700000
+	learning_rate: 0.0377893745899
+	momentum: 0.510442078114
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0951417386532
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93095195293
+	valid_y_col_norms_min: 1.90848994255
+	valid_y_max_max_class: 0.999983549118
+	valid_y_mean_max_class: 0.965570628643
+	valid_y_min_max_class: 0.493750363588
+	valid_y_misclass: 0.0279999841005
+	valid_y_nll: 0.0951417386532
+	valid_y_row_norms_max: 0.573724687099
+	valid_y_row_norms_mean: 0.26015779376
+	valid_y_row_norms_min: 0.0874916389585
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 15
+	Batches seen: 7500
+	Examples seen: 750000
+	learning_rate: 0.0370411500335
+	momentum: 0.511244595051
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0946910381317
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93529140949
+	valid_y_col_norms_min: 1.93278777599
+	valid_y_max_max_class: 0.999984383583
+	valid_y_mean_max_class: 0.966287732124
+	valid_y_min_max_class: 0.497158497572
+	valid_y_misclass: 0.0266999825835
+	valid_y_nll: 0.0946910381317
+	valid_y_row_norms_max: 0.576683461666
+	valid_y_row_norms_mean: 0.260768920183
+	valid_y_row_norms_min: 0.0881127938628
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 16
+	Batches seen: 8000
+	Examples seen: 800000
+	learning_rate: 0.0363076739013
+	momentum: 0.512048363686
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0891077294946
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.9356637001
+	valid_y_col_norms_min: 1.93223702908
+	valid_y_max_max_class: 0.999985218048
+	valid_y_mean_max_class: 0.96820807457
+	valid_y_min_max_class: 0.502092421055
+	valid_y_misclass: 0.0256999880075
+	valid_y_nll: 0.0891077294946
+	valid_y_row_norms_max: 0.579480230808
+	valid_y_row_norms_mean: 0.26090028882
+	valid_y_row_norms_min: 0.0890505686402
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 17
+	Batches seen: 8500
+	Examples seen: 850000
+	learning_rate: 0.0355887822807
+	momentum: 0.512850999832
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0881613940001
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93482923508
+	valid_y_col_norms_min: 1.93224895
+	valid_y_max_max_class: 0.999977946281
+	valid_y_mean_max_class: 0.968540728092
+	valid_y_min_max_class: 0.502689123154
+	valid_y_misclass: 0.0259999874979
+	valid_y_nll: 0.0881613940001
+	valid_y_row_norms_max: 0.581995129585
+	valid_y_row_norms_mean: 0.260852187872
+	valid_y_row_norms_min: 0.0897702872753
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 18
+	Batches seen: 9000
+	Examples seen: 900000
+	learning_rate: 0.034884031862
+	momentum: 0.513654768467
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0850231125951
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93542182446
+	valid_y_col_norms_min: 1.93202567101
+	valid_y_max_max_class: 0.999984383583
+	valid_y_mean_max_class: 0.969747781754
+	valid_y_min_max_class: 0.509953558445
+	valid_y_misclass: 0.0240999888629
+	valid_y_nll: 0.0850231125951
+	valid_y_row_norms_max: 0.582888305187
+	valid_y_row_norms_mean: 0.261032491922
+	valid_y_row_norms_min: 0.0914754495025
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 19
+	Batches seen: 9500
+	Examples seen: 950000
+	learning_rate: 0.0341933257878
+	momentum: 0.514457404613
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0860132798553
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93475472927
+	valid_y_col_norms_min: 1.93239700794
+	valid_y_max_max_class: 0.999982178211
+	valid_y_mean_max_class: 0.968550980091
+	valid_y_min_max_class: 0.500067293644
+	valid_y_misclass: 0.024499990046
+	valid_y_nll: 0.0860132798553
+	valid_y_row_norms_max: 0.585309624672
+	valid_y_row_norms_mean: 0.261046379805
+	valid_y_row_norms_min: 0.0925424173474
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 20
+	Batches seen: 10000
+	Examples seen: 1000000
+	learning_rate: 0.0335162654519
+	momentum: 0.515261173248
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.082815758884
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93560194969
+	valid_y_col_norms_min: 1.93234658241
+	valid_y_max_max_class: 0.999988675117
+	valid_y_mean_max_class: 0.970959126949
+	valid_y_min_max_class: 0.511843085289
+	valid_y_misclass: 0.0254999864846
+	valid_y_nll: 0.082815758884
+	valid_y_row_norms_max: 0.587335705757
+	valid_y_row_norms_mean: 0.261245518923
+	valid_y_row_norms_min: 0.0929176956415
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 21
+	Batches seen: 10500
+	Examples seen: 1050000
+	learning_rate: 0.0328526012599
+	momentum: 0.516063690186
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0818511322141
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93555438519
+	valid_y_col_norms_min: 1.93388462067
+	valid_y_max_max_class: 0.999989688396
+	valid_y_mean_max_class: 0.972750782967
+	valid_y_min_max_class: 0.532890379429
+	valid_y_misclass: 0.0240999888629
+	valid_y_nll: 0.0818511322141
+	valid_y_row_norms_max: 0.584912359715
+	valid_y_row_norms_mean: 0.261357337236
+	valid_y_row_norms_min: 0.0945193618536
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 22
+	Batches seen: 11000
+	Examples seen: 1100000
+	learning_rate: 0.0322021208704
+	momentum: 0.51686757803
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0818284526467
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93543183804
+	valid_y_col_norms_min: 1.93241846561
+	valid_y_max_max_class: 0.999989748001
+	valid_y_mean_max_class: 0.971523821354
+	valid_y_min_max_class: 0.512000918388
+	valid_y_misclass: 0.0234999898821
+	valid_y_nll: 0.0818284526467
+	valid_y_row_norms_max: 0.585798442364
+	valid_y_row_norms_mean: 0.261481463909
+	valid_y_row_norms_min: 0.0941899940372
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 23
+	Batches seen: 11500
+	Examples seen: 1150000
+	learning_rate: 0.0315644294024
+	momentum: 0.517670154572
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0783765539527
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.9352645874
+	valid_y_col_norms_min: 1.93146395683
+	valid_y_max_max_class: 0.999990105629
+	valid_y_mean_max_class: 0.972935736179
+	valid_y_min_max_class: 0.526244282722
+	valid_y_misclass: 0.0227999929339
+	valid_y_nll: 0.0783765539527
+	valid_y_row_norms_max: 0.584616661072
+	valid_y_row_norms_mean: 0.261561661959
+	valid_y_row_norms_min: 0.095776475966
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 24
+	Batches seen: 12000
+	Examples seen: 1200000
+	learning_rate: 0.0309394672513
+	momentum: 0.518473863602
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0788094773889
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93574666977
+	valid_y_col_norms_min: 1.93321406841
+	valid_y_max_max_class: 0.999989807606
+	valid_y_mean_max_class: 0.973162412643
+	valid_y_min_max_class: 0.517908215523
+	valid_y_misclass: 0.0223999936134
+	valid_y_nll: 0.0788094773889
+	valid_y_row_norms_max: 0.585705518723
+	valid_y_row_norms_mean: 0.261755138636
+	valid_y_row_norms_min: 0.0961646586657
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 25
+	Batches seen: 12500
+	Examples seen: 1250000
+	learning_rate: 0.0303268413991
+	momentum: 0.519276380539
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0773832201958
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93531489372
+	valid_y_col_norms_min: 1.93346488476
+	valid_y_max_max_class: 0.999991297722
+	valid_y_mean_max_class: 0.973752617836
+	valid_y_min_max_class: 0.529483020306
+	valid_y_misclass: 0.0232999920845
+	valid_y_nll: 0.0773832201958
+	valid_y_row_norms_max: 0.584707736969
+	valid_y_row_norms_mean: 0.26182243228
+	valid_y_row_norms_min: 0.0976150333881
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 26
+	Batches seen: 13000
+	Examples seen: 1300000
+	learning_rate: 0.0297263283283
+	momentum: 0.520080327988
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0760994628072
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93572044373
+	valid_y_col_norms_min: 1.93307471275
+	valid_y_max_max_class: 0.999990880489
+	valid_y_mean_max_class: 0.974325656891
+	valid_y_min_max_class: 0.535016477108
+	valid_y_misclass: 0.0222999919206
+	valid_y_nll: 0.0760994628072
+	valid_y_row_norms_max: 0.584625720978
+	valid_y_row_norms_mean: 0.262017458677
+	valid_y_row_norms_min: 0.0985018759966
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 27
+	Batches seen: 13500
+	Examples seen: 1350000
+	learning_rate: 0.0291377287358
+	momentum: 0.520884275436
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0745258107781
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93582701683
+	valid_y_col_norms_min: 1.93377733231
+	valid_y_max_max_class: 0.999992668629
+	valid_y_mean_max_class: 0.974617183208
+	valid_y_min_max_class: 0.528786301613
+	valid_y_misclass: 0.0223999880254
+	valid_y_nll: 0.0745258107781
+	valid_y_row_norms_max: 0.582557380199
+	valid_y_row_norms_mean: 0.262156099081
+	valid_y_row_norms_min: 0.0989429056644
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 28
+	Batches seen: 14000
+	Examples seen: 1400000
+	learning_rate: 0.0285607334226
+	momentum: 0.521686851978
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0740825012326
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93625664711
+	valid_y_col_norms_min: 1.93552911282
+	valid_y_max_max_class: 0.999993383884
+	valid_y_mean_max_class: 0.975292444229
+	valid_y_min_max_class: 0.53286421299
+	valid_y_misclass: 0.0215999912471
+	valid_y_nll: 0.0740825012326
+	valid_y_row_norms_max: 0.582411408424
+	valid_y_row_norms_mean: 0.262312680483
+	valid_y_row_norms_min: 0.0992850065231
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 29
+	Batches seen: 14500
+	Examples seen: 1450000
+	learning_rate: 0.0279952250421
+	momentum: 0.522490501404
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0735178440809
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93584024906
+	valid_y_col_norms_min: 1.93419444561
+	valid_y_max_max_class: 0.999993622303
+	valid_y_mean_max_class: 0.975481748581
+	valid_y_min_max_class: 0.530311524868
+	valid_y_misclass: 0.0224999897182
+	valid_y_nll: 0.0735178440809
+	valid_y_row_norms_max: 0.581296265125
+	valid_y_row_norms_mean: 0.262381464243
+	valid_y_row_norms_min: 0.0999962612987
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 30
+	Batches seen: 15000
+	Examples seen: 1500000
+	learning_rate: 0.027440899983
+	momentum: 0.523293077946
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0742838978767
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93606865406
+	valid_y_col_norms_min: 1.93509995937
+	valid_y_max_max_class: 0.999993681908
+	valid_y_mean_max_class: 0.975233256817
+	valid_y_min_max_class: 0.529448390007
+	valid_y_misclass: 0.021299989894
+	valid_y_nll: 0.0742838978767
+	valid_y_row_norms_max: 0.579390823841
+	valid_y_row_norms_mean: 0.262531936169
+	valid_y_row_norms_min: 0.101199686527
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 31
+	Batches seen: 15500
+	Examples seen: 1550000
+	learning_rate: 0.0268975384533
+	momentum: 0.52409696579
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0728998035192
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93537724018
+	valid_y_col_norms_min: 1.9334436655
+	valid_y_max_max_class: 0.999993503094
+	valid_y_mean_max_class: 0.975039601326
+	valid_y_min_max_class: 0.530441880226
+	valid_y_misclass: 0.0211999937892
+	valid_y_nll: 0.0728998035192
+	valid_y_row_norms_max: 0.577543199062
+	valid_y_row_norms_mean: 0.262552529573
+	valid_y_row_norms_min: 0.101914428174
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 32
+	Batches seen: 16000
+	Examples seen: 1600000
+	learning_rate: 0.0263649839908
+	momentum: 0.524899542332
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0729000866413
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93582475185
+	valid_y_col_norms_min: 1.93382787704
+	valid_y_max_max_class: 0.999994158745
+	valid_y_mean_max_class: 0.976245224476
+	valid_y_min_max_class: 0.523617744446
+	valid_y_misclass: 0.0215999912471
+	valid_y_nll: 0.0729000866413
+	valid_y_row_norms_max: 0.575930356979
+	valid_y_row_norms_mean: 0.262723714113
+	valid_y_row_norms_min: 0.102134570479
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 33
+	Batches seen: 16500
+	Examples seen: 1650000
+	learning_rate: 0.0258428994566
+	momentum: 0.525703251362
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0711924284697
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93601918221
+	valid_y_col_norms_min: 1.93474292755
+	valid_y_max_max_class: 0.999995052814
+	valid_y_mean_max_class: 0.976920008659
+	valid_y_min_max_class: 0.534669041634
+	valid_y_misclass: 0.0214999932796
+	valid_y_nll: 0.0711924284697
+	valid_y_row_norms_max: 0.575306117535
+	valid_y_row_norms_mean: 0.262870043516
+	valid_y_row_norms_min: 0.102859787643
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 34
+	Batches seen: 17000
+	Examples seen: 1700000
+	learning_rate: 0.025331215933
+	momentum: 0.526505768299
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0699434503913
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93592369556
+	valid_y_col_norms_min: 1.93427860737
+	valid_y_max_max_class: 0.999995589256
+	valid_y_mean_max_class: 0.976588606834
+	valid_y_min_max_class: 0.526415586472
+	valid_y_misclass: 0.0207999944687
+	valid_y_nll: 0.0699434503913
+	valid_y_row_norms_max: 0.57373303175
+	valid_y_row_norms_mean: 0.262948900461
+	valid_y_row_norms_min: 0.103134438396
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 35
+	Batches seen: 17500
+	Examples seen: 1750000
+	learning_rate: 0.0248296167701
+	momentum: 0.527309715748
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0703471153975
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93556249142
+	valid_y_col_norms_min: 1.93350601196
+	valid_y_max_max_class: 0.999995827675
+	valid_y_mean_max_class: 0.977201640606
+	valid_y_min_max_class: 0.540143966675
+	valid_y_misclass: 0.0216999910772
+	valid_y_nll: 0.0703471153975
+	valid_y_row_norms_max: 0.569660127163
+	valid_y_row_norms_mean: 0.263015538454
+	valid_y_row_norms_min: 0.103172674775
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 36
+	Batches seen: 18000
+	Examples seen: 1800000
+	learning_rate: 0.024337939918
+	momentum: 0.528112351894
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0702705085278
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93602788448
+	valid_y_col_norms_min: 1.9353749752
+	valid_y_max_max_class: 0.99999576807
+	valid_y_mean_max_class: 0.977866530418
+	valid_y_min_max_class: 0.538337409496
+	valid_y_misclass: 0.0210999920964
+	valid_y_nll: 0.0702705085278
+	valid_y_row_norms_max: 0.570420444012
+	valid_y_row_norms_mean: 0.263186216354
+	valid_y_row_norms_min: 0.103417091072
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 37
+	Batches seen: 18500
+	Examples seen: 1850000
+	learning_rate: 0.0238560270518
+	momentum: 0.52891600132
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0700398162007
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93587827682
+	valid_y_col_norms_min: 1.93338406086
+	valid_y_max_max_class: 0.999996423721
+	valid_y_mean_max_class: 0.977614223957
+	valid_y_min_max_class: 0.5420165658
+	valid_y_misclass: 0.0208999942988
+	valid_y_nll: 0.0700398162007
+	valid_y_row_norms_max: 0.568318426609
+	valid_y_row_norms_mean: 0.263258725405
+	valid_y_row_norms_min: 0.102311313152
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 38
+	Batches seen: 19000
+	Examples seen: 1900000
+	learning_rate: 0.023383660242
+	momentum: 0.529718577862
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0708458870649
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93592023849
+	valid_y_col_norms_min: 1.93505263329
+	valid_y_max_max_class: 0.999996066093
+	valid_y_mean_max_class: 0.978010952473
+	valid_y_min_max_class: 0.540901780128
+	valid_y_misclass: 0.0209999922663
+	valid_y_nll: 0.0708458870649
+	valid_y_row_norms_max: 0.56648516655
+	valid_y_row_norms_mean: 0.263367444277
+	valid_y_row_norms_min: 0.102654665709
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 39
+	Batches seen: 19500
+	Examples seen: 1950000
+	learning_rate: 0.0229206457734
+	momentum: 0.530522465706
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0704958587885
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93585407734
+	valid_y_col_norms_min: 1.9334679842
+	valid_y_max_max_class: 0.999996304512
+	valid_y_mean_max_class: 0.978026509285
+	valid_y_min_max_class: 0.547220349312
+	valid_y_misclass: 0.0213999915868
+	valid_y_nll: 0.0704958587885
+	valid_y_row_norms_max: 0.563822090626
+	valid_y_row_norms_mean: 0.263476461172
+	valid_y_row_norms_min: 0.102645337582
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 40
+	Batches seen: 20000
+	Examples seen: 2000000
+	learning_rate: 0.0224668364972
+	momentum: 0.531325042248
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0690455883741
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93611621857
+	valid_y_col_norms_min: 1.93514764309
+	valid_y_max_max_class: 0.999996364117
+	valid_y_mean_max_class: 0.978076517582
+	valid_y_min_max_class: 0.548255205154
+	valid_y_misclass: 0.0201999917626
+	valid_y_nll: 0.0690455883741
+	valid_y_row_norms_max: 0.561926782131
+	valid_y_row_norms_mean: 0.263601183891
+	valid_y_row_norms_min: 0.102276928723
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 41
+	Batches seen: 20500
+	Examples seen: 2050000
+	learning_rate: 0.0220219288021
+	momentum: 0.532128691673
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0694609507918
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93617403507
+	valid_y_col_norms_min: 1.93555283546
+	valid_y_max_max_class: 0.999996304512
+	valid_y_mean_max_class: 0.97806340456
+	valid_y_min_max_class: 0.549679040909
+	valid_y_misclass: 0.0206999927759
+	valid_y_nll: 0.0694609507918
+	valid_y_row_norms_max: 0.559350013733
+	valid_y_row_norms_mean: 0.263698756695
+	valid_y_row_norms_min: 0.102876111865
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 42
+	Batches seen: 21000
+	Examples seen: 2100000
+	learning_rate: 0.0215858761221
+	momentum: 0.532931268215
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0682552456856
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93583071232
+	valid_y_col_norms_min: 1.93494808674
+	valid_y_max_max_class: 0.999996244907
+	valid_y_mean_max_class: 0.978460967541
+	valid_y_min_max_class: 0.536799311638
+	valid_y_misclass: 0.0206999927759
+	valid_y_nll: 0.0682552456856
+	valid_y_row_norms_max: 0.558497667313
+	valid_y_row_norms_mean: 0.263731598854
+	valid_y_row_norms_min: 0.102174289525
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 43
+	Batches seen: 21500
+	Examples seen: 2150000
+	learning_rate: 0.0211584754288
+	momentum: 0.533735215664
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0681645348668
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93625628948
+	valid_y_col_norms_min: 1.93569374084
+	valid_y_max_max_class: 0.999996840954
+	valid_y_mean_max_class: 0.978974223137
+	valid_y_min_max_class: 0.545737028122
+	valid_y_misclass: 0.020799992606
+	valid_y_nll: 0.0681645348668
+	valid_y_row_norms_max: 0.55761551857
+	valid_y_row_norms_mean: 0.263863831758
+	valid_y_row_norms_min: 0.102318651974
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 44
+	Batches seen: 22000
+	Examples seen: 2200000
+	learning_rate: 0.0207395013422
+	momentum: 0.534537792206
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0678072944283
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93612587452
+	valid_y_col_norms_min: 1.93490695953
+	valid_y_max_max_class: 0.999996721745
+	valid_y_mean_max_class: 0.978856146336
+	valid_y_min_max_class: 0.544487297535
+	valid_y_misclass: 0.0202999915928
+	valid_y_nll: 0.0678072944283
+	valid_y_row_norms_max: 0.557243287563
+	valid_y_row_norms_mean: 0.263932317495
+	valid_y_row_norms_min: 0.102473787963
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 45
+	Batches seen: 22500
+	Examples seen: 2250000
+	learning_rate: 0.0203288514167
+	momentum: 0.535341382027
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0676843076944
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93607878685
+	valid_y_col_norms_min: 1.93488621712
+	valid_y_max_max_class: 0.999997019768
+	valid_y_mean_max_class: 0.979203939438
+	valid_y_min_max_class: 0.541955709457
+	valid_y_misclass: 0.0211999919266
+	valid_y_nll: 0.0676843076944
+	valid_y_row_norms_max: 0.554672837257
+	valid_y_row_norms_mean: 0.263984143734
+	valid_y_row_norms_min: 0.102155439556
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 46
+	Batches seen: 23000
+	Examples seen: 2300000
+	learning_rate: 0.0199263226241
+	momentum: 0.536144316196
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0666035339236
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93638801575
+	valid_y_col_norms_min: 1.93599748611
+	valid_y_max_max_class: 0.999997377396
+	valid_y_mean_max_class: 0.979231536388
+	valid_y_min_max_class: 0.552668094635
+	valid_y_misclass: 0.0199999958277
+	valid_y_nll: 0.0666035339236
+	valid_y_row_norms_max: 0.55202627182
+	valid_y_row_norms_mean: 0.264121174812
+	valid_y_row_norms_min: 0.102099038661
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 47
+	Batches seen: 23500
+	Examples seen: 2350000
+	learning_rate: 0.0195317566395
+	momentum: 0.536948263645
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0681700259447
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93598556519
+	valid_y_col_norms_min: 1.93464744091
+	valid_y_max_max_class: 0.999997317791
+	valid_y_mean_max_class: 0.979587137699
+	valid_y_min_max_class: 0.54142510891
+	valid_y_misclass: 0.0199999958277
+	valid_y_nll: 0.0681700259447
+	valid_y_row_norms_max: 0.550442397594
+	valid_y_row_norms_mean: 0.264142274857
+	valid_y_row_norms_min: 0.101656988263
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 48
+	Batches seen: 24000
+	Examples seen: 2400000
+	learning_rate: 0.0191450119019
+	momentum: 0.537750899792
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0699112415314
+	valid_y_col_norms_max: 1.93649816513
+	valid_y_col_norms_mean: 1.93574678898
+	valid_y_col_norms_min: 1.9335873127
+	valid_y_max_max_class: 0.999997794628
+	valid_y_mean_max_class: 0.979529380798
+	valid_y_min_max_class: 0.541589438915
+	valid_y_misclass: 0.0213999953121
+	valid_y_nll: 0.0699112415314
+	valid_y_row_norms_max: 0.548533558846
+	valid_y_row_norms_mean: 0.264166146517
+	valid_y_row_norms_min: 0.101314254105
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 49
+	Batches seen: 24500
+	Examples seen: 2450000
+	learning_rate: 0.0187659449875
+	momentum: 0.538554370403
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0663670673966
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93616163731
+	valid_y_col_norms_min: 1.93532729149
+	valid_y_max_max_class: 0.999997615814
+	valid_y_mean_max_class: 0.979907333851
+	valid_y_min_max_class: 0.557513237
+	valid_y_misclass: 0.0203999932855
+	valid_y_nll: 0.0663670673966
+	valid_y_row_norms_max: 0.54831713438
+	valid_y_row_norms_mean: 0.264298945665
+	valid_y_row_norms_min: 0.101693712175
+Time this epoch: 1.000000 seconds
+Monitoring step:
+	Epochs seen: 50
+	Batches seen: 25000
+	Examples seen: 2500000
+	learning_rate: 0.0183943510056
+	momentum: 0.53935700655
+	monitor_seconds_per_epoch: 0.999999344349
+	valid_objective: 0.0667693465948
+	valid_y_col_norms_max: 1.9364978075
+	valid_y_col_norms_mean: 1.93614006042
+	valid_y_col_norms_min: 1.93519842625
+	valid_y_max_max_class: 0.999997913837
+	valid_y_mean_max_class: 0.980073690414
+	valid_y_min_max_class: 0.548148930073
+	valid_y_misclass: 0.019999993965
+	valid_y_nll: 0.0667693465948
+	valid_y_row_norms_max: 0.546491324902
+	valid_y_row_norms_mean: 0.26435393095
+	valid_y_row_norms_min: 0.101421758533
+max memory usage(ru_maxrss) : 969688  (check 'man getrusage' for the unit)

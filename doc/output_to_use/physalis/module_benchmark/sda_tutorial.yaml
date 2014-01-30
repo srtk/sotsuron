@@ -1,0 +1,131 @@
+- !obj:pylearn2.train.Train {
+    dataset: &train1 !obj:pylearn2.datasets.mnist.MNIST {
+        which_set: 'train',
+        start: 0,
+        stop: 50000
+    },
+    model: &layer1 !obj:pylearn2.models.autoencoder.DenoisingAutoencoder {
+        nvis : 784,
+        nhid : 500,
+        irange : 0.05,
+        corruptor: !obj:pylearn2.corruption.BinomialCorruptor {
+            corruption_level: .2,
+        },
+        act_enc: "tanh",
+        act_dec: null,    # Linear activation on the decoder side.
+    },
+    algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {
+        learning_rate : 1e-3,
+        batch_size : 100,
+        monitoring_batches : 5,
+        monitoring_dataset : *train1,
+        cost : !obj:pylearn2.costs.autoencoder.MeanSquaredReconstructionError {},
+        termination_criterion : !obj:pylearn2.termination_criteria.EpochCounter {
+            max_epochs: 10,
+        },
+    },
+    save_path: "./dae_l1.pkl",
+    save_freq: 1
+}
+- !obj:pylearn2.train.Train {
+    dataset: &train2 !obj:pylearn2.datasets.transformer_dataset.TransformerDataset {
+        raw: !obj:pylearn2.datasets.mnist.MNIST {
+            which_set: 'train',
+            start: 0,
+            stop: 50000
+        },
+        # transformer: !pkl: "./dae_l1.pkl"
+        transformer: *layer1
+    },
+    model: &layer2 !obj:pylearn2.models.autoencoder.DenoisingAutoencoder {
+        nvis : 500,
+        nhid : 500,
+        irange : 0.05,
+        corruptor: !obj:pylearn2.corruption.BinomialCorruptor {
+            corruption_level: .3,
+        },
+        act_enc: "tanh",
+        act_dec: null,    # Linear activation on the decoder side.
+    },
+    algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {
+        learning_rate : 1e-3,
+        batch_size : 100,
+        monitoring_batches : 5,
+        monitoring_dataset : *train2,
+        cost : !obj:pylearn2.costs.autoencoder.MeanSquaredReconstructionError {},
+        termination_criterion : !obj:pylearn2.termination_criteria.EpochCounter {
+            max_epochs: 10,
+        },
+    },
+    save_path: "./dae_l2.pkl",
+    save_freq: 1
+}
+- !obj:pylearn2.train.Train {
+    dataset: &train3 !obj:pylearn2.datasets.mnist.MNIST {
+        which_set: 'train',
+        one_hot: 1,
+        start: 0,
+        stop: 50000
+    },
+    model: !obj:pylearn2.models.mlp.MLP {
+        batch_size: 100,
+        layers: [
+                 !obj:pylearn2.models.mlp.PretrainedLayer {
+                     layer_name: 'h1',
+                     # layer_content: !pkl: "./dae_l1.pkl"
+                     layer_content: *layer1
+                 },
+                 !obj:pylearn2.models.mlp.PretrainedLayer {
+                     layer_name: 'h2',
+                     # layer_content: !pkl: "./dae_l2.pkl"
+                     layer_content: *layer2
+                 },
+                 !obj:pylearn2.models.mlp.Softmax {
+                     max_col_norm: 1.9365,
+                     layer_name: 'y',
+                     n_classes: 10,
+                     irange: .005
+                 }
+                ],
+        nvis: 784
+    },
+    algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {
+        learning_rate: .05,
+        learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum {
+            init_momentum: .5,
+        },
+        monitoring_dataset:
+            {
+                'valid' : !obj:pylearn2.datasets.mnist.MNIST {
+                              which_set: 'train',
+                              one_hot: 1,
+                              start: 50000,
+                              stop: 60000
+                          },
+            },
+        cost: !obj:pylearn2.costs.mlp.Default {},
+        termination_criterion: !obj:pylearn2.termination_criteria.And {
+            criteria: [
+                !obj:pylearn2.termination_criteria.MonitorBased {
+                    channel_name: "valid_y_misclass",
+                    prop_decrease: 0.,
+                    N: 100
+                },
+                !obj:pylearn2.termination_criteria.EpochCounter {
+                    max_epochs: 50
+                }
+            ]
+        },
+        update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay {
+            decay_factor: 1.00004,
+            min_lr: .000001
+        }
+    },
+    extensions: [
+        !obj:pylearn2.training_algorithms.learning_rule.MomentumAdjustor {
+            start: 1,
+            saturate: 250,
+            final_momentum: .7
+        }
+    ]
+}
