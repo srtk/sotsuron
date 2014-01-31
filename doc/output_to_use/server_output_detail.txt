@@ -18,15 +18,37 @@ log_cifar_no_aug
 * あるもの
 
 
-artemis+DLT+CIFAR+{CNN, DBN, SDA}
+artemis+DLT+CIFAR10+{CNN, DBN, SDA}
 artemis+DLT+MNIST+drednet(original)
+
+physalis+DLT+CIFAR10+{CNN, DBN, SDA}
+physalis+DLT+MNIST+{CNN, DBN, SDA}
 
 physalis+PL2+MNIST+{CNN, DBN, SDA, Maxout1, Maxout2}
 
 これから
 
-physalis+DLT+MNIST+{CNN, DBN, SDA}
-physalis+DLT+CIFAR10+{CNN, DBN, SDA}
+artemis+DLT+MNIST+{CNN, DBN, SDA}
 
 失敗したもの
 physalis+PL2+CIFAR+Maxout
+
+* 結果
+artemis+DLT+CIFAR10+CNN
+artemis+DLT+CIFAR10+DBN
+artemis+DLT+CIFAR10+SDA
+
+artemis+DLT+MNIST+drednet(original)
+
+physalis+DLT+CIFAR10+CNN
+physalis+DLT+CIFAR10+DBN
+physalis+DLT+CIFAR10+SDA
+
+physalis+DLT+MNIST+CNN
+physalis+DLT+MNIST+DBN
+physalis+DLT+MNIST+SDA
+
+physalis+PL2+MNIST+CNN
+physalis+PL2+MNIST+SDA
+physalis+PL2+MNIST+Maxout1
+physalis+PL2+MNIST+Maxout2

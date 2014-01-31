@@ -1,0 +1,77 @@
+Using gpu device 0: GeForce GTX 760
+2014/1/31 04:11:30.408342
+... loading data from data/cifar10_for_dlt.pkl.gz
+loading completed
+... building the model
+... getting the pretraining functions
+... pre-training the model
+Pre-training layer 0, epoch 0, cost  1879.98175971
+Pre-training layer 0, epoch 1, cost  1821.39279028
+Pre-training layer 0, epoch 2, cost  1788.59463351
+Pre-training layer 0, epoch 3, cost  1767.53880862
+Pre-training layer 0, epoch 4, cost  1756.22925167
+Pre-training layer 0, epoch 5, cost  1750.11011376
+Pre-training layer 0, epoch 6, cost  1746.55575289
+Pre-training layer 0, epoch 7, cost  1744.2376998
+Pre-training layer 0, epoch 8, cost  1742.64061825
+Pre-training layer 0, epoch 9, cost  1741.41333461
+Pre-training layer 0, epoch 10, cost  1740.46080737
+Pre-training layer 0, epoch 11, cost  1739.71314741
+Pre-training layer 0, epoch 12, cost  1739.0499688
+Pre-training layer 0, epoch 13, cost  1738.51332021
+Pre-training layer 0, epoch 14, cost  1738.01929631
+Pre-training layer 1, epoch 0, cost  451.202035233
+Pre-training layer 1, epoch 1, cost  428.235443767
+Pre-training layer 1, epoch 2, cost  423.199011184
+Pre-training layer 1, epoch 3, cost  420.744059905
+Pre-training layer 1, epoch 4, cost  419.09686555
+Pre-training layer 1, epoch 5, cost  418.023040369
+Pre-training layer 1, epoch 6, cost  417.128018048
+Pre-training layer 1, epoch 7, cost  416.453319253
+Pre-training layer 1, epoch 8, cost  415.941727068
+Pre-training layer 1, epoch 9, cost  415.49939999
+Pre-training layer 1, epoch 10, cost  415.149234388
+Pre-training layer 1, epoch 11, cost  414.840493448
+Pre-training layer 1, epoch 12, cost  414.568617098
+Pre-training layer 1, epoch 13, cost  414.328949263
+Pre-training layer 1, epoch 14, cost  414.103921663
+Pre-training layer 2, epoch 0, cost  420.53938463
+Pre-training layer 2, epoch 1, cost  401.930494888
+Pre-training layer 2, epoch 2, cost  398.297052753
+Pre-training layer 2, epoch 3, cost  396.451015216
+Pre-training layer 2, epoch 4, cost  395.391326261
+Pre-training layer 2, epoch 5, cost  394.607137714
+Pre-training layer 2, epoch 6, cost  394.034440551
+Pre-training layer 2, epoch 7, cost  393.564105026
+Pre-training layer 2, epoch 8, cost  393.188811021
+Pre-training layer 2, epoch 9, cost  392.862885806
+Pre-training layer 2, epoch 10, cost  392.597633562
+Pre-training layer 2, epoch 11, cost  392.347573561
+Pre-training layer 2, epoch 12, cost  392.09564153
+Pre-training layer 2, epoch 13, cost  391.89874238
+Pre-training layer 2, epoch 14, cost  391.725795613
+The pretraining code for file SdA_cifar10.py ran for 67.12m
+... getting the finetuning functions
+... finetunning the model
+epoch 1, minibatch 41666/41666, validation error 69.450444 %
+     epoch 1, minibatch 41666/41666, test error of best model 68.600000 %
+epoch 2, minibatch 41666/41666, validation error 66.138709 %
+     epoch 2, minibatch 41666/41666, test error of best model 64.850000 %
+epoch 3, minibatch 41666/41666, validation error 60.703144 %
+     epoch 3, minibatch 41666/41666, test error of best model 59.520000 %
+epoch 4, minibatch 41666/41666, validation error 61.855052 %
+epoch 5, minibatch 41666/41666, validation error 60.391169 %
+     epoch 5, minibatch 41666/41666, test error of best model 59.390000 %
+epoch 6, minibatch 41666/41666, validation error 59.803216 %
+     epoch 6, minibatch 41666/41666, test error of best model 59.020000 %
+epoch 7, minibatch 41666/41666, validation error 59.215263 %
+     epoch 7, minibatch 41666/41666, test error of best model 58.640000 %
+epoch 8, minibatch 41666/41666, validation error 59.503240 %
+epoch 9, minibatch 41666/41666, validation error 59.323254 %
+epoch 10, minibatch 41666/41666, validation error 61.543077 %
+epoch 11, minibatch 41666/41666, validation error 60.547156 %
+epoch 12, minibatch 41666/41666, validation error 60.019198 %
+epoch 13, minibatch 41666/41666, validation error 60.223182 %
+Optimization complete with best validation score of 59.215263 %,with test performance 58.640000 %
+The training code for file SdA_cifar10.py ran for 24.75m
+2014/1/31 05:43:48.123762
