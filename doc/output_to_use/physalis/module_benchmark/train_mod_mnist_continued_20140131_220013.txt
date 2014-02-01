@@ -1,0 +1,1484 @@
+Using gpu device 0: GeForce GTX 760
+/home/kurotaki/lib/python/pylearn2-0.1dev-py2.7.egg/pylearn2/models/mlp.py:41: UserWarning: MLP changing the recursion limit.
+ warnings.warn("MLP changing the recursion limit.")
+/home/kurotaki/lib/python/pylearn2-0.1dev-py2.7.egg/pylearn2/utils/call_check.py:98: UserWarning: Usage of 'supervised' argument of MethodCost is deprecated. Use 'data_specs' to provide the name of a method or property of the model that describes the data specs required by method cost_from_X. cost_from_X_data_specs will be used by default.
+ return to_call(**kwargs)
+/home/kurotaki/lib/python/pylearn2-0.1dev-py2.7.egg/pylearn2/sandbox/cuda_convnet/pool.py:26: UserWarning: image_shape argument isn't needed anymore, quit passing it.
+ warnings.warn("image_shape argument isn't needed anymore, quit passing it.")
+compiling begin_record_entry...
+compiling begin_record_entry done. Time elapsed: 0.000000 seconds
+Monitored channels: 
+	h0_kernel_norms_max
+	h0_kernel_norms_mean
+	h0_kernel_norms_min
+	h0_max_x.max_u
+	h0_max_x.mean_u
+	h0_max_x.min_u
+	h0_mean_x.max_u
+	h0_mean_x.mean_u
+	h0_mean_x.min_u
+	h0_min_x.max_u
+	h0_min_x.mean_u
+	h0_min_x.min_u
+	h0_range_x.max_u
+	h0_range_x.mean_u
+	h0_range_x.min_u
+	h1_kernel_norms_max
+	h1_kernel_norms_mean
+	h1_kernel_norms_min
+	h1_max_x.max_u
+	h1_max_x.mean_u
+	h1_max_x.min_u
+	h1_mean_x.max_u
+	h1_mean_x.mean_u
+	h1_mean_x.min_u
+	h1_min_x.max_u
+	h1_min_x.mean_u
+	h1_min_x.min_u
+	h1_range_x.max_u
+	h1_range_x.mean_u
+	h1_range_x.min_u
+	h2_kernel_norms_max
+	h2_kernel_norms_mean
+	h2_kernel_norms_min
+	h2_max_x.max_u
+	h2_max_x.mean_u
+	h2_max_x.min_u
+	h2_mean_x.max_u
+	h2_mean_x.mean_u
+	h2_mean_x.min_u
+	h2_min_x.max_u
+	h2_min_x.mean_u
+	h2_min_x.min_u
+	h2_range_x.max_u
+	h2_range_x.mean_u
+	h2_range_x.min_u
+	objective
+	y_col_norms_max
+	y_col_norms_mean
+	y_col_norms_min
+	y_max_max_class
+	y_mean_max_class
+	y_min_max_class
+	y_misclass
+	y_nll
+	y_row_norms_max
+	y_row_norms_mean
+	y_row_norms_min
+Compiling accum...
+graph size: 306
+Compiling accum done. Time elapsed: 18.000000 seconds
+/home/kurotaki/lib/python/pylearn2-0.1dev-py2.7.egg/pylearn2/datasets/dense_design_matrix.py:1044: UserWarning: It looks like DefaultViewConverter.axes has been changed directly, please use the set_axes() method instead.
+ "instead." % self.__class__.__name__)
+Monitoring step:
+	Epochs seen: 0
+	Batches seen: 0
+	Examples seen: 0
+	h0_kernel_norms_max: 0.899910748005
+	h0_kernel_norms_mean: 0.507000803947
+	h0_kernel_norms_min: 0.0906623676419
+	h0_max_x.max_u: 1.05603790283
+	h0_max_x.mean_u: 0.739499807358
+	h0_max_x.min_u: 0.448901742697
+	h0_mean_x.max_u: 0.220418065786
+	h0_mean_x.mean_u: 0.0851217806339
+	h0_mean_x.min_u: -0.0650118291378
+	h0_min_x.max_u: -0.0805928334594
+	h0_min_x.mean_u: -0.654138803482
+	h0_min_x.min_u: -1.66228532791
+	h0_range_x.max_u: 2.30342507362
+	h0_range_x.mean_u: 1.39363861084
+	h0_range_x.min_u: 0.657204270363
+	h1_kernel_norms_max: 1.61240661144
+	h1_kernel_norms_mean: 0.940702497959
+	h1_kernel_norms_min: 0.244170054793
+	h1_max_x.max_u: 2.95817947388
+	h1_max_x.mean_u: 2.04267382622
+	h1_max_x.min_u: 1.19445407391
+	h1_mean_x.max_u: 0.697368323803
+	h1_mean_x.mean_u: 0.137776464224
+	h1_mean_x.min_u: -0.280459702015
+	h1_min_x.max_u: -0.0767266899347
+	h1_min_x.mean_u: -1.08190131187
+	h1_min_x.min_u: -1.76931071281
+	h1_range_x.max_u: 4.25791358948
+	h1_range_x.mean_u: 3.12457227707
+	h1_range_x.min_u: 2.15578484535
+	h2_kernel_norms_max: 1.2342748642
+	h2_kernel_norms_mean: 0.618892967701
+	h2_kernel_norms_min: 0.258676439524
+	h2_max_x.max_u: 5.38878059387
+	h2_max_x.mean_u: 4.02572250366
+	h2_max_x.min_u: 2.96946048737
+	h2_mean_x.max_u: 0.526217699051
+	h2_mean_x.mean_u: 0.318099945784
+	h2_mean_x.min_u: 0.141997754574
+	h2_min_x.max_u: -1.19208347797
+	h2_min_x.mean_u: -1.71987092495
+	h2_min_x.min_u: -2.30323553085
+	h2_range_x.max_u: 7.34581804276
+	h2_range_x.mean_u: 5.74559402466
+	h2_range_x.min_u: 4.36644935608
+	objective: 0.00280723813921
+	y_col_norms_max: 1.80625593662
+	y_col_norms_mean: 1.72166717052
+	y_col_norms_min: 1.63001167774
+	y_max_max_class: 0.999994218349
+	y_mean_max_class: 0.998754382133
+	y_min_max_class: 0.911995470524
+	y_misclass: 0.000759999675211
+	y_nll: 0.00280723813921
+	y_row_norms_max: 0.547092139721
+	y_row_norms_mean: 0.362574011087
+	y_row_norms_min: 0.108331434429
+Parameter and initial learning rate summary:
+	h0_W: 0.00923442002386
+	h0_b: 0.00923442002386
+	h1_W: 0.00923442002386
+	h1_b: 0.00923442002386
+	h2_W: 0.00923442002386
+	h2_b: 0.00923442002386
+	softmax_b: 0.00923442002386
+	softmax_W: 0.00923442002386
+Compiling sgd_update...
+Compiling sgd_update done. Time elapsed: 16.000000 seconds
+compiling begin_record_entry...
+compiling begin_record_entry done. Time elapsed: 0.000000 seconds
+Monitored channels: 
+	learning_rate
+	momentum
+	monitor_seconds_per_epoch
+	valid_h0_kernel_norms_max
+	valid_h0_kernel_norms_mean
+	valid_h0_kernel_norms_min
+	valid_h0_max_x.max_u
+	valid_h0_max_x.mean_u
+	valid_h0_max_x.min_u
+	valid_h0_mean_x.max_u
+	valid_h0_mean_x.mean_u
+	valid_h0_mean_x.min_u
+	valid_h0_min_x.max_u
+	valid_h0_min_x.mean_u
+	valid_h0_min_x.min_u
+	valid_h0_range_x.max_u
+	valid_h0_range_x.mean_u
+	valid_h0_range_x.min_u
+	valid_h1_kernel_norms_max
+	valid_h1_kernel_norms_mean
+	valid_h1_kernel_norms_min
+	valid_h1_max_x.max_u
+	valid_h1_max_x.mean_u
+	valid_h1_max_x.min_u
+	valid_h1_mean_x.max_u
+	valid_h1_mean_x.mean_u
+	valid_h1_mean_x.min_u
+	valid_h1_min_x.max_u
+	valid_h1_min_x.mean_u
+	valid_h1_min_x.min_u
+	valid_h1_range_x.max_u
+	valid_h1_range_x.mean_u
+	valid_h1_range_x.min_u
+	valid_h2_kernel_norms_max
+	valid_h2_kernel_norms_mean
+	valid_h2_kernel_norms_min
+	valid_h2_max_x.max_u
+	valid_h2_max_x.mean_u
+	valid_h2_max_x.min_u
+	valid_h2_mean_x.max_u
+	valid_h2_mean_x.mean_u
+	valid_h2_mean_x.min_u
+	valid_h2_min_x.max_u
+	valid_h2_min_x.mean_u
+	valid_h2_min_x.min_u
+	valid_h2_range_x.max_u
+	valid_h2_range_x.mean_u
+	valid_h2_range_x.min_u
+	valid_objective
+	valid_y_col_norms_max
+	valid_y_col_norms_mean
+	valid_y_col_norms_min
+	valid_y_max_max_class
+	valid_y_mean_max_class
+	valid_y_min_max_class
+	valid_y_misclass
+	valid_y_nll
+	valid_y_row_norms_max
+	valid_y_row_norms_mean
+	valid_y_row_norms_min
+Compiling accum...
+graph size: 309
+Compiling accum done. Time elapsed: 3.000000 seconds
+Monitoring step:
+	Epochs seen: 0
+	Batches seen: 0
+	Examples seen: 0
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 0.0
+	valid_h0_kernel_norms_max: 0.89990913868
+	valid_h0_kernel_norms_mean: 0.50700455904
+	valid_h0_kernel_norms_min: 0.0906621217728
+	valid_h0_max_x.max_u: 1.06180179119
+	valid_h0_max_x.mean_u: 0.743639588356
+	valid_h0_max_x.min_u: 0.450961500406
+	valid_h0_mean_x.max_u: 0.22218132019
+	valid_h0_mean_x.mean_u: 0.0881478413939
+	valid_h0_mean_x.min_u: -0.0607168599963
+	valid_h0_min_x.max_u: -0.0797361135483
+	valid_h0_min_x.mean_u: -0.647309720516
+	valid_h0_min_x.min_u: -1.64204311371
+	valid_h0_range_x.max_u: 2.29016542435
+	valid_h0_range_x.mean_u: 1.39094901085
+	valid_h0_range_x.min_u: 0.657790601254
+	valid_h1_kernel_norms_max: 1.61239814758
+	valid_h1_kernel_norms_mean: 0.940696418285
+	valid_h1_kernel_norms_min: 0.244169428945
+	valid_h1_max_x.max_u: 3.05525493622
+	valid_h1_max_x.mean_u: 2.08122825623
+	valid_h1_max_x.min_u: 1.19971013069
+	valid_h1_mean_x.max_u: 0.716871976852
+	valid_h1_mean_x.mean_u: 0.134927392006
+	valid_h1_mean_x.min_u: -0.29019716382
+	valid_h1_min_x.max_u: -0.0551975816488
+	valid_h1_min_x.mean_u: -1.09771156311
+	valid_h1_min_x.min_u: -1.77612090111
+	valid_h1_range_x.max_u: 4.38957023621
+	valid_h1_range_x.mean_u: 3.17894005775
+	valid_h1_range_x.min_u: 2.19902586937
+	valid_h2_kernel_norms_max: 1.23427820206
+	valid_h2_kernel_norms_mean: 0.618891656399
+	valid_h2_kernel_norms_min: 0.258676916361
+	valid_h2_max_x.max_u: 5.57452917099
+	valid_h2_max_x.mean_u: 4.1642165184
+	valid_h2_max_x.min_u: 3.14205169678
+	valid_h2_mean_x.max_u: 0.542206048965
+	valid_h2_mean_x.mean_u: 0.337246447802
+	valid_h2_mean_x.min_u: 0.1540145576
+	valid_h2_min_x.max_u: -1.21427738667
+	valid_h2_min_x.mean_u: -1.73800301552
+	valid_h2_min_x.min_u: -2.31929183006
+	valid_h2_range_x.max_u: 7.55148649216
+	valid_h2_range_x.mean_u: 5.90222072601
+	valid_h2_range_x.min_u: 4.55014610291
+	valid_objective: 0.021624924615
+	valid_y_col_norms_max: 1.80625152588
+	valid_y_col_norms_mean: 1.72166359425
+	valid_y_col_norms_min: 1.63001680374
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.996489167213
+	valid_y_min_max_class: 0.760957479477
+	valid_y_misclass: 0.00539999827743
+	valid_y_nll: 0.021624924615
+	valid_y_row_norms_max: 0.547091424465
+	valid_y_row_norms_mean: 0.362572580576
+	valid_y_row_norms_min: 0.108331434429
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 1
+	Batches seen: 469
+	Examples seen: 60000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.899923324585
+	valid_h0_kernel_norms_mean: 0.506895542145
+	valid_h0_kernel_norms_min: 0.0909409224987
+	valid_h0_max_x.max_u: 1.0721861124
+	valid_h0_max_x.mean_u: 0.757788002491
+	valid_h0_max_x.min_u: 0.455338418484
+	valid_h0_mean_x.max_u: 0.232720419765
+	valid_h0_mean_x.mean_u: 0.0945744290948
+	valid_h0_mean_x.min_u: -0.0571057163179
+	valid_h0_min_x.max_u: -0.0734073519707
+	valid_h0_min_x.mean_u: -0.632283389568
+	valid_h0_min_x.min_u: -1.6216622591
+	valid_h0_range_x.max_u: 2.28237390518
+	valid_h0_range_x.mean_u: 1.39007139206
+	valid_h0_range_x.min_u: 0.652107536793
+	valid_h1_kernel_norms_max: 1.61277067661
+	valid_h1_kernel_norms_mean: 0.940650701523
+	valid_h1_kernel_norms_min: 0.244155541062
+	valid_h1_max_x.max_u: 2.98134446144
+	valid_h1_max_x.mean_u: 2.01343631744
+	valid_h1_max_x.min_u: 1.14773476124
+	valid_h1_mean_x.max_u: 0.724906384945
+	valid_h1_mean_x.mean_u: 0.0910083055496
+	valid_h1_mean_x.min_u: -0.339609056711
+	valid_h1_min_x.max_u: -0.0240956079215
+	valid_h1_min_x.mean_u: -1.16836571693
+	valid_h1_min_x.min_u: -1.91764080524
+	valid_h1_range_x.max_u: 4.42645359039
+	valid_h1_range_x.mean_u: 3.18180251122
+	valid_h1_range_x.min_u: 2.22755026817
+	valid_h2_kernel_norms_max: 1.23429393768
+	valid_h2_kernel_norms_mean: 0.618811190128
+	valid_h2_kernel_norms_min: 0.258272081614
+	valid_h2_max_x.max_u: 5.63640165329
+	valid_h2_max_x.mean_u: 4.24328565598
+	valid_h2_max_x.min_u: 3.2366065979
+	valid_h2_mean_x.max_u: 0.600169718266
+	valid_h2_mean_x.mean_u: 0.3963085711
+	valid_h2_mean_x.min_u: 0.204321160913
+	valid_h2_min_x.max_u: -1.16693258286
+	valid_h2_min_x.mean_u: -1.63435792923
+	valid_h2_min_x.min_u: -2.25879120827
+	valid_h2_range_x.max_u: 7.46955537796
+	valid_h2_range_x.mean_u: 5.87764072418
+	valid_h2_range_x.min_u: 4.57864236832
+	valid_objective: 0.0142091996968
+	valid_y_col_norms_max: 1.80675625801
+	valid_y_col_norms_mean: 1.72137486935
+	valid_y_col_norms_min: 1.63083040714
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.996739506721
+	valid_y_min_max_class: 0.789268016815
+	valid_y_misclass: 0.00390000012703
+	valid_y_nll: 0.0142091996968
+	valid_y_row_norms_max: 0.546956241131
+	valid_y_row_norms_mean: 0.362505614758
+	valid_y_row_norms_min: 0.108473487198
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 2
+	Batches seen: 938
+	Examples seen: 120000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.899998545647
+	valid_h0_kernel_norms_mean: 0.506965517998
+	valid_h0_kernel_norms_min: 0.0909582450986
+	valid_h0_max_x.max_u: 1.08110070229
+	valid_h0_max_x.mean_u: 0.764078736305
+	valid_h0_max_x.min_u: 0.45076456666
+	valid_h0_mean_x.max_u: 0.228298008442
+	valid_h0_mean_x.mean_u: 0.0967981740832
+	valid_h0_mean_x.min_u: -0.0465840622783
+	valid_h0_min_x.max_u: -0.0824988782406
+	valid_h0_min_x.mean_u: -0.628703415394
+	valid_h0_min_x.min_u: -1.60127580166
+	valid_h0_range_x.max_u: 2.2791993618
+	valid_h0_range_x.mean_u: 1.39278233051
+	valid_h0_range_x.min_u: 0.654869914055
+	valid_h1_kernel_norms_max: 1.61269438267
+	valid_h1_kernel_norms_mean: 0.940724313259
+	valid_h1_kernel_norms_min: 0.244168251753
+	valid_h1_max_x.max_u: 3.03329133987
+	valid_h1_max_x.mean_u: 2.06317639351
+	valid_h1_max_x.min_u: 1.18011939526
+	valid_h1_mean_x.max_u: 0.73758995533
+	valid_h1_mean_x.mean_u: 0.114175461233
+	valid_h1_mean_x.min_u: -0.309707701206
+	valid_h1_min_x.max_u: -0.0113727459684
+	valid_h1_min_x.mean_u: -1.14811432362
+	valid_h1_min_x.min_u: -1.90573644638
+	valid_h1_range_x.max_u: 4.4544801712
+	valid_h1_range_x.mean_u: 3.21129012108
+	valid_h1_range_x.min_u: 2.25627756119
+	valid_h2_kernel_norms_max: 1.23460876942
+	valid_h2_kernel_norms_mean: 0.618875980377
+	valid_h2_kernel_norms_min: 0.258165210485
+	valid_h2_max_x.max_u: 5.75876522064
+	valid_h2_max_x.mean_u: 4.30511713028
+	valid_h2_max_x.min_u: 3.26958751678
+	valid_h2_mean_x.max_u: 0.624308466911
+	valid_h2_mean_x.mean_u: 0.392268866301
+	valid_h2_mean_x.min_u: 0.188016846776
+	valid_h2_min_x.max_u: -1.19245457649
+	valid_h2_min_x.mean_u: -1.67991781235
+	valid_h2_min_x.min_u: -2.35009479523
+	valid_h2_range_x.max_u: 7.62236642838
+	valid_h2_range_x.mean_u: 5.98503637314
+	valid_h2_range_x.min_u: 4.6336479187
+	valid_objective: 0.0121424663812
+	valid_y_col_norms_max: 1.80668139458
+	valid_y_col_norms_mean: 1.7216988802
+	valid_y_col_norms_min: 1.63088476658
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.996957063675
+	valid_y_min_max_class: 0.793887257576
+	valid_y_misclass: 0.00319999991916
+	valid_y_nll: 0.0121424663812
+	valid_y_row_norms_max: 0.547069787979
+	valid_y_row_norms_mean: 0.36257314682
+	valid_y_row_norms_min: 0.108518823981
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 3
+	Batches seen: 1407
+	Examples seen: 180000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.900000870228
+	valid_h0_kernel_norms_mean: 0.507118523121
+	valid_h0_kernel_norms_min: 0.0910495892167
+	valid_h0_max_x.max_u: 1.08822226524
+	valid_h0_max_x.mean_u: 0.768689334393
+	valid_h0_max_x.min_u: 0.460896641016
+	valid_h0_mean_x.max_u: 0.231500431895
+	valid_h0_mean_x.mean_u: 0.0980196297169
+	valid_h0_mean_x.min_u: -0.0456078574061
+	valid_h0_min_x.max_u: -0.0823812782764
+	valid_h0_min_x.mean_u: -0.628178775311
+	valid_h0_min_x.min_u: -1.59913539886
+	valid_h0_range_x.max_u: 2.28386950493
+	valid_h0_range_x.mean_u: 1.39686834812
+	valid_h0_range_x.min_u: 0.657616853714
+	valid_h1_kernel_norms_max: 1.61275196075
+	valid_h1_kernel_norms_mean: 0.940821111202
+	valid_h1_kernel_norms_min: 0.244368851185
+	valid_h1_max_x.max_u: 3.0967001915
+	valid_h1_max_x.mean_u: 2.09070563316
+	valid_h1_max_x.min_u: 1.17506408691
+	valid_h1_mean_x.max_u: 0.740298211575
+	valid_h1_mean_x.mean_u: 0.122106939554
+	valid_h1_mean_x.min_u: -0.309506684542
+	valid_h1_min_x.max_u: -0.0102596068755
+	valid_h1_min_x.mean_u: -1.15071833134
+	valid_h1_min_x.min_u: -1.91882836819
+	valid_h1_range_x.max_u: 4.46889972687
+	valid_h1_range_x.mean_u: 3.24142360687
+	valid_h1_range_x.min_u: 2.26149082184
+	valid_h2_kernel_norms_max: 1.23496067524
+	valid_h2_kernel_norms_mean: 0.61897611618
+	valid_h2_kernel_norms_min: 0.258130073547
+	valid_h2_max_x.max_u: 5.72899532318
+	valid_h2_max_x.mean_u: 4.30528736115
+	valid_h2_max_x.min_u: 3.30275511742
+	valid_h2_mean_x.max_u: 0.585625350475
+	valid_h2_mean_x.mean_u: 0.359904140234
+	valid_h2_mean_x.min_u: 0.149029374123
+	valid_h2_min_x.max_u: -1.24716150761
+	valid_h2_min_x.mean_u: -1.77762067318
+	valid_h2_min_x.min_u: -2.4921271801
+	valid_h2_range_x.max_u: 7.73448467255
+	valid_h2_range_x.mean_u: 6.08290958405
+	valid_h2_range_x.min_u: 4.7624297142
+	valid_objective: 0.0106593715027
+	valid_y_col_norms_max: 1.80676519871
+	valid_y_col_norms_mean: 1.72220849991
+	valid_y_col_norms_min: 1.63162827492
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.997107565403
+	valid_y_min_max_class: 0.79317265749
+	valid_y_misclass: 0.00289999996312
+	valid_y_nll: 0.0106593715027
+	valid_y_row_norms_max: 0.547070205212
+	valid_y_row_norms_mean: 0.362678021193
+	valid_y_row_norms_min: 0.108535788953
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 4
+	Batches seen: 1876
+	Examples seen: 240000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.899928927422
+	valid_h0_kernel_norms_mean: 0.507295489311
+	valid_h0_kernel_norms_min: 0.0912701413035
+	valid_h0_max_x.max_u: 1.09467029572
+	valid_h0_max_x.mean_u: 0.772584199905
+	valid_h0_max_x.min_u: 0.460739195347
+	valid_h0_mean_x.max_u: 0.230394527316
+	valid_h0_mean_x.mean_u: 0.100058414042
+	valid_h0_mean_x.min_u: -0.0439974330366
+	valid_h0_min_x.max_u: -0.0801477357745
+	valid_h0_min_x.mean_u: -0.624343216419
+	valid_h0_min_x.min_u: -1.58211266994
+	valid_h0_range_x.max_u: 2.27567481995
+	valid_h0_range_x.mean_u: 1.39692735672
+	valid_h0_range_x.min_u: 0.645300209522
+	valid_h1_kernel_norms_max: 1.6128000021
+	valid_h1_kernel_norms_mean: 0.940941929817
+	valid_h1_kernel_norms_min: 0.24456769228
+	valid_h1_max_x.max_u: 3.05615830421
+	valid_h1_max_x.mean_u: 2.07565784454
+	valid_h1_max_x.min_u: 1.1835258007
+	valid_h1_mean_x.max_u: 0.745082139969
+	valid_h1_mean_x.mean_u: 0.114923238754
+	valid_h1_mean_x.min_u: -0.304938882589
+	valid_h1_min_x.max_u: -0.00115507515147
+	valid_h1_min_x.mean_u: -1.15811359882
+	valid_h1_min_x.min_u: -1.93821787834
+	valid_h1_range_x.max_u: 4.44784545898
+	valid_h1_range_x.mean_u: 3.23377180099
+	valid_h1_range_x.min_u: 2.27149939537
+	valid_h2_kernel_norms_max: 1.23536777496
+	valid_h2_kernel_norms_mean: 0.619096636772
+	valid_h2_kernel_norms_min: 0.258083224297
+	valid_h2_max_x.max_u: 5.81990623474
+	valid_h2_max_x.mean_u: 4.35569143295
+	valid_h2_max_x.min_u: 3.34265255928
+	valid_h2_mean_x.max_u: 0.615709006786
+	valid_h2_mean_x.mean_u: 0.390247225761
+	valid_h2_mean_x.min_u: 0.185066565871
+	valid_h2_min_x.max_u: -1.19961822033
+	valid_h2_min_x.mean_u: -1.70843958855
+	valid_h2_min_x.min_u: -2.40554213524
+	valid_h2_range_x.max_u: 7.71900367737
+	valid_h2_range_x.mean_u: 6.06413030624
+	valid_h2_range_x.min_u: 4.75085449219
+	valid_objective: 0.00880218017846
+	valid_y_col_norms_max: 1.80548262596
+	valid_y_col_norms_mean: 1.72289061546
+	valid_y_col_norms_min: 1.63175439835
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.997241139412
+	valid_y_min_max_class: 0.801671504974
+	valid_y_misclass: 0.00219999952242
+	valid_y_nll: 0.00880218017846
+	valid_y_row_norms_max: 0.547285437584
+	valid_y_row_norms_mean: 0.36281773448
+	valid_y_row_norms_min: 0.108542568982
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 5
+	Batches seen: 2345
+	Examples seen: 300000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.900000870228
+	valid_h0_kernel_norms_mean: 0.507508516312
+	valid_h0_kernel_norms_min: 0.0917346999049
+	valid_h0_max_x.max_u: 1.10558569431
+	valid_h0_max_x.mean_u: 0.777725696564
+	valid_h0_max_x.min_u: 0.471825301647
+	valid_h0_mean_x.max_u: 0.23275347054
+	valid_h0_mean_x.mean_u: 0.101926751435
+	valid_h0_mean_x.min_u: -0.0393501780927
+	valid_h0_min_x.max_u: -0.0816278383136
+	valid_h0_min_x.mean_u: -0.621867597103
+	valid_h0_min_x.min_u: -1.58522474766
+	valid_h0_range_x.max_u: 2.27999782562
+	valid_h0_range_x.mean_u: 1.39959335327
+	valid_h0_range_x.min_u: 0.649302482605
+	valid_h1_kernel_norms_max: 1.61294543743
+	valid_h1_kernel_norms_mean: 0.941091120243
+	valid_h1_kernel_norms_min: 0.244766995311
+	valid_h1_max_x.max_u: 3.07177066803
+	valid_h1_max_x.mean_u: 2.07882547379
+	valid_h1_max_x.min_u: 1.18551361561
+	valid_h1_mean_x.max_u: 0.756595373154
+	valid_h1_mean_x.mean_u: 0.113321296871
+	valid_h1_mean_x.min_u: -0.304320365191
+	valid_h1_min_x.max_u: 0.010905733332
+	valid_h1_min_x.mean_u: -1.16666269302
+	valid_h1_min_x.min_u: -1.94286453724
+	valid_h1_range_x.max_u: 4.46255064011
+	valid_h1_range_x.mean_u: 3.24548768997
+	valid_h1_range_x.min_u: 2.27566361427
+	valid_h2_kernel_norms_max: 1.23593974113
+	valid_h2_kernel_norms_mean: 0.619254589081
+	valid_h2_kernel_norms_min: 0.258068263531
+	valid_h2_max_x.max_u: 5.72304821014
+	valid_h2_max_x.mean_u: 4.32653474808
+	valid_h2_max_x.min_u: 3.32353186607
+	valid_h2_mean_x.max_u: 0.593299508095
+	valid_h2_mean_x.mean_u: 0.379800647497
+	valid_h2_mean_x.min_u: 0.179307192564
+	valid_h2_min_x.max_u: -1.21219086647
+	valid_h2_min_x.mean_u: -1.73476672173
+	valid_h2_min_x.min_u: -2.42927932739
+	valid_h2_range_x.max_u: 7.70181369781
+	valid_h2_range_x.mean_u: 6.06130170822
+	valid_h2_range_x.min_u: 4.75792980194
+	valid_objective: 0.00762872025371
+	valid_y_col_norms_max: 1.80566430092
+	valid_y_col_norms_mean: 1.72371995449
+	valid_y_col_norms_min: 1.63214278221
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.997269630432
+	valid_y_min_max_class: 0.807232260704
+	valid_y_misclass: 0.00159999961033
+	valid_y_nll: 0.00762872025371
+	valid_y_row_norms_max: 0.547480523586
+	valid_y_row_norms_mean: 0.362992912531
+	valid_y_row_norms_min: 0.108549676836
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 6
+	Batches seen: 2814
+	Examples seen: 360000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.899993121624
+	valid_h0_kernel_norms_mean: 0.507777988911
+	valid_h0_kernel_norms_min: 0.0922572091222
+	valid_h0_max_x.max_u: 1.115421772
+	valid_h0_max_x.mean_u: 0.784553527832
+	valid_h0_max_x.min_u: 0.475338280201
+	valid_h0_mean_x.max_u: 0.235897913575
+	valid_h0_mean_x.mean_u: 0.104503773153
+	valid_h0_mean_x.min_u: -0.0370851382613
+	valid_h0_min_x.max_u: -0.073190972209
+	valid_h0_min_x.mean_u: -0.618829488754
+	valid_h0_min_x.min_u: -1.57833743095
+	valid_h0_range_x.max_u: 2.2778942585
+	valid_h0_range_x.mean_u: 1.40338242054
+	valid_h0_range_x.min_u: 0.649585962296
+	valid_h1_kernel_norms_max: 1.61305058002
+	valid_h1_kernel_norms_mean: 0.941250562668
+	valid_h1_kernel_norms_min: 0.244927346706
+	valid_h1_max_x.max_u: 3.05715513229
+	valid_h1_max_x.mean_u: 2.07086062431
+	valid_h1_max_x.min_u: 1.17099773884
+	valid_h1_mean_x.max_u: 0.772939145565
+	valid_h1_mean_x.mean_u: 0.101571567357
+	valid_h1_mean_x.min_u: -0.319656431675
+	valid_h1_min_x.max_u: 0.0237569566816
+	valid_h1_min_x.mean_u: -1.19392001629
+	valid_h1_min_x.min_u: -1.99863767624
+	valid_h1_range_x.max_u: 4.48063993454
+	valid_h1_range_x.mean_u: 3.26477980614
+	valid_h1_range_x.min_u: 2.29280757904
+	valid_h2_kernel_norms_max: 1.23649477959
+	valid_h2_kernel_norms_mean: 0.619427204132
+	valid_h2_kernel_norms_min: 0.258081108332
+	valid_h2_max_x.max_u: 5.80665969849
+	valid_h2_max_x.mean_u: 4.38982534409
+	valid_h2_max_x.min_u: 3.37365841866
+	valid_h2_mean_x.max_u: 0.616657137871
+	valid_h2_mean_x.mean_u: 0.399872809649
+	valid_h2_mean_x.min_u: 0.194088920951
+	valid_h2_min_x.max_u: -1.20440852642
+	valid_h2_min_x.mean_u: -1.71990478039
+	valid_h2_min_x.min_u: -2.4052028656
+	valid_h2_range_x.max_u: 7.75479745865
+	valid_h2_range_x.mean_u: 6.10973024368
+	valid_h2_range_x.min_u: 4.80730867386
+	valid_objective: 0.00667021330446
+	valid_y_col_norms_max: 1.80555522442
+	valid_y_col_norms_mean: 1.72465085983
+	valid_y_col_norms_min: 1.63347184658
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.997347712517
+	valid_y_min_max_class: 0.814998328686
+	valid_y_misclass: 0.00119999982417
+	valid_y_nll: 0.00667021330446
+	valid_y_row_norms_max: 0.547682821751
+	valid_y_row_norms_mean: 0.363187789917
+	valid_y_row_norms_min: 0.108557909727
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 7
+	Batches seen: 3283
+	Examples seen: 420000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.900000870228
+	valid_h0_kernel_norms_mean: 0.508004367352
+	valid_h0_kernel_norms_min: 0.0920711755753
+	valid_h0_max_x.max_u: 1.11869800091
+	valid_h0_max_x.mean_u: 0.787615776062
+	valid_h0_max_x.min_u: 0.479922622442
+	valid_h0_mean_x.max_u: 0.235293015838
+	valid_h0_mean_x.mean_u: 0.104967616498
+	valid_h0_mean_x.min_u: -0.0333046354353
+	valid_h0_min_x.max_u: -0.0736064910889
+	valid_h0_min_x.mean_u: -0.620019972324
+	valid_h0_min_x.min_u: -1.57050311565
+	valid_h0_range_x.max_u: 2.27659034729
+	valid_h0_range_x.mean_u: 1.40763556957
+	valid_h0_range_x.min_u: 0.661182880402
+	valid_h1_kernel_norms_max: 1.61313176155
+	valid_h1_kernel_norms_mean: 0.941413402557
+	valid_h1_kernel_norms_min: 0.245165929198
+	valid_h1_max_x.max_u: 3.11018562317
+	valid_h1_max_x.mean_u: 2.10663747787
+	valid_h1_max_x.min_u: 1.19798111916
+	valid_h1_mean_x.max_u: 0.777000784874
+	valid_h1_mean_x.mean_u: 0.119585283101
+	valid_h1_mean_x.min_u: -0.300386428833
+	valid_h1_min_x.max_u: 0.0259800609201
+	valid_h1_min_x.mean_u: -1.17646718025
+	valid_h1_min_x.min_u: -1.99005687237
+	valid_h1_range_x.max_u: 4.50683164597
+	valid_h1_range_x.mean_u: 3.28310465813
+	valid_h1_range_x.min_u: 2.30635786057
+	valid_h2_kernel_norms_max: 1.23693597317
+	valid_h2_kernel_norms_mean: 0.619608402252
+	valid_h2_kernel_norms_min: 0.258112311363
+	valid_h2_max_x.max_u: 5.86992454529
+	valid_h2_max_x.mean_u: 4.4024553299
+	valid_h2_max_x.min_u: 3.38102126122
+	valid_h2_mean_x.max_u: 0.634761869907
+	valid_h2_mean_x.mean_u: 0.386410951614
+	valid_h2_mean_x.min_u: 0.163307696581
+	valid_h2_min_x.max_u: -1.23723995686
+	valid_h2_min_x.mean_u: -1.76905632019
+	valid_h2_min_x.min_u: -2.51405930519
+	valid_h2_range_x.max_u: 7.85084915161
+	valid_h2_range_x.mean_u: 6.17151355743
+	valid_h2_range_x.min_u: 4.85773563385
+	valid_objective: 0.00617566984147
+	valid_y_col_norms_max: 1.80573225021
+	valid_y_col_norms_mean: 1.72562229633
+	valid_y_col_norms_min: 1.63466453552
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.997412919998
+	valid_y_min_max_class: 0.808729171753
+	valid_y_misclass: 0.00149999978021
+	valid_y_nll: 0.00617566984147
+	valid_y_row_norms_max: 0.547869086266
+	valid_y_row_norms_mean: 0.36339199543
+	valid_y_row_norms_min: 0.108579240739
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 8
+	Batches seen: 3752
+	Examples seen: 480000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.899977743626
+	valid_h0_kernel_norms_mean: 0.508296608925
+	valid_h0_kernel_norms_min: 0.092211984098
+	valid_h0_max_x.max_u: 1.11984682083
+	valid_h0_max_x.mean_u: 0.790230095387
+	valid_h0_max_x.min_u: 0.484250158072
+	valid_h0_mean_x.max_u: 0.235309109092
+	valid_h0_mean_x.mean_u: 0.106027379632
+	valid_h0_mean_x.min_u: -0.0313011296093
+	valid_h0_min_x.max_u: -0.0733168423176
+	valid_h0_min_x.mean_u: -0.619997084141
+	valid_h0_min_x.min_u: -1.57336521149
+	valid_h0_range_x.max_u: 2.28123402596
+	valid_h0_range_x.mean_u: 1.41022706032
+	valid_h0_range_x.min_u: 0.646366715431
+	valid_h1_kernel_norms_max: 1.61315250397
+	valid_h1_kernel_norms_mean: 0.941586077213
+	valid_h1_kernel_norms_min: 0.245317578316
+	valid_h1_max_x.max_u: 3.12941122055
+	valid_h1_max_x.mean_u: 2.11346530914
+	valid_h1_max_x.min_u: 1.19789338112
+	valid_h1_mean_x.max_u: 0.794301986694
+	valid_h1_mean_x.mean_u: 0.117508322001
+	valid_h1_mean_x.min_u: -0.305620223284
+	valid_h1_min_x.max_u: 0.0343131124973
+	valid_h1_min_x.mean_u: -1.18545234203
+	valid_h1_min_x.min_u: -1.99536240101
+	valid_h1_range_x.max_u: 4.53083515167
+	valid_h1_range_x.mean_u: 3.29891657829
+	valid_h1_range_x.min_u: 2.32378220558
+	valid_h2_kernel_norms_max: 1.23752856255
+	valid_h2_kernel_norms_mean: 0.619798064232
+	valid_h2_kernel_norms_min: 0.258095979691
+	valid_h2_max_x.max_u: 5.88065767288
+	valid_h2_max_x.mean_u: 4.43295145035
+	valid_h2_max_x.min_u: 3.42537546158
+	valid_h2_mean_x.max_u: 0.593764483929
+	valid_h2_mean_x.mean_u: 0.38468170166
+	valid_h2_mean_x.min_u: 0.181502699852
+	valid_h2_min_x.max_u: -1.2364205122
+	valid_h2_min_x.mean_u: -1.7853975296
+	valid_h2_min_x.min_u: -2.48615694046
+	valid_h2_range_x.max_u: 7.89839220047
+	valid_h2_range_x.mean_u: 6.21834897995
+	valid_h2_range_x.min_u: 4.91379022598
+	valid_objective: 0.0054518240504
+	valid_y_col_norms_max: 1.8069217205
+	valid_y_col_norms_mean: 1.72665405273
+	valid_y_col_norms_min: 1.63600850105
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.997634828091
+	valid_y_min_max_class: 0.827492892742
+	valid_y_misclass: 0.00079999997979
+	valid_y_nll: 0.0054518240504
+	valid_y_row_norms_max: 0.548112869263
+	valid_y_row_norms_mean: 0.363610029221
+	valid_y_row_norms_min: 0.108565978706
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 9
+	Batches seen: 4221
+	Examples seen: 540000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.900000870228
+	valid_h0_kernel_norms_mean: 0.508534550667
+	valid_h0_kernel_norms_min: 0.0925034359097
+	valid_h0_max_x.max_u: 1.11801874638
+	valid_h0_max_x.mean_u: 0.793613910675
+	valid_h0_max_x.min_u: 0.485840797424
+	valid_h0_mean_x.max_u: 0.236730203032
+	valid_h0_mean_x.mean_u: 0.107270658016
+	valid_h0_mean_x.min_u: -0.0278316494077
+	valid_h0_min_x.max_u: -0.0767552554607
+	valid_h0_min_x.mean_u: -0.618915557861
+	valid_h0_min_x.min_u: -1.57111096382
+	valid_h0_range_x.max_u: 2.28272747993
+	valid_h0_range_x.mean_u: 1.41252887249
+	valid_h0_range_x.min_u: 0.655896961689
+	valid_h1_kernel_norms_max: 1.61311602592
+	valid_h1_kernel_norms_mean: 0.94175350666
+	valid_h1_kernel_norms_min: 0.245505660772
+	valid_h1_max_x.max_u: 3.13289785385
+	valid_h1_max_x.mean_u: 2.12135481834
+	valid_h1_max_x.min_u: 1.19650387764
+	valid_h1_mean_x.max_u: 0.803617954254
+	valid_h1_mean_x.mean_u: 0.117923624814
+	valid_h1_mean_x.min_u: -0.309146404266
+	valid_h1_min_x.max_u: 0.0425306558609
+	valid_h1_min_x.mean_u: -1.19080996513
+	valid_h1_min_x.min_u: -2.01614069939
+	valid_h1_range_x.max_u: 4.5377407074
+	valid_h1_range_x.mean_u: 3.31216573715
+	valid_h1_range_x.min_u: 2.33351421356
+	valid_h2_kernel_norms_max: 1.2380259037
+	valid_h2_kernel_norms_mean: 0.619986593723
+	valid_h2_kernel_norms_min: 0.258175492287
+	valid_h2_max_x.max_u: 5.94823598862
+	valid_h2_max_x.mean_u: 4.48035049438
+	valid_h2_max_x.min_u: 3.46065425873
+	valid_h2_mean_x.max_u: 0.626262903214
+	valid_h2_mean_x.mean_u: 0.394834935665
+	valid_h2_mean_x.min_u: 0.180354773998
+	valid_h2_min_x.max_u: -1.24167191982
+	valid_h2_min_x.mean_u: -1.78742051125
+	valid_h2_min_x.min_u: -2.51586890221
+	valid_h2_range_x.max_u: 7.95831346512
+	valid_h2_range_x.mean_u: 6.26777076721
+	valid_h2_range_x.min_u: 4.9565653801
+	valid_objective: 0.00500888563693
+	valid_y_col_norms_max: 1.80747294426
+	valid_y_col_norms_mean: 1.72766911983
+	valid_y_col_norms_min: 1.63703882694
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.997734129429
+	valid_y_min_max_class: 0.832536816597
+	valid_y_misclass: 0.00079999997979
+	valid_y_nll: 0.00500888563693
+	valid_y_row_norms_max: 0.548315763474
+	valid_y_row_norms_mean: 0.363825201988
+	valid_y_row_norms_min: 0.108581282198
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 10
+	Batches seen: 4690
+	Examples seen: 600000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.900000870228
+	valid_h0_kernel_norms_mean: 0.508820950985
+	valid_h0_kernel_norms_min: 0.0923678353429
+	valid_h0_max_x.max_u: 1.11882245541
+	valid_h0_max_x.mean_u: 0.797474205494
+	valid_h0_max_x.min_u: 0.495712131262
+	valid_h0_mean_x.max_u: 0.236810609698
+	valid_h0_mean_x.mean_u: 0.108014464378
+	valid_h0_mean_x.min_u: -0.027488315478
+	valid_h0_min_x.max_u: -0.0765105560422
+	valid_h0_min_x.mean_u: -0.620481073856
+	valid_h0_min_x.min_u: -1.57129919529
+	valid_h0_range_x.max_u: 2.28495025635
+	valid_h0_range_x.mean_u: 1.41795551777
+	valid_h0_range_x.min_u: 0.665679693222
+	valid_h1_kernel_norms_max: 1.61316466331
+	valid_h1_kernel_norms_mean: 0.941929221153
+	valid_h1_kernel_norms_min: 0.245696619153
+	valid_h1_max_x.max_u: 3.18007969856
+	valid_h1_max_x.mean_u: 2.14017319679
+	valid_h1_max_x.min_u: 1.19182240963
+	valid_h1_mean_x.max_u: 0.814585328102
+	valid_h1_mean_x.mean_u: 0.121268212795
+	valid_h1_mean_x.min_u: -0.31614536047
+	valid_h1_min_x.max_u: 0.0455856472254
+	valid_h1_min_x.mean_u: -1.19793999195
+	valid_h1_min_x.min_u: -2.03625297546
+	valid_h1_range_x.max_u: 4.57615661621
+	valid_h1_range_x.mean_u: 3.33811354637
+	valid_h1_range_x.min_u: 2.35417032242
+	valid_h2_kernel_norms_max: 1.23860311508
+	valid_h2_kernel_norms_mean: 0.620184898376
+	valid_h2_kernel_norms_min: 0.258198469877
+	valid_h2_max_x.max_u: 5.99674367905
+	valid_h2_max_x.mean_u: 4.50760173798
+	valid_h2_max_x.min_u: 3.51659727097
+	valid_h2_mean_x.max_u: 0.609987080097
+	valid_h2_mean_x.mean_u: 0.380248278379
+	valid_h2_mean_x.min_u: 0.161132797599
+	valid_h2_min_x.max_u: -1.27394604683
+	valid_h2_min_x.mean_u: -1.83815205097
+	valid_h2_min_x.min_u: -2.58118891716
+	valid_h2_range_x.max_u: 8.04238414764
+	valid_h2_range_x.mean_u: 6.3457531929
+	valid_h2_range_x.min_u: 5.06103897095
+	valid_objective: 0.004748291336
+	valid_y_col_norms_max: 1.8093546629
+	valid_y_col_norms_mean: 1.72873294353
+	valid_y_col_norms_min: 1.63881099224
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.997901856899
+	valid_y_min_max_class: 0.844496965408
+	valid_y_misclass: 0.000699999975041
+	valid_y_nll: 0.004748291336
+	valid_y_row_norms_max: 0.548518419266
+	valid_y_row_norms_mean: 0.364051043987
+	valid_y_row_norms_min: 0.1085877195
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 11
+	Batches seen: 5159
+	Examples seen: 660000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.900000870228
+	valid_h0_kernel_norms_mean: 0.509086489677
+	valid_h0_kernel_norms_min: 0.0925552323461
+	valid_h0_max_x.max_u: 1.12499415874
+	valid_h0_max_x.mean_u: 0.800155699253
+	valid_h0_max_x.min_u: 0.493846923113
+	valid_h0_mean_x.max_u: 0.237770065665
+	valid_h0_mean_x.mean_u: 0.108722671866
+	valid_h0_mean_x.min_u: -0.0255119781941
+	valid_h0_min_x.max_u: -0.0744790509343
+	valid_h0_min_x.mean_u: -0.621043205261
+	valid_h0_min_x.min_u: -1.56684076786
+	valid_h0_range_x.max_u: 2.28460383415
+	valid_h0_range_x.mean_u: 1.42119860649
+	valid_h0_range_x.min_u: 0.655477166176
+	valid_h1_kernel_norms_max: 1.61323463917
+	valid_h1_kernel_norms_mean: 0.942102849483
+	valid_h1_kernel_norms_min: 0.245824694633
+	valid_h1_max_x.max_u: 3.19941711426
+	valid_h1_max_x.mean_u: 2.15789532661
+	valid_h1_max_x.min_u: 1.21005523205
+	valid_h1_mean_x.max_u: 0.828440546989
+	valid_h1_mean_x.mean_u: 0.126321464777
+	valid_h1_mean_x.min_u: -0.309093147516
+	valid_h1_min_x.max_u: 0.0513392463326
+	valid_h1_min_x.mean_u: -1.1980407238
+	valid_h1_min_x.min_u: -2.02746558189
+	valid_h1_range_x.max_u: 4.59905147552
+	valid_h1_range_x.mean_u: 3.35593605042
+	valid_h1_range_x.min_u: 2.36553239822
+	valid_h2_kernel_norms_max: 1.23920822144
+	valid_h2_kernel_norms_mean: 0.620385110378
+	valid_h2_kernel_norms_min: 0.258233517408
+	valid_h2_max_x.max_u: 6.02934932709
+	valid_h2_max_x.mean_u: 4.53625011444
+	valid_h2_max_x.min_u: 3.53032207489
+	valid_h2_mean_x.max_u: 0.603762865067
+	valid_h2_mean_x.mean_u: 0.383406072855
+	valid_h2_mean_x.min_u: 0.169289007783
+	valid_h2_min_x.max_u: -1.27801024914
+	valid_h2_min_x.mean_u: -1.85168886185
+	valid_h2_min_x.min_u: -2.58450603485
+	valid_h2_range_x.max_u: 8.112241745
+	valid_h2_range_x.mean_u: 6.38793945312
+	valid_h2_range_x.min_u: 5.09091281891
+	valid_objective: 0.00427824771032
+	valid_y_col_norms_max: 1.80900299549
+	valid_y_col_norms_mean: 1.72982907295
+	valid_y_col_norms_min: 1.63962852955
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.998041093349
+	valid_y_min_max_class: 0.855408489704
+	valid_y_misclass: 0.000599999970291
+	valid_y_nll: 0.00427824771032
+	valid_y_row_norms_max: 0.548802554607
+	valid_y_row_norms_mean: 0.364281535149
+	valid_y_row_norms_min: 0.108612038195
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 12
+	Batches seen: 5628
+	Examples seen: 720000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.900000870228
+	valid_h0_kernel_norms_mean: 0.509360671043
+	valid_h0_kernel_norms_min: 0.0924859568477
+	valid_h0_max_x.max_u: 1.12373304367
+	valid_h0_max_x.mean_u: 0.803546845913
+	valid_h0_max_x.min_u: 0.503417253494
+	valid_h0_mean_x.max_u: 0.237568452954
+	valid_h0_mean_x.mean_u: 0.109467461705
+	valid_h0_mean_x.min_u: -0.0218157637864
+	valid_h0_min_x.max_u: -0.0715909078717
+	valid_h0_min_x.mean_u: -0.62210226059
+	valid_h0_min_x.min_u: -1.57140755653
+	valid_h0_range_x.max_u: 2.29029583931
+	valid_h0_range_x.mean_u: 1.42564928532
+	valid_h0_range_x.min_u: 0.667654395103
+	valid_h1_kernel_norms_max: 1.61325335503
+	valid_h1_kernel_norms_mean: 0.942275166512
+	valid_h1_kernel_norms_min: 0.245995774865
+	valid_h1_max_x.max_u: 3.25050663948
+	valid_h1_max_x.mean_u: 2.17949199677
+	valid_h1_max_x.min_u: 1.20439326763
+	valid_h1_mean_x.max_u: 0.837276220322
+	valid_h1_mean_x.mean_u: 0.131449639797
+	valid_h1_mean_x.min_u: -0.315018981695
+	valid_h1_min_x.max_u: 0.0547236688435
+	valid_h1_min_x.mean_u: -1.20228731632
+	valid_h1_min_x.min_u: -2.04474687576
+	valid_h1_range_x.max_u: 4.63736963272
+	valid_h1_range_x.mean_u: 3.38177990913
+	valid_h1_range_x.min_u: 2.37722229958
+	valid_h2_kernel_norms_max: 1.2397030592
+	valid_h2_kernel_norms_mean: 0.620580673218
+	valid_h2_kernel_norms_min: 0.258310526609
+	valid_h2_max_x.max_u: 6.08078670502
+	valid_h2_max_x.mean_u: 4.57036304474
+	valid_h2_max_x.min_u: 3.57630443573
+	valid_h2_mean_x.max_u: 0.594723165035
+	valid_h2_mean_x.mean_u: 0.370380938053
+	valid_h2_mean_x.min_u: 0.150554433465
+	valid_h2_min_x.max_u: -1.31088769436
+	valid_h2_min_x.mean_u: -1.90918433666
+	valid_h2_min_x.min_u: -2.65651893616
+	valid_h2_range_x.max_u: 8.22263145447
+	valid_h2_range_x.mean_u: 6.47954750061
+	valid_h2_range_x.min_u: 5.18504095078
+	valid_objective: 0.00426409300417
+	valid_y_col_norms_max: 1.81115484238
+	valid_y_col_norms_mean: 1.73089766502
+	valid_y_col_norms_min: 1.64168167114
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.998075962067
+	valid_y_min_max_class: 0.857470870018
+	valid_y_misclass: 0.000699999975041
+	valid_y_nll: 0.00426409300417
+	valid_y_row_norms_max: 0.549016416073
+	valid_y_row_norms_mean: 0.364508211613
+	valid_y_row_norms_min: 0.108614787459
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 13
+	Batches seen: 6097
+	Examples seen: 780000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.899987220764
+	valid_h0_kernel_norms_mean: 0.509566009045
+	valid_h0_kernel_norms_min: 0.0928039774299
+	valid_h0_max_x.max_u: 1.12930369377
+	valid_h0_max_x.mean_u: 0.80612206459
+	valid_h0_max_x.min_u: 0.494829028845
+	valid_h0_mean_x.max_u: 0.239296942949
+	valid_h0_mean_x.mean_u: 0.110174328089
+	valid_h0_mean_x.min_u: -0.0207221116871
+	valid_h0_min_x.max_u: -0.073750346899
+	valid_h0_min_x.mean_u: -0.622087061405
+	valid_h0_min_x.min_u: -1.56571042538
+	valid_h0_range_x.max_u: 2.29021716118
+	valid_h0_range_x.mean_u: 1.42820954323
+	valid_h0_range_x.min_u: 0.664282917976
+	valid_h1_kernel_norms_max: 1.61325275898
+	valid_h1_kernel_norms_mean: 0.942438840866
+	valid_h1_kernel_norms_min: 0.246186986566
+	valid_h1_max_x.max_u: 3.25077319145
+	valid_h1_max_x.mean_u: 2.19186091423
+	valid_h1_max_x.min_u: 1.22700357437
+	valid_h1_mean_x.max_u: 0.844887137413
+	valid_h1_mean_x.mean_u: 0.13672195375
+	valid_h1_mean_x.min_u: -0.306017875671
+	valid_h1_min_x.max_u: 0.0609090328217
+	valid_h1_min_x.mean_u: -1.19867861271
+	valid_h1_min_x.min_u: -2.04420018196
+	valid_h1_range_x.max_u: 4.64687108994
+	valid_h1_range_x.mean_u: 3.39053893089
+	valid_h1_range_x.min_u: 2.38991618156
+	valid_h2_kernel_norms_max: 1.24022269249
+	valid_h2_kernel_norms_mean: 0.620765686035
+	valid_h2_kernel_norms_min: 0.258342176676
+	valid_h2_max_x.max_u: 6.17533254623
+	valid_h2_max_x.mean_u: 4.61440086365
+	valid_h2_max_x.min_u: 3.58603024483
+	valid_h2_mean_x.max_u: 0.644360184669
+	valid_h2_mean_x.mean_u: 0.388849258423
+	valid_h2_mean_x.min_u: 0.156846165657
+	valid_h2_min_x.max_u: -1.30548429489
+	valid_h2_min_x.mean_u: -1.88416826725
+	valid_h2_min_x.min_u: -2.66957592964
+	valid_h2_range_x.max_u: 8.25725269318
+	valid_h2_range_x.mean_u: 6.49856758118
+	valid_h2_range_x.min_u: 5.18646717072
+	valid_objective: 0.00372039759532
+	valid_y_col_norms_max: 1.81039774418
+	valid_y_col_norms_mean: 1.73194086552
+	valid_y_col_norms_min: 1.64199841022
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.998127996922
+	valid_y_min_max_class: 0.854218006134
+	valid_y_misclass: 0.000399999989895
+	valid_y_nll: 0.00372039759532
+	valid_y_row_norms_max: 0.549287378788
+	valid_y_row_norms_mean: 0.364728420973
+	valid_y_row_norms_min: 0.108629502356
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 14
+	Batches seen: 6566
+	Examples seen: 840000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.900000870228
+	valid_h0_kernel_norms_mean: 0.509803712368
+	valid_h0_kernel_norms_min: 0.0928795933723
+	valid_h0_max_x.max_u: 1.13147127628
+	valid_h0_max_x.mean_u: 0.808275580406
+	valid_h0_max_x.min_u: 0.494975596666
+	valid_h0_mean_x.max_u: 0.239574179053
+	valid_h0_mean_x.mean_u: 0.110581040382
+	valid_h0_mean_x.min_u: -0.0180004555732
+	valid_h0_min_x.max_u: -0.0761051401496
+	valid_h0_min_x.mean_u: -0.622924625874
+	valid_h0_min_x.min_u: -1.56493258476
+	valid_h0_range_x.max_u: 2.29235482216
+	valid_h0_range_x.mean_u: 1.43120002747
+	valid_h0_range_x.min_u: 0.665644526482
+	valid_h1_kernel_norms_max: 1.61322116852
+	valid_h1_kernel_norms_mean: 0.942604362965
+	valid_h1_kernel_norms_min: 0.246325492859
+	valid_h1_max_x.max_u: 3.28186273575
+	valid_h1_max_x.mean_u: 2.21062016487
+	valid_h1_max_x.min_u: 1.23935198784
+	valid_h1_mean_x.max_u: 0.852251827717
+	valid_h1_mean_x.mean_u: 0.145094811916
+	valid_h1_mean_x.min_u: -0.301030486822
+	valid_h1_min_x.max_u: 0.0647632479668
+	valid_h1_min_x.mean_u: -1.1920696497
+	valid_h1_min_x.min_u: -2.03951096535
+	valid_h1_range_x.max_u: 4.66652441025
+	valid_h1_range_x.mean_u: 3.40268874168
+	valid_h1_range_x.min_u: 2.39737939835
+	valid_h2_kernel_norms_max: 1.24068009853
+	valid_h2_kernel_norms_mean: 0.62095195055
+	valid_h2_kernel_norms_min: 0.258365094662
+	valid_h2_max_x.max_u: 6.19257640839
+	valid_h2_max_x.mean_u: 4.63057565689
+	valid_h2_max_x.min_u: 3.58509421349
+	valid_h2_mean_x.max_u: 0.651869416237
+	valid_h2_mean_x.mean_u: 0.384544223547
+	valid_h2_mean_x.min_u: 0.145118117332
+	valid_h2_min_x.max_u: -1.32163858414
+	valid_h2_min_x.mean_u: -1.90771758556
+	valid_h2_min_x.min_u: -2.71627354622
+	valid_h2_range_x.max_u: 8.2980260849
+	valid_h2_range_x.mean_u: 6.53829288483
+	valid_h2_range_x.min_u: 5.20832538605
+	valid_objective: 0.00360151054338
+	valid_y_col_norms_max: 1.81083512306
+	valid_y_col_norms_mean: 1.73299312592
+	valid_y_col_norms_min: 1.64348566532
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.998116493225
+	valid_y_min_max_class: 0.851126909256
+	valid_y_misclass: 0.000299999985145
+	valid_y_nll: 0.00360151054338
+	valid_y_row_norms_max: 0.549570500851
+	valid_y_row_norms_mean: 0.364950329065
+	valid_y_row_norms_min: 0.10863224417
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 15
+	Batches seen: 7035
+	Examples seen: 900000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.900000870228
+	valid_h0_kernel_norms_mean: 0.510066926479
+	valid_h0_kernel_norms_min: 0.0928541794419
+	valid_h0_max_x.max_u: 1.13135623932
+	valid_h0_max_x.mean_u: 0.811136245728
+	valid_h0_max_x.min_u: 0.499549418688
+	valid_h0_mean_x.max_u: 0.240173652768
+	valid_h0_mean_x.mean_u: 0.1112947613
+	valid_h0_mean_x.min_u: -0.0171663761139
+	valid_h0_min_x.max_u: -0.0737670734525
+	valid_h0_min_x.mean_u: -0.623765945435
+	valid_h0_min_x.min_u: -1.56664454937
+	valid_h0_range_x.max_u: 2.29569745064
+	valid_h0_range_x.mean_u: 1.43490219116
+	valid_h0_range_x.min_u: 0.667729854584
+	valid_h1_kernel_norms_max: 1.61323034763
+	valid_h1_kernel_norms_mean: 0.942768633366
+	valid_h1_kernel_norms_min: 0.246481731534
+	valid_h1_max_x.max_u: 3.3106842041
+	valid_h1_max_x.mean_u: 2.22264504433
+	valid_h1_max_x.min_u: 1.2425160408
+	valid_h1_mean_x.max_u: 0.859496116638
+	valid_h1_mean_x.mean_u: 0.1467115134
+	valid_h1_mean_x.min_u: -0.302937090397
+	valid_h1_min_x.max_u: 0.0675747916102
+	valid_h1_min_x.mean_u: -1.19762265682
+	valid_h1_min_x.min_u: -2.04910564423
+	valid_h1_range_x.max_u: 4.69377851486
+	valid_h1_range_x.mean_u: 3.42026686668
+	valid_h1_range_x.min_u: 2.41113805771
+	valid_h2_kernel_norms_max: 1.24119782448
+	valid_h2_kernel_norms_mean: 0.621141016483
+	valid_h2_kernel_norms_min: 0.258420169353
+	valid_h2_max_x.max_u: 6.24953556061
+	valid_h2_max_x.mean_u: 4.66090965271
+	valid_h2_max_x.min_u: 3.6284070015
+	valid_h2_mean_x.max_u: 0.654549121857
+	valid_h2_mean_x.mean_u: 0.38319426775
+	valid_h2_mean_x.min_u: 0.141624599695
+	valid_h2_min_x.max_u: -1.3352547884
+	valid_h2_min_x.mean_u: -1.9313236475
+	valid_h2_min_x.min_u: -2.74387073517
+	valid_h2_range_x.max_u: 8.35748195648
+	valid_h2_range_x.mean_u: 6.59223127365
+	valid_h2_range_x.min_u: 5.27732419968
+	valid_objective: 0.00327477604151
+	valid_y_col_norms_max: 1.81254029274
+	valid_y_col_norms_mean: 1.73404741287
+	valid_y_col_norms_min: 1.64477431774
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.998264312744
+	valid_y_min_max_class: 0.862248182297
+	valid_y_misclass: 0.000299999985145
+	valid_y_nll: 0.00327477604151
+	valid_y_row_norms_max: 0.549831151962
+	valid_y_row_norms_mean: 0.365173280239
+	valid_y_row_norms_min: 0.108635269105
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 16
+	Batches seen: 7504
+	Examples seen: 960000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.89999294281
+	valid_h0_kernel_norms_mean: 0.510290145874
+	valid_h0_kernel_norms_min: 0.0931000933051
+	valid_h0_max_x.max_u: 1.13660478592
+	valid_h0_max_x.mean_u: 0.814318478107
+	valid_h0_max_x.min_u: 0.503128290176
+	valid_h0_mean_x.max_u: 0.243335649371
+	valid_h0_mean_x.mean_u: 0.112490996718
+	valid_h0_mean_x.min_u: -0.0155348638073
+	valid_h0_min_x.max_u: -0.0737558975816
+	valid_h0_min_x.mean_u: -0.622267067432
+	valid_h0_min_x.min_u: -1.56816601753
+	valid_h0_range_x.max_u: 2.29759216309
+	valid_h0_range_x.mean_u: 1.43658566475
+	valid_h0_range_x.min_u: 0.674632251263
+	valid_h1_kernel_norms_max: 1.61326265335
+	valid_h1_kernel_norms_mean: 0.942930340767
+	valid_h1_kernel_norms_min: 0.246595516801
+	valid_h1_max_x.max_u: 3.29492616653
+	valid_h1_max_x.mean_u: 2.21209263802
+	valid_h1_max_x.min_u: 1.23844230175
+	valid_h1_mean_x.max_u: 0.865721464157
+	valid_h1_mean_x.mean_u: 0.138210073113
+	valid_h1_mean_x.min_u: -0.3134983778
+	valid_h1_min_x.max_u: 0.0745253786445
+	valid_h1_min_x.mean_u: -1.21170592308
+	valid_h1_min_x.min_u: -2.07063341141
+	valid_h1_range_x.max_u: 4.69428253174
+	valid_h1_range_x.mean_u: 3.42379903793
+	valid_h1_range_x.min_u: 2.41127943993
+	valid_h2_kernel_norms_max: 1.2416768074
+	valid_h2_kernel_norms_mean: 0.621324419975
+	valid_h2_kernel_norms_min: 0.258496999741
+	valid_h2_max_x.max_u: 6.23575973511
+	valid_h2_max_x.mean_u: 4.66640949249
+	valid_h2_max_x.min_u: 3.62166595459
+	valid_h2_mean_x.max_u: 0.661191225052
+	valid_h2_mean_x.mean_u: 0.394423574209
+	valid_h2_mean_x.min_u: 0.149082869291
+	valid_h2_min_x.max_u: -1.32796728611
+	valid_h2_min_x.mean_u: -1.91503143311
+	valid_h2_min_x.min_u: -2.7169907093
+	valid_h2_range_x.max_u: 8.34078216553
+	valid_h2_range_x.mean_u: 6.58143949509
+	valid_h2_range_x.min_u: 5.26327610016
+	valid_objective: 0.00313861249015
+	valid_y_col_norms_max: 1.81334078312
+	valid_y_col_norms_mean: 1.73508858681
+	valid_y_col_norms_min: 1.64569580555
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.998345851898
+	valid_y_min_max_class: 0.871648967266
+	valid_y_misclass: 0.000199999994948
+	valid_y_nll: 0.00313861249015
+	valid_y_row_norms_max: 0.550110578537
+	valid_y_row_norms_mean: 0.365394353867
+	valid_y_row_norms_min: 0.10863122344
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 17
+	Batches seen: 7973
+	Examples seen: 1020000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.899997770786
+	valid_h0_kernel_norms_mean: 0.510538816452
+	valid_h0_kernel_norms_min: 0.0929851382971
+	valid_h0_max_x.max_u: 1.13791620731
+	valid_h0_max_x.mean_u: 0.816173315048
+	valid_h0_max_x.min_u: 0.507196426392
+	valid_h0_mean_x.max_u: 0.241430208087
+	valid_h0_mean_x.mean_u: 0.112556800246
+	valid_h0_mean_x.min_u: -0.0145563213155
+	valid_h0_min_x.max_u: -0.0758153274655
+	valid_h0_min_x.mean_u: -0.624618887901
+	valid_h0_min_x.min_u: -1.56440973282
+	valid_h0_range_x.max_u: 2.29834628105
+	valid_h0_range_x.mean_u: 1.44079232216
+	valid_h0_range_x.min_u: 0.672041594982
+	valid_h1_kernel_norms_max: 1.61328625679
+	valid_h1_kernel_norms_mean: 0.943091034889
+	valid_h1_kernel_norms_min: 0.246742516756
+	valid_h1_max_x.max_u: 3.33732104301
+	valid_h1_max_x.mean_u: 2.24136090279
+	valid_h1_max_x.min_u: 1.24974179268
+	valid_h1_mean_x.max_u: 0.874579191208
+	valid_h1_mean_x.mean_u: 0.149324297905
+	valid_h1_mean_x.min_u: -0.305156886578
+	valid_h1_min_x.max_u: 0.074511513114
+	valid_h1_min_x.mean_u: -1.20410180092
+	valid_h1_min_x.min_u: -2.05770897865
+	valid_h1_range_x.max_u: 4.71933794022
+	valid_h1_range_x.mean_u: 3.44546175003
+	valid_h1_range_x.min_u: 2.42571663857
+	valid_h2_kernel_norms_max: 1.24222624302
+	valid_h2_kernel_norms_mean: 0.621513426304
+	valid_h2_kernel_norms_min: 0.258517801762
+	valid_h2_max_x.max_u: 6.24977254868
+	valid_h2_max_x.mean_u: 4.67625379562
+	valid_h2_max_x.min_u: 3.64390873909
+	valid_h2_mean_x.max_u: 0.623245477676
+	valid_h2_mean_x.mean_u: 0.373362481594
+	valid_h2_mean_x.min_u: 0.136968329549
+	valid_h2_min_x.max_u: -1.35601258278
+	valid_h2_min_x.mean_u: -1.97090601921
+	valid_h2_min_x.min_u: -2.76590132713
+	valid_h2_range_x.max_u: 8.43147754669
+	valid_h2_range_x.mean_u: 6.64715909958
+	valid_h2_range_x.min_u: 5.32865333557
+	valid_objective: 0.00291059794836
+	valid_y_col_norms_max: 1.81507349014
+	valid_y_col_norms_mean: 1.73613500595
+	valid_y_col_norms_min: 1.6473325491
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.998455047607
+	valid_y_min_max_class: 0.878937125206
+	valid_y_misclass: 0.000399999989895
+	valid_y_nll: 0.00291059794836
+	valid_y_row_norms_max: 0.550388395786
+	valid_y_row_norms_mean: 0.365617066622
+	valid_y_row_norms_min: 0.108629308641
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Time this epoch: 35.000000 seconds
+Monitoring step:
+	Epochs seen: 18
+	Batches seen: 8442
+	Examples seen: 1080000
+	learning_rate: 0.00923442561179
+	momentum: 0.585943520069
+	monitor_seconds_per_epoch: 35.0000114441
+	valid_h0_kernel_norms_max: 0.900000870228
+	valid_h0_kernel_norms_mean: 0.510770499706
+	valid_h0_kernel_norms_min: 0.0931293591857
+	valid_h0_max_x.max_u: 1.13607990742
+	valid_h0_max_x.mean_u: 0.819132566452
+	valid_h0_max_x.min_u: 0.505601406097
+	valid_h0_mean_x.max_u: 0.243599846959
+	valid_h0_mean_x.mean_u: 0.113790564239
+	valid_h0_mean_x.min_u: -0.0132675589994
+	valid_h0_min_x.max_u: -0.072348177433
+	valid_h0_min_x.mean_u: -0.62367361784
+	valid_h0_min_x.min_u: -1.56576228142
+	valid_h0_range_x.max_u: 2.30014872551
+	valid_h0_range_x.mean_u: 1.44280600548
+	valid_h0_range_x.min_u: 0.671058416367
+	valid_h1_kernel_norms_max: 1.61328351498
+	valid_h1_kernel_norms_mean: 0.943240046501
+	valid_h1_kernel_norms_min: 0.246889024973
+	valid_h1_max_x.max_u: 3.32061910629
+	valid_h1_max_x.mean_u: 2.23574638367
+	valid_h1_max_x.min_u: 1.24789404869
+	valid_h1_mean_x.max_u: 0.884836494923
+	valid_h1_mean_x.mean_u: 0.142596870661
+	valid_h1_mean_x.min_u: -0.309913396835
+	valid_h1_min_x.max_u: 0.0819071680307
+	valid_h1_min_x.mean_u: -1.21842813492
+	valid_h1_min_x.min_u: -2.08898878098
+	valid_h1_range_x.max_u: 4.72969150543
+	valid_h1_range_x.mean_u: 3.45417451859
+	valid_h1_range_x.min_u: 2.44385766983
+	valid_h2_kernel_norms_max: 1.24270379543
+	valid_h2_kernel_norms_mean: 0.621685802937
+	valid_h2_kernel_norms_min: 0.258568018675
+	valid_h2_max_x.max_u: 6.39051771164
+	valid_h2_max_x.mean_u: 4.75447893143
+	valid_h2_max_x.min_u: 3.71572303772
+	valid_h2_mean_x.max_u: 0.683103859425
+	valid_h2_mean_x.mean_u: 0.398565262556
+	valid_h2_mean_x.min_u: 0.156216204166
+	valid_h2_min_x.max_u: -1.34118318558
+	valid_h2_min_x.mean_u: -1.93790793419
+	valid_h2_min_x.min_u: -2.73805451393
+	valid_h2_range_x.max_u: 8.48111152649
+	valid_h2_range_x.mean_u: 6.69238615036
+	valid_h2_range_x.min_u: 5.37756204605
+	valid_objective: 0.00267244921997
+	valid_y_col_norms_max: 1.81723642349
+	valid_y_col_norms_mean: 1.73713064194
+	valid_y_col_norms_min: 1.64869248867
+	valid_y_max_max_class: 0.999999284744
+	valid_y_mean_max_class: 0.998531222343
+	valid_y_min_max_class: 0.888978123665
+	valid_y_misclass: 0.000399999989895
+	valid_y_nll: 0.00267244921997
+	valid_y_row_norms_max: 0.55064457655
+	valid_y_row_norms_mean: 0.365826576948
+	valid_y_row_norms_min: 0.108626015484
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+Saving to mnist_continued.pkl...
+Saving to mnist_continued.pkl done. Time elapsed: 0.000000 seconds
+run 686.41 sec
+max memory usage(ru_maxrss) : 1020220  (check 'man getrusage' for the unit)
