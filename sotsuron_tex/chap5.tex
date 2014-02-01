@@ -1,6 +1,6 @@
 % !TEX root = thesis.tex
-\chapter{ウェブ工学への深層学習技術の応用}
-この章では、第4章で得られた深層学習用の構成を用いて、実際に機械学習のタスクを実行する。分類精度、実行時間、消費メモリ量を調べることにより、深層学習をウェブ工学の問題に適用する際の参考とする。
+\chapter{深層学習技術の応用}
+この章では、4章で挙げた問題点の対策を検証するため、いくつかの深層学習用の実装を用いて、実際に機械学習のタスクを実行する。特に、実際の分類精度を測定することによる、「分類精度の再現の問題」の解決を目標とする。
 \section{利用したデータセット}
 実験の前提知識として、この節では、実験に使用したデータセットについて記す。機械学習の分野では、分類精度のベンチマークを取るために、様々なデータセットが提供/提案されてきている。同じデータセットに対して、様々な分類モデルやアルゴリズムを用いて分類実験を行うことにより、どの手法が優れているのか比較することが出来る。\par
 ここでは、画像認識のデータセットを用いて、深層学習プログラムのベンチマークを行う。画像データを用いる理由は、1つには、画像認識が深層学習が最も高い分類性能を実現している分野だからである。加えて、画像データや画像から抽出された素性は、可視化が比較的容易なことが多い。可視化することで、学習過程を目で見て確かめることが出来るため、アルゴリズムの分析を行いやすい、という利点がある。
@@ -25,6 +25,7 @@ MNISTは、様々な画像認識アルゴリズムの作者によって使用さ
   \label{c5_mnist_rank}%
   \end{center}
 \end{table}%
+なお、MNISTのデータによって分類実験をする際、元データを少し歪ませたり、解像度を変更することで入力データの種類を増やすと、良い結果が得られることがわかっている\cite{simard2003best}\cite{lauer2007a-trainable}。一方で、このような元データの変更を禁止した状態で、良い精度を出す試みもある。さらに条件を厳しくして、変形を行わないだけでなく、「2次元の画像データではなく、1次元のベクトルデータである」と考える順序不変(Permutation Invariant, PI)と呼ばれる条件も行われている。このPI条件の場合、2次元的畳み込みネットワークの利用を使うことが出来なくなり、分類精度は大きく落ちることになる。ただ、この条件下でも良い精度を出すことのできるアルゴリズムは、他の1次元のデータ、例えば言語データや音声データにおいても、良い性能を出しやすいと考えられる。今回の実験では、Web工学などへの応用可能性を考えるため、分類モデルが畳み込みレイヤーを含まない場合は、全て順序不変で行っている。畳み込みレイヤーを含むものについては、順序不変にはなっていいが、この場合も元データの変形によるデータ増加は行っていない。
 
 \subsection{CIFAR10}
 CIFAR10\footnote{http://www.cs.toronto.edu/~kriz/cifar.html}は、写真を画像分析によって識別するタスクである\cite{krizhevsky2009learning}。入力データは60000件のカラー画像で、どの画像も、飛行機、自動車、鳥、猫、鹿、犬、蛙、馬、船、トラックの10種類のクラスのどれかに属しており、各クラス均等に6000枚ずつの画像が割り振られている。画像データは、GoogleやFlickrなどによるウェブ検索で集められた画像を、人手でラベリングして作られている。また、サイズを32x32ピクセルに縮小されている。\par
@@ -48,17 +49,26 @@ CIFAR10についても、データの例を\ref{c5_cifar_ex}に、分類誤差�
  \label{c5_cifar_rank}
 \end{table}
 
-\section{使用したライブラリ}
-この章の実験には、Pylearn2という深層学習のライブラリを用いた。
-\section{使用したハードウェア}
-この章の実験では、GPUを搭載したサーバマシンを用いた。表\ref{c5_hardware_spec}に、今回の実験で使用したマシンの主な使用パーツ及び性能を列挙した。また、Maxout Networkの実装ソースコードには、実験マシンのパーツ性能を書いたファイルが付属している\footnote{Pylearn2/scripts/papers/maxout/notes}。このファイルの記述内容も、比較のために列挙した。今回の実験に使ったマシンの方が、ハードウェア性能的には優れていることがわかる。
+\section{使用した実装}
+この章の実験では、深層学習用の実装として、"Pylearn2"と"Deep Learning Tutorial"という2種類のライブラリによるものを用いた。この2つを選んだのは、どちらも共通してTheanoをベースに書いてあり、自動微分や自動最適化の恩恵を受けられること、ソースコードが非常に系統立てて書いてあり、他のソースコードに比べれば改造が容易なこと、github上にてソースコードが公開されており、利用者が多いことが理由である。それぞれのライブラリの詳細な特徴は、4章にて述べた。\par
+ここでは、各ライブラリに含まれている分類モデルの中で、どのモデルを実験に用いたかを記す。
+
+\subsection{Deep Learning Tutorial内のモデル}
+Deep Learning Tutorialからは、畳み込みネットワーク(CNN)\footnote{\url{http://deeplearning.net/tutorial/lenet.html}}、積層雑音除去自己符号器(SDA)\footnote{\url{http://deeplearning.net/tutorial/SdA.html}}、深層信念ネットワーク(DBN)\footnote{\url{http://deeplearning.net/tutorial/DBN.html}}の3種類の実装を用いた。加えて、CNNの上から2番目のレイヤーを、Dropout + Rectifier Unitに変更したDReDNet\footnote{\url{http://techtalks.tv/talks/drednets/58115/}}と呼ばれるモデルでも実験した。このときユニットの出力を隠す割合を決める破損率(corruption rate)は、0.5に設定した。
+
+\subsection{Pylearn2内のモデル}
+Pylearn2からは、CNN\footnote{\url{http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/convolutional_network.ipynb}}、SDA\footnote{\url{http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/stacked_autoencoders.ipynb}}、Maxout Network、Maxout+畳み込みレイヤー\footnote{\url{http://deeplearning.net/software/pylearn2/library/models.html#module-pylearn2.models.maxout}}の4種類のモデルを用いた。DBNについては、構成要素であるRBMの実装は用意されているものの、これを組み立ててDBNにする作業はライブラリの利用者に任されている。出来るだけソースを変更せずに用いて分類精度を再現するという、今回の趣旨にそぐわないため、除外した。
+
+\section{使用したマシンとハードウェア性能}
+この章の実験では、2種類のサーバマシンを用いている。一方は、深層学習を目的に構成した自作サーバマシンで、GPUを搭載している(physalisと名付ける)。もう一方は、Dell社のPowerEdgeT300\footnote{\url{http://www1.jp.dell.com/jp/ja/premier/servers/pedge_t300/pd.aspx?refid=pedge_t300&cs=jppremier1&s=premier}}という機種のもので、こちらにはGPUは搭載されていない(artemisと名付ける)。表\ref{c5_hardware_spec}に、今回の実験で使用したマシンの主な使用パーツ及び性能を列挙した。また、Pylearn2に実装されているMaxout Networkのソースコードには、実験マシンのパーツ性能を書いたファイルが付属している\footnote{Pylearn2/scripts/papers/maxout/notes}。このファイルの記述内容も、比較のために列挙した。Maxout Networkは、先述したMNISTやCIFAR10のベンチマーク実験において、かなり最先端に高い精度を挙げており、特に順序不変(Permutatin Invariant)のタスクにおいては最も性能が高い。このMaxout Networkの実験に用いられたマシンよりも、ハードウェア面で上回っているならば、ハードウェア面での性能が不足して実験がうまくいかない危険性はかなり低いと言える。今回の実験に使ったマシンで言うと、新しく構成してGPUを搭載したphysalisサーバの方は、論文のマシンよりハードウェア性能的に優れていることがわかる。一方、artemisサーバはGPUを搭載していなかったため、学習速度面にて劣ることが予想される。
 \begin{table}[tbp]
  \begin{center}
   \caption{ハードウェア性能の比較}
   \begin{tabular}{|c|c|c|c|c|c|}\hline
-   & GPU & CUDA core & CPU & クロック数 & メモリ容量\\ \hline
-今回 & GTX760 & 1152 & Intel CPU Core i7 4770S & 3.1 GHz & 32GB\\ \hline
-論文 & GTX580 & 512 & Intel Xeon CPU E5620 &  2.40GHz & (記載無し)\\ \hline
+  マシン識別名 & GPU & CUDA core & CPU & クロック数 & メモリ容量\\ \hline
+physalis & GTX760 & 1152 & Intel CPU Core i7 4770S & 3.1GHz x 8 & 32GB\\ \hline
+artemis & (無し) & (無し) & Intel Xeon CPU X3323 & 2.5GHz x 4 & 24GB\\ \hline
+(論文) &GTX580 & 512 & Intel Xeon CPU E5620 &  2.4GHz x 4 & (記載無し)\\ \hline
   \end{tabular}
  \end{center}
 
@@ -66,39 +76,48 @@ CIFAR10についても、データの例を\ref{c5_cifar_ex}に、分類誤差�
 \end{table}
 
 \section{ベンチマーク実験の詳細}
-前節で挙げた画像分類のベンチマークセットに対し、深層学習の様々なアルゴリズムによって分類を行わせ、その性能を測定した。
+使用サーバ・ベンチマークセット・ライブラリ・分類モデルの組み合わせについて、分類学習の結果得られる性能を測定した。表\ref{c5_all_result}に結果を示す。ここで、DLTはDeep Learning Tutorial、PL2はPylearn2の略とする。また、PIは、MNISTの実験種類における順序不変タスクのことを指している。この結果に対する考察は、6章にて行う。
 
+% Table generated by Excel2LaTeX from sheet 'summary'
+\begin{table}[htbp]
+  \centering
+  \caption{ベンチマーク実験の結果}
+    \begin{tabular}{|c|c|c|c|r|r|r|}\hline
+    マシン名 & ライブラリ & データセット & モデル & \shortstack{識別誤差\\(\%)} & \shortstack{実行時間\\(分)} & \shortstack{使用メモリ\\(MB)}\rule[0mm]{0mm}{10mm}\\ \hline
+artemis & DLT & CIFAR10 & CNN   & 35.18 & 766   & - \\ \hline
+artemis & DLT & CIFAR10 & DBN & 51.01 & 236 &- \\ \hline
+artemis & DLT & CIFAR10 & SDA & 56.94 & 1335&- \\ \hline
+physalis & DLT & CIFAR10 & CNN & 34.76 & 28&- \\ \hline
+physalis & DLT & CIFAR10 & DBN & 50.90& 115 &- \\ \hline
+physalis & DLT & CIFAR10 & SDA & 58.64 & 92&- \\ \hline
+physalis & DLT & MNIST(PI) & DBN & 1.51& 101 &- \\ \hline
+physalis & DLT & MNIST(PI) & SDA & 1.40 & 183 &- \\ \hline
+physalis & PL2 & MNIST(PI) & SDA & 1.90 & 128 & 1004 \\ \hline
+physalis & PL2 & MNIST(PI) & Maxout & 1.16& 55& 792 \\ \hline
+artemis & DLT & MNIST & Drednet & 1.19& 593 &- \\ \hline
+physalis & DLT & MNIST & CNN & 0.93& 32&- \\ \hline
+physalis & PL2 & MNIST & CNN & 0.68& 30& 796 \\ \hline
+physalis & PL2 & MNIST & \shortstack{Maxout\\+畳み込み}\rule[0mm]{0mm}{8mm} & 0.51& 126 & 996 \\ \hline
+\end{tabular}%
+\label{c5_all_result}%
+\end{table}%
+\par
+\begin{comment}
 \subsection{Maxout Networkによる、MNISTの分類タスク(2次元データとして扱う)}
 Maxout Networkを分類器として用い、MNISTの分類タスクを行わせた。モデル構造としては、畳み込みレイヤーを2層重ねた上に、全てのニューロンが単純に接続されたMaxout レイヤーを1層付け加え、最後の層にてロジスティック回帰を行って分類結果を出した。
 実験を行った結果、分類誤差は0.51\%となった。これは、元の論文が主張している分類誤差より、僅かに悪い結果となった。結果を、表\ref{c5_maxout_mnist2_result}に示す。
-\begin{table}[tdp]
-\caption{Maxout NetworkによるMNIST(2次元)分類の結果}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|}\hline
-手法 & データセット & 元論文の誤差 & 実験誤差 & 増加分\\ \hline
-Maxout Network & MNIST(2次元) & 0.45\% & 0.51\% & +0.06\% \\ \hline
-\end{tabular}
-\end{center}
-\label{c5_maxout_mnist2_result}
-\end{table}%
 
-\subsection{Maxout Networkによる、MNISTの分類タスク(1次元データとして扱う)}
-前項と同じタスクを、「MNISTのデータは、2次元の画像データではなく、1次元のベクトルデータである」という条件の基で行わせた。つまり、2次元データに対する畳み込みレイヤー技術を敢えて使わない状態で、どれだけの精度をMaxout Networkが実現できるのか、実験した。この条件でもMaxout Networkが良い性能を出すことが出来れば、1次元のデータ、例えば言語データや音声データにおいても、Maxout Networkが応用できる可能性が高くなる。\\
-また、何らかの原因でランダム性が発生していないか確かめるため、この実験は同じ条件で10回行った。乱数のシードは、元論文の実験が行われたときと同じ値で固定した。\\
-実験の結果、誤差は10回とも共通で、1.16\%となった。Maxoutの元の論文やはり少し低い精度になってしまった(表\ref{c5_maxout_mnist1_result})。なお、平均実行時間は55分、最大メモリ使用量は793MBだった(表\ref{c5_maxout_mnist1_stat})。\\
-\begin{table}[tdp]
-\caption{Maxout NetworkによるMNIST(1次元)分類の結果}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|}\hline
-手法 & データセット & 元論文の誤差 & 実験誤差 & 増加分\\ \hline
-Maxout Network & MNIST(1次元) & 0.94\% & 1.16\% & +0.12\% \\ \hline
-\end{tabular}
-\end{center}
-\label{c5_maxout_mnist1_result}
-\end{table}%
+\end{comment}
+
+\section{その他に行った実験}
+ここでは、上記の組み合わせ実験に当てはまらない、独立して行った実験について記す。
+
+\subsection{Maxout Networkによる、MNIST分類の繰り返し実験}
+Maxout Networkを利用して、再現精度Pylearn2を利用するにあたり、何らかの原因でランダム性が発生していないか確かめるため、Pylearn2 + Maxout Networkによる、MNISTの順序不変タスク実験を、10回繰り返して行い、分類性能が変化するどうかを見た。乱数のシードは、元論文の実験が行われたときと同じ値で固定した。つまり、乱数以外の原因でランダム性が発生してしまっていないかどうかをチェックした。これは、実験結果の分類誤差が、Maxout Networkの元の論文よりも僅かではあるが悪くなってしまったため、まずアルゴリズムやハードウェアの動作に含まれるランダム性によって、精度が変化してしまっていないことを確かめるためである。\par
+実験の結果、誤差は10回とも共通で、1.16\%となった。なお、平均実行時間は約55分、最大メモリ使用量は793MBだった(表\ref{c5_maxout_mnist1_stat})。\par
 
 \begin{table}[tdp]
-\caption{Maxout NetworkによるMNIST(1次元)分類の実験詳細}
+\caption{Maxout NetworkによるMNIST(1次元)分類タスク繰り返し実験の詳細}
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline
  & 平均実行時間(秒) & 平均最大使用メモリ(MB) \\ \hline
@@ -112,5 +131,4 @@ Maxout Network & MNIST(1次元) & 0.94\% & 1.16\% & +0.12\% \\ \hline
 
 
 \subsection{Maxout Networkによる、CIFAR10の分類タスク}
-データセットを変更し、MNISTではなく、CIFAR10をMaxout Networkを用いて分類させようと試みた。データは2次元画像として扱った。つまり、畳み込みレイヤーの使用は可能とした。レイヤー構造は、畳み込みレイヤー 3層 - Maxout レイヤー1層 - 識別用ソフトマックスレイヤー1層とした。\par
-しかし、この実験を実際に行ったところ、3日間実行を続けたところで、残りエポック数と計算速度の比較より、全体の実行が完了するまでに10日以上かかることが判明した。これはウェブ工学における応用に使う学習アルゴリズムとして、試行錯誤しながら使うものとしては現実的でない実行時間である。また、実験スケジュールの都合もあり、実験の中断を余儀なくされてしまった。%実行が完了した部分までの分類誤差を、図??に示した。[図追加]
+Maxout+畳み込みのモデルについて、MNISTだけでなく、CIFAR10にも使ってみようと実験を試みた。しかし、この組み合わせの実験を実際に行ったところ、3日間実行を続けたところで、残りエポック数と計算速度の比較より、全体の実行が完了するまでに5日以上かかることが判明した。これはウェブ工学における応用に使う学習アルゴリズムとして、試行錯誤しながら使うものとしては現実的でない実行時間である。また、実験スケジュールの都合もあり、実験の中断を余儀なくされてしまった。%実行が完了した部分までの分類誤差を、図??に示した。[図追加]

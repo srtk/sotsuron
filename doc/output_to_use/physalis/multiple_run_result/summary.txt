@@ -10,33 +10,43 @@ test_y_misclass
 実行時間(↑がpretraining, ↓がfinetuning)
 log_01.txt:run 2527.78 sec
 log_01.txt:run 757.32 sec
+3284
 
 log_02.txt:run 2529.65 sec
 log_02.txt:run 754.27 sec
+3283
 
 log_03.txt:run 2535.82 sec
 log_03.txt:run 758.22 sec
+3293
 
 log_04.txt:run 2534.88 sec
 log_04.txt:run 757.78 sec
+3291
 
 log_05.txt:run 2545.69 sec
 log_05.txt:run 756.38 sec
+3301
 
 log_06.txt:run 2538.06 sec
 log_06.txt:run 760.31 sec
+3298
 
 log_07.txt:run 2529.61 sec
 log_07.txt:run 758.24 sec
+3587
 
 log_08.txt:run 2530.62 sec
 log_08.txt:run 754.35 sec
+3284
 
 log_09.txt:run 2526.54 sec
 log_09.txt:run 754.46 sec
+3280
 
 log_10.txt:run 2527.59 sec
 log_10.txt:run 758.49 sec
+3285
 
 平均
 pretraining 2532.8
