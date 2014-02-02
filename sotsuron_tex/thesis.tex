@@ -1,56 +1,100 @@
-\documentclass[a4paper,11pt,twoside,openany]{jsbook}
+\documentclass[a4j,11pt,twoside,openany]{jreport}
+
 \usepackage{amsmath,amssymb}
 \usepackage{bm}
 \usepackage{comment}
 \usepackage[dvipdfmx]{graphicx}
+\usepackage{setspace}
 \usepackage{subfigure}
 \usepackage{verbatim}
 \usepackage{wrapfig}
 \usepackage{ascmac}
 \usepackage{makeidx}
 \usepackage{url}
+\usepackage[top=25mm,bottom=20mm,left=15mm,right=35mm]{geometry}
+
+
 \makeindex
 
-\addtolength{\voffset}{-1in}
-\addtolength{\hoffset}{-1in}
-\setlength{\oddsidemargin}{15truemm}
-\setlength{\evensidemargin}{35truemm}
-\setlength{\textwidth}{160truemm} %A4 -> width210mm = 160+35+15
-\setlength{\textheight}{40\baselineskip}
-\addtolength{\textheight}{\topskip}
-\setlength{\voffset}{-0.55in}
+%\addtolength{\voffset}{-1in}
+%\addtolength{\hoffset}{-1in}
+%\setlength{\oddsidemargin}{-1in}
+%\addtolength{\oddsidemargin}{15truemm}
+%\setlength{\evensidemargin}{-1in}
+%\addtolength{\evensidemargin}{35truemm}
+%\setlength{\textwidth}{160truemm} %A4 -> width210mm = 160+35+15
 
-%\pagestyle{myheadings}
-%\markboth{even}{odd}
+%\setlength{\topmargin}{-1in}
+%\addtolength{\topmargin}{25truemm}
+%\setlength{\textheight}{\paperheight}
+%\addtolength{\textheight}{-45truemm} %25+20
+%\addtolength{\textheight}{\topskip}
+%\setlength{\voffset}{-0.55in}
 
 \renewcommand{\bibname}{参考文献}
-%
-\title{ウェブ工学で応用するための\\深層学習利用法と知見の体系化}
-\author{2013年度卒業論文\\
-東京大学工学部システム創成学科知能社会システムコース\\
-03120929 黒滝 紘生\\\\
-指導教官: 松尾 豊 准教授}
-\date{2014年2月 日}
-%
+
+%\twocolumn
+\makeatletter
+\def\tableofcontents{%
+   \@makeschapterhead{\contentsname}%
+   \@mkboth{\contentsname}{\contentsname}%
+   \@starttoc{toc}}
+\def\listoffigures{%
+   \@makeschapterhead{\listfigurename}%
+   \@mkboth{\listfigurename}{\listfigurename}%
+   \@starttoc{lof}}
+\def\listoftables{%
+   \@makeschapterhead{\listtablename}%
+   \@mkboth{\listtablename}{\listtablename}%
+   \@starttoc{lot}}
+\makeatother
+
 \begin{document}
 %
-\maketitle
+\begin{center}
+\vspace*{4.0cm}
+\Huge Web工学で応用するための\\Deep Learning利用法と知見の体系化
+
+\vspace{6.4cm}
+\LARGE 2013年2月
+
+\vspace{1.2cm}
+
+\LARGE 指導教員　松尾 豊 准教授
+
+\vspace{1.2cm}
+\Large 東京大学工学部システム創成学科知能社会システムコース
+
+\vspace{0.4cm}
+\Large 03120929 黒滝 紘生
+\end{center}
+\normalsize
+\thispagestyle{empty}
+\clearpage
+%タイトルおしまい
+%
+%\maketitle
 %
 \pagestyle{plain}
 
-\setlength{\baselineskip}{22truept}
+%\setlength{\baselineskip}{22truept}
+\renewcommand{\baselinestretch}{1.25} 
+\setstretch{1.25}
 %
-\frontmatter
+\pagenumbering{roman}
 \include{introduction}
 
 %
 %\include{extract_subsubsection_mode}
 %
 \tableofcontents
+\newpage
 \listoffigures
+\newpage
 \listoftables
+\newpage
 
-\mainmatter
+\pagenumbering{arabic}
 \include{chap1}
 \include{chap2}
 \include{chap3}
