@@ -12,7 +12,7 @@
 \end{figure}
 GoogleのSupervisionによる、画像分析の結果の例を図\ref{c3_supervision}に載せる(\cite{krizhevsky2012imagenet}より引用)。画像の分類に失敗している場合でも、妥当なラベルをつけていることがわかる。\begin{figure}[tbp]
  \begin{center}
-  \includegraphics[width=80mm]{img/c3/supervision}
+  \includegraphics[width=120mm]{img/c3/supervision}
  \end{center}
  \caption{Supervisionによる画像分類の結果の例}
  \label{c3_supervision}
@@ -21,8 +21,11 @@ GoogleのSupervisionによる、画像分析の結果の例を図\ref{c3_supervi
 深層学習は画像分析だけでなく、自然言語処理(NLP)の分野でも有効なことがわかっている。Googleが公開している"word2vec"というライブラリを使うと、入力されたテキスト文書から、単語のベクトル化やクラスタリングを行うことができる\cite{mikolov2013efficient}\cite{mikolov2013linguistic}。このベクトル化により、
 \begin{equation}
 vector('Paris') - vector('France') + vector('Italy') = vector('Rome')
+\end{equation}
+\begin{equation}
 vector('king') - vector('man') + vector('woman') = vector('queen')
 \end{equation}
+
 のような計算が行えるようになった。また、この計算を行う過程で、全ての単語同士の内積の和を計算していたところを止め、数個だけサンプルを取って計算することで、計算時間が短縮できるだけでなく、分類精度まで向上することが判明した\cite{mikolov2013distributed}。\par
 word2vecを応用した研究も出現している。Deep Visual-Semantic Embedding model(DeViSE)\cite{frome2013devise:}と名付けられたシステムでは、zero-shot learningと呼ばれる問題を解かせるため、Supervisionとword2vecを組み合わせている。zero-shot learningとは、訓練時に一度も見たことがないクラスの画像に対し、正しく分類を行えるかという問題である。この研究では、1000カテゴリの画像による訓練を行っただけで、まだ見たことが無い20000カテゴリに属する画像を適切にラベリングしている。画像以外に全く情報がなければ分類は不可能なので、Wikipediaのテキスト内容を補助データとして使っているが、これはWordNetや意味データベースの情報を直接用いていた従来の研究\cite{mensink2012metric}\cite{rohrbach2011evaluating}\cite{palatucci2009zero-shot}に比べて、より生データに近い情報で処理に成功していると言える。\par
 \begin{figure}[tbp]
