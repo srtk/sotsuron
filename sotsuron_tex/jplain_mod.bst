@@ -257,9 +257,9 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
 
-    { s nameptr "{ff}{ll}" format.name$ is.kanji.str$
-	{s nameptr "{ff}{ll}" format.name$ 't :=}
- 	{s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't :=}
+    { s nameptr "{f.}{ll}" format.name$ is.kanji.str$
+	{s nameptr "{f.}{ll}" format.name$ 't :=}
+ 	{s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't :=}
       if$
 
       nameptr #1 >
