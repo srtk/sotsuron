@@ -20,7 +20,7 @@
 このようにライブラリが確立していない状況では、プログラマが自ら深層学習のコードを記述する必要がある。しかし、深層学習の原理は多くの数学的背景の下成り立っており、理解には多くの時間がかかる。結果としては、プログラム開発に長い時間がかかってしまい、ビジネスシーンにおいて不利であると考えられる。なおライブラリの未成熟さや、実装・改造の難しさは、自力実装における「分類精度の再現の問題」にも影響している。\par
 
 \subsection{学習時間の問題}
-深層学習のモデルを訓練するには、無視できない長さの時間が必要となる。例えば、先述したGoogleによるSupervisionの学習では、1000台のマシンによるクラスタを用いても、訓練に3日間かかっており、個人レベルでは実験自体がほぼ不可能である\cite{le2012building}。一回の学習の時間が長くなれば、それだけ技術開発にかかる時間も長くなり、刻一刻と変化するウェブサービスに対して応用するのは難しくなる。特に、スタートアップ企業が深層学習の技術を用いて市場での優位を得ようとする場合を考えると、開発期間の短縮は大きなポイントである\cite{ries2011lean}。\par
+深層学習のモデルを訓練するには、無視できない長さの時間が必要となる。例えば、先述したGoogleによるSupervisionの学習では、1000台のマシンによるクラスタを用いても、訓練に3日間かかっており、個人レベルでは実験自体がほぼ不可能である\cite{le2012building}。一回の学習の時間が長くなれば、それだけ技術開発にかかる時間も長くなり、刻一刻と変化するウェブサービスに対して応用するのは難しくなる。特に、スタートアップ企業が深層学習の技術を用いて市場での優位を得ようとする場合を考えると、開発期間の短縮は大きなポイントである\cite{ries2011the-lean}。\par
 必要実行時間の長さをカバーするため、Graphics Processing Unit(以下GPU)を用いて演算をスピードアップさせる手法が確立されつつあるが、GPUは比較的高価なパーツである上、GPUの利用には特殊なプログラミングが要求され、開発における障壁の1つとなっている(つまりこれは「実装難易度の問題」でもある)。また、大部分のノートパソコンや一部のサーバなど、並列演算に利用可能なGPUの搭載自体が出来ないパソコンを使っている場合ではGPUを利用しているソースコードの実行が全く出来ないこともある(後述)。\par
 
 この章の残りでは、今挙げた「分類精度の再現の問題」「実装難易度の問題」「学習時間の問題」を解決するための方策について述べる。また、「分類精度の再現の問題」については、5章にていくつかのアルゴリズムや実装による実験を行うことで検証する。
@@ -59,7 +59,7 @@ GPUとは、CPUと併用できるプロセッサの一種で、主に画像処�
 深層学習の研究においても、GPUによる並列計算が有効とされている。これは、入力ベクトルと重み行列の積など、ニューラルネットワークの計算にて中心を占める行列演算が、並列計算の恩恵を受けやすいからである\cite{bengio2012practical}。例えば、前述したDropConnectの研究\cite{wan2013regularization}に拠れば、GPUで演算した場合、テクスチャメモリを利用しなくてもCPUより97.2倍高速化でき、テクスチャメモリを利用すれば414.8倍の速度を出すことも可能である。\par
 また、深層学習の実装によっては、はじめからGPUで高速化することを前提に、GPU専用のコードを書いている場合がある。例えば、後述するcuda-convnet\footnote{\url{https://code.google.com/p/cuda-convnet/}}や、Maxout Network\cite{goodfellow2013maxout}のコードの一部、DropConnect\cite{wan2013regularization}\footnote{\url{http://cs.nyu.edu/~wanli/dropc/}}が該当する。この場合、そもそもGPUを搭載したマシンを使わないと、コンパイルや実行が全く出来なくなってしまう。\par
 %CPUの計算能力は頭打ちになっている。
-GPUが高速に演算を実行できる理由は、その構造にある。1〜数個のプロセッサで様々な命令をこなすCPUに対し、GPUは数百〜数千個のcoreを持っており、同一の命令を高速に並列演算する用途に向いている。これは、大量の点の変換処理が必要となるグラフィック処理環境から生まれたGPUの強みである。かつてGPUを科学演算に用いるには、OpenGL\footnote{\url{http://www.opengl.org/}}やCg\footnote{\url{http://www.nvidia.co.jp/object/cg_jp.html}}のようなグラフィック処理用ライブラリを使ってアルゴリズムを記述しなくてはならず、非常に難易度が高かった\footnote{\url{http://www.nvidia.co.jp/object/what-is-gpu-computing-jp.html}}。そこで、NVIDIAはCUDAというGPUによる演算の開発環境を開発した\cite{garland2008parallel}。CUDAはC/C++言語を拡張した作りになっており、グラフィックライブラリに比べて記述は非常に容易である。また、PythonにてCUDAコードを生成するライブラリも存在している\cite{klockner2009pycuda:}\cite{klockner2012pycuda}。\par
+GPUが高速に演算を実行できる理由は、その構造にある。1〜数個のプロセッサで様々な命令をこなすCPUに対し、GPUは数百〜数千個のcoreを持っており、同一の命令を高速に並列演算する用途に向いている。これは、大量の点の変換処理が必要となるグラフィック処理環境から生まれたGPUの強みである。かつてGPUを科学演算に用いるには、OpenGL\footnote{\url{http://www.opengl.org/}}やCg\footnote{\url{http://www.nvidia.co.jp/object/cg_jp.html}}のようなグラフィック処理用ライブラリを使ってアルゴリズムを記述しなくてはならず、非常に難易度が高かった\footnote{\url{http://www.nvidia.co.jp/object/what-is-gpu-computing-jp.html}}。そこで、NVIDIAはCUDAというGPUによる演算の開発環境を開発した\cite{garland2008parallel}。CUDAはC/C++言語を拡張した作りになっており、グラフィックライブラリに比べて記述は非常に容易である。また、PythonにてCUDAコードを生成するライブラリも存在している\cite{kloeckner2009pycuda:}\cite{klockner2012pycuda}。\par
 GPUによる並列演算は高速だが、GPUのメモリとCPUのメモリとの間で起こる通信は、比較して低速であり、ボトルネックになることが多い。通信の回数を減らし、GPU上のみで完結する演算を増やすことが重要である\cite{bengio2012practical}。
 
 \subsubsection{GPUの選定}
@@ -92,7 +92,7 @@ CUDAとC++による畳み込みネットワークの実装が、CIFARデータ�
 %hinton(matlab)
 
 \subsection{数値計算ライブラリTheano}
-Theanoは、python上で記述される数式処理/数値計算ライブラリである。Theanoは、数式のコンパイルと実際のデータによる数値計算の2段階で動作する\cite{bergstra+al:2010-Scipy}。図\ref{c4_Theano_compile}に、Theanoが動作する仕組みを示した。
+Theanoは、python上で記述される数式処理/数値計算ライブラリである。Theanoは、数式のコンパイルと実際のデータによる数値計算の2段階で動作する\cite{bergstra2010theano:}。図\ref{c4_Theano_compile}に、Theanoが動作する仕組みを示した。
 \begin{figure}[tbp]
  \centering
   \includegraphics[width=100mm]{img/c4/theano_compile}
@@ -135,7 +135,7 @@ Pylearn2のソースコードは、拡張性や可読性を非常に強く意識
 \item \textbf{models} 自己符号器、RBMなどの学習モデルが定義されている。
 \item \textbf{sandbox} cuda-convnetのラッパクラスが定義されている。
 \item \textbf{scripts} 実際に学習を行わせたり、学習結果を集計するときに便利なスクリプトが集められている。
-\item \textbf{train\_extensions}学習がスタートする時や、1回の処理が終了したときに動かす処理を定義するためのクラスである。デザインパターン\cite{johnson1995design}でいうObserverパターンが用いられている。
+\item \textbf{train\_extensions}学習がスタートする時や、1回の処理が終了したときに動かす処理を定義するためのクラスである。デザインパターン\cite{gamma1995design}でいうObserverパターンが用いられている。
 \item \textbf{training\_algorithms} SGDとバッチ勾配降下法を始めとする、学習アルゴリズムが定義されている。SGDと併用するための、学習率変化アルゴリズム(線形減少、指数関数的減少、焼き鈍し)、慣性率の利用、Polyak平均化\cite{polyak1992acceleration}なども、ここで一緒に定義されている。
 
 

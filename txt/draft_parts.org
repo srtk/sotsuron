@@ -4,9 +4,30 @@
 機械学習で用いる数学モデル及び学習法として、2000年代に、Deep Learningと呼ばれる一群の手法が台頭した。Deep Learningとは、人間の脳の構造に類似した、ネットワーク構造のモデルによって学習を行わせる方法である。Deep Learningは、画像認識や音声認識など数々の分野で優れた性能を示し、注目を浴びるようになった。しかし、Deep Learningは歴史の浅い分野であり、定番のアルゴリズムが固まっていない。また、ライブラリも標準的なものがまだ確立しておらず、Deep Learning技術を様々な問題に応用すること自体が、困難な状況である。
 
 
-* 書式
-表のキャプションは上
-tableのcaptionを上にする
+* 参考文献で困ったタイトル
+Efficient Learning of Sparse Representations with an Energy-Based Model
+手持ちのpdfとciteseerでfirst authorが消滅している
+MIT Pressの場所がUSとUKで2つあって選べない
+
+arxivからとってきたpdf参照したけど、後から出版されてたときはどうする?
+
+Maxout Networks ページ数がどこにも書いてない
+
+* acm style参考文献用のフィールド
+- book
+Authors. Title. Publisher, City of Publication(=Address), Year of Publication(=Year).
+
+-incollection
+Authors. Title. in Editors Title of edited book, Publisher, City of Publication, Year of Publication, Pages.
+
+- article
+Authors. Title. Journal or magazine name, Volume (Issue), Pages.
+
+- inproceeding
+Authors, Title. in Title of conference, (Location of Conference, Year), Publisher, Pages.
+
+
+
 * 参考文献のフォーマット
 
 ACM formatやWWWの論文を参考にせよ
