@@ -1,6 +1,8 @@
 % !TEX root = thesis.tex
 \chapter{深層学習の実装例とその検証}
-この章では、4章で挙げた問題点の対策を検証するため、いくつかの深層学習用の実装を用いて、実際に機械学習のタスクを実行する。特に、実際の分類精度を測定することによる、「分類精度の再現の問題」の解決を目標とする。
+%そして、５章は、その推薦された設定が、うまく動作することの検証です。
+この章では、深層学習の実装上の問題点を解決するために、4章で挙げた構成がうまく動作するか検証する。そのため、いくつかの深層学習用の実装を用いて、実際に機械学習のタスクを実行する。特に、実際の分類精度を測定することによる、「分類精度の再現の問題」の検証を目標とする。
+
 \section{利用したデータセット}
 実験の前提知識として、この節では、実験に使用したデータセットについて記す。機械学習の分野では、分類精度のベンチマークを取るために、様々なデータセットが提供/提案されてきている。同じデータセットに対して、様々な分類モデルやアルゴリズムを用いて分類実験を行うことにより、どの手法が優れているのか比較することが出来る。\par
 ここでは、画像認識のデータセットを用いて、深層学習プログラムのベンチマークを行う。画像データを用いる理由は、1つには、画像認識が深層学習が最も高い分類性能を実現している分野だからである。加えて、画像データや画像から抽出された素性は、可視化が比較的容易なことが多い。可視化することで、学習過程を目で見て確かめることが出来るため、アルゴリズムの分析を行いやすい、という利点がある。
@@ -30,7 +32,7 @@ MNISTは、様々な画像認識アルゴリズムの作者によって使用さ
 \subsection{CIFAR10}
 CIFAR10\footnote{http://www.cs.toronto.edu/~kriz/cifar.html}は、写真を画像分析によって識別するタスクである\cite{krizhevsky2009learning}。入力データは60000件のカラー画像で、どの画像も、飛行機、自動車、鳥、猫、鹿、犬、蛙、馬、船、トラックの10種類のクラスのどれかに属しており、各クラス均等に6000枚ずつの画像が割り振られている。画像データは、GoogleやFlickrなどによるウェブ検索で集められた画像を、人手でラベリングして作られている。また、サイズを32x32ピクセルに縮小されている。\par
 MNISTと同じように、60000件のデータは、50000の訓練データと10000件のテストデータに分割されている。まず、分類器にこれらの訓練データを読み取らせて、学習を行わせる。その後、テストデータのうちいくつを正しいクラスに分類することができるのか、分類精度を競うことになる。\par
-CIFAR10についても、データの例を\ref{c5_cifar_ex}に、分類誤差のランキングウェブサイト\footnote{\url{http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html}}より、再構成した表を\ref{c5_cifar_rank}に示す。
+CIFAR10についても、データの例を図\ref{c5_cifar_ex}に、分類誤差のランキングウェブサイト\footnote{\url{http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html}}より、再構成した表を、表\ref{c5_cifar_rank}に示す。
 \begin{figure}[tbp]
  \begin{center}
   \includegraphics[width=100mm]{img/c5/cifar_ex}
@@ -57,7 +59,7 @@ CIFAR10についても、データの例を\ref{c5_cifar_ex}に、分類誤差�
 Deep Learning Tutorialからは、畳み込みネットワーク(CNN)\footnote{\url{http://deeplearning.net/tutorial/lenet.html}}、積層雑音除去自己符号器(SDA)\footnote{\url{http://deeplearning.net/tutorial/SdA.html}}、深層信念ネットワーク(DBN)\footnote{\url{http://deeplearning.net/tutorial/DBN.html}}の3種類の実装を用いた。加えて、CNNの上から2番目のレイヤーを、Dropout + Rectifier Unitに変更したDReDNet\footnote{\url{http://techtalks.tv/talks/drednets/58115/}}と呼ばれるモデルでも実験した。このときユニットの出力を隠す割合を決める破損率(corruption rate)は、0.5に設定した。
 
 \subsection{Pylearn2内のモデル}
-Pylearn2からは、CNN\footnote{\url{http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/convolutional_network.ipynb}}、SDA\footnote{\url{http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/stacked_autoencoders.ipynb}}、Maxout Network、Maxout+畳み込みレイヤー\footnote{\url{http://deeplearning.net/software/pylearn2/library/models.html#module-pylearn2.models.maxout}}の4種類のモデルを用いた。DBNについては、構成要素であるRBMの実装は用意されているものの、これを組み立ててDBNにする作業はライブラリの利用者に任されている。出来るだけソースを変更せずに用いて分類精度を再現するという、今回の趣旨にそぐわないため、除外した。
+Pylearn2からは、CNN\footnote{\url{http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/convolutional_network.ipynb}}、SDA\footnote{\url{http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/stacked_autoencoders.ipynb}}、Maxout Network、Maxout+畳み込みレイヤー\footnote{\url{http://deeplearning.net/software/pylearn2/library/models.html\#module-pylearn2.models.maxout}}の4種類のモデルを用いた。DBNについては、構成要素であるRBMの実装は用意されているものの、これを組み立ててDBNにする作業はライブラリの利用者に任されている。出来るだけソースを変更せずに用いて分類精度を再現するという、今回の趣旨にそぐわないため、除外した。
 
 \section{使用したマシンとハードウェア性能}
 この章の実験では、2種類のサーバマシンを用いている。一方は、深層学習を目的に構成した自作サーバマシンで、GPUを搭載している(physalisと名付ける)。もう一方は、Dell社のPowerEdgeT300\footnote{\url{http://www1.jp.dell.com/jp/ja/premier/servers/pedge_t300/pd.aspx?refid=pedge_t300&cs=jppremier1&s=premier}}という機種のもので、こちらにはGPUは搭載されていない(artemisと名付ける)。表\ref{c5_hardware_spec}に、今回の実験で使用したマシンの主な使用パーツ及び性能を列挙した。また、Pylearn2に実装されているMaxout Networkのソースコードには、実験マシンのパーツ性能を書いたファイルが付属している\footnote{Pylearn2/scripts/papers/maxout/notes}。このファイルの記述内容も、比較のために列挙した。Maxout Networkは、先述したMNISTやCIFAR10のベンチマーク実験において、かなり最先端に高い精度を挙げており、特に順序不変(Permutatin Invariant)のタスクにおいては最も性能が高い。このMaxout Networkの実験に用いられたマシンよりも、ハードウェア面で上回っているならば、ハードウェア面での性能が不足して実験がうまくいかない危険性はかなり低いと言える。今回の実験に使ったマシンで言うと、新しく構成してGPUを搭載したphysalisサーバの方は、論文のマシンよりハードウェア性能的に優れていることがわかる。一方、artemisサーバはGPUを搭載していなかったため、学習速度面にて劣ることが予想される。
@@ -129,6 +131,10 @@ Maxout Networkを利用して、再現精度Pylearn2を利用するにあたり�
 \label{c5_maxout_mnist1_stat}
 \end{table}%
 
-
+\begin{comment}
+%ここでは、CIFAR10の場合にはうまくいかなかったとありますが、
+%それは、論文全体のなかでどういう意味をもつと位置づけるのでしょうか？
+%論文のなかに位置づけられないのであれば、書く必要がないです。
 \subsection{Maxout Networkによる、CIFAR10の分類タスク}
 Maxout+畳み込みのモデルについて、MNISTだけでなく、CIFAR10にも使ってみようと実験を試みた。しかし、この組み合わせの実験を実際に行ったところ、3日間実行を続けたところで、残りエポック数と計算速度の比較より、全体の実行が完了するまでに5日以上かかることが判明した。これはウェブ工学における応用に使う学習アルゴリズムとして、試行錯誤しながら使うものとしては現実的でない実行時間である。また、実験スケジュールの都合もあり、実験の中断を余儀なくされてしまった。%実行が完了した部分までの分類誤差を、図??に示した。[図追加]
+\end{comment}
