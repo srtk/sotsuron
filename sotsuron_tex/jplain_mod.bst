@@ -1,3 +1,5 @@
+% modified by Hiroki Kurotaki
+
 	% version 0.30 for JBibTeX versions 0.30 or later, LaTeX version 2.09.
 	% Copyright (C) 1990, all rights reserved.
 	%
@@ -257,8 +259,8 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
 
-    { s nameptr "{f.}{ll}" format.name$ is.kanji.str$
-	{s nameptr "{f.}{ll}" format.name$ 't :=}
+    { s nameptr "{ff}{ll}" format.name$ is.kanji.str$
+	{s nameptr "{ff}{ll}" format.name$ 't :=}
  	{s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't :=}
       if$
 
