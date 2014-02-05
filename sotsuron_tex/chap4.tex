@@ -108,13 +108,25 @@ CUDAとC++による畳み込みネットワークの実装が、CIFARデータ�
 %\subsection{DropConnect}
 %DropConnectのソースコードも、ウェブページにて公開されている。CUDAとC++を用いた独自のコード
 %sentiment analysis
-%torch7
-%sugomori
+
 %nolearn
 %deepnet
 %scikit
 %pycuda
-%hinton(matlab)
+\subsection{Hinton研究室のサンプルコード}
+　Matlabで書かれている
+Autoencoder、classification model (???)
+1.2\% 2006
+
+\subsection{sugomoriさんのコード}
+Theanoはわかりにくいので、numpyで全て書き直している。
+2008年のコード準拠
+
+\subsection{torch7}
+Luaで書かれている。
+Theanoとの比較表がある。
+%http://torch.ch/
+%http://conditional.github.io/blog/2013/12/07/an-introduction-to-torch7/
 
 \subsection{数値計算ライブラリTheano}
 Theanoは、python上で記述される数式処理/数値計算ライブラリである。Theanoは、数式のコンパイルと実際のデータによる数値計算の2段階で動作する\cite{bergstra2010theano:}。図\ref{c4_Theano_compile}に、Theanoが動作する仕組みを示した。
