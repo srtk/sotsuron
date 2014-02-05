@@ -88,22 +88,38 @@ NVIDIAのGPUは、Teslaを除くと、QuadroとGeForceという2つのシリー�
 
 \section{深層学習に応用できるライブラリ}
 \label{sec:c4_deep_library}
-%\nameref{subsec:c4_replication}と\nameref{subsec:c4_difficulty}で述べたように、深層学習の実装においては、分類性能が高く、かつ利用が容易な公開ライブラリを選ぶことが重要となる。また、「学習時間の問題」で述べたように、現段階で学習時間の短縮に最も有効な手段の1つが、GPUの利用であり、GPU用のコードを記述するためにもライブラリが重要である。つまり、深層学習の実装では、適切なライブラリを選択することが重要となる。そこで、この節では現在深層学習を実装する際に利用できるライブラリやソースコードを紹介する。
+
 \ref{subsec:c4_provision_replication}項「分類精度の再現の問題への対策」と\ref{subsec:c4_provision_difficulty}項「実装難易度の問題への対策」で述べたように、深層学習の実装においては、分類性能が高く、かつ利用が容易な公開ライブラリを選ぶことが重要となる。また、\ref{subsec:c4_provision_exectime}項「学習時間の問題」で述べたように、現段階で学習時間の短縮に最も有効な手段の1つが、GPUの利用であり、GPU用のコードを記述するためにもライブラリが重要である。つまり、深層学習の実装では、適切なライブラリを選択することが重要となる。そこでこの節では、現在深層学習を実装する際に利用できるライブラリやソースコードを比較・検討する。また、ライブラリの1つであるPylearn2というライブラリが、今回の問題点を解決する上で適当であることを示す。
+
+\subsection{深層学習ライブラリの紹介と比較}
+図\ref{c4_dl_library}は、深層学習のアルゴリズムを実装しているライブラリを独自に調査し、その特徴をまとめたものである。以下では、まずこの表の各項目の意味について述べた後、各ライブラリを紹介する。なお、この表ではライブラリを最終更新日の順に並べている。
+\begin{figure}[tbp]
+ \centering
+  \includegraphics[width=150mm]{img/c4/dl_library}
+ \caption{深層学習を実装しているライブラリの比較}
+ \label{c4_dl_library}
+\end{figure}
+\begin{itemize}
+\item \textbf{ライブラリor作者の名前} ライブラリの名前が明示されている場合はライブラリ名、そうでない場合は、作者の名前またはハンドルネームを書いた。
+\item \textbf{DBN} Deep Belief Networkが実装されているかどうか。ただし、DBN自体が実装されてなくても、Deep Belief Networkの構成要素であるRBMと、pretrainingやfinetuningなど深層構造を学習するための仕組みの両方が実装されている場合は△とした。
+\item \textbf{SDA} Stacked Denoising Autoencoderが実装されているかどうか。
+\item \textbf{CNN} Convolutional Neural Network全体、またはConvolutional LayerとMulti Layer Perceptronを組み合わせる仕組みが実装されているかどうか。
+\item \textbf{その他深層学習} その他、深層学習のアルゴリズムで実装されているもの。略称の詳細は、各ライブラリの説明に記す。
+\item \textbf{GPUサポート} GPUによる高速計算をサポートしているかどうか。
+\item \textbf{数式最適化} 数式を自動で最適化し、余分な計算を省いたり、情報落ちや桁落ちを自動的に防ぐ仕組みが備わっているかどうか。ただしMATLABについては、内部的に数式を自動最適化しているかどうかに関する資料を発見できなかったため、「不明」とした。
+\item \textbf{言語} ライブラリの利用者が使うプログラミング言語は何か。
+\item \textbf{ドキュメント} クラス単位のドキュメントが用意されているかどうか。ここでは、サンプルコードのみが提供されている場合や、ライブラリ全体に関するドキュメントしかない場合は、「無し」に分類した。これは、「実装難易度の問題」で述べたように、ライブラリの多少の改変を視野に入れる必要からである。
+\item \textbf{公開場所} ソースコードは、どのようなウェブサイトで公開されているか。
+\item \textbf{最終更新日} ソースコードが最後に更新された日はいつか。
+\end{itemize}
+
 %で、「そこで、この節では現在深層学習を実装する際に利用できるライブラリやソースコードを紹介する。」とありますが、紹介してどうするのですか？
 %論文の目的と照らして、書いてあることを位置づけて下さい。
 %紹介して、その中からpylearn2を用いることが最適であることを言うのではないのですか？
 
-
+\begin{comment}
 \subsection{cuda-convnet}
 CUDAとC++による畳み込みネットワークの実装が、CIFARデータセットの制作者であるKrizhevsky氏によって公開されている\footnote{\url{https://code.google.com/p/cuda-convnet/}}。最大値蓄積レイヤーや最終レイヤー用のソフトマックスレイヤーなど、畳み込みネットワークの実装に必要なパーツが一通り用意されている。なお、後述するPylearn2にも、このcuda-convnetのPythonラッパクラスが実装されている。
-
-%word2vecは、課題1や課題2を解決するためのライブラリのひとつなのですか？
-%（上の目的に照らすと、ここで紹介する必然性はあるのでしょうか？）
-\begin{comment}
-\subsection{word2vec}
-1章で紹介した、単語をベクトル化するword2vecのコードも全て公開されている。また、ウェブアプリにもなっており、誰でもブラウザ上でテキストデータを入れるだけで、意味ベクトルを生成できるようになっている\footnote{\url{https://code.google.com/p/word2vec/}}。word2vecは、入力されたテキストデータから、まず単語の辞書を作り、次にそれぞれの単語の意味をベクトル化していく。ベクトル化が済めば、単語同士の類似度を計測したり、クラスタリングに用いることができる。
-\end{comment}
 
 %\subsection{DropConnect}
 %DropConnectのソースコードも、ウェブページにて公開されている。CUDAとC++を用いた独自のコード
@@ -127,6 +143,9 @@ Luaで書かれている。
 Theanoとの比較表がある。
 %http://torch.ch/
 %http://conditional.github.io/blog/2013/12/07/an-introduction-to-torch7/
+\end{comment}
+
+
 
 \subsection{数値計算ライブラリTheano}
 Theanoは、python上で記述される数式処理/数値計算ライブラリである。Theanoは、数式のコンパイルと実際のデータによる数値計算の2段階で動作する\cite{bergstra2010theano:}。図\ref{c4_Theano_compile}に、Theanoが動作する仕組みを示した。
