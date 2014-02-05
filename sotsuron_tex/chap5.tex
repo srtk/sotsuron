@@ -7,13 +7,13 @@
 実験の前提知識として、この節では、実験に使用したデータセットについて記す。機械学習の分野では、分類精度のベンチマークを取るために、様々なデータセットが提供/提案されてきている。同じデータセットに対して、様々な分類モデルやアルゴリズムを用いて分類実験を行うことにより、どの手法が優れているのか比較することが出来る。\par
 ここでは、画像認識のデータセットを用いて、深層学習プログラムのベンチマークを行う。画像データを用いる理由は、1つには、画像認識が深層学習が最も高い分類性能を実現している分野だからである。加えて、画像データや画像から抽出された素性は、可視化が比較的容易なことが多い。可視化することで、学習過程を目で見て確かめることが出来るため、アルゴリズムの分析を行いやすい、という利点がある。
 \subsection{MNIST}
-MNIST database\footnote{http://yann.lecun.com/exdb/mnist/}とは、手書き数字を画像分析によって認識するベンチマークタスクである。このデータセットは、National Institute of Standards and Technology(NIST)が提供する手書き数字のデータにサイズの規格化処理を加え、数字の書き手毎に整理したものである。データはサイズ28x28ピクセルの白黒画像70000件より構成される\cite{lecun1998gradient-based}。それぞれの画像は、0〜9のいずれかの数字1文字に該当している。画像データを認識プログラムに入力して、どの数字に該当するか判別させることで、画像識別の精度を競うことになる。図\ref{c5_mnist_ex}に、MNISTの画像データの一部を示す(\cite{lecun1998gradient-based}より引用した)。\par
+MNIST database\footnote{http://yann.lecun.com/exdb/mnist/}とは、手書き数字を画像分析によって認識するベンチマークタスクである。このデータセットは、National Institute of Standards and Technology(NIST)が提供する手書き数字のデータにサイズの規格化処理を加え、数字の書き手毎に整理したものである。データはサイズ28x28ピクセルの白黒画像70000件より構成される\cite{lecun1998gradient-based}。それぞれの画像は、0〜9のいずれかの数字1文字に該当している。画像データを認識プログラムに入力して、どの数字に該当するか判別させることで、画像識別の精度を競うことになる。図\ref{c5_mnist_ex}に、MNISTの画像データの一部を示す。\par
 MNISTの70000件のデータは、60000件のモデル訓練用データと、10000件の精度測定用データに分かれている。まず60000件のデータを使って識別モデルに学習を行わせた後、未知の10000件のテストデータを実際に識別してみることで、精度を測定する。テストデータを識別している最中に、更なる学習を行うことは許されない。分類器は、過去に学習に使ったデータだけ良く識別できても意味がなく、むしろ未知のデータこそ精度良く分類出来なければならない。モデルが過去のデータに特化してしまうと、かえって未知のデータに対する識別精度が低下することもある。この低下現象は過学習(over fitting)と呼ばれ、機械学習における落とし穴の一つとなっている。MNISTに限らず、機械学習用のデータセットにて、訓練データとテストデータをあらかじめ分けておくことは一般的であり、学習アルゴリズムが過学習を防げているかどうか、判定するために有効な方法の1つとして知られている。\par
 \begin{figure}[tbp]
  \begin{center}
   \includegraphics[width=50mm]{img/c5/mnist_ex}
  \end{center}
- \caption{MNISTデータの例}
+ \caption{MNISTデータの例(\cite{lecun1998gradient-based}より引用)}
  \label{c5_mnist_ex}
 \end{figure}
 MNISTは、様々な画像認識アルゴリズムの作者によって使用されている。MNISTの配布ウェブサイトには、MNISTを利用した論文のリストが、分類誤差によるランキング形式で掲載されている。表\ref{c5_mnist_rank}に、MNISTデータセットにおける各アルゴリズムの分類誤差を、ランキング形式のウェブサイト\footnote{\label{c5_rank}\url{http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html}}より再構成して示す。
@@ -37,7 +37,7 @@ CIFAR10についても、データの例を図\ref{c5_cifar_ex}に、分類誤�
  \begin{center}
   \includegraphics[width=100mm]{img/c5/cifar_ex}
  \end{center}
- \caption{CIFAR10データの例}
+ \caption{CIFAR10データの例 (http://www.cs.toronto.edu/~kriz/cifar.htmlより引用)}
  \label{c5_cifar_ex}
 \end{figure}
 
