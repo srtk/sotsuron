@@ -1,9 +1,9 @@
 % !TEX root = thesis.tex
 \chapter{深層学習の実装例とその検証}
-%そして、５章は、その推薦された設定が、うまく動作することの検証です。
-この章では、深層学習の実装上の問題点を解決するために、4章で挙げた構成がうまく動作するか検証する。そのため、いくつかの深層学習用の実装を用いて、実際に機械学習のタスクを実行する。特に、実際の分類精度を測定することによる、「分類精度の再現の問題」の検証を目標とする。
+4章では、NVIDIAのGeForceシリーズの一定性能以上のGPUを搭載したマシンにて、深層学習ライブラリPylearn2やDeep Learning Tutorialを用いた実装を用いることで、深層学習の問題点3つのうち、2つを解決できることを示した。しかし、「分類精度の再現性」の問題については、 実際に実験を行わないとわからないため、保留していた。\par
+この章では、実際にPylearn2とDeep Learning Tutorialに実装されている深層学習モデルを用いて、機械学習のタスクを実行する。ここで実際の分類精度を測定することにより、「分類精度の再現の問題」の検証を行う。また、GPUの利用により、どこまで「学習時間の問題」が解消されたのかもチェックする。
 
-\section{利用したデータセット}
+\section{実験に利用したデータセット}
 実験の前提知識として、この節では、実験に使用したデータセットについて記す。機械学習の分野では、分類精度のベンチマークを取るために、様々なデータセットが提供/提案されてきている。同じデータセットに対して、様々な分類モデルやアルゴリズムを用いて分類実験を行うことにより、どの手法が優れているのか比較することが出来る。\par
 ここでは、画像認識のデータセットを用いて、深層学習プログラムのベンチマークを行う。画像データを用いる理由は、1つには、画像認識が深層学習が最も高い分類性能を実現している分野だからである。加えて、画像データや画像から抽出された素性は、可視化が比較的容易なことが多い。可視化することで、学習過程を目で見て確かめることが出来るため、アルゴリズムの分析を行いやすい、という利点がある。
 \subsection{MNIST}
@@ -51,18 +51,17 @@ CIFAR10についても、データの例を図\ref{c5_cifar_ex}に、分類誤�
  \label{c5_cifar_rank}
 \end{table}
 
-\section{使用した実装}
-この章の実験では、深層学習用の実装として、"Pylearn2"と"Deep Learning Tutorial"という2種類のライブラリによるものを用いた。この2つを選んだのは、どちらも共通してTheanoをベースに書いてあり、自動微分や自動最適化の恩恵を受けられること、ソースコードが非常に系統立てて書いてあり、他のソースコードに比べれば改造が容易なこと、github上にてソースコードが公開されており、利用者が多いことが理由である。それぞれのライブラリの詳細な特徴は、4章にて述べた。\par
-ここでは、各ライブラリに含まれている分類モデルの中で、どのモデルを実験に用いたかを記す。
+\section{実験に利用した深層学習のモデル}
+ここでは、Pylearn2およびDeep Learning Tutorialに含まれている、深層学習モデルの中で、どのモデルを実験に用いたかを記す。
 
 \subsection{Deep Learning Tutorial内のモデル}
-Deep Learning Tutorialからは、畳み込みネットワーク(CNN)\footnote{\url{http://deeplearning.net/tutorial/lenet.html}}、積層雑音除去自己符号器(SDA)\footnote{\url{http://deeplearning.net/tutorial/SdA.html}}、深層信念ネットワーク(DBN)\footnote{\url{http://deeplearning.net/tutorial/DBN.html}}の3種類の実装を用いた。加えて、CNNの上から2番目のレイヤーを、Dropout + Rectifier Unitに変更したDReDNet\footnote{\url{http://techtalks.tv/talks/drednets/58115/}}と呼ばれるモデルでも実験した。このときユニットの出力を隠す割合を決める破損率(corruption rate)は、0.5に設定した。
+Deep Learning Tutorialからは、CNN\footnote{\url{http://deeplearning.net/tutorial/lenet.html}}、SDA\footnote{\url{http://deeplearning.net/tutorial/SdA.html}}、DBN\footnote{\url{http://deeplearning.net/tutorial/DBN.html}}の3種類の実装を用いた。加えて、CNNの上から2番目のレイヤーを、Dropout + Rectifier Unitに変更したDReDNet\footnote{\url{http://techtalks.tv/talks/drednets/58115/}}と呼ばれるモデルでも実験した。このときユニットの出力を隠す割合を決める破損率(corruption rate)は、0.5に設定した。
 
 \subsection{Pylearn2内のモデル}
-Pylearn2からは、CNN\footnote{\url{http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/convolutional_network.ipynb}}、SDA\footnote{\url{http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/stacked_autoencoders.ipynb}}、Maxout Network、Maxout+畳み込みレイヤー\footnote{\url{http://deeplearning.net/software/pylearn2/library/models.html\#module-pylearn2.models.maxout}}の4種類のモデルを用いた。DBNについては、構成要素であるRBMの実装は用意されているものの、これを組み立ててDBNにする作業はライブラリの利用者に任されている。出来るだけソースを変更せずに用いて分類精度を再現するという、今回の趣旨にそぐわないため、除外した。
+Pylearn2からは、CNN\footnote{\url{http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/convolutional_network.ipynb}}、SDA\footnote{\url{http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/stacked_autoencoders.ipynb}}、Maxout Network、Maxout+畳み込みレイヤー\footnote{\url{http://deeplearning.net/software/pylearn2/library/models.html\#module-pylearn2.models.maxout}}の4種類のモデルを用いた。DBNについては、構成要素であるRBMの実装は用意されているものの、これを組み立ててDBNにする作業はライブラリの利用者に任されており、完全なソースではないため除外した。
 
 \section{使用したマシンとハードウェア性能}
-この章の実験では、2種類のサーバマシンを用いている。一方は、深層学習を目的に構成した自作サーバマシンで、GPUを搭載している(physalisと名付ける)。もう一方は、Dell社のPowerEdgeT300\footnote{\url{http://www1.jp.dell.com/jp/ja/premier/servers/pedge_t300/pd.aspx?refid=pedge_t300&cs=jppremier1&s=premier}}という機種のもので、こちらにはGPUは搭載されていない(artemisと名付ける)。表\ref{c5_hardware_spec}に、今回の実験で使用したマシンの主な使用パーツ及び性能を列挙した。また、Pylearn2に実装されているMaxout Networkのソースコードには、実験マシンのパーツ性能を書いたファイルが付属している\footnote{Pylearn2/scripts/papers/maxout/notes}。このファイルの記述内容も、比較のために列挙した。Maxout Networkは、先述したMNISTやCIFAR10のベンチマーク実験において、かなり最先端に高い精度を挙げており、特に順序不変(Permutatin Invariant)のタスクにおいては最も性能が高い。このMaxout Networkの実験に用いられたマシンよりも、ハードウェア面で上回っているならば、ハードウェア面での性能が不足して実験がうまくいかない危険性はかなり低いと言える。今回の実験に使ったマシンで言うと、新しく構成してGPUを搭載したphysalisサーバの方は、論文のマシンよりハードウェア性能的に優れていることがわかる。一方、artemisサーバはGPUを搭載していなかったため、学習速度面にて劣ることが予想される。
+この章の実験では、2種類のサーバマシンを用いている。一方は、深層学習を目的に構成した自作サーバマシンで、GPUを搭載している(physalisと名付けられている)。もう一方は、Dell社のPowerEdgeT300\footnote{\url{http://www1.jp.dell.com/jp/ja/premier/servers/pedge_t300/pd.aspx?refid=pedge_t300&cs=jppremier1&s=premier}}という機種のもので、こちらにはGPUは搭載されていない(artemisと名付けられている)。表\ref{c5_hardware_spec}に、今回の実験で使用したマシンの主な使用パーツ及び性能を列挙した。また、Pylearn2に実装されているMaxout Networkのソースコードには、実験マシンのパーツ性能を書いたファイルが付属している\footnote{Pylearn2/scripts/papers/maxout/notes}。このファイルの記述内容も、比較のために列挙した。Maxout Networkは、先述したMNISTやCIFAR10のベンチマーク実験において、かなり最先端に高い精度を挙げており、特に順序不変(Permutatin Invariant)のタスクにおいては最も性能が高い。このMaxout Networkの実験に用いられたマシンよりも、ハードウェア面で上回っているならば、ハードウェア面での性能が不足して実験がうまくいかない危険性はかなり低いと言える。今回の実験に使ったマシンで言うと、新しく構成してGPUを搭載したphysalisサーバの方は、論文のマシンよりハードウェア性能的に優れていることがわかる。一方、artemisサーバはGPUを搭載していなかったため、学習速度面にて劣ることが予想される。
 \begin{table}[tbp]
  \begin{center}
   \caption{ハードウェア性能の比較}
@@ -104,12 +103,8 @@ physalis & PL2 & MNIST & \shortstack{Maxout\\+畳み込み}\rule[0mm]{0mm}{8mm} 
 \label{c5_all_result}%
 \end{table}%
 \par
-\begin{comment}
-\subsection{Maxout Networkによる、MNISTの分類タスク(2次元データとして扱う)}
-Maxout Networkを分類器として用い、MNISTの分類タスクを行わせた。モデル構造としては、畳み込みレイヤーを2層重ねた上に、全てのニューロンが単純に接続されたMaxout レイヤーを1層付け加え、最後の層にてロジスティック回帰を行って分類結果を出した。
-実験を行った結果、分類誤差は0.51\%となった。これは、元の論文が主張している分類誤差より、僅かに悪い結果となった。結果を、表\ref{c5_maxout_mnist2_result}に示す。
 
-\end{comment}
+
 
 \section{その他に行った実験}
 ここでは、上記の組み合わせ実験に当てはまらない、独立して行った実験について記す。
@@ -131,10 +126,52 @@ Maxout Networkを利用して、再現精度Pylearn2を利用するにあたり�
 \label{c5_maxout_mnist1_stat}
 \end{table}%
 
-\begin{comment}
-%ここでは、CIFAR10の場合にはうまくいかなかったとありますが、
-%それは、論文全体のなかでどういう意味をもつと位置づけるのでしょうか？
-%論文のなかに位置づけられないのであれば、書く必要がないです。
-\subsection{Maxout Networkによる、CIFAR10の分類タスク}
-Maxout+畳み込みのモデルについて、MNISTだけでなく、CIFAR10にも使ってみようと実験を試みた。しかし、この組み合わせの実験を実際に行ったところ、3日間実行を続けたところで、残りエポック数と計算速度の比較より、全体の実行が完了するまでに5日以上かかることが判明した。これはウェブ工学における応用に使う学習アルゴリズムとして、試行錯誤しながら使うものとしては現実的でない実行時間である。また、実験スケジュールの都合もあり、実験の中断を余儀なくされてしまった。%実行が完了した部分までの分類誤差を、図??に示した。[図追加]
-\end{comment}
+\section{実験による結論}
+この節では、今回の再現実験にて得られた結論について、考察する。
+\subsection{分類精度の再現性について}
+今回の実験で再現出来た分類精度が、データセットの分類精度ランキングの中で、どこに位置づけられるのかを示したのが、表\ref{c5_mnist2_result}及び表\ref{c5_mnist1_result}である。なお、最も性能が高かったMaxout Networkの2つについてのみ示している。特にConvolutional Layerを用いた"2次元、画像変形無し"のタスクで、非常に良い性能を再現できていることがわかる。
+\begin{table}[tdp]
+\caption{MNIST(2次元、画像変形無し)の分類誤差ランキング(\cite{goodfellow2013maxout}より再構成)}
+\begin{center}
+    \begin{tabular}{| l | r |}\hline
+    手法 & 分類誤差 \\ \hline
+    Conv. maxout + dropout & 0.45\% \\ \hline
+    Stochastic pooling \cite{zeiler2013stochastic} & 0.47\% \\ \hline
+    \textbf{今回の実験} & 0.51\% \\ \hline
+2-layer CNN+2-layer NN \cite{jarrett2009what} & 0.53\% \\ \hline
+    \end{tabular}%
+    \end{center}
+\label{c5_mnist2_result}
+\end{table}%
+
+\begin{table}[tdp]
+\caption{MNIST(1次元、順序不変)の分類誤差ランキング(\cite{goodfellow2013maxout}より再構成)}
+\begin{center}
+    \begin{tabular}{| l | r |}\hline
+    手法 & 分類誤差 \\ \hline
+DBM + dropout \cite{hinton2012improving} & 0.79\% \\ \hline
+Manifold Tangent Classifier \cite{rifai2011the-manifold} & 0.83\% \\ \hline
+Deep Convex Network \cite{yu2011deep} & 0.91\% \\ \hline
+Maxout MLP + dropout MP-DBM\cite{goodfellow2012joint} & 0.94\% \\ \hline
+DBM \cite{salakhutdinov2009deep} & 0.95\% \\ \hline
+Rectifier MLP + dropout \cite{srivastava2013improving} & 1.05\% \\ \hline
+今回の実験 & 1.16\% \\ \hline
+    \end{tabular}%
+    \end{center}
+\label{c5_mnist1_result}
+\end{table}%
+
+\subsection{GPUの利用による学習時間短縮について}
+GPUを搭載したphysalisサーバと、搭載していないartemisサーバでDeep Learning Tutorialの3モデルを動かした結果を比較した(表\ref{c5_gpu_result})。2つのマシンはGPUの有無以外にも性能差があるため、一概に比較はできないものの、GPUを搭載しているphysalisマシンの方は、SDAで14.5倍、CNNで27.35倍もの速度上昇を果たしていることがわかる。この2つのモデルについては、GPUを利用することで、4章で挙げた「学習時間の問題」をかなり大きく緩和することが出来ると言える。なお、DBNでは2.05倍の速度上昇に留まっており、深層学習モデルの中でも、GPUの恩恵を受けやすいモデルと、影響が少ないモデルが存在することもわかる。これについては実装による差異も大きいと予想できるので、更なる調査が必要である。\par
+なお、DBNとCNNではphysalisマシンの方が誤差が少し小さく、SDAではartemisマシンの方が分類誤差が減少している。これについては、artemisマシンとphysalisマシンでは、実験を行った時期が少しずれているため、numpyなど内部ライブラリのバージョンが異なっている可能性があると考えられる。
+
+\begin{table}[tdp]
+\caption{2種類のマシンによるDeep Learning Tutorial+CIFAR10の分類誤差および実行時間}
+\centering
+\begin{tabular}{|c|c|c|c|c|}\hline
+マシン名 & GPU & DBNの結果 & SDAの結果 & CNNの結果\\ \hline
+physalis & 有り & 50.90\% ,115分 & 58.64\% ,92分  & 34.76\% ,28分  \\ \hline
+artemis & 無し & 51.01\% ,236分 & 56.94\% , 1335分 & 35.18\% ,766分 \\ \hline
+\end{tabular}
+\label{c5_gpu_result}
+\end{table}
