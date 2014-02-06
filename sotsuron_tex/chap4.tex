@@ -76,11 +76,11 @@ GPUによる並列演算は高速だが、GPUのメモリとCPUのメモリと�
 
 \subsubsection{GPUの選定}
 前項で述べた通り、深層学習を高速に行うためには、GPUの応用が重要である。ここでは、機械学習を行うマシンに搭載するGPUを、選ぶときのポイントについて記す。\par
-まず、GPUは、NVIDIA製で、CUDAに対応していなければならない。ただし、グラフィック出力の機能はなくても構わない。\par2013年1月現在、NVIDIAのウェブページに掲載されているGPUに関しては、全てCUDAに対応しているため、店舗で新品のGPUを購入する場合は基本的に問題は生じないと思われる。\par
-なお、NVIDIAと並ぶGPUの開発メーカーであるAMD社も、CUDAと同様のGPUコンピューティング支援システムであるATI Streamという技術を開発している\footnote{\url{http://www.amd.com/jp/products/technologies/stream-technology/Pages/stream-technology.aspx}}。しかし、現在深層学習にて使われているライブラリは、後述するようにCUDAをベースとしているものが多いため、ここではCUDAの利用のみを前提として考える。\par
-NVIDIAのGPUの中で、どれを選ぶかも問題になる。NVIDIAのウェブページでは、GPUのうちTeslaというシリーズがGPUによる科学演算や高品質な画像生成に特化しており、非常に高精度/高速な演算を行うことができる、と述べられている。しかし、非常に高価な上、Teslaシリーズは一般的なタワー型PC向けのグラフィックカードではなく、大型サーバやワークステーションでの利用を基本としている\footnote{\url{http://www.nvidia.co.jp/object/tesla-servers-jp.html}}\footnote{\url{http://www.nvidia.co.jp/object/where-to-buy-tesla-jp.html}}。専門家の方によれば、Teslaは主に商用の大規模データや、ミスの許されない長時間科学計算などに用いることを想定して作られている。今回の目的は、ウェブ工学の一般的タスクにおける深層学習技術を確立するという、いわば実験的な用途であり、Teslaの利用はオーバースペックだと思われる。\par
-NVIDIAのGPUは、Teslaを除くと、QuadroとGeForceという2つのシリーズに分かれている。専門家の方に詳しい話を伺ったところ、Quadroはコンピュータグラフィックの出力機能に注力したシリーズであり、GeForceはより計算性能重視という傾向をもっている。つまり、深層学習の計算などGPGPUに用いる場合、同じ価格帯ならば、GeForceシリーズのGPUを用いた方が、費用対効果が大きくなると考えられる。\par
-また、専門家の方によれば、GeForceシリーズの中でもTitanという機種は、Tesla用の部品の中で品質チェックに漏れてしまったものを流用しており、Teslaとほぼ同様の、非常に高い性能を発揮することが出来る、とのことだった。しかし、今回利用する中で最も計算量が大きいMaxout Networkについて、元の発表論文によれば、GeForceシリーズのGTX 580という、少し世代が前のGPUが用いられている。深層学習を実行させる上で、GPUが存在すること自体は非常に重要だが、必ずしも最新スペックのGPUが必要というわけではないことがわかる。
+まずGPUは、NVIDIA製で、CUDAに対応している必要がある。これは、後述するように、現在で深層学習を実装しているライブラリで、GPUコンピューティングに対応しているものは、全てNVIDIAのCUDAを利用しているからである。なお、グラフィック出力の機能は必要ない。\par2013年1月現在、NVIDIAのウェブページに掲載されているGPUに関しては、全てCUDAに対応しているため、店舗で新品のGPUを購入する場合は基本的に問題は生じないと思われる。\par
+NVIDIAと並ぶGPUの開発メーカーであるAMD社も、CUDAと同様のGPUコンピューティング支援システムであるATI Streamという技術を開発している\footnote{\url{http://www.amd.com/jp/products/technologies/stream-technology/Pages/stream-technology.aspx}}。しかし、現在深層学習にて使われているライブラリは、後述するようにCUDAをベースとしているものが多いため、ここではCUDAの利用のみを前提として考える。\par
+NVIDIAのGPUの中で、どれを選ぶかも問題になる。NVIDIAのウェブページでは、GPUのうちTeslaというシリーズがGPUによる科学演算や高品質な画像生成に特化しており、非常に高精度/高速な演算を行うことができる、と述べられている。しかし、非常に高価な上、Teslaシリーズは一般的なタワー型PC向けのグラフィックカードではなく、大型サーバやワークステーションでの利用を基本としている\footnote{\url{http://www.nvidia.co.jp/object/tesla-servers-jp.html}}\footnote{\url{http://www.nvidia.co.jp/object/where-to-buy-tesla-jp.html}}。今回の目的は、ウェブ工学の一般的タスクにおける深層学習技術を確立するという、いわば実験的な用途であり、Teslaの利用はオーバースペックだと思われる。\par
+NVIDIAのGPUは、Teslaを除くと、QuadroとGeForceという2つのシリーズに分かれている。QuadroはTeslaと同じプロフェッショナル向けの商品であるが、Teslaと違い、並列コンピューティングよりも3D画像などグラフィック処理の方に重点を置いている。GeForceにないグラフィック処理機能を備えている分、計算力に対して割高な傾向がある。\footnote{\url{http://www.ryoyo.co.jp/product/solution/it/p81-04/p81-04-02.html}}。つまり、深層学習の計算などGPGPUに用いる場合、同じ価格帯ならば、GeForceシリーズのGPUを用いた方が、費用対効果が大きくなると考えられる。\par
+GeForceシリーズの中でどの機種を選ぶかも問題になる。基本的には、処理速度が高く、コア数が多いGPUを選んだ方が、演算は早くなると考えられる。目安として、Imagenetの識別タスク\cite{krizhevsky2012imagenet}やDropoutの提案論文\cite{hinton2012improving}では、GTX580を用いている。また、Bengio氏によるDeep Learningの実装手法提案論文\cite{bengio2012practical}では、具体的な機種には言及されていないが、コア数が512のGPUを用いたことが書いてある。のこれらよりスペックの高い機種を選択すれば、大きな問題は起こらないと考えられる。
 
 
 \section{深層学習に応用できるライブラリ}
