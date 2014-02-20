@@ -2,20 +2,20 @@
 \chapter{深層学習の成果とアルゴリズム}
 深層学習は、MLPのうち、普通隠れレイヤーが2つ以上のものをいう。2006年にHintonらによって、レイヤーの多いニューラルネットワークを効率よく学習させる方法が発見され、発展への道が開けた\cite{hinton2006a-fast, hinton2006reducing}。深層学習では、従来よりも多くのレイヤーを扱うことで、より複雑な関数を学習できるようになった。深層学習は、数々の分類タスクにて、従来手法を大きくしのぐ成果を収め、注目を浴びている。この章では、深層学習で使われているアルゴリズムの詳細について述べる。
 \section{深層学習の成果}
-2012年には、GoogleがSupervisionと題してYoutubeビデオの静止画を使って多層ニューラルネットワークの教師なし学習を行わせ、結果として、猫を認識するユニットや人を認識するユニットを学習させることに成功した。また、ImageNet Large Scale Visual Recognition Competition(ILSVRC)というデータセット\cite{deng2009imagenet:}の分類にて、最先端の結果を残した。ImageNet\footnote{\url{http://www.image-net.org/}}とは、WordNet\footnote{\url{http://wordnet.princeton.edu/}}を真似して作られたデータセットである。2009年より、100を超える様々な論文にて、画像認識のベンチマークに利用されてきている\footnote{\url{http://www.image-net.org/about-publication}}。図\ref{c3_imagenet}は、ImageNetの画像の例である。画像はツリー状に分類されており、例えば上を見ると、mammal(哺乳類)→palcental(胎盤)→carnivore(肉食)→canine(イヌ科)→dog(イヌ)→working dog(盲導犬やそり犬など使役される犬)→husky(ハスキー)というように、徐々に分類が細かくなっていくことがわかる。また、一つのカテゴリーには、9枚の画像がひもづけられている。\par
+2012年には、GoogleがSupervisionと題してYoutubeビデオの静止画を使って多層ニューラルネットワークの教師なし学習を行わせ、結果として、猫を認識するユニットや人を認識するユニットを学習させることに成功した。また、ImageNet Large Scale Visual Recognition Competition(ILSVRC)というデータセット\cite{deng2009imagenet:}の分類にて、最先端の結果を残した\cite{le2012building}。ImageNet\footnote{\url{http://www.image-net.org/}}とは、WordNet\footnote{\url{http://wordnet.princeton.edu/}}を真似して作られたデータセットである。2009年より、100を超える様々な論文にて、画像認識のベンチマークに利用されてきている\footnote{\url{http://www.image-net.org/about-publication}}。図\ref{c3_imagenet}は、ImageNetの画像の例である。画像はツリー状に分類されており、例えば上を見ると、mammal(哺乳類)→palcental(胎盤)→carnivore(肉食)→canine(イヌ科)→dog(イヌ)→working dog(盲導犬やそり犬など使役される犬)→husky(ハスキー)というように、徐々に分類が細かくなっていくことがわかる。また、一つのカテゴリーには、9枚の画像がひもづけられている。\par
 \begin{figure}[tbp]
  \begin{center}
   \includegraphics[width=120mm]{img/c3/imagenet}
  \end{center}
- \caption{Imagenetの画像とラベル構造の例(\cite{krizhevsky2012imagenet}より引用)}
+ \caption{Imagenetの画像とラベル構造の例(\cite{deng2009imagenet:}より引用)}
  \label{c3_imagenet}
 \end{figure}
-GoogleのSupervisionによる、画像分析の結果の例を図\ref{c3_supervision}に載せる。画像の分類に失敗している場合でも、妥当なラベルをつけていることがわかる。\begin{figure}[tbp]
+また、図\ref{c3_krizhevsky}は、Krizhevskeyらによる、深層学習を用いた画像分類の例である\cite{krizhevsky2012imagenet}。分類ラベルの付け方を見ると、画像の分類に失敗している場合でも、その画像に似ているものを選んでおり、人間にも理解しやすい間違い方をしていることがわかる。\begin{figure}[tbp]
  \begin{center}
-  \includegraphics[width=120mm]{img/c3/supervision}
+  \includegraphics[width=120mm]{img/c3/krizhevsky}
  \end{center}
- \caption{Supervisionによる画像分類の結果の例}
- \label{c3_supervision}
+ \caption{深層学習による画像分類の結果の例(\cite{krizhevsky2012imagenet}より引用)}
+ \label{c3_krizhevsky}
 \end{figure}
 
 深層学習は画像分析だけでなく、自然言語処理の分野でも有効なことがわかっている。Googleが公開している"word2vec"というライブラリを使うと、入力されたテキスト文書から、単語のベクトル化やクラスタリングを行うことができる\cite{mikolov2013efficient}\cite{mikolov2013linguistic}。このベクトル化により、
