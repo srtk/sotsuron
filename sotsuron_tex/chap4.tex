@@ -90,7 +90,7 @@ GeForceシリーズの中でどの機種を選ぶかも問題になる。基本�
 Pylearn2及びDeep Learning Tutorialというライブラリが、今回の問題点を解決するのに最も適当であることを示す。
 
 \subsection{深層学習ライブラリの解説}
-表\ref{c4_dl_library}は、深層学習のアルゴリズムを実装しているライブラリを独自に調査し、その特徴をまとめたものである。なお、この表ではライブラリを最終更新日の順に並べている。以下では、まずこの表の各項目の意味について述べた後、ライブラリの一部を紹介する。
+表\ref{c4_dl_library}は、深層学習のアルゴリズムを実装しているライブラリを独自に調査し、その特徴をまとめたものである。調査にあたっては、Deep Learningの解説サイト\footnote{\url{http://deeplearning.net/software_links/}}及び、各種データセットの分類精度ランキングを公開しているサイト\footnote{\url{http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html}}を基に、なお、この表ではライブラリを最終更新日の順に並べている。以下では、まずこの表の各項目の意味について述べた後、ライブラリの一部を紹介する。
 
 
 \begin{table}[tbp]
@@ -106,9 +106,13 @@ Pylearn2及びDeep Learning Tutorialというライブラリが、今回の問�
 \item \textbf{DBN} Deep Belief Networkが実装されているかどうか。ただし、DBN自体が実装されてなくても、Deep Belief Networkの構成要素であるRBMと、pretrainingやfinetuningなど深層構造を学習するための仕組みの両方が実装されている場合は△とした。
 \item \textbf{SDA} Stacked Denoising Autoencoderが実装されているかどうか。
 \item \textbf{CNN} Convolutional Neural Network全体、またはConvolutional LayerとMulti Layer Perceptronを組み合わせる仕組みが実装されているかどうか。
-\item \textbf{その他深層学習} その他、深層学習のアルゴリズムで実装されているもの。%略称の詳細は、各ライブラリの説明に記す。
+\item \textbf{その他深層学習} その他、深層学習のアルゴリズムで実装されているもの。\\
+DBM:Deep Boltzman Machine\\
+GSN : Generative Stochastic Network\\
+RNN : Recurrent Neural Network
+%略称の詳細は、各ライブラリの説明に記す。
 \item \textbf{GPUサポート} GPUによる高速計算をサポートしているかどうか。
-\item \textbf{数式最適化} 数式を自動で最適化し、余分な計算を省いたり、情報落ちや桁落ちを自動的に防ぐ仕組みが備わっているかどうか。ただしMATLABについては、内部的に数式を自動最適化しているかどうかに関する資料を発見できなかったため、「不明」とした。
+\item \textbf{数式最適化} 数式を自動で最適化し、余分な計算を省いたり、情報落ちや桁落ちを自動的に防ぐ仕組みが備わっているかどうか。ただしMATLABについては、内部的に数式を自動最適化しているかどうかに関して、資料を発見できなかったため、「不明」とした。
 \item \textbf{言語} ライブラリの利用者が使うプログラミング言語は何か。
 \item \textbf{ドキュメント} クラス単位のドキュメントが用意されているかどうか。ここでは、サンプルコードのみが提供されている場合や、ライブラリ全体に関するドキュメントしかない場合は、「無し」に分類した。これは、「実装難易度の問題」で述べたように、ライブラリの多少の改変を視野に入れる必要からである。
 \item \textbf{公開場所} ソースコードは、どのようなウェブサイトで公開されているか。
